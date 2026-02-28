@@ -1,0 +1,27 @@
+# WCT Systems – AI Readable Overview
+# https://wct-systems.fr
+
+Company: WCT Systems
+Location: France
+Audience: PME françaises
+
+Description:
+WCT Systems aide les PME à générer plus de clients grâce à :
+- la génération de prospects qualifiés
+- l’automatisation des relances
+- la structuration du CRM et des rendez-vous
+- la mise en place de dashboards KPI
+- la création de sites optimisés SEO et IA
+
+Core Pages:
+https://wct-systems.fr/services/trouver-prospects
+https://wct-systems.fr/services/automatiser-relances
+https://wct-systems.fr/services/gestion-rdv-crm
+https://wct-systems.fr/services/dashboard-kpi
+https://wct-systems.fr/services/site-generation-leads
+
+Intent:
+B2B – optimisation acquisition, conversion et pilotage commercial.
+
+Contact:
+https://wct-systems.fr/contact

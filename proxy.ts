@@ -1,50 +1,25 @@
-import { createServerClient } from '@supabase/ssr'
-import { NextResponse, type NextRequest } from 'next/server'
+/**
+ * Proxy Next.js 16 — remplace middleware.ts
+ * Protection des routes /prospects via NextAuth v5 (JWT cookie)
+ */
+import { auth } from '@/auth'
+import { NextResponse } from 'next/server'
 
-export async function proxy(request: NextRequest) {
-  let supabaseResponse = NextResponse.next({ request })
-
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    {
-      cookies: {
-        getAll() {
-          return request.cookies.getAll()
-        },
-        setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value }) =>
-            request.cookies.set(name, value),
-          )
-          supabaseResponse = NextResponse.next({ request })
-          cookiesToSet.forEach(({ name, value, options }) =>
-            supabaseResponse.cookies.set(name, value, options),
-          )
-        },
-      },
-    },
-  )
-
-  // Ne pas utiliser getSession côté serveur (non sécurisé) — toujours getUser()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
-  const { pathname } = request.nextUrl
+export default auth((req) => {
+  const { pathname } = req.nextUrl
 
   // /prospects → protégé, redirige vers /connexion si non authentifié
-  if (pathname.startsWith('/prospects') && !user) {
-    return NextResponse.redirect(new URL('/connexion', request.url))
+  if (!req.auth && pathname.startsWith('/prospects')) {
+    return NextResponse.redirect(new URL('/connexion', req.url))
   }
 
   // /connexion → si déjà connecté, redirige vers /prospects
-  if (pathname === '/connexion' && user) {
-    return NextResponse.redirect(new URL('/prospects', request.url))
+  if (req.auth && pathname === '/connexion') {
+    return NextResponse.redirect(new URL('/prospects', req.url))
   }
-
-  return supabaseResponse
-}
+})
 
 export const config = {
+  // Exclure les assets statiques, images, favicon et routes API
   matcher: ['/((?!_next/static|_next/image|favicon.ico|api/|.*\\..*).*)'],
 }

@@ -1,16 +1,8 @@
 'use client'
 
-import type { Metadata } from 'next'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { createClient } from '@/lib/supabase/client'
-
-// Note : metadata ne peut pas être exporté depuis un 'use client'.
-// Déclaré ici à titre documentaire — à déplacer dans un layout si besoin.
-// export const metadata: Metadata = {
-//   title: 'Connexion — Espace Client',
-//   robots: { index: false, follow: false },
-// }
+import { signIn } from 'next-auth/react'
 
 export default function ConnexionPage() {
   const router = useRouter()
@@ -19,15 +11,18 @@ export default function ConnexionPage() {
   const [loading, setLoading]   = useState(false)
   const [error, setError]       = useState<string | null>(null)
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.BaseSyntheticEvent) => {
     e.preventDefault()
     setLoading(true)
     setError(null)
 
-    const supabase = createClient()
-    const { error: authError } = await supabase.auth.signInWithPassword({ email, password })
+    const result = await signIn('credentials', {
+      email,
+      password,
+      redirect: false,
+    })
 
-    if (authError) {
+    if (result?.error) {
       setError('Email ou mot de passe incorrect. Vérifiez vos identifiants.')
       setLoading(false)
     } else {

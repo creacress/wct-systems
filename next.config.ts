@@ -202,7 +202,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/pricing/custom",
-        destination: "/contact",
+        destination: "/tarifs",
+        permanent: true,
+      },
+      {
+        source: "/pricing",
+        destination: "/tarifs",
         permanent: true,
       },
       {

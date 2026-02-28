@@ -10,6 +10,7 @@ const routes = [
   "/services/gestion-rdv-crm",
   "/services/dashboard-kpi",
   "/services/site-generation-leads",
+  "/tarifs",
   "/contact",
   // Ajoute ici /cas-clients, /blog, etc quand prêts
 ] as const;

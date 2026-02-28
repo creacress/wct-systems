@@ -30,20 +30,17 @@ export default function OpenGraphImage() {
               width: 90,
               height: 90,
               borderRadius: 999,
-              overflow: "hidden",
-              border: "2px solid rgba(255,255,255,0.08)",
-              background: "#0B0B0F",
+              border: "2px solid rgba(255,255,255,0.15)",
+              background: "rgba(124,58,237,0.25)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              fontSize: 40,
+              fontWeight: 700,
+              color: "white",
             }}
           >
-            <img
-              src="/images/logo-wct-systems.png"
-              width="90"
-              height="90"
-              style={{ objectFit: "cover" }}
-            />
+            W
           </div>
 
           <div style={{ fontSize: 32, opacity: 0.9 }}>

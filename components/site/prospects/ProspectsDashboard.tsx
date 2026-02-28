@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -346,17 +346,32 @@ export function ProspectsDashboard() {
       {/* ── Statistiques (toujours visibles) ───────────────────────────────── */}
       {stats && (
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          <StatCard label="Total prospects" value={stats.total.toLocaleString('fr-FR')} />
+          <StatCard
+            label="Total prospects"
+            value={stats.total.toLocaleString('fr-FR')}
+            icon={<svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" /></svg>}
+            accent="violet"
+          />
           <StatCard
             label="Enrichis"
             value={stats.enrichis.toLocaleString('fr-FR')}
             sub={stats.total ? `${Math.round(stats.enrichis / stats.total * 100)} %` : undefined}
+            icon={<svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" /></svg>}
+            accent="blue"
           />
-          <StatCard label="Score moyen" value={stats.score_moyen.toFixed(1)} sub="/ 100" />
+          <StatCard
+            label="Score moyen"
+            value={stats.score_moyen.toFixed(1)}
+            sub="/ 100"
+            icon={<svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>}
+            accent="amber"
+          />
           <StatCard
             label="Convertis"
             value={stats.convertis.toLocaleString('fr-FR')}
             sub={`${stats.nouveaux} nouveaux`}
+            icon={<svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>}
+            accent="green"
           />
         </div>
       )}
@@ -388,14 +403,26 @@ export function ProspectsDashboard() {
         <div className="space-y-6">
 
           {/* Formulaire de recherche */}
-          <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur">
-            <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-              Rechercher des entreprises en France
-            </h2>
+          <div className="rounded-3xl border bg-background/60 p-8 shadow-sm backdrop-blur">
+
+            {/* En-tête du formulaire */}
+            <div className="mb-7 flex items-center gap-4">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-violet-100 dark:bg-violet-950/60">
+                <svg className="h-5 w-5 text-violet-600 dark:text-violet-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h2 className="text-base font-semibold">Rechercher des entreprises en France</h2>
+                <p className="text-xs text-muted-foreground mt-0.5">Base officielle gouvernementale — résultats sauvegardés automatiquement</p>
+              </div>
+            </div>
+
             <form
               onSubmit={e => { e.preventDefault(); lancerRecherche(1) }}
-              className="space-y-4"
+              className="space-y-5"
             >
+              {/* Mots-clés */}
               <div className="space-y-1.5">
                 <label className="text-sm font-medium">
                   Mots-clés <span className="text-red-500">*</span>
@@ -406,11 +433,12 @@ export function ProspectsDashboard() {
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                   placeholder="Ex : menuiserie, plombier, agence marketing…"
-                  className="w-full rounded-2xl border bg-background px-4 py-2.5 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/30"
+                  className="w-full rounded-2xl border bg-background px-4 py-3 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/30"
                 />
               </div>
 
-              <div className="flex flex-wrap gap-3">
+              {/* Département + Taille — grille 2 colonnes */}
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="space-y-1.5">
                   <label className="text-sm font-medium">Département</label>
                   <input
@@ -419,16 +447,16 @@ export function ProspectsDashboard() {
                     onChange={e => setSearchDept(e.target.value)}
                     placeholder="Ex : 69, 75, 13"
                     maxLength={3}
-                    className="w-32 rounded-2xl border bg-background px-4 py-2.5 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/30"
+                    className="w-full rounded-2xl border bg-background px-4 py-3 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/30"
                   />
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-sm font-medium">Taille</label>
+                  <label className="text-sm font-medium">Taille d&apos;entreprise</label>
                   <select
                     value={searchCategorie}
                     onChange={e => setSearchCategorie(e.target.value)}
-                    className="rounded-2xl border bg-background px-4 py-2.5 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/30"
+                    className="w-full rounded-2xl border bg-background px-4 py-3 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/30"
                   >
                     {CATEGORIES.map(c => (
                       <option key={c.value} value={c.value}>{c.label}</option>
@@ -437,13 +465,29 @@ export function ProspectsDashboard() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              {/* Actions */}
+              <div className="flex items-center gap-3 pt-1">
                 <button
                   type="submit"
                   disabled={searching || !searchQuery.trim()}
-                  className="rounded-2xl bg-violet-600 px-6 py-2.5 text-sm font-medium text-white transition hover:bg-violet-700 disabled:opacity-50"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-violet-600 px-7 py-3 text-sm font-medium text-white transition hover:bg-violet-700 disabled:opacity-50"
                 >
-                  {searching ? 'Recherche…' : 'Rechercher'}
+                  {searching ? (
+                    <>
+                      <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                      </svg>
+                      Recherche…
+                    </>
+                  ) : (
+                    <>
+                      <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
+                      </svg>
+                      Rechercher
+                    </>
+                  )}
                 </button>
                 {searchDone && (
                   <button
@@ -455,7 +499,7 @@ export function ProspectsDashboard() {
                       setSearchResults([])
                       setSearchDone(false)
                     }}
-                    className="rounded-2xl border px-4 py-2.5 text-sm text-muted-foreground transition hover:bg-muted"
+                    className="rounded-2xl border px-4 py-3 text-sm text-muted-foreground transition hover:bg-muted"
                   >
                     Réinitialiser
                   </button>
@@ -601,12 +645,15 @@ export function ProspectsDashboard() {
 
           {/* État initial : pas encore cherché */}
           {!searchDone && !searching && (
-            <div className="rounded-3xl border border-dashed bg-background/40 px-6 py-16 text-center">
-              <p className="text-sm text-muted-foreground">
-                Entrez des mots-clés pour rechercher des entreprises dans la base officielle française.
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground">
-                Les résultats sont automatiquement sauvegardés dans vos prospects.
+            <div className="rounded-3xl border border-dashed bg-background/40 px-6 py-14 text-center">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-50 dark:bg-violet-950/40">
+                <svg className="h-7 w-7 text-violet-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 15.803a7.5 7.5 0 0010.607 0z" />
+                </svg>
+              </div>
+              <p className="text-sm font-medium text-foreground">Lancez votre première recherche</p>
+              <p className="mt-1.5 text-xs text-muted-foreground max-w-xs mx-auto">
+                Entrez un secteur d&apos;activité, un métier ou un type d&apos;entreprise pour interroger la base officielle française.
               </p>
             </div>
           )}
@@ -924,11 +971,34 @@ export function ProspectsDashboard() {
 
 // ── Sous-composants ─────────────────────────────────────────────────────────────
 
-function StatCard({ label, value, sub }: { label: string; value: string | number; sub?: string }) {
+const ACCENT_CLASSES: Record<string, { icon: string; bg: string }> = {
+  violet: { icon: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-50 dark:bg-violet-950/50' },
+  blue:   { icon: 'text-blue-600 dark:text-blue-400',     bg: 'bg-blue-50 dark:bg-blue-950/50' },
+  amber:  { icon: 'text-amber-600 dark:text-amber-400',   bg: 'bg-amber-50 dark:bg-amber-950/50' },
+  green:  { icon: 'text-green-600 dark:text-green-400',   bg: 'bg-green-50 dark:bg-green-950/50' },
+}
+
+function StatCard({
+  label, value, sub, icon, accent = 'violet',
+}: {
+  label: string
+  value: string | number
+  sub?: string
+  icon?: React.ReactNode
+  accent?: string
+}) {
+  const ac = ACCENT_CLASSES[accent] ?? ACCENT_CLASSES.violet
   return (
     <div className="rounded-3xl border bg-background/60 p-5 shadow-sm backdrop-blur transition hover:shadow-md">
-      <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{label}</p>
-      <p className="mt-1.5 text-2xl font-semibold tracking-tight">{value}</p>
+      <div className="flex items-center justify-between">
+        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{label}</p>
+        {icon && (
+          <div className={`flex h-7 w-7 items-center justify-center rounded-xl ${ac.bg} ${ac.icon}`}>
+            {icon}
+          </div>
+        )}
+      </div>
+      <p className="mt-2 text-2xl font-semibold tracking-tight">{value}</p>
       {sub && <p className="mt-0.5 text-xs text-muted-foreground">{sub}</p>}
     </div>
   )

@@ -49,7 +49,7 @@ export default function OpenGraphImage() {
         </div>
 
         {/* Main message */}
-        <div style={{ fontSize: 76, fontWeight: 700, lineHeight: 1.05 }}>
+        <div style={{ display: "flex", flexDirection: "column", fontSize: 76, fontWeight: 700, lineHeight: 1.05 }}>
           <div>Plus de clients.</div>
           <div style={{ opacity: 0.75 }}>
             Moins de tâches répétitives.

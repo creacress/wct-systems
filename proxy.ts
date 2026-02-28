@@ -8,8 +8,8 @@ import { NextResponse } from 'next/server'
 export default auth((req) => {
   const { pathname } = req.nextUrl
 
-  // /prospects → protégé, redirige vers /connexion si non authentifié
-  if (!req.auth && pathname.startsWith('/prospects')) {
+  // /prospects et /admin → protégés, redirige vers /connexion si non authentifié
+  if (!req.auth && (pathname.startsWith('/prospects') || pathname.startsWith('/admin'))) {
     return NextResponse.redirect(new URL('/connexion', req.url))
   }
 

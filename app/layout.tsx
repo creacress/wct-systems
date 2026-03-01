@@ -1,7 +1,6 @@
-
-
 import "./globals.css";
 import type { Metadata } from "next";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
@@ -46,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body className="min-h-screen bg-background text-foreground antialiased">
+        <GoogleTagManager gtmId="GTM-5SG8GNR8" />
         {children}
       </body>
     </html>

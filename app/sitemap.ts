@@ -4,6 +4,7 @@ const SITE = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").repla
 
 const routes = [
   "/",
+  "/a-propos",
   "/services",
   "/services/trouver-prospects",
   "/services/automatiser-relances",
@@ -12,6 +13,8 @@ const routes = [
   "/services/site-generation-leads",
   "/tarifs",
   "/contact",
+  "/cas-clients",
+  "/blog",
   // Ajoute ici /cas-clients, /blog, etc quand prêts
 ] as const;
 

@@ -372,6 +372,38 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ESPACE CLIENT */}
+        <section className="mt-20" aria-label="Espace client">
+          <div className="rounded-3xl border bg-muted p-8 sm:flex sm:items-center sm:justify-between sm:gap-8">
+            <div>
+              <h2 className="text-xl font-semibold tracking-tight">Déjà client ?</h2>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Accédez à votre tableau de bord pour gérer vos prospects, suivre
+                vos relances et piloter vos KPI.
+              </p>
+            </div>
+            <Link
+              href="/connexion"
+              className="mt-4 inline-flex items-center justify-center gap-2 rounded-2xl border bg-background px-6 py-3 text-sm font-medium shadow-sm transition hover:bg-background/80 sm:mt-0 sm:shrink-0"
+            >
+              <svg
+                className="h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              Accéder à l&apos;espace client
+            </Link>
+          </div>
+        </section>
+
         {/* FINAL CTA */}
         <section className="mt-24" aria-label="Appel à l'action">
           <div className="rounded-3xl border bg-linear-to-br from-violet-50 to-indigo-50/80 p-10 text-center shadow-sm dark:from-violet-950/40 dark:to-indigo-950/30">

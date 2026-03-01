@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/site/navbar";
 import { Footer } from "@/components/site/footer";
+import { CookieBanner } from "@/components/site/cookie-banner";
 
 export const metadata: Metadata = {
   title: {
@@ -21,6 +22,7 @@ export default function SiteLayout({
       <Navbar />
       <main>{children}</main>
       <Footer />
+      <CookieBanner />
     </>
   );
 }

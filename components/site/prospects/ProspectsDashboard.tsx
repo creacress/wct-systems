@@ -129,7 +129,7 @@ export function ProspectsDashboard() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          query:      searchQuery.trim(),
+          q:          searchQuery.trim(),
           departement: searchDept || undefined,
           categorie:  searchCategorie || undefined,
           page,

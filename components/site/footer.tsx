@@ -6,6 +6,7 @@ const LINKS = [
   { href: "/cas-clients", label: "Cas clients" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
+  { href: "/connexion", label: "Espace client" },
 ] as const;
 
 export function Footer() {
@@ -55,9 +56,14 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <p>Fait pour être lisible par humains et par machines.</p>
-          <div className="flex gap-4">
+        <div className="mt-10 flex flex-col gap-4 border-t pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-wrap gap-4">
+            <Link href="/mentions-legales" className="hover:text-foreground">
+              Mentions légales
+            </Link>
+            <Link href="/conditions-generales-de-vente" className="hover:text-foreground">
+              CGV
+            </Link>
             <Link href="/llms.txt" className="hover:text-foreground">
               llms.txt
             </Link>

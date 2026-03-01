@@ -172,25 +172,20 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
-      // --- Pages légales / mentions ---
-      {
-        source: "/mentions-legales",
-        destination: "/",
-        permanent: true,
-      },
+      // --- Pages légales / mentions (anciennes URLs → nouvelles pages) ---
       {
         source: "/legal-mentions",
-        destination: "/",
+        destination: "/mentions-legales",
         permanent: true,
       },
       {
         source: "/LegalMentions",
-        destination: "/",
+        destination: "/mentions-legales",
         permanent: true,
       },
       {
         source: "/terms-of-sale",
-        destination: "/",
+        destination: "/conditions-generales-de-vente",
         permanent: true,
       },
 

@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     const hp = clean(form.get("company_website"), 200);
     if (hp) {
       // Fake success (bots)
-      return NextResponse.redirect(new URL("/contact?sent=1", req.url), { status: 303 });
+      return NextResponse.redirect(new URL("/contact/merci", req.url), { status: 303 });
     }
 
     const name = clean(form.get("name"), 120);
@@ -90,7 +90,7 @@ export async function POST(req: Request) {
       text,
     });
 
-    return NextResponse.redirect(new URL("/contact?sent=1", req.url), { status: 303 });
+    return NextResponse.redirect(new URL("/contact/merci", req.url), { status: 303 });
   } catch (err) {
     console.error("CONTACT API ERROR:", err);
     return NextResponse.redirect(new URL("/contact?error=server", req.url), { status: 303 });

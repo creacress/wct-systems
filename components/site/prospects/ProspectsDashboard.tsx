@@ -228,7 +228,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 
 function StatutBadge({ statut }: { statut: string | null }) {
   if (!statut) return null
-  const active = statut.toLowerCase().includes('activ') || statut.includes('\u2705')
+  const active = statut.toLowerCase().includes('activ') || statut.includes('✅')
   return (
     <span className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-[10px] font-semibold ${
       active
@@ -283,11 +283,11 @@ function CompanyAvatar({ nom }: { nom: string }) {
 
 function exportCSV(fiches: Fiche[], query: string) {
   const headers = [
-    'SIREN', 'SIRET si\u00e8ge', 'Nom', 'Sigle', 'Code NAF', 'Activit\u00e9', 'Secteur',
-    'Date cr\u00e9ation', 'Adresse', 'CP', 'Ville', 'D\u00e9partement',
-    'Cat\u00e9gorie', 'Effectif', 'Nb \u00e9tablissements',
+    'SIREN', 'SIRET siège', 'Nom', 'Sigle', 'Code NAF', 'Activité', 'Secteur',
+    'Date création', 'Adresse', 'CP', 'Ville', 'Département',
+    'Catégorie', 'Effectif', 'Nb établissements',
     'Dirigeant', 'Nb dirigeants',
-    "Chiffre d'affaires", 'R\u00e9sultat net', 'Ann\u00e9e finance',
+    "Chiffre d'affaires", 'Résultat net', 'Année finance',
     'Statut', 'Nature juridique', 'Labels',
     'Fiche annuaire', 'Fiche Pappers',
   ]
@@ -302,7 +302,7 @@ function exportCSV(fiches: Fiche[], query: string) {
     f.fiche_annuaire, f.fiche_pappers,
   ])
   const csv = [headers, ...rows].map((r) => r.map(esc).join(',')).join('\n')
-  const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8' })
+  const blob = new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8' })
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
   a.href = url
@@ -420,7 +420,7 @@ function ErrorPanel({
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-3.5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182" />
           </svg>
-          R\u00e9essayer
+          Réessayer
         </button>
       </div>
     </div>
@@ -455,7 +455,7 @@ function NetworkErrorPanel({
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-3.5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182" />
           </svg>
-          R\u00e9essayer
+          Réessayer
         </button>
       </div>
     </div>
@@ -469,58 +469,58 @@ type FieldHint = { title: string; description: string; example?: string }
 const FIELD_HINTS: Record<string, FieldHint> = {
   default: {
     title: 'Guide de recherche',
-    description: 'Utilisez les champs ci-contre pour filtrer les entreprises fran\u00e7aises. Combinez plusieurs crit\u00e8res pour affiner vos r\u00e9sultats.',
+    description: 'Utilisez les champs ci-contre pour filtrer les entreprises françaises. Combinez plusieurs critères pour affiner vos résultats.',
   },
   q: {
     title: 'Recherche libre',
-    description: 'Recherchez par nom d\'entreprise, mot-cl\u00e9 du secteur, m\u00e9tier ou adresse. La recherche est effectu\u00e9e en texte int\u00e9gral sur l\'ensemble des donn\u00e9es.',
+    description: 'Recherchez par nom d\'entreprise, mot-clé du secteur, métier ou adresse. La recherche est effectuée en texte intégral sur l\'ensemble des données.',
     example: 'boulangerie, ACME SAS, plombier lyon',
   },
   departement: {
-    title: 'D\u00e9partement',
-    description: 'Code \u00e0 2 ou 3 chiffres du d\u00e9partement fran\u00e7ais. Pour les DOM-TOM, utilisez le code \u00e0 3 chiffres.',
-    example: '75 (Paris), 13 (Bouches-du-Rh\u00f4ne), 974 (R\u00e9union)',
+    title: 'Département',
+    description: 'Code à 2 ou 3 chiffres du département français. Pour les DOM-TOM, utilisez le code à 3 chiffres.',
+    example: '75 (Paris), 13 (Bouches-du-Rhône), 974 (Réunion)',
   },
   region: {
-    title: 'R\u00e9gion (code INSEE)',
-    description: 'Code num\u00e9rique de la r\u00e9gion selon la nomenclature INSEE. Permet de cibler une r\u00e9gion enti\u00e8re.',
-    example: '11 (\u00cele-de-France), 84 (Auvergne-Rh\u00f4ne-Alpes), 93 (PACA)',
+    title: 'Région (code INSEE)',
+    description: 'Code numérique de la région selon la nomenclature INSEE. Permet de cibler une région entière.',
+    example: '11 (Île-de-France), 84 (Auvergne-Rhône-Alpes), 93 (PACA)',
   },
   code_postal: {
     title: 'Code postal',
-    description: 'Code postal \u00e0 5 chiffres pour cibler une commune pr\u00e9cise. Plus restrictif que le d\u00e9partement.',
+    description: 'Code postal à 5 chiffres pour cibler une commune précise. Plus restrictif que le département.',
     example: '75001, 69001, 33000',
   },
   activite_principale: {
     title: 'Code NAF / APE',
-    description: 'Code de la Nomenclature d\'Activit\u00e9s Fran\u00e7aise (4 chiffres + 1 lettre). Identifie le secteur d\'activit\u00e9 principal de l\'entreprise. Tapez un mot-cl\u00e9 pour voir les suggestions.',
+    description: 'Code de la Nomenclature d\'Activités Française (4 chiffres + 1 lettre). Identifie le secteur d\'activité principal de l\'entreprise. Tapez un mot-clé pour voir les suggestions.',
     example: '6201Z (Programmation), 4120A (Construction maisons)',
   },
   categorie_entreprise: {
-    title: 'Cat\u00e9gorie d\'entreprise',
-    description: 'Classification par taille : PME (< 250 salari\u00e9s, CA < 50M\u20ac), ETI (250-4999 salari\u00e9s), GE (5000+ salari\u00e9s ou CA > 1,5Md\u20ac).',
+    title: 'Catégorie d\'entreprise',
+    description: 'Classification par taille : PME (< 250 salariés, CA < 50M€), ETI (250-4999 salariés), GE (5000+ salariés ou CA > 1,5Md€).',
   },
   tranche_effectif_salarie: {
-    title: 'Effectif salari\u00e9',
-    description: 'Tranche d\'effectif selon la d\u00e9claration INSEE. Permet de cibler des entreprises par taille de personnel.',
+    title: 'Effectif salarié',
+    description: 'Tranche d\'effectif selon la déclaration INSEE. Permet de cibler des entreprises par taille de personnel.',
   },
   ca_min: {
     title: 'Chiffre d\'affaires minimum',
-    description: 'Seuil minimum de CA annuel en euros. Filtre les entreprises ayant un CA sup\u00e9rieur \u00e0 cette valeur.',
-    example: '100000 (100k\u20ac), 1000000 (1M\u20ac)',
+    description: 'Seuil minimum de CA annuel en euros. Filtre les entreprises ayant un CA supérieur à cette valeur.',
+    example: '100000 (100k€), 1000000 (1M€)',
   },
   ca_max: {
     title: 'Chiffre d\'affaires maximum',
-    description: 'Seuil maximum de CA annuel en euros. Combinable avec le minimum pour d\u00e9finir une fourchette.',
-    example: '5000000 (5M\u20ac), 50000000 (50M\u20ac)',
+    description: 'Seuil maximum de CA annuel en euros. Combinable avec le minimum pour définir une fourchette.',
+    example: '5000000 (5M€), 50000000 (50M€)',
   },
   per_page: {
-    title: 'Nombre de r\u00e9sultats',
-    description: 'Nombre d\'entreprises \u00e0 retourner par recherche (entre 1 et 25). Un nombre \u00e9lev\u00e9 peut ralentir la r\u00e9ponse.',
+    title: 'Nombre de résultats',
+    description: 'Nombre d\'entreprises à retourner par recherche (entre 1 et 25). Un nombre élevé peut ralentir la réponse.',
   },
   labels: {
     title: 'Labels & certifications',
-    description: 'Filtrez par labels officiels : Bio, RGE (\u00e9co-\u00e9nergie), Qualiopi (formation), ESS (\u00e9conomie sociale), etc. Plusieurs labels combinables.',
+    description: 'Filtrez par labels officiels : Bio, RGE (éco-énergie), Qualiopi (formation), ESS (économie sociale), etc. Plusieurs labels combinables.',
   },
 }
 
@@ -554,7 +554,7 @@ function FormAside({ activeField }: { activeField: string }) {
           <h3 className="mb-3 text-sm font-semibold">Raccourcis</h3>
           <div className="space-y-2.5">
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <kbd className="rounded border bg-muted px-1.5 py-0.5 font-mono text-[10px] font-medium">Entr\u00e9e</kbd>
+              <kbd className="rounded border bg-muted px-1.5 py-0.5 font-mono text-[10px] font-medium">Entrée</kbd>
               <span>Lancer la recherche</span>
             </div>
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -566,9 +566,9 @@ function FormAside({ activeField }: { activeField: string }) {
 
         {/* Source */}
         <div className="rounded-2xl border border-dashed bg-background/40 p-4">
-          <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground/60">Source des donn\u00e9es</p>
+          <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground/60">Source des données</p>
           <p className="mt-1 text-xs text-muted-foreground">
-            Annuaire des Entreprises (data.gouv.fr) + enrichissement N8N. Donn\u00e9es mises \u00e0 jour quotidiennement.
+            Annuaire des Entreprises (data.gouv.fr) + enrichissement N8N. Données mises à jour quotidiennement.
           </p>
         </div>
       </div>
@@ -591,7 +591,7 @@ function FicheCard({ fiche, index }: { fiche: Fiche; index: number }) {
   return (
     <div className="overflow-hidden rounded-2xl border bg-background shadow-sm transition hover:shadow-md">
 
-      {/* En-t\u00eate cliquable */}
+      {/* En-tête cliquable */}
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -638,7 +638,7 @@ function FicheCard({ fiche, index }: { fiche: Fiche; index: number }) {
         ))}
       </div>
 
-      {/* D\u00e9tails d\u00e9pliables */}
+      {/* Détails dépliables */}
       {open && (
         <div className="border-t px-5 py-5">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -649,11 +649,11 @@ function FicheCard({ fiche, index }: { fiche: Fiche; index: number }) {
               <dl className="space-y-2">
                 {([
                   { label: 'SIREN', value: fiche.siren, mono: true },
-                  { label: 'SIRET si\u00e8ge', value: fiche.siret_siege, mono: true },
+                  { label: 'SIRET siège', value: fiche.siret_siege, mono: true },
                   { label: 'Nature juridique', value: fiche.nature_juridique },
-                  { label: 'Date cr\u00e9ation', value: fiche.date_creation },
+                  { label: 'Date création', value: fiche.date_creation },
                   { label: 'Adresse', value: fiche.adresse },
-                  { label: '\u00c9tablissements', value: fiche.nb_etablissements != null ? fiche.nb_etablissements.toLocaleString('fr-FR') : null },
+                  { label: 'Établissements', value: fiche.nb_etablissements != null ? fiche.nb_etablissements.toLocaleString('fr-FR') : null },
                 ] as { label: string; value: string | null | undefined; mono?: boolean }[]).map(({ label, value, mono }) => value ? (
                   <div key={label} className="flex gap-3">
                     <dt className="w-32 shrink-0 text-xs text-muted-foreground">{label}</dt>
@@ -671,8 +671,8 @@ function FicheCard({ fiche, index }: { fiche: Fiche; index: number }) {
                   { label: 'Dirigeant', value: fiche.dirigeant },
                   { label: 'Nb dirigeants', value: fiche.nb_dirigeants != null ? String(fiche.nb_dirigeants) : null },
                   { label: "Chiffre d'affaires", value: fiche.chiffre_affaires },
-                  { label: 'R\u00e9sultat net', value: fiche.resultat_net },
-                  { label: 'Ann\u00e9e finances', value: fiche.annee_finance },
+                  { label: 'Résultat net', value: fiche.resultat_net },
+                  { label: 'Année finances', value: fiche.annee_finance },
                 ] as const).map(({ label, value }) => value ? (
                   <div key={label} className="flex gap-3">
                     <dt className="w-32 shrink-0 text-xs text-muted-foreground">{label}</dt>
@@ -733,7 +733,7 @@ function FicheCard({ fiche, index }: { fiche: Fiche; index: number }) {
   )
 }
 
-// ── Panel r\u00e9sultats ───────────────────────────────────────────────────────────
+// ── Panel résultats ───────────────────────────────────────────────────────────
 
 function ResultsPanel({ data, query }: { data: WebhookResponse; query: string }) {
   const [showRaw, setShowRaw] = useState(false)
@@ -748,12 +748,12 @@ function ResultsPanel({ data, query }: { data: WebhookResponse; query: string })
             <span className="font-semibold text-violet-600 dark:text-violet-400">
               {data.total_resultats.toLocaleString('fr-FR')}
             </span>
-            <span className="ml-1.5 text-muted-foreground">r\u00e9sultats totaux</span>
+            <span className="ml-1.5 text-muted-foreground">résultats totaux</span>
           </div>
           <div className="h-3 w-px bg-border hidden sm:block" />
           <div>
             <span className="font-semibold">{data.nb_fiches}</span>
-            <span className="ml-1.5 text-muted-foreground">affich\u00e9{data.nb_fiches > 1 ? 's' : ''}</span>
+            <span className="ml-1.5 text-muted-foreground">affiché{data.nb_fiches > 1 ? 's' : ''}</span>
           </div>
           <div className="h-3 w-px bg-border hidden sm:block" />
           <span className="text-muted-foreground">Page <span className="font-semibold text-foreground">{data.page_actuelle}</span></span>
@@ -840,14 +840,14 @@ export function ProspectsDashboard() {
       setError(
         err instanceof Error
           ? err.message
-          : 'Impossible de contacter le serveur. V\u00e9rifiez votre connexion internet.'
+          : 'Impossible de contacter le serveur. Vérifiez votre connexion internet.'
       )
     } finally {
       setLoading(false)
     }
   }, [form])
 
-  // D\u00e9termine le type d'erreur pour l'affichage
+  // Détermine le type d'erreur pour l'affichage
   const apiError = response !== null && isApiError(response) ? response : null
   const hasResults = response !== null && isWebhookResponse(response)
   const hasRawResponse = response !== null && !isApiError(response) && !isWebhookResponse(response)
@@ -885,12 +885,12 @@ export function ProspectsDashboard() {
             <SectionLabel>Localisation</SectionLabel>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
               <div>
-                <label className="mb-1.5 block text-xs text-muted-foreground">D\u00e9partement</label>
+                <label className="mb-1.5 block text-xs text-muted-foreground">Département</label>
                 <input type="text" value={form.departement} onChange={setStr('departement')} onFocus={() => setActiveField('departement')} placeholder="Ex : 75, 69, 13" className={inputCls} disabled={loading} />
               </div>
               <div>
-                <label className="mb-1.5 block text-xs text-muted-foreground">R\u00e9gion (code INSEE)</label>
-                <input type="text" value={form.region} onChange={setStr('region')} onFocus={() => setActiveField('region')} placeholder="Ex : 11 pour \u00cele-de-France" className={inputCls} disabled={loading} />
+                <label className="mb-1.5 block text-xs text-muted-foreground">Région (code INSEE)</label>
+                <input type="text" value={form.region} onChange={setStr('region')} onFocus={() => setActiveField('region')} placeholder="Ex : 11 pour Île-de-France" className={inputCls} disabled={loading} />
               </div>
               <div>
                 <label className="mb-1.5 block text-xs text-muted-foreground">Code postal</label>
@@ -899,9 +899,9 @@ export function ProspectsDashboard() {
             </div>
           </div>
 
-          {/* Activit\u00e9 */}
+          {/* Activité */}
           <div>
-            <SectionLabel>Activit\u00e9</SectionLabel>
+            <SectionLabel>Activité</SectionLabel>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
               <div onFocus={() => setActiveField('activite_principale')}>
                 <label className="mb-1.5 block text-xs text-muted-foreground">Code NAF / APE</label>
@@ -912,13 +912,13 @@ export function ProspectsDashboard() {
                 />
               </div>
               <div>
-                <label className="mb-1.5 block text-xs text-muted-foreground">Cat\u00e9gorie d&apos;entreprise</label>
+                <label className="mb-1.5 block text-xs text-muted-foreground">Catégorie d&apos;entreprise</label>
                 <select value={form.categorie_entreprise} onChange={setStr('categorie_entreprise')} onFocus={() => setActiveField('categorie_entreprise')} className={selectCls} disabled={loading}>
                   {CATEGORIES.map((c) => <option key={c.code} value={c.code}>{c.label}</option>)}
                 </select>
               </div>
               <div>
-                <label className="mb-1.5 block text-xs text-muted-foreground">Effectif salari\u00e9</label>
+                <label className="mb-1.5 block text-xs text-muted-foreground">Effectif salarié</label>
                 <select value={form.tranche_effectif_salarie} onChange={setStr('tranche_effectif_salarie')} onFocus={() => setActiveField('tranche_effectif_salarie')} className={selectCls} disabled={loading}>
                   {EFFECTIFS.map((ef) => <option key={ef.code} value={ef.code}>{ef.label}</option>)}
                 </select>
@@ -931,15 +931,15 @@ export function ProspectsDashboard() {
             <SectionLabel>Finance &amp; Volume</SectionLabel>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
               <div>
-                <label className="mb-1.5 block text-xs text-muted-foreground">CA minimum (\u20ac)</label>
+                <label className="mb-1.5 block text-xs text-muted-foreground">CA minimum (€)</label>
                 <input type="number" value={form.ca_min} onChange={setStr('ca_min')} onFocus={() => setActiveField('ca_min')} placeholder="Ex : 100 000" className={inputCls} disabled={loading} min={0} />
               </div>
               <div>
-                <label className="mb-1.5 block text-xs text-muted-foreground">CA maximum (\u20ac)</label>
+                <label className="mb-1.5 block text-xs text-muted-foreground">CA maximum (€)</label>
                 <input type="number" value={form.ca_max} onChange={setStr('ca_max')} onFocus={() => setActiveField('ca_max')} placeholder="Ex : 5 000 000" className={inputCls} disabled={loading} min={0} />
               </div>
               <div>
-                <label className="mb-1.5 block text-xs text-muted-foreground">R\u00e9sultats (max 25)</label>
+                <label className="mb-1.5 block text-xs text-muted-foreground">Résultats (max 25)</label>
                 <input type="number" value={form.per_page} onChange={setStr('per_page')} onFocus={() => setActiveField('per_page')} className={inputCls} disabled={loading} min={1} max={25} />
               </div>
             </div>
@@ -974,7 +974,7 @@ export function ProspectsDashboard() {
           {/* CTA */}
           <div className="flex items-center justify-between border-t pt-5">
             <span className="text-xs text-muted-foreground/50">
-              {fieldCount} champ{fieldCount > 1 ? 's' : ''} dans la requ\u00eate
+              {fieldCount} champ{fieldCount > 1 ? 's' : ''} dans la requête
             </span>
             <button
               type="button"
@@ -1010,26 +1010,26 @@ export function ProspectsDashboard() {
         <FormAside activeField={activeField} />
       </div>
 
-      {/* ── Erreur r\u00e9seau (fetch failed) ───────────────────────────────────── */}
+      {/* ── Erreur réseau (fetch failed) ───────────────────────────────────── */}
       {error && (
         <NetworkErrorPanel message={error} onRetry={handleSubmit} loading={loading} />
       )}
 
-      {/* ── Erreur API structur\u00e9e ──────────────────────────────────────────── */}
+      {/* ── Erreur API structurée ──────────────────────────────────────────── */}
       {apiError && (
         <ErrorPanel error={apiError} onRetry={handleSubmit} loading={loading} />
       )}
 
-      {/* ── R\u00e9sultats ──────────────────────────────────────────────────────── */}
+      {/* ── Résultats ──────────────────────────────────────────────────────── */}
       {hasResults && (
         <ResultsPanel data={response as WebhookResponse} query={form.q} />
       )}
 
-      {/* ── R\u00e9ponse brute non reconnue ────────────────────────────────────── */}
+      {/* ── Réponse brute non reconnue ────────────────────────────────────── */}
       {hasRawResponse && (
         <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur space-y-4">
           <div className="flex items-center justify-between">
-            <p className="text-sm font-semibold">R\u00e9ponse du serveur</p>
+            <p className="text-sm font-semibold">Réponse du serveur</p>
           </div>
           <pre className="overflow-x-auto rounded-2xl border border-zinc-800 bg-zinc-950 p-5 font-mono text-xs leading-relaxed text-zinc-300">
             {typeof response === 'string' ? response : JSON.stringify(response, null, 2)}

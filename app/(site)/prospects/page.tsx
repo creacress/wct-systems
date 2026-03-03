@@ -2,36 +2,34 @@ import type { Metadata } from 'next'
 import { ProspectsDashboard } from '@/components/site/prospects/ProspectsDashboard'
 
 export const metadata: Metadata = {
-  title: 'Mes Prospects — WCT Systems',
-  description: 'Tableau de bord de prospection B2B : recherchez, enrichissez et gérez vos prospects.',
+  title: 'Agent PROSPEX — WCT Systems',
+  description: 'Agent IA de prospection B2B : collecte et enrichit automatiquement vos leads depuis l\'annuaire des entreprises françaises.',
   robots: { index: false, follow: false },
 }
 
 export default function ProspectsPage() {
   return (
     <main id="content" className="relative overflow-hidden">
-      {/* Fond dégradé identique aux autres pages */}
-      <div className="absolute inset-0 -z-10 bg-linear-to-b from-violet-50/70 via-background to-background dark:from-violet-950/30" />
+      <div className="absolute inset-0 -z-10 bg-linear-to-b from-violet-950/20 via-background to-background" />
 
-      <div className="mx-auto max-w-7xl px-6 py-12 sm:py-16">
-
-        {/* En-tête */}
-        <div className="mb-8 space-y-3">
-          <div className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-4 py-1 text-xs uppercase tracking-wide text-violet-700 dark:border-violet-800 dark:bg-violet-950/50 dark:text-violet-300">
-            CRM Prospection B2B
+      <div className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
+        <div className="mb-8 space-y-2">
+          <div className="inline-flex items-center gap-2 rounded-full border border-violet-800/40 bg-violet-950/30 px-3 py-1 text-xs uppercase tracking-wide text-violet-400">
+            <span className="size-1.5 animate-pulse rounded-full bg-violet-400" />
+            Agent IA · DataGouv + Claude Web Search
           </div>
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            Mes{' '}
-            <span className="bg-linear-to-r from-violet-600 to-indigo-500 bg-clip-text text-transparent">
-              Prospects
+            Agent{' '}
+            <span className="bg-linear-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+              PROSPEX
             </span>
           </h1>
-          <p className="max-w-2xl text-muted-foreground">
-            Recherchez, enrichissez et suivez vos prospects B2B en temps réel.
+          <p className="max-w-xl text-sm text-muted-foreground">
+            Recherche dans l&apos;annuaire des entreprises françaises, enrichit chaque lead via web search,
+            et livre des fiches contacts prêtes à l&apos;emploi.
           </p>
         </div>
 
-        {/* Dashboard interactif */}
         <ProspectsDashboard />
       </div>
     </main>

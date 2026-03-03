@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { ProspectsDashboard } from '@/components/site/prospects/ProspectsDashboard'
+import { SavedProspectsDashboard } from '@/components/site/prospects/SavedProspectsDashboard'
+import { ProspectsPageTabs } from '@/components/site/prospects/ProspectsPageTabs'
 
 export const metadata: Metadata = {
   title: 'Agent PROSPEX — WCT Systems',
@@ -7,7 +10,14 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-export default function ProspectsPage() {
+export default async function ProspectsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ tab?: string }>
+}) {
+  const { tab } = await searchParams
+  const activeTab = tab === 'saved' ? 'saved' : 'search'
+
   return (
     <main id="content" className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-violet-950/20 via-background to-background" />
@@ -19,18 +29,38 @@ export default function ProspectsPage() {
             Prospection B2B · DataGouv · N8N
           </div>
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            Recherche{' '}
-            <span className="bg-linear-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
-              d&apos;entreprises
-            </span>
+            {activeTab === 'search' ? (
+              <>
+                Recherche{' '}
+                <span className="bg-linear-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+                  d&apos;entreprises
+                </span>
+              </>
+            ) : (
+              <>
+                Mes prospects{' '}
+                <span className="bg-linear-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+                  sauvegardés
+                </span>
+              </>
+            )}
           </h1>
           <p className="max-w-xl text-sm text-muted-foreground">
-            Trouvez vos prospects B2B parmi les entreprises françaises. Filtrez par localisation,
-            secteur d&apos;activité, effectif, chiffre d&apos;affaires et labels.
+            {activeTab === 'search'
+              ? "Trouvez vos prospects B2B parmi les entreprises françaises. Filtrez par localisation, secteur d'activité, effectif, chiffre d'affaires et labels."
+              : 'Consultez, gérez et exportez vos fiches prospects. Retrouvez facilement vos contacts via LinkedIn et Google.'}
           </p>
         </div>
 
-        <ProspectsDashboard />
+        <Suspense>
+          <ProspectsPageTabs activeTab={activeTab} />
+        </Suspense>
+
+        {activeTab === 'search' ? (
+          <ProspectsDashboard />
+        ) : (
+          <SavedProspectsDashboard />
+        )}
       </div>
     </main>
   )

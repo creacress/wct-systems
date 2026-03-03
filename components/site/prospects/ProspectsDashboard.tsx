@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { searchNafCodes, type NafEntry } from '@/lib/naf-codes'
+import type { Fiche } from '@/lib/types/prospect'
 
 // ── Proxy Next.js → N8N ──────────────────────────────────────────────────────
 const WEBHOOK_URL = '/api/prospection/webhook'
@@ -101,36 +102,6 @@ function buildPayload(form: Form): Record<string, unknown> {
 }
 
 // ── Types réponse webhook ─────────────────────────────────────────────────────
-
-type Fiche = {
-  siren: string
-  siret_siege: string | null
-  nom: string
-  sigle: string | null
-  code_naf: string | null
-  libelle_activite: string | null
-  secteur: string | null
-  date_creation: string | null
-  adresse: string | null
-  code_postal: string | null
-  ville: string | null
-  departement: string | null
-  latitude: number | null
-  longitude: number | null
-  categorie: string | null
-  effectif: string | null
-  nb_etablissements: number | null
-  dirigeant: string | null
-  nb_dirigeants: number | null
-  chiffre_affaires: string | null
-  resultat_net: string | null
-  annee_finance: string | null
-  statut: string | null
-  nature_juridique: string | null
-  labels: string[]
-  fiche_annuaire: string | null
-  fiche_pappers: string | null
-}
 
 type WebhookResponse = {
   total_resultats: number
@@ -578,7 +549,7 @@ function FormAside({ activeField }: { activeField: string }) {
 
 // ── Fiche card ────────────────────────────────────────────────────────────────
 
-function FicheCard({ fiche, index }: { fiche: Fiche; index: number }) {
+function FicheCard({ fiche, index, saved, onToggleSave }: { fiche: Fiche; index: number; saved: boolean; onToggleSave: (fiche: Fiche) => void }) {
   const [open, setOpen] = useState(false)
 
   const quickStats = [
@@ -694,39 +665,51 @@ function FicheCard({ fiche, index }: { fiche: Fiche; index: number }) {
             </div>
           </div>
 
-          {/* Liens externes */}
-          {(fiche.fiche_annuaire || fiche.fiche_pappers) && (
-            <div className="mt-5 flex flex-wrap gap-2 border-t pt-4">
-              {fiche.fiche_annuaire && (
-                <a
-                  href={fiche.fiche_annuaire}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-xl border px-3 py-1.5 text-xs font-medium text-muted-foreground transition hover:border-violet-400 hover:text-violet-600 dark:hover:text-violet-400"
-                >
-                  <svg viewBox="0 0 20 20" fill="currentColor" className="size-3.5">
-                    <path fillRule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clipRule="evenodd" />
-                    <path fillRule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clipRule="evenodd" />
-                  </svg>
-                  Annuaire DataGouv
-                </a>
-              )}
-              {fiche.fiche_pappers && (
-                <a
-                  href={fiche.fiche_pappers}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-xl border px-3 py-1.5 text-xs font-medium text-muted-foreground transition hover:border-violet-400 hover:text-violet-600 dark:hover:text-violet-400"
-                >
-                  <svg viewBox="0 0 20 20" fill="currentColor" className="size-3.5">
-                    <path fillRule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clipRule="evenodd" />
-                    <path fillRule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clipRule="evenodd" />
-                  </svg>
-                  Pappers
-                </a>
-              )}
-            </div>
-          )}
+          {/* Liens externes + sauvegarde */}
+          <div className="mt-5 flex flex-wrap gap-2 border-t pt-4">
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); onToggleSave(fiche) }}
+              className={`inline-flex items-center gap-1.5 rounded-xl border px-3 py-1.5 text-xs font-medium transition ${
+                saved
+                  ? 'border-violet-400 bg-violet-50 text-violet-700 dark:border-violet-700 dark:bg-violet-950/30 dark:text-violet-400'
+                  : 'text-muted-foreground hover:border-violet-400 hover:text-violet-600 dark:hover:text-violet-400'
+              }`}
+            >
+              <svg viewBox="0 0 20 20" fill={saved ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth={saved ? 0 : 1.5} className="size-3.5">
+                <path d="M5 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14l-5-2.5L5 18V4Z" />
+              </svg>
+              {saved ? 'Sauvegardé' : 'Sauvegarder'}
+            </button>
+            {fiche.fiche_annuaire && (
+              <a
+                href={fiche.fiche_annuaire}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-xl border px-3 py-1.5 text-xs font-medium text-muted-foreground transition hover:border-violet-400 hover:text-violet-600 dark:hover:text-violet-400"
+              >
+                <svg viewBox="0 0 20 20" fill="currentColor" className="size-3.5">
+                  <path fillRule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clipRule="evenodd" />
+                  <path fillRule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clipRule="evenodd" />
+                </svg>
+                Annuaire DataGouv
+              </a>
+            )}
+            {fiche.fiche_pappers && (
+              <a
+                href={fiche.fiche_pappers}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-xl border px-3 py-1.5 text-xs font-medium text-muted-foreground transition hover:border-violet-400 hover:text-violet-600 dark:hover:text-violet-400"
+              >
+                <svg viewBox="0 0 20 20" fill="currentColor" className="size-3.5">
+                  <path fillRule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clipRule="evenodd" />
+                  <path fillRule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clipRule="evenodd" />
+                </svg>
+                Pappers
+              </a>
+            )}
+          </div>
         </div>
       )}
     </div>
@@ -735,7 +718,7 @@ function FicheCard({ fiche, index }: { fiche: Fiche; index: number }) {
 
 // ── Panel résultats ───────────────────────────────────────────────────────────
 
-function ResultsPanel({ data, query }: { data: WebhookResponse; query: string }) {
+function ResultsPanel({ data, query, savedSirens, onToggleSave }: { data: WebhookResponse; query: string; savedSirens: Set<string>; onToggleSave: (fiche: Fiche) => void }) {
   const [showRaw, setShowRaw] = useState(false)
 
   return (
@@ -789,7 +772,7 @@ function ResultsPanel({ data, query }: { data: WebhookResponse; query: string })
       ) : (
         <div className="space-y-2.5">
           {data.fiches.map((fiche, i) => (
-            <FicheCard key={fiche.siren ?? i} fiche={fiche} index={i} />
+            <FicheCard key={fiche.siren ?? i} fiche={fiche} index={i} saved={savedSirens.has(fiche.siren)} onToggleSave={onToggleSave} />
           ))}
         </div>
       )}
@@ -805,6 +788,7 @@ export function ProspectsDashboard() {
   const [response, setResponse] = useState<unknown>(null)
   const [error, setError] = useState<string | null>(null)
   const [activeField, setActiveField] = useState('default')
+  const [savedSirens, setSavedSirens] = useState<Set<string>>(new Set())
 
   const setStr =
     (key: keyof Form) =>
@@ -846,6 +830,38 @@ export function ProspectsDashboard() {
       setLoading(false)
     }
   }, [form])
+
+  // Vérifie quels SIRENs sont déjà sauvegardés après une recherche
+  useEffect(() => {
+    if (!response || !isWebhookResponse(response)) return
+    const sirens = (response as WebhookResponse).fiches.map((f) => f.siren).filter(Boolean)
+    if (sirens.length === 0) return
+    fetch('/api/prospection/saved/check', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sirens }),
+    })
+      .then((r) => r.json())
+      .then((data) => setSavedSirens(new Set(data.saved)))
+      .catch(() => {})
+  }, [response])
+
+  const handleToggleSave = useCallback(async (fiche: Fiche) => {
+    const isSaved = savedSirens.has(fiche.siren)
+    try {
+      if (isSaved) {
+        await fetch(`/api/prospection/saved/${fiche.siren}`, { method: 'DELETE' })
+        setSavedSirens((prev) => { const next = new Set(prev); next.delete(fiche.siren); return next })
+      } else {
+        await fetch('/api/prospection/saved', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(fiche),
+        })
+        setSavedSirens((prev) => new Set(prev).add(fiche.siren))
+      }
+    } catch { /* silently fail */ }
+  }, [savedSirens])
 
   // Détermine le type d'erreur pour l'affichage
   const apiError = response !== null && isApiError(response) ? response : null
@@ -1022,7 +1038,7 @@ export function ProspectsDashboard() {
 
       {/* ── Résultats ──────────────────────────────────────────────────────── */}
       {hasResults && (
-        <ResultsPanel data={response as WebhookResponse} query={form.q} />
+        <ResultsPanel data={response as WebhookResponse} query={form.q} savedSirens={savedSirens} onToggleSave={handleToggleSave} />
       )}
 
       {/* ── Réponse brute non reconnue ────────────────────────────────────── */}

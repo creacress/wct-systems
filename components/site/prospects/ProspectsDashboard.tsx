@@ -2,10 +2,10 @@
 
 import { useState } from 'react'
 
-// ── Webhook ──────────────────────────────────────────────────────────────────
-// ⚠️  URL HTTP → en production HTTPS, passer par un proxy Next.js API
-//     ou basculer sur l'URL de production N8N (sans "-test")
-const WEBHOOK_URL = 'http://31.97.178.252:5678/webhook-test/prospection'
+// ── Proxy Next.js → N8N ──────────────────────────────────────────────────────
+// L'appel HTTP vers N8N est fait côté serveur (route API) pour éviter
+// le blocage mixed-content depuis une page HTTPS.
+const WEBHOOK_URL = '/api/prospection/webhook'
 
 // ── Référentiels ─────────────────────────────────────────────────────────────
 

@@ -1,12 +1,12 @@
 // ── PROSPEX Agent SSE Route ────────────────────────────────────────────────────
-// GET /api/prospection/agent?naf=62.01Z&departement=75&effectif=11&nb_leads=10
+// GET /api/prospection/agent?q=plombier&departement=75&effectif=11&nb_leads=10
 //
 // Streams Server-Sent Events :
 //   { type:"log",  msg, level }      — logs temps réel
 //   { type:"lead", data:{...} }      — lead enrichi (1 par entreprise)
 //   { type:"meta", data:{...} }      — récap final
 //   { type:"done" }
-//   { type:"error", message }
+//   { type:"error", message }        — erreur (inclus dans le stream SSE, pas un HTTP 500)
 
 import { NextRequest } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
@@ -38,20 +38,17 @@ type Contact = {
 }
 
 // ── Phase 1 — Collecte DataGouv ─────────────────────────────────────────────────
+// Utilise le paramètre `q` (recherche texte libre) de l'API Recherche Entreprises
 
 async function searchEntreprises(params: {
-  naf: string
+  q: string
   departement: string
   effectif: string
   perPage: number
 }): Promise<Company[]> {
-  const qs = new URLSearchParams({
-    activite_principale: params.naf,
-    departement: params.departement,
-    tranche_effectif_salarie: params.effectif,
-    page: '1',
-    per_page: String(params.perPage),
-  })
+  const qs = new URLSearchParams({ q: params.q, per_page: String(params.perPage) })
+  if (params.departement) qs.set('departement', params.departement)
+  if (params.effectif) qs.set('tranche_effectif_salarie', params.effectif)
 
   const res = await fetch(`${DATAGOUV_URL}/search?${qs}`, {
     headers: { Accept: 'application/json', 'User-Agent': 'PROSPEX/2.0 (WCT-Systems)' },
@@ -72,7 +69,7 @@ async function searchEntreprises(params: {
       siren: (e.siren as string) ?? null,
       entreprise: (e.nom_complet as string) || (e.nom_raison_sociale as string) || 'Inconnu',
       domaine: cleanDomain(siege.site_internet),
-      secteur_naf: (e.activite_principale as string) || params.naf,
+      secteur_naf: (e.activite_principale as string) || '',
       secteur_libelle: libelle.fr || '',
       ville: siege.libelle_commune || '',
       departement: siege.departement || params.departement,
@@ -182,11 +179,7 @@ function fallbackPattern(
   domain: string | null
 ): Contact {
   const normalize = (s: string) =>
-    s
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/[^a-z0-9]/g, '')
+    s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '')
 
   if (domain && dirigeant.prenom && dirigeant.nom) {
     return {
@@ -209,22 +202,16 @@ function fallbackPattern(
 // ── Route Handler ────────────────────────────────────────────────────────────────
 
 export async function GET(request: NextRequest) {
-  if (!process.env.ANTHROPIC_API_KEY) {
-    return new Response('ANTHROPIC_API_KEY manquante dans .env.local', { status: 500 })
-  }
-
   const { searchParams } = new URL(request.url)
-  const naf = searchParams.get('naf') ?? ''
+  const q = searchParams.get('q')?.trim() ?? ''
   const departement = searchParams.get('departement') ?? ''
   const effectif = searchParams.get('effectif') ?? ''
   const nbLeads = Math.min(Math.max(parseInt(searchParams.get('nb_leads') ?? '10'), 1), 25)
 
-  if (!naf || !departement || !effectif) {
-    return new Response('Paramètres requis : naf, departement, effectif', { status: 400 })
-  }
-
   const encoder = new TextEncoder()
 
+  // Toutes les erreurs sont émises comme événements SSE (pas de HTTP 4xx/5xx)
+  // → le frontend lit toujours le stream normalement
   const stream = new ReadableStream({
     async start(controller) {
       const send = (type: string, payload: Record<string, unknown> = {}) => {
@@ -232,16 +219,29 @@ export async function GET(request: NextRequest) {
       }
       const log = (msg: string, level = 'info') => send('log', { msg, level })
 
+      // Validation dans le stream (pas avant) pour toujours avoir un SSE valide
+      if (!process.env.ANTHROPIC_API_KEY) {
+        send('error', { message: 'ANTHROPIC_API_KEY manquante. Ajoutez-la dans .env.local et redémarrez le serveur.' })
+        controller.close()
+        return
+      }
+
+      if (!q) {
+        send('error', { message: 'Saisissez un métier ou type d\'entreprise pour lancer la recherche.' })
+        controller.close()
+        return
+      }
+
       try {
         log('🚀 Agent PROSPEX démarré', 'success')
-        log(`📋 NAF ${naf} | Dept ${departement} | Effectif ${effectif}`)
+        log(`🔍 Recherche : "${q}" | Dept ${departement || 'tous'} | Effectif ${effectif || 'tous'}`)
 
         // Phase 1
         log('🔌 Connexion API Recherche Entreprises (data.gouv.fr)...')
-        const companies = await searchEntreprises({ naf, departement, effectif, perPage: nbLeads })
+        const companies = await searchEntreprises({ q, departement, effectif, perPage: nbLeads })
 
         if (!companies.length) {
-          log('⚠️ Aucune entreprise trouvée avec ces critères.', 'error')
+          log(`⚠️ Aucune entreprise trouvée pour "${q}".`, 'error')
           send('done')
           controller.close()
           return
@@ -292,11 +292,10 @@ export async function GET(request: NextRequest) {
           )
         }
 
-        // Phase 3
         send('meta', {
           data: {
             total_trouvé: leads.length,
-            criteres: `NAF ${naf} | Département ${departement}`,
+            criteres: `"${q}"${departement ? ` · Dept ${departement}` : ''}`,
             source: 'API Recherche Entreprises + Claude Web Search',
           },
         })

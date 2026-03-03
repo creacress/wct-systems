@@ -16,17 +16,17 @@ export default function ProspectsPage() {
         <div className="mb-8 space-y-2">
           <div className="inline-flex items-center gap-2 rounded-full border border-violet-800/40 bg-violet-950/30 px-3 py-1 text-xs uppercase tracking-wide text-violet-400">
             <span className="size-1.5 animate-pulse rounded-full bg-violet-400" />
-            Agent IA · DataGouv + Claude Web Search
+            Prospection B2B · DataGouv · N8N
           </div>
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            Agent{' '}
+            Recherche{' '}
             <span className="bg-linear-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
-              PROSPEX
+              d&apos;entreprises
             </span>
           </h1>
           <p className="max-w-xl text-sm text-muted-foreground">
-            Recherche dans l&apos;annuaire des entreprises françaises, enrichit chaque lead via web search,
-            et livre des fiches contacts prêtes à l&apos;emploi.
+            Trouvez vos prospects B2B parmi les entreprises françaises. Filtrez par localisation,
+            secteur d&apos;activité, effectif, chiffre d&apos;affaires et labels.
           </p>
         </div>
 

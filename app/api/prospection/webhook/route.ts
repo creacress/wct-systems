@@ -3,7 +3,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 
-const N8N_URL = 'http://31.97.178.252:5678/webhook-test/prospection'
+const N8N_URL = 'http://31.97.178.252:5678/webhook/prospection'
 
 type ApiError = {
   success: false

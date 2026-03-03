@@ -12,7 +12,7 @@ export default function ProspectsPage() {
     <main id="content" className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-violet-950/20 via-background to-background" />
 
-      <div className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
+      <div className="mx-auto max-w-6xl px-6 py-12 sm:py-16">
         <div className="mb-8 space-y-2">
           <div className="inline-flex items-center gap-2 rounded-full border border-violet-800/40 bg-violet-950/30 px-3 py-1 text-xs uppercase tracking-wide text-violet-400">
             <span className="size-1.5 animate-pulse rounded-full bg-violet-400" />

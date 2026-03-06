@@ -26,6 +26,7 @@ const SAAS = [
     priceMonthly: 99,
     priceYearly: 79,
     yearlyTotal: 948,
+    setup: 490,
     href: "/services/trouver-prospects",
     features: [
       "Ciblage IA par secteur, zone géo et taille d\u2019entreprise",
@@ -63,6 +64,7 @@ const SAAS = [
     priceMonthly: 149,
     priceYearly: 119,
     yearlyTotal: 1428,
+    setup: 490,
     href: "/services/automatiser-relances",
     features: [
       "Workflows sur mesure (relances, CRM, facturation)",
@@ -81,6 +83,7 @@ const SAAS = [
     priceMonthly: 199,
     priceYearly: 159,
     yearlyTotal: 1908,
+    setup: 490,
     href: "/services/dashboard-kpi",
     badge: "Populaire",
     features: [

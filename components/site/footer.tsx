@@ -13,7 +13,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t">
+    <footer className="border-t dark:border-white/[0.06]">
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid gap-10 md:grid-cols-3">
           <div className="space-y-3">
@@ -23,7 +23,7 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               IA + automatisation pour PME : acquisition, qualification, CRM, relances, dashboards KPI.
             </p>
-            <div className="inline-flex rounded-2xl border bg-muted px-3 py-2 text-xs text-muted-foreground">
+            <div className="inline-flex rounded-2xl border bg-muted px-3 py-2 text-xs text-muted-foreground dark:border-white/[0.08] dark:bg-white/[0.04]">
               PageSpeed • SEO • SEO IA (LLMs)
             </div>
           </div>
@@ -56,7 +56,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-4 border-t pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-4 border-t pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between dark:border-white/[0.06]">
           <div className="flex flex-wrap gap-4">
             <Link href="/mentions-legales" className="hover:text-foreground">
               Mentions légales

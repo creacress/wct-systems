@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "WCT Systems — IA & Automatisation pour PME",
   description:
-    "WCT Systems aide les PME à générer plus de clients avec des systèmes simples : prospects → relances → CRM/RDV → KPI. Audit gratuit.",
+    "WCT Systems aide les PME avec 4 SaaS : Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA. Audit gratuit.",
   alternates: { canonical: "/" },
 };
 
@@ -33,33 +33,27 @@ const FAQ = [
 const SERVICES = [
   {
     href: "/services/trouver-prospects",
-    title: "Trouver des prospects",
-    desc: "Ciblage précis, données propres, pipeline prêt à être contacté.",
-    bullets: ["Secteur + zone", "Liste propre", "Contacts exploitables"],
+    title: "Prospection IA",
+    desc: "Ciblage IA, enrichissement automatique, intégration CRM. À partir de 99 €/mois.",
+    bullets: ["Ciblage IA", "Enrichissement", "Scoring leads"],
+  },
+  {
+    href: "/services/site-web-moderne",
+    title: "Site Web Moderne",
+    desc: "Site rapide, SEO + SEO IA, 4 templates. Livré en 14 jours. À partir de 99 €/mois.",
+    bullets: ["SEO + SEO IA", "4 templates", "Perf A+"],
   },
   {
     href: "/services/automatiser-relances",
-    title: "Automatiser les relances",
-    desc: "Moins d’oublis, plus de réponses, plus de signatures.",
-    bullets: ["Séquences simples", "Rappels auto", "Suivi réponses"],
+    title: "Automatisation (RPA)",
+    desc: "Workflows sur mesure : relances, CRM, reporting, dashboard KPI. À partir de 149 €/mois.",
+    bullets: ["200+ outils", "Dashboard KPI", "Alertes auto"],
   },
   {
-    href: "/services/gestion-rdv-crm",
-    title: "CRM & RDV",
-    desc: "Pipeline clair et utilisable : vous savez toujours où vous en êtes.",
-    bullets: ["Étapes claires", "Historique", "RDV structurés"],
-  },
-  {
-    href: "/services/dashboard-kpi",
-    title: "Dashboard KPI",
-    desc: "Chiffres simples pour décider vite et couper le bruit.",
-    bullets: ["Leads", "Réponses", "Signatures"],
-  },
-  {
-    href: "/services/site-generation-leads",
-    title: "Site qui convertit",
-    desc: "Rapide, lisible, SEO + visibilité IA, orienté demandes.",
-    bullets: ["PageSpeed", "1 service = 1 page", "CTA + preuve"],
+    href: "/services/integration-ia",
+    title: "Intégration IA",
+    desc: "Chatbot, agents IA, assistants sur mesure connectés à vos données. À partir de 199 €/mois.",
+    bullets: ["Chatbot IA", "Agents métier", "RAG données"],
   },
 ] as const;
 
@@ -123,8 +117,8 @@ export default function HomePage() {
 
             {/* LLM-friendly, client-friendly positioning */}
             <p className="max-w-2xl text-lg text-muted-foreground">
-              <strong>WCT Systems</strong> est une entreprise française qui aide les PME à générer plus d’opportunités
-              avec des systèmes simples : <strong>prospects → relances → CRM/RDV → KPI</strong>.
+              <strong>WCT Systems</strong> est une entreprise française qui aide les PME avec 4 SaaS :
+              <strong>Prospection IA → Site Web → Automatisation → Intégration IA</strong>.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -143,15 +137,15 @@ export default function HomePage() {
             </div>
 
             <div className="grid gap-3 sm:grid-cols-3 text-sm text-muted-foreground">
-              <div className="rounded-3xl border bg-background/60 p-4 shadow-sm backdrop-blur">
+              <div className="rounded-3xl border bg-background/60 p-4 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
                 <p className="text-xs uppercase tracking-wide">Mobile-first</p>
                 <p className="mt-2">Lecture rapide, CTA clairs</p>
               </div>
-              <div className="rounded-3xl border bg-background/60 p-4 shadow-sm backdrop-blur">
+              <div className="rounded-3xl border bg-background/60 p-4 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
                 <p className="text-xs uppercase tracking-wide">SEO</p>
                 <p className="mt-2">Pages canoniques + schémas</p>
               </div>
-              <div className="rounded-3xl border bg-background/60 p-4 shadow-sm backdrop-blur">
+              <div className="rounded-3xl border bg-background/60 p-4 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
                 <p className="text-xs uppercase tracking-wide">SEO IA</p>
                 <p className="mt-2">Structure claire + llms.txt</p>
               </div>
@@ -159,24 +153,24 @@ export default function HomePage() {
           </div>
 
           {/* Right panel */}
-          <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur">
+          <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
             <p className="text-sm font-medium">La V1 typique (7–14 jours)</p>
             <div className="mt-4 grid gap-3 text-sm">
-              <div className="rounded-2xl border bg-background p-4">
+              <div className="rounded-2xl border bg-background p-4 dark:border-white/[0.06] dark:bg-white/[0.03]">
                 <p className="font-medium">1) Prospects qualifiés</p>
                 <p className="mt-1 text-muted-foreground">Ciblage → liste propre → pipeline prêt.</p>
               </div>
-              <div className="rounded-2xl border bg-background p-4">
+              <div className="rounded-2xl border bg-background p-4 dark:border-white/[0.06] dark:bg-white/[0.03]">
                 <p className="font-medium">2) Relances & suivi</p>
                 <p className="mt-1 text-muted-foreground">Relances simples + suivi des réponses.</p>
               </div>
-              <div className="rounded-2xl border bg-background p-4">
+              <div className="rounded-2xl border bg-background p-4 dark:border-white/[0.06] dark:bg-white/[0.03]">
                 <p className="font-medium">3) KPI essentiels</p>
                 <p className="mt-1 text-muted-foreground">Leads, réponses, RDV, signatures.</p>
               </div>
             </div>
 
-            <div className="mt-5 rounded-3xl border bg-muted p-4 text-sm">
+            <div className="mt-5 rounded-3xl border bg-muted p-4 text-sm dark:border-violet-500/10 dark:bg-violet-500/[0.06]">
               <p className="font-medium">Promesse</p>
               <p className="mt-1 text-muted-foreground">Un plan clair + une V1 qui tourne. Pas du blabla.</p>
             </div>
@@ -205,7 +199,7 @@ export default function HomePage() {
             ].map((x) => (
               <div
                 key={x.k}
-                className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition hover:shadow-md"
+                className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 dark:border-white/[0.08] dark:bg-white/[0.04] dark:hover:border-violet-500/20 dark:hover:bg-white/[0.06] dark:hover:shadow-lg dark:hover:shadow-violet-500/5"
               >
                 <p className="text-xs uppercase tracking-wide text-muted-foreground">{x.k}</p>
                 <p className="mt-2 text-xl font-semibold tracking-tight">{x.v}</p>
@@ -236,13 +230,13 @@ export default function HomePage() {
             {SERVICES.map((s) => (
               <article
                 key={s.href}
-                className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition hover:shadow-md"
+                className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 dark:border-white/[0.08] dark:bg-white/[0.04] dark:hover:border-violet-500/20 dark:hover:bg-white/[0.06] dark:hover:shadow-lg dark:hover:shadow-violet-500/5"
               >
                 <h3 className="text-lg font-semibold tracking-tight">{s.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
                 <ul className="mt-4 grid gap-2 text-sm text-muted-foreground sm:grid-cols-3">
                   {s.bullets.map((b) => (
-                    <li key={b} className="rounded-2xl border bg-background px-3 py-2">
+                    <li key={b} className="rounded-2xl border bg-background px-3 py-2 dark:border-white/[0.06] dark:bg-white/[0.03]">
                       {b}
                     </li>
                   ))}
@@ -277,22 +271,22 @@ export default function HomePage() {
 
         {/* ROI */}
         <section className="mt-20" aria-label="ROI">
-          <div className="rounded-3xl border bg-muted p-8">
+          <div className="rounded-3xl border bg-muted p-8 dark:border-white/[0.06] dark:bg-violet-500/[0.04]">
             <h2 className="text-2xl font-semibold tracking-tight">Exemple de ROI (simple)</h2>
             <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
               Transformer du temps perdu en opportunités mesurables. Exemple indicatif pour une PME.
             </p>
 
             <div className="mt-6 grid gap-4 md:grid-cols-3">
-              <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur">
+              <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
                 <p className="text-xs uppercase tracking-wide text-muted-foreground">Hypothèse</p>
                 <p className="mt-2 text-sm text-muted-foreground">2h/jour de prospection manuelle → automatisée</p>
               </div>
-              <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur">
+              <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
                 <p className="text-xs uppercase tracking-wide text-muted-foreground">Gain</p>
                 <p className="mt-2 text-sm text-muted-foreground">~40h/mois récupérées (vendues ou réinvesties)</p>
               </div>
-              <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur">
+              <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
                 <p className="text-xs uppercase tracking-wide text-muted-foreground">Impact</p>
                 <p className="mt-2 text-sm text-muted-foreground">+ volume traité → + chances de signatures</p>
               </div>
@@ -331,7 +325,7 @@ export default function HomePage() {
             ].map((x) => (
               <li
                 key={x.s}
-                className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur"
+                className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]"
               >
                 <p className="text-xs uppercase tracking-wide text-muted-foreground">{x.s}</p>
                 <p className="mt-2 font-medium">{x.t}</p>
@@ -363,7 +357,7 @@ export default function HomePage() {
             {FAQ.map((f) => (
               <details
                 key={f.q}
-                className="group rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition hover:bg-muted"
+                className="group rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition-all duration-200 hover:bg-muted dark:border-white/[0.08] dark:bg-white/[0.03] dark:hover:bg-white/[0.06] dark:hover:border-violet-500/15"
               >
                 <summary className="cursor-pointer font-medium">{f.q}</summary>
                 <p className="mt-3 text-sm text-muted-foreground">{f.a}</p>
@@ -374,7 +368,7 @@ export default function HomePage() {
 
         {/* ESPACE CLIENT */}
         <section className="mt-20" aria-label="Espace client">
-          <div className="rounded-3xl border bg-muted p-8 sm:flex sm:items-center sm:justify-between sm:gap-8">
+          <div className="rounded-3xl border bg-muted p-8 sm:flex sm:items-center sm:justify-between sm:gap-8 dark:border-white/[0.06] dark:bg-violet-500/[0.04]">
             <div>
               <h2 className="text-xl font-semibold tracking-tight">Déjà client ?</h2>
               <p className="mt-2 text-sm text-muted-foreground">
@@ -406,7 +400,7 @@ export default function HomePage() {
 
         {/* FINAL CTA */}
         <section className="mt-24" aria-label="Appel à l'action">
-          <div className="rounded-3xl border bg-linear-to-br from-violet-50 to-indigo-50/80 p-10 text-center shadow-sm dark:from-violet-950/40 dark:to-indigo-950/30">
+          <div className="rounded-3xl border bg-linear-to-br from-violet-50 to-indigo-50/80 p-10 text-center shadow-sm dark:border-violet-500/20 dark:from-violet-950/40 dark:to-indigo-950/30 dark:shadow-lg dark:shadow-violet-500/10">
             <h2 className="text-3xl font-semibold tracking-tight">Prêt à simplifier et convertir ?</h2>
             <p className="mt-4 text-sm text-muted-foreground">
               Audit rapide → plan clair → V1 qui tourne. Ensuite on optimise.

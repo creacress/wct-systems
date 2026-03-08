@@ -234,6 +234,23 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+
+      // --- Anciennes pages services renommées ---
+      {
+        source: "/services/site-generation-leads",
+        destination: "/services/site-web-moderne",
+        permanent: true,
+      },
+      {
+        source: "/services/dashboard-kpi",
+        destination: "/services/integration-ia",
+        permanent: true,
+      },
+      {
+        source: "/services/gestion-rdv-crm",
+        destination: "/services/automatiser-relances",
+        permanent: true,
+      },
     ];
   },
 };

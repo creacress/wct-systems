@@ -133,7 +133,7 @@ export default function AproposPage() {
 
         {/* STORY */}
         <section className="mt-16 grid gap-6 lg:grid-cols-2" aria-label="Histoire et méthode">
-          <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur sm:p-8">
+          <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur sm:p-8 dark:border-white/[0.08] dark:bg-white/[0.04]">
             <h2 className="text-2xl font-semibold tracking-tight">Pourquoi WCT Systems ?</h2>
             <p className="mt-4 text-sm text-muted-foreground sm:text-base">
               Beaucoup d’entreprises ont les mêmes symptômes : prospecter prend du temps, les relances
@@ -145,16 +145,16 @@ export default function AproposPage() {
             </p>
           </div>
 
-          <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur sm:p-8">
+          <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur sm:p-8 dark:border-white/[0.08] dark:bg-white/[0.04]">
             <h2 className="text-2xl font-semibold tracking-tight">La méthode</h2>
             <ol className="mt-4 grid gap-3 text-sm text-muted-foreground sm:text-base">
-              <li className="rounded-2xl border bg-background px-4 py-3">
+              <li className="rounded-2xl border bg-background px-4 py-3 dark:border-white/[0.06] dark:bg-white/[0.03]">
                 <strong>Audit</strong> : on clarifie l’objectif, le process actuel, et les contraintes.
               </li>
-              <li className="rounded-2xl border bg-background px-4 py-3">
+              <li className="rounded-2xl border bg-background px-4 py-3 dark:border-white/[0.06] dark:bg-white/[0.03]">
                 <strong>V1 utile</strong> : une première version en production (prospects + suivi + relances).
               </li>
-              <li className="rounded-2xl border bg-background px-4 py-3">
+              <li className="rounded-2xl border bg-background px-4 py-3 dark:border-white/[0.06] dark:bg-white/[0.03]">
                 <strong>Optimisation</strong> : itérations courtes, KPI, SEO, automatisations supplémentaires.
               </li>
             </ol>
@@ -172,7 +172,7 @@ export default function AproposPage() {
             {VALUES.map((v) => (
               <div
                 key={v.title}
-                className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition hover:shadow-md"
+                className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 dark:border-white/[0.08] dark:bg-white/[0.04] dark:hover:border-violet-500/20 dark:hover:bg-white/[0.06] dark:hover:shadow-lg dark:hover:shadow-violet-500/5"
               >
                 <p className="text-sm font-medium">{v.title}</p>
                 <p className="mt-2 text-sm text-muted-foreground">{v.desc}</p>
@@ -183,7 +183,7 @@ export default function AproposPage() {
 
         {/* WHAT WE DO */}
         <section className="mt-16" aria-label="Ce que nous faisons">
-          <div className="rounded-3xl border bg-linear-to-r from-violet-50 to-indigo-50/80 dark:from-violet-950/40 dark:to-indigo-950/30 p-8">
+          <div className="rounded-3xl border bg-linear-to-r from-violet-50 to-indigo-50/80 dark:border-violet-500/15 dark:from-violet-950/40 dark:to-indigo-950/30 p-8">
             <h2 className="text-2xl font-semibold tracking-tight">Concrètement, on fait quoi ?</h2>
             <p className="mt-3 max-w-3xl text-sm text-muted-foreground sm:text-base">
               On construit une machine commerciale simple, et on la rend fiable. Vous gardez le contrôle,
@@ -201,7 +201,7 @@ export default function AproposPage() {
               ].map((x) => (
                 <div
                   key={x}
-                  className="rounded-2xl border bg-background px-4 py-3 text-sm text-muted-foreground"
+                  className="rounded-2xl border bg-background px-4 py-3 text-sm text-muted-foreground dark:border-white/[0.06] dark:bg-white/[0.03]"
                 >
                   {x}
                 </div>
@@ -232,7 +232,7 @@ export default function AproposPage() {
             {FAQ.map((f) => (
               <details
                 key={f.q}
-                className="group rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition hover:bg-muted"
+                className="group rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition-all duration-200 hover:bg-muted dark:border-white/[0.08] dark:bg-white/[0.03] dark:hover:bg-white/[0.06] dark:hover:border-violet-500/15"
               >
                 <summary className="cursor-pointer font-medium">{f.q}</summary>
                 <p className="mt-3 text-sm text-muted-foreground">{f.a}</p>
@@ -243,7 +243,7 @@ export default function AproposPage() {
 
         {/* FINAL CTA */}
         <section className="mt-20" aria-label="Appel à l'action">
-          <div className="rounded-3xl border bg-linear-to-r from-violet-50 to-indigo-50/80 dark:from-violet-950/40 dark:to-indigo-950/30 p-10 text-center shadow-sm">
+          <div className="rounded-3xl border bg-linear-to-r from-violet-50 to-indigo-50/80 dark:border-violet-500/20 dark:from-violet-950/40 dark:to-indigo-950/30 dark:shadow-lg dark:shadow-violet-500/10 p-10 text-center shadow-sm">
             <h2 className="text-3xl font-semibold tracking-tight">On démarre par l’audit</h2>
             <p className="mt-4 text-sm text-muted-foreground">
               15–30 minutes. 3 priorités. Un plan clair. Puis une V1 utile.

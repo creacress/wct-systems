@@ -119,7 +119,7 @@ export default function TrouverProspectsPage() {
             ].map((item) => (
               <div
                 key={item}
-                className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition hover:shadow-md"
+                className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition hover:shadow-md dark:border-white/[0.08] dark:bg-white/[0.04] dark:hover:border-violet-500/20 dark:hover:bg-white/[0.06] dark:hover:shadow-lg dark:hover:shadow-violet-500/5"
               >
                 <p className="text-sm text-muted-foreground">{item}</p>
               </div>
@@ -142,7 +142,7 @@ export default function TrouverProspectsPage() {
             ].map((item, i) => (
               <div
                 key={item}
-                className="group rounded-3xl border bg-muted/40 p-6 transition hover:bg-muted"
+                className="group rounded-3xl border bg-muted/40 p-6 transition hover:bg-muted dark:border-white/[0.06] dark:bg-violet-500/[0.03] dark:hover:bg-violet-500/[0.06]"
               >
                 <div className="mb-3 text-xs font-medium text-muted-foreground">
                   Étape {i + 1}
@@ -159,21 +159,21 @@ export default function TrouverProspectsPage() {
             Exemple de ROI
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur">
+            <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
               <p className="text-xs uppercase tracking-wide text-muted-foreground">Hypothèse</p>
               <p className="mt-2 text-sm text-muted-foreground">
                 2h/jour de prospection manuelle → automatisée
               </p>
             </div>
 
-            <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur">
+            <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
               <p className="text-xs uppercase tracking-wide text-muted-foreground">Gain</p>
               <p className="mt-2 text-sm text-muted-foreground">
                 ~40h/mois récupérées (temps vendu ou réinvesti)
               </p>
             </div>
 
-            <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur">
+            <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
               <p className="text-xs uppercase tracking-wide text-muted-foreground">Impact</p>
               <p className="mt-2 text-sm text-muted-foreground">
                 + volume de contacts traités → + chances de devis signés
@@ -181,7 +181,7 @@ export default function TrouverProspectsPage() {
             </div>
           </div>
 
-          <div className="rounded-3xl border bg-muted p-6">
+          <div className="rounded-3xl border bg-muted p-6 dark:border-white/[0.06] dark:bg-violet-500/[0.04]">
             <p className="text-sm font-medium">Traduction business</p>
             <p className="mt-2 text-sm text-muted-foreground">
               Si votre taux de conversion est de <strong>5%</strong> et que vous traitez <strong>200 prospects/mois</strong>
@@ -201,14 +201,14 @@ export default function TrouverProspectsPage() {
           </h2>
 
           <div className="grid gap-8 md:grid-cols-2">
-            <div className="rounded-3xl border p-8">
+            <div className="rounded-3xl border p-8 dark:border-white/[0.08]">
               <p className="text-sm font-medium">Avant</p>
               <p className="mt-4 text-sm text-muted-foreground">
                 Prospection manuelle, Excel dispersés, relances oubliées.
               </p>
             </div>
 
-            <div className="rounded-3xl border bg-muted p-8">
+            <div className="rounded-3xl border bg-muted p-8 dark:border-white/[0.06] dark:bg-violet-500/[0.04]">
               <p className="text-sm font-medium">Après</p>
               <p className="mt-4 text-sm text-muted-foreground">
                 Pipeline propre, prospects ciblés automatiquement, suivi
@@ -228,7 +228,7 @@ export default function TrouverProspectsPage() {
             {FAQ.map((f) => (
               <details
                 key={f.q}
-                className="group rounded-3xl border bg-background p-6 transition hover:bg-muted"
+                className="group rounded-3xl border bg-background p-6 transition hover:bg-muted dark:border-white/[0.08] dark:bg-white/[0.03] dark:hover:bg-white/[0.06]"
               >
                 <summary className="cursor-pointer font-medium">
                   {f.q}
@@ -241,7 +241,7 @@ export default function TrouverProspectsPage() {
 
         {/* FINAL CTA */}
         <section className="mt-20">
-          <div className="rounded-3xl border bg-linear-to-r from-violet-50 to-indigo-50/80 dark:from-violet-950/40 dark:to-indigo-950/30 p-10 text-center shadow-sm">
+          <div className="rounded-3xl border bg-linear-to-r from-violet-50 to-indigo-50/80 dark:from-violet-950/40 dark:to-indigo-950/30 p-10 text-center shadow-sm dark:border-violet-500/20 dark:shadow-lg dark:shadow-violet-500/10">
             <h2 className="text-3xl font-semibold tracking-tight">
               Prêt à générer plus d’opportunités ?
             </h2>

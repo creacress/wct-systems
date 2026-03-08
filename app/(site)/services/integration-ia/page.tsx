@@ -2,34 +2,34 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Automatisation (RPA) — Relances, CRM, Reporting | WCT Systems",
+  title: "Intégration IA — Chatbot, Agents & Assistants sur mesure | WCT Systems",
   description:
-    "Automatisez vos process sans coder : relances email, CRM, facturation, reporting, dashboard KPI. Intégration 200+ outils. Support inclus. Audit gratuit.",
-  alternates: { canonical: "/services/automatiser-relances" },
+    "Intégrez l'IA dans votre quotidien : chatbot site/WhatsApp, agents IA métier, RAG sur vos données, connexion outils existants. Formation incluse. Audit gratuit.",
+  alternates: { canonical: "/services/integration-ia" },
 };
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 const FAQ = [
   {
-    q: "Est-ce que ça risque d'envoyer des emails 'robot' ?",
-    a: "Non. On écrit des séquences simples et humaines, avec des relances sobres. L'objectif est d'éviter les oublis, pas de spammer.",
+    q: "C'est quoi un agent IA exactement ?",
+    a: "Un agent IA est un assistant automatisé qui exécute des tâches : répondre aux clients, qualifier des leads, rédiger des emails, analyser des données. Il s'adapte à votre métier et vos process.",
   },
   {
-    q: "Vous pouvez vous connecter à mon outil actuel ?",
-    a: "Oui : CRM, tableur, Notion, Airtable, HubSpot, Gmail/Outlook, Slack, et 200+ autres outils. On s'adapte et on simplifie.",
+    q: "Est-ce que l'IA peut utiliser mes données internes ?",
+    a: "Oui. Grâce au RAG (Retrieval Augmented Generation), l'IA peut répondre en se basant sur vos documents, FAQ, fiches produits ou base de connaissances. Vos données restent privées.",
   },
   {
-    q: "Je n'ai pas beaucoup de prospects, c'est utile quand même ?",
-    a: "Oui. Même avec peu de leads, les relances augmentent fortement le taux de réponse. Et l'automatisation CRM/reporting vous fait gagner du temps immédiatement.",
+    q: "Vous pouvez connecter l'IA à mes outils actuels ?",
+    a: "Oui : CRM, Notion, HubSpot, Gmail, Slack, WhatsApp, etc. L'IA s'intègre dans votre workflow existant.",
   },
   {
-    q: "Est-ce que le dashboard KPI est inclus ?",
-    a: "Oui. Un dashboard en temps réel fait partie du service : leads, réponses, devis, signatures, alertes.",
+    q: "Faut-il des compétences techniques pour l'utiliser ?",
+    a: "Non. On configure tout pour vous et on forme votre équipe (1h/mois incluse). L'IA est prête à l'emploi.",
   },
 ] as const;
 
-export default function AutomatiserRelancesPage() {
+export default function IntegrationIaPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -41,23 +41,23 @@ export default function AutomatiserRelancesPage() {
           {
             "@type": "ListItem",
             position: 3,
-            name: "Automatisation (RPA)",
-            item: `${SITE_URL}/services/automatiser-relances`,
+            name: "Intégration IA",
+            item: `${SITE_URL}/services/integration-ia`,
           },
         ],
       },
       {
         "@type": "Service",
-        name: "Automatisation (RPA) — Relances, CRM, Reporting",
+        name: "Intégration IA — Chatbot, Agents & Assistants sur mesure",
         description:
-          "Service d'automatisation RPA pour PME : workflows sur mesure, relances email, CRM, facturation, reporting, dashboard KPI, intégration 200+ outils.",
+          "Service d'intégration IA pour PME : chatbot site/WhatsApp, agents IA métier (vente, support, RH), RAG sur vos données, connexion outils existants.",
         provider: {
           "@type": "Organization",
           name: "WCT Systems",
           url: SITE_URL,
         },
         areaServed: { "@type": "Country", name: "France" },
-        url: `${SITE_URL}/services/automatiser-relances`,
+        url: `${SITE_URL}/services/integration-ia`,
       },
       {
         "@type": "FAQPage",
@@ -83,49 +83,72 @@ export default function AutomatiserRelancesPage() {
         {/* HERO */}
         <section className="space-y-8">
           <div className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-4 py-1 text-xs uppercase tracking-wide text-violet-700 dark:border-violet-800 dark:bg-violet-950/50 dark:text-violet-300">
-            RPA &bull; Relances &bull; CRM &bull; KPI
+            IA sur mesure &bull; Chatbot &bull; Agents &bull; RAG
           </div>
 
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
-            Automatisez vos process
+            L&apos;IA intégrée
             <span className="block bg-linear-to-r from-violet-600 to-indigo-500 bg-clip-text text-transparent dark:from-violet-400 dark:to-indigo-400">
-              sans coder
+              dans votre quotidien
             </span>
           </h1>
 
           <p className="max-w-2xl text-lg text-muted-foreground">
-            Relances, CRM, facturation, reporting : on automatise vos workflows sur mesure.
-            Intégration avec 200+ outils, dashboard KPI en temps réel, alertes automatiques.
-            Vous gardez le contrôle, sans les tâches répétitives.
+            Chatbot pour votre site ou WhatsApp, agents IA pour la vente, le support ou les RH,
+            assistants connectés à vos données. On met en place l&apos;IA qui a un impact réel
+            sur votre productivité.
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link
-              href="/contact?service=automatisation"
+              href="/contact?service=integration-ia"
               className="inline-flex items-center justify-center rounded-2xl bg-violet-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/20 transition hover:scale-[1.02] hover:bg-violet-700"
             >
               Demander un audit gratuit
             </Link>
             <div className="text-sm text-muted-foreground">
-              149 &euro; HT/mois &middot; Mise en place incluse &middot; 200+ outils
+              199 &euro; HT/mois &middot; Mise en place incluse &middot; Formation 1h/mois
             </div>
           </div>
         </section>
 
-        {/* PROBLEM */}
+        {/* USE CASES */}
         <section className="mt-16 sm:mt-24 space-y-8">
-          <h2 className="text-2xl font-semibold tracking-tight">Le problème courant</h2>
-          <div className="grid gap-6 md:grid-cols-3">
+          <h2 className="text-2xl font-semibold tracking-tight">Cas d&apos;usage concrets</h2>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              "Prospects oubliés ou relancés trop tard",
-              "Suivi dispersé entre 5 outils différents",
-              "Pas de visibilité sur ce qui marche (KPI flous)",
+              {
+                title: "Chatbot site / WhatsApp",
+                desc: "Répondez aux visiteurs 24/7, qualifiez les leads, prenez des RDV automatiquement.",
+              },
+              {
+                title: "Agent IA vente",
+                desc: "Rédaction d'emails, scoring de leads, synthèse de conversations, relances intelligentes.",
+              },
+              {
+                title: "Agent IA support",
+                desc: "Réponses automatiques basées sur votre FAQ et documentation. Escalade aux humains si besoin.",
+              },
+              {
+                title: "Agent IA RH",
+                desc: "Tri de CV, réponses candidats, synthèse d'entretiens, onboarding automatisé.",
+              },
+              {
+                title: "RAG sur vos données",
+                desc: "L'IA répond en se basant sur vos documents internes, fiches produits ou base de connaissances.",
+              },
+              {
+                title: "Connexion outils",
+                desc: "CRM, Notion, HubSpot, Gmail, Slack — l'IA s'intègre dans votre workflow existant.",
+              },
             ].map((item) => (
               <div
-                key={item}
+                key={item.title}
                 className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition hover:shadow-md dark:border-white/[0.08] dark:bg-white/[0.04] dark:hover:border-violet-500/20 dark:hover:bg-white/[0.06]"
               >
-                <p className="text-sm text-muted-foreground">{item}</p>
+                <p className="text-sm font-medium">{item.title}</p>
+                <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -135,21 +158,23 @@ export default function AutomatiserRelancesPage() {
         <section className="mt-16 sm:mt-24 space-y-8">
           <h2 className="text-2xl font-semibold tracking-tight">Ce qui est inclus</h2>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {[
-              { title: "Workflows sur mesure", desc: "Relances, CRM, facturation, onboarding — on automatise vos process clés." },
-              { title: "Intégration 200+ outils", desc: "Gmail, Notion, HubSpot, Airtable, Slack, Stripe, et bien plus." },
-              { title: "Dashboard KPI", desc: "Leads, réponses, devis, signatures — suivi en temps réel." },
-              { title: "Alertes automatiques", desc: "Notifications quand un seuil est atteint ou qu'une action est nécessaire." },
-              { title: "Pipeline CRM clair", desc: "Suivi des prospects du premier contact à la signature." },
-              { title: "Support & maintenance", desc: "On maintient et fait évoluer vos automations en continu." },
-            ].map((item) => (
+              "Chatbot IA pour votre site / WhatsApp",
+              "Agents IA métier (vente, support, RH)",
+              "Connexion à vos outils existants",
+              "Réponses basées sur vos données (RAG)",
+              "Formation équipe incluse (1h/mois)",
+              "Support & maintenance continus",
+            ].map((item, i) => (
               <div
-                key={item.title}
-                className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition hover:shadow-md dark:border-white/[0.08] dark:bg-white/[0.04] dark:hover:border-violet-500/20 dark:hover:bg-white/[0.06]"
+                key={item}
+                className="group rounded-3xl border bg-muted/40 p-6 transition hover:bg-muted dark:border-white/[0.06] dark:bg-violet-500/[0.03] dark:hover:bg-violet-500/[0.06]"
               >
-                <p className="text-sm font-medium">{item.title}</p>
-                <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+                <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-xl bg-violet-100 text-sm font-semibold text-violet-700 dark:bg-violet-950/50 dark:text-violet-300">
+                  {i + 1}
+                </div>
+                <p className="text-sm text-muted-foreground">{item}</p>
               </div>
             ))}
           </div>
@@ -163,19 +188,19 @@ export default function AutomatiserRelancesPage() {
             <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
               <p className="text-xs uppercase tracking-wide text-muted-foreground">Hypothèse</p>
               <p className="mt-2 text-sm text-muted-foreground">
-                100 prospects/mois &bull; 10% répondent
+                3h/jour de tâches répétitives (emails, réponses, tri)
               </p>
             </div>
             <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
-              <p className="text-xs uppercase tracking-wide text-muted-foreground">Après automatisation</p>
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">Gain</p>
               <p className="mt-2 text-sm text-muted-foreground">
-                10% → 18% de réponses + pipeline clair
+                ~60h/mois récupérées par l&apos;équipe
               </p>
             </div>
             <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
               <p className="text-xs uppercase tracking-wide text-muted-foreground">Impact</p>
               <p className="mt-2 text-sm text-muted-foreground">
-                + opportunités, + devis, + signatures
+                Réponses plus rapides, leads qualifiés, satisfaction client
               </p>
             </div>
           </div>
@@ -183,12 +208,12 @@ export default function AutomatiserRelancesPage() {
           <div className="rounded-3xl border bg-muted p-6 dark:border-white/[0.06] dark:bg-violet-500/[0.04]">
             <p className="text-sm font-medium">Traduction business</p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Si votre panier moyen est de <strong>1 500&euro;</strong> et que vous signez <strong>20%</strong> des
-              prospects qui répondent, passer de 10 à 18 réponses + un pipeline structuré peut ajouter
-              plusieurs ventes chaque mois.
+              Un chatbot qui qualifie <strong>20 leads/mois</strong> à votre place
+              et un agent qui rédige <strong>50 emails/semaine</strong> — c&apos;est
+              l&apos;équivalent d&apos;un mi-temps en moins.
             </p>
             <p className="mt-3 text-xs text-muted-foreground">
-              *Exemple indicatif : dépend de votre offre, délai de décision et qualité des messages.
+              *Exemple indicatif : dépend de votre volume et complexité des tâches.
             </p>
           </div>
         </section>
@@ -201,13 +226,13 @@ export default function AutomatiserRelancesPage() {
             <div className="rounded-3xl border p-8 dark:border-white/[0.08]">
               <p className="text-sm font-medium">Avant</p>
               <p className="mt-4 text-sm text-muted-foreground">
-                Relances manuelles, suivi dispersé, KPI flous, prospects perdus.
+                Tâches manuelles répétitives, réponses lentes, leads non qualifiés, données dispersées.
               </p>
             </div>
             <div className="rounded-3xl border bg-muted p-8 dark:border-white/[0.06] dark:bg-violet-500/[0.04]">
               <p className="text-sm font-medium">Après</p>
               <p className="mt-4 text-sm text-muted-foreground">
-                Workflows automatisés, pipeline clair, dashboard KPI, alertes en temps réel.
+                IA qui répond 24/7, leads qualifiés automatiquement, emails rédigés, données centralisées.
               </p>
             </div>
           </div>
@@ -233,12 +258,12 @@ export default function AutomatiserRelancesPage() {
         {/* FINAL CTA */}
         <section className="mt-20">
           <div className="rounded-3xl border bg-linear-to-r from-violet-50 to-indigo-50/80 dark:from-violet-950/40 dark:to-indigo-950/30 p-10 text-center shadow-sm dark:border-violet-500/20 dark:shadow-lg dark:shadow-violet-500/10">
-            <h2 className="text-3xl font-semibold tracking-tight">On automatise vos process</h2>
+            <h2 className="text-3xl font-semibold tracking-tight">Prêt à intégrer l&apos;IA ?</h2>
             <p className="mt-4 text-sm text-muted-foreground">
-              Audit rapide → workflows prioritaires → dashboard KPI. Ensuite on optimise en continu.
+              Audit gratuit → cas d&apos;usage prioritaires → mise en place → formation. On vous accompagne.
             </p>
             <Link
-              href="/contact?service=automatisation"
+              href="/contact?service=integration-ia"
               className="mt-8 inline-flex items-center justify-center rounded-2xl bg-violet-600 px-8 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/20 transition hover:scale-[1.02] hover:bg-violet-700"
             >
               Réserver l&apos;audit
@@ -250,14 +275,14 @@ export default function AutomatiserRelancesPage() {
         <section className="mt-12 text-sm text-muted-foreground">
           <p>
             À combiner avec :{" "}
+            <Link className="underline hover:opacity-80" href="/services/automatiser-relances">
+              Automatisation (RPA)
+            </Link>
+            {" "}et{" "}
             <Link className="underline hover:opacity-80" href="/services/trouver-prospects">
               Prospection IA
             </Link>
-            {" "}pour alimenter votre pipeline et{" "}
-            <Link className="underline hover:opacity-80" href="/services/integration-ia">
-              Intégration IA
-            </Link>
-            {" "}pour aller plus loin.
+            {" "}pour un système complet.
           </p>
         </section>
       </div>

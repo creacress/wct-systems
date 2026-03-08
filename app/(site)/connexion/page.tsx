@@ -56,7 +56,7 @@ export default function ConnexionPage() {
         </div>
 
         {/* Formulaire de connexion */}
-        <div className="rounded-3xl border bg-background/60 p-8 shadow-sm backdrop-blur">
+        <div className="rounded-3xl border bg-background/60 p-8 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
           <form onSubmit={handleSubmit} className="space-y-5">
 
             {error && (
@@ -77,7 +77,7 @@ export default function ConnexionPage() {
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 placeholder="vous@entreprise.com"
-                className="w-full rounded-2xl border bg-background px-4 py-2.5 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/30"
+                className="w-full rounded-2xl border bg-background px-4 py-2.5 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/30 dark:border-white/[0.1] dark:bg-white/[0.04]"
               />
             </div>
 
@@ -93,7 +93,7 @@ export default function ConnexionPage() {
                 value={password}
                 onChange={e => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full rounded-2xl border bg-background px-4 py-2.5 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/30"
+                className="w-full rounded-2xl border bg-background px-4 py-2.5 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/30 dark:border-white/[0.1] dark:bg-white/[0.04]"
               />
             </div>
 
@@ -108,7 +108,7 @@ export default function ConnexionPage() {
         </div>
 
         {/* Section contact pour les non-clients */}
-        <div className="rounded-3xl border bg-background/60 p-6 text-center shadow-sm backdrop-blur">
+        <div className="rounded-3xl border bg-background/60 p-6 text-center shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
           <p className="text-sm font-medium">Pas encore client ?</p>
           <p className="mt-1 text-sm text-muted-foreground">
             Contactez-nous pour obtenir votre accès à l&apos;espace de prospection B2B.

@@ -89,7 +89,7 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/60">
+    <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/60 dark:border-white/[0.06] dark:bg-background/90">
       {/* Skip link (a11y) */}
       <a
         href="#content"
@@ -184,7 +184,7 @@ export function Navbar() {
         {/* Mobile button */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-2xl border bg-background p-2 shadow-sm transition hover:bg-muted focus:outline-none focus:ring-2 focus:ring-violet-500/30 md:hidden"
+          className="inline-flex items-center justify-center rounded-2xl border bg-background p-2 shadow-sm transition hover:bg-muted focus:outline-none focus:ring-2 focus:ring-violet-500/30 md:hidden dark:border-white/[0.12] dark:bg-white/[0.05]"
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={open}
           aria-controls="mobile-nav"
@@ -207,7 +207,7 @@ export function Navbar() {
         <div
           id="mobile-nav"
           className={cn(
-            "fixed right-0 top-0 z-50 h-dvh w-[86vw] max-w-sm border-l bg-background shadow-2xl transition-transform",
+            "fixed right-0 top-0 z-50 h-dvh w-[86vw] max-w-sm border-l bg-background shadow-2xl transition-transform dark:border-white/[0.06] dark:bg-[#0c0c0f]",
             open ? "translate-x-0" : "translate-x-full"
           )}
           role="dialog"
@@ -288,7 +288,7 @@ export function Navbar() {
               </Link>
             </div>
 
-            <div className="mt-6 rounded-3xl border bg-muted p-4 text-sm">
+            <div className="mt-6 rounded-3xl border bg-muted p-4 text-sm dark:border-violet-500/10 dark:bg-violet-500/[0.06]">
               <p className="font-medium">Audit express</p>
               <p className="mt-1 text-muted-foreground">
                 15 minutes. 3 automatisations prioritaires. Un plan clair.

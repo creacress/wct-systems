@@ -107,8 +107,8 @@ export default function BlogPage() {
 
         {/* COMING SOON */}
         <section className="mt-16 sm:mt-20" aria-label="Articles à venir">
-          <div className="rounded-3xl border bg-muted/60 p-6 sm:p-8">
-            <div className="inline-flex items-center rounded-full border bg-background px-3 py-1 text-xs text-muted-foreground">
+          <div className="rounded-3xl border bg-muted/60 p-6 sm:p-8 dark:border-white/[0.06] dark:bg-violet-500/[0.04]">
+            <div className="inline-flex items-center rounded-full border bg-background px-3 py-1 text-xs text-muted-foreground dark:border-white/[0.08] dark:bg-white/[0.04]">
               Prochainement
             </div>
             <p className="mt-4 text-base font-medium">Les premiers articles arrivent bientôt.</p>
@@ -130,13 +130,13 @@ export default function BlogPage() {
             {UPCOMING.map((a) => (
               <div
                 key={a.title}
-                className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur"
+                className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]"
               >
                 <div className="flex flex-wrap gap-2">
                   {a.tags.map((t) => (
                     <span
                       key={t}
-                      className="rounded-full border bg-background px-2.5 py-0.5 text-xs text-muted-foreground"
+                      className="rounded-full border bg-background px-2.5 py-0.5 text-xs text-muted-foreground dark:border-white/[0.08] dark:bg-white/[0.04]"
                     >
                       {t}
                     </span>
@@ -151,7 +151,7 @@ export default function BlogPage() {
 
         {/* CTA */}
         <section className="mt-20" aria-label="Appel à l'action">
-          <div className="rounded-3xl border bg-linear-to-r from-violet-50 to-indigo-50/80 dark:from-violet-950/40 dark:to-indigo-950/30 p-10 text-center shadow-sm">
+          <div className="rounded-3xl border bg-linear-to-r from-violet-50 to-indigo-50/80 dark:border-violet-500/20 dark:from-violet-950/40 dark:to-indigo-950/30 dark:shadow-lg dark:shadow-violet-500/10 p-10 text-center shadow-sm">
             <h2 className="text-3xl font-semibold tracking-tight">
               Pas besoin d'attendre les articles
             </h2>

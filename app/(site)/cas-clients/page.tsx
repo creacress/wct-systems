@@ -165,14 +165,14 @@ export default function CasClientsPage() {
             <article
               key={c.slug}
               id={c.slug}
-              className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition hover:shadow-md"
+              className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 dark:border-white/[0.08] dark:bg-white/[0.04] dark:hover:border-violet-500/20 dark:hover:bg-white/[0.06] dark:hover:shadow-lg dark:hover:shadow-violet-500/5"
             >
               <header className="space-y-2">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="rounded-full border bg-background px-3 py-1 text-xs text-muted-foreground">
+                  <span className="rounded-full border bg-background px-3 py-1 text-xs text-muted-foreground dark:border-white/[0.08] dark:bg-white/[0.04]">
                     {c.sector}
                   </span>
-                  <span className="rounded-full border bg-background px-3 py-1 text-xs text-muted-foreground">
+                  <span className="rounded-full border bg-background px-3 py-1 text-xs text-muted-foreground dark:border-white/[0.08] dark:bg-white/[0.04]">
                     {c.org}
                   </span>
                 </div>
@@ -186,7 +186,7 @@ export default function CasClientsPage() {
                   <p className="text-sm font-medium">Ce qui a été livré</p>
                   <ul className="mt-3 grid gap-2 text-sm text-muted-foreground">
                     {c.delivered.map((x) => (
-                      <li key={x} className="rounded-2xl border bg-background px-3 py-2">
+                      <li key={x} className="rounded-2xl border bg-background px-3 py-2 dark:border-white/[0.06] dark:bg-white/[0.03]">
                         {x}
                       </li>
                     ))}
@@ -197,7 +197,7 @@ export default function CasClientsPage() {
                   <p className="text-sm font-medium">Résultats</p>
                   <ul className="mt-3 grid gap-2 text-sm text-muted-foreground">
                     {c.results.map((x) => (
-                      <li key={x} className="rounded-2xl border bg-muted px-3 py-2">
+                      <li key={x} className="rounded-2xl border bg-muted px-3 py-2 dark:border-white/[0.06] dark:bg-violet-500/[0.04]">
                         {x}
                       </li>
                     ))}
@@ -210,7 +210,7 @@ export default function CasClientsPage() {
                     {c.stack.map((t) => (
                       <span
                         key={t}
-                        className="rounded-full border bg-background px-3 py-1 text-xs text-muted-foreground"
+                        className="rounded-full border bg-background px-3 py-1 text-xs text-muted-foreground dark:border-white/[0.08] dark:bg-white/[0.04]"
                       >
                         {t}
                       </span>
@@ -218,7 +218,7 @@ export default function CasClientsPage() {
                   </div>
                 </div>
 
-                <div className="rounded-3xl border bg-linear-to-r from-violet-50 to-indigo-50/80 dark:from-violet-950/40 dark:to-indigo-950/30 p-5">
+                <div className="rounded-3xl border bg-linear-to-r from-violet-50 to-indigo-50/80 dark:border-violet-500/15 dark:from-violet-950/40 dark:to-indigo-950/30 p-5">
                   <p className="text-sm font-medium">Vous voulez un résultat similaire ?</p>
                   <p className="mt-2 text-sm text-muted-foreground">
                     On commence par un audit (15–30 min) et on livre une V1 utile, rapidement.
@@ -250,7 +250,7 @@ export default function CasClientsPage() {
             {FAQ.map((f) => (
               <details
                 key={f.q}
-                className="group rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition hover:bg-muted"
+                className="group rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition-all duration-200 hover:bg-muted dark:border-white/[0.08] dark:bg-white/[0.03] dark:hover:bg-white/[0.06] dark:hover:border-violet-500/15"
               >
                 <summary className="cursor-pointer font-medium">{f.q}</summary>
                 <p className="mt-3 text-sm text-muted-foreground">{f.a}</p>
@@ -261,7 +261,7 @@ export default function CasClientsPage() {
 
         {/* CTA */}
         <section className="mt-20" aria-label="Appel à l'action">
-          <div className="rounded-3xl border bg-linear-to-r from-violet-50 to-indigo-50/80 dark:from-violet-950/40 dark:to-indigo-950/30 p-10 text-center shadow-sm">
+          <div className="rounded-3xl border bg-linear-to-r from-violet-50 to-indigo-50/80 dark:border-violet-500/20 dark:from-violet-950/40 dark:to-indigo-950/30 dark:shadow-lg dark:shadow-violet-500/10 p-10 text-center shadow-sm">
             <h2 className="text-3xl font-semibold tracking-tight">On parle de votre contexte</h2>
             <p className="mt-4 text-sm text-muted-foreground">
               Audit rapide → plan clair → V1 utile. Ensuite on optimise et on scale.

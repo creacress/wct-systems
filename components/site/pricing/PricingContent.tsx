@@ -46,7 +46,7 @@ const SAAS = [
     priceYearly: 79,
     yearlyTotal: 948,
     setup: 590,
-    href: "/services/site-generation-leads",
+    href: "/services/site-web-moderne",
     features: [
       "5 à 10 pages optimisées conversion",
       "SEO classique + SEO IA (JSON-LD, llms.txt)",
@@ -84,7 +84,7 @@ const SAAS = [
     priceYearly: 159,
     yearlyTotal: 1908,
     setup: 490,
-    href: "/services/dashboard-kpi",
+    href: "/services/integration-ia",
     badge: "Populaire",
     features: [
       "Chatbot IA pour votre site / WhatsApp",
@@ -251,7 +251,7 @@ export default function PricingContent() {
                 className={`group relative flex flex-col rounded-3xl border p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
                   s.badge
                     ? "border-violet-300 bg-linear-to-br from-violet-50/80 to-indigo-50/60 dark:border-violet-700 dark:from-violet-950/40 dark:to-indigo-950/20"
-                    : "border-border/60 bg-background/60 backdrop-blur hover:border-violet-200 dark:hover:border-violet-800"
+                    : "border-border/60 bg-background/60 backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04] hover:border-violet-200 dark:hover:border-violet-500/25 dark:hover:bg-white/[0.06] dark:hover:shadow-lg dark:hover:shadow-violet-500/5"
                 }`}
               >
                 {s.badge && (
@@ -363,7 +363,7 @@ export default function PricingContent() {
                 className={`relative flex flex-col rounded-3xl border p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
                   pack.highlighted
                     ? "border-violet-300 bg-linear-to-br from-violet-50/80 to-indigo-50/60 dark:border-violet-700 dark:from-violet-950/40 dark:to-indigo-950/20"
-                    : "border-border/60 bg-background/60 backdrop-blur hover:border-violet-200 dark:hover:border-violet-800"
+                    : "border-border/60 bg-background/60 backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04] hover:border-violet-200 dark:hover:border-violet-500/25 dark:hover:bg-white/[0.06] dark:hover:shadow-lg dark:hover:shadow-violet-500/5"
                 }`}
               >
                 {pack.highlighted && (
@@ -563,7 +563,7 @@ export default function PricingContent() {
           </div>
 
           {/* Paiement en 3x */}
-          <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur">
+          <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-100 text-violet-700 dark:bg-violet-950/50 dark:text-violet-400">
                 <CreditCard className="h-5 w-5" />
@@ -622,7 +622,7 @@ export default function PricingContent() {
           {FAQ.map((f) => (
             <details
               key={f.q}
-              className="group rounded-3xl border bg-background p-6 transition hover:bg-muted"
+              className="group rounded-3xl border bg-background p-6 transition hover:bg-muted dark:border-white/[0.08] dark:bg-white/[0.03] dark:hover:bg-white/[0.06]"
             >
               <summary className="flex cursor-pointer items-center justify-between font-medium">
                 <span>{f.q}</span>
@@ -636,7 +636,7 @@ export default function PricingContent() {
 
       {/* ── CTA FINAL ─────────────────────────────────────────────────── */}
       <section className="mt-20" aria-label="Appel à l'action">
-        <div className="rounded-3xl border bg-linear-to-br from-violet-50 to-indigo-50/80 p-10 text-center shadow-sm dark:from-violet-950/40 dark:to-indigo-950/30">
+        <div className="rounded-3xl border bg-linear-to-br from-violet-50 to-indigo-50/80 p-10 text-center shadow-sm dark:from-violet-950/40 dark:to-indigo-950/30 dark:border-violet-500/20 dark:shadow-lg dark:shadow-violet-500/10">
           <h2 className="text-3xl font-semibold tracking-tight">
             Besoin d&apos;aide pour choisir ?
           </h2>

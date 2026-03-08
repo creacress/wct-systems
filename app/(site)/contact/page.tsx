@@ -11,11 +11,13 @@ export const metadata: Metadata = {
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 const SERVICES = [
-  { value: "prospects", label: "Trouver des prospects" },
-  { value: "relances", label: "Automatiser les relances" },
-  { value: "rdv", label: "CRM & rendez-vous" },
-  { value: "kpi", label: "Dashboard KPI" },
-  { value: "site", label: "Site génération de leads" },
+  { value: "prospection-ia", label: "Prospection IA" },
+  { value: "site-web", label: "Site Web Moderne" },
+  { value: "automatisation", label: "Automatisation (RPA)" },
+  { value: "integration-ia", label: "Intégration IA" },
+  { value: "pack-starter", label: "Pack Starter" },
+  { value: "pack-business", label: "Pack Business" },
+  { value: "pack-scale", label: "Pack Scale" },
   { value: "autre", label: "Autre / à discuter" },
 ] as const;
 
@@ -106,7 +108,7 @@ export default function ContactPage({
         <section className="mt-14 grid gap-8 lg:grid-cols-5">
           {/* Form */}
           <div className="lg:col-span-3">
-            <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur sm:p-8">
+            <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur sm:p-8 dark:border-white/[0.08] dark:bg-white/[0.04]">
               <div className="mb-6">
                 <h2 className="text-xl font-semibold tracking-tight">
                   Demander un audit
@@ -142,7 +144,7 @@ export default function ContactPage({
                       name="name"
                       required
                       autoComplete="name"
-                      className="h-11 rounded-2xl border bg-background px-4 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/40"
+                      className="h-11 rounded-2xl border bg-background px-4 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/40 dark:border-white/[0.1] dark:bg-white/[0.04]"
                       placeholder="Votre nom"
                     />
                   </div>
@@ -157,7 +159,7 @@ export default function ContactPage({
                       type="email"
                       required
                       autoComplete="email"
-                      className="h-11 rounded-2xl border bg-background px-4 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/40"
+                      className="h-11 rounded-2xl border bg-background px-4 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/40 dark:border-white/[0.1] dark:bg-white/[0.04]"
                       placeholder="vous@entreprise.fr"
                     />
                   </div>
@@ -175,7 +177,7 @@ export default function ContactPage({
                       id="company"
                       name="company"
                       autoComplete="organization"
-                      className="h-11 rounded-2xl border bg-background px-4 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/40"
+                      className="h-11 rounded-2xl border bg-background px-4 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/40 dark:border-white/[0.1] dark:bg-white/[0.04]"
                       placeholder="Nom de votre entreprise"
                     />
                   </div>
@@ -192,7 +194,7 @@ export default function ContactPage({
                       name="phone"
                       type="tel"
                       autoComplete="tel"
-                      className="h-11 rounded-2xl border bg-background px-4 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/40"
+                      className="h-11 rounded-2xl border bg-background px-4 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/40 dark:border-white/[0.1] dark:bg-white/[0.04]"
                       placeholder="06 00 00 00 00"
                     />
                   </div>
@@ -206,7 +208,7 @@ export default function ContactPage({
                     id="service"
                     name="service"
                     defaultValue={selected}
-                    className="h-11 rounded-2xl border bg-background px-4 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/40"
+                    className="h-11 rounded-2xl border bg-background px-4 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/40 dark:border-white/[0.1] dark:bg-white/[0.04]"
                   >
                     <option value="">Choisir…</option>
                     {SERVICES.map((s) => (
@@ -226,7 +228,7 @@ export default function ContactPage({
                     name="message"
                     required
                     rows={6}
-                    className="min-h-[140px] rounded-2xl border bg-background px-4 py-3 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/40"
+                    className="min-h-[140px] rounded-2xl border bg-background px-4 py-3 text-sm outline-none transition focus:ring-2 focus:ring-violet-500/40 dark:border-white/[0.1] dark:bg-white/[0.04]"
                     placeholder="En 3 lignes : votre objectif + votre situation actuelle + votre urgence."
                   />
                   <p className="text-xs text-muted-foreground">
@@ -235,7 +237,7 @@ export default function ContactPage({
                   </p>
                 </div>
 
-                <div className="flex items-start gap-3 rounded-3xl border bg-muted p-4">
+                <div className="flex items-start gap-3 rounded-3xl border bg-muted p-4 dark:border-white/[0.06] dark:bg-violet-500/[0.04]">
                   <input
                     id="consent"
                     name="consent"
@@ -267,7 +269,7 @@ export default function ContactPage({
           {/* Side info */}
           <aside className="lg:col-span-2">
             <div className="grid gap-6">
-              <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur">
+              <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
                 <p className="text-sm font-medium">Ce que vous obtenez</p>
                 <ul className="mt-4 grid gap-2 text-sm text-muted-foreground">
                   {[
@@ -276,32 +278,32 @@ export default function ContactPage({
                     "Une V1 utile rapidement",
                     "Des KPI pour piloter",
                   ].map((x) => (
-                    <li key={x} className="rounded-2xl border bg-background px-3 py-2">
+                    <li key={x} className="rounded-2xl border bg-background px-3 py-2 dark:border-white/[0.06] dark:bg-white/[0.03]">
                       {x}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="rounded-3xl border bg-linear-to-r from-muted to-muted/60 p-6 shadow-sm">
+              <div className="rounded-3xl border bg-linear-to-r from-muted to-muted/60 p-6 shadow-sm dark:border-white/[0.06] dark:from-violet-500/[0.04] dark:to-violet-500/[0.02]">
                 <p className="text-sm font-medium">Pour aller plus vite</p>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Donnez ces 3 infos dans votre message :
                 </p>
                 <ol className="mt-3 grid gap-2 text-sm text-muted-foreground">
-                  <li className="rounded-2xl border bg-background px-3 py-2">
+                  <li className="rounded-2xl border bg-background px-3 py-2 dark:border-white/[0.06] dark:bg-white/[0.03]">
                     Objectif (ex: 20 demandes/mois)
                   </li>
-                  <li className="rounded-2xl border bg-background px-3 py-2">
+                  <li className="rounded-2xl border bg-background px-3 py-2 dark:border-white/[0.06] dark:bg-white/[0.03]">
                     Votre process actuel
                   </li>
-                  <li className="rounded-2xl border bg-background px-3 py-2">
+                  <li className="rounded-2xl border bg-background px-3 py-2 dark:border-white/[0.06] dark:bg-white/[0.03]">
                     Délai souhaité
                   </li>
                 </ol>
               </div>
 
-              <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur">
+              <div className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
                 <p className="text-sm font-medium">Alternative</p>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Vous pouvez aussi passer par la page services pour choisir

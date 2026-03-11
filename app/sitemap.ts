@@ -15,6 +15,7 @@ const routes = [
   "/contact",
   "/cas-clients",
   "/blog",
+  "/politique-de-confidentialite",
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {

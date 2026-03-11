@@ -20,8 +20,8 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur sm:p-8">
-      <h2 className="text-lg font-semibold tracking-tight">{titre}</h2>
+    <section className="rounded-3xl border bg-background/70 p-6 shadow-sm backdrop-blur sm:p-8 dark:border-white/[0.08] dark:bg-white/[0.04]">
+      <h2 className="font-display text-lg font-semibold tracking-tight">{titre}</h2>
       <div className="mt-4 space-y-3 text-sm text-muted-foreground">
         {children}
       </div>
@@ -36,15 +36,15 @@ function Section({
 export default function CGVPage() {
   return (
     <main id="content" className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-linear-to-b from-violet-50/70 via-background to-background dark:from-violet-950/30" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-slate-50/40 via-background to-background dark:from-slate-950/15" />
 
-      <div className="mx-auto max-w-4xl px-6 py-16 sm:py-20">
+      <div className="mx-auto max-w-4xl px-6 py-16 sm:py-24">
         {/* En-tête */}
         <div className="space-y-4">
-          <div className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-4 py-1 text-xs uppercase tracking-wide text-violet-700 dark:border-violet-800 dark:bg-violet-950/50 dark:text-violet-300">
+          <div className="inline-flex items-center rounded-full border border-slate-300 bg-slate-100 px-4 py-1 text-xs font-medium uppercase tracking-wide text-slate-700 dark:border-slate-700 dark:bg-slate-900/50 dark:text-slate-300">
             Conditions commerciales
           </div>
-          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
             Conditions générales de vente
           </h1>
           <p className="text-sm text-muted-foreground">

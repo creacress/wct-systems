@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PricingContent from "@/components/site/pricing/PricingContent";
+import GridPattern from "@/components/ui/grid-pattern";
 
 export const metadata: Metadata = {
   title: "Tarifs — 5 SaaS Digital Workplace & IA pour PME | WCT Systems",
@@ -101,7 +102,8 @@ export default function TarifsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="absolute inset-0 -z-10 bg-linear-to-b from-violet-50/70 via-background to-background dark:from-violet-950/30" />
+      <div className="absolute inset-0 -z-10 bg-linear-to-b from-violet-50/40 via-background to-background dark:from-violet-950/15" />
+      <GridPattern variant="line" color="rgba(139, 92, 246, 0.04)" />
       <PricingContent />
     </div>
   );

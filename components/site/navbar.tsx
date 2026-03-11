@@ -19,16 +19,7 @@ function cn(...classes: Array<string | false | null | undefined>) {
 
 function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
       <path d="M4 6h16" />
       <path d="M4 12h16" />
       <path d="M4 18h16" />
@@ -38,16 +29,7 @@ function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
 
 function CloseIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
       <path d="M18 6 6 18" />
       <path d="M6 6l12 12" />
     </svg>
@@ -57,11 +39,20 @@ function CloseIcon(props: React.SVGProps<SVGSVGElement>) {
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const ctaHref = "/contact";
   const ctaLabel = "Audit gratuit";
 
   const items = useMemo(() => NAV_ITEMS, []);
+
+  // Scroll detection
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   // Lock scroll when menu is open
   useEffect(() => {
@@ -89,7 +80,14 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/60 dark:border-white/[0.06] dark:bg-background/90">
+    <header
+      className={cn(
+        "sticky top-0 z-50 backdrop-blur transition-all duration-300",
+        scrolled
+          ? "navbar-scrolled border-b bg-background/85 dark:bg-background/90"
+          : "bg-transparent dark:bg-transparent"
+      )}
+    >
       {/* Skip link (a11y) */}
       <a
         href="#content"
@@ -102,10 +100,10 @@ export function Navbar() {
         {/* Brand */}
         <Link
           href="/"
-          className="group inline-flex items-center gap-3 font-semibold tracking-tight"
+          className="group inline-flex items-center gap-3 font-display font-semibold tracking-tight"
           aria-label="Aller à l'accueil"
         >
-          <span className="relative inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border bg-background shadow-sm">
+          <span className="relative inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border bg-background shadow-sm transition-transform duration-300 group-hover:rotate-12">
             <Image
               src="/images/logo-wct-systems.png"
               alt="WCT Systems"
@@ -122,7 +120,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-2 md:flex" aria-label="Navigation principale">
+        <nav className="hidden items-center gap-1 md:flex" aria-label="Navigation principale">
           {items.map((it) => {
             const active = pathname === it.href || pathname?.startsWith(`${it.href}/`);
             return (
@@ -130,20 +128,26 @@ export function Navbar() {
                 key={it.href}
                 href={it.href}
                 className={cn(
-                  "relative rounded-xl px-3 py-2 text-sm transition focus:outline-none focus:ring-2 focus:ring-violet-500/30",
+                  "nav-link relative rounded-xl px-3 py-2 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-violet-500/30",
                   active
-                    ? "bg-violet-600 text-white shadow-sm"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                    ? "text-violet-600 dark:text-violet-400"
+                    : "text-muted-foreground hover:text-foreground"
                 )}
                 aria-current={active ? "page" : undefined}
               >
                 {it.label}
-                {active ? (
-                  <span
-                    aria-hidden="true"
-                    className="absolute -bottom-2.5 left-1/2 h-1 w-8 -translate-x-1/2 rounded-full bg-violet-600"
-                  />
-                ) : null}
+                {it.href === "/services" && (
+                  <span className="ml-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-violet-100 text-[10px] font-semibold text-violet-600 dark:bg-violet-900/50 dark:text-violet-400">
+                    5
+                  </span>
+                )}
+                {/* Animated underline */}
+                <span
+                  className={cn(
+                    "absolute -bottom-0.5 left-1/2 h-0.5 -translate-x-1/2 rounded-full bg-violet-600 transition-all duration-300 dark:bg-violet-400",
+                    active ? "w-6" : "w-0 group-hover:w-4"
+                  )}
+                />
               </Link>
             );
           })}
@@ -151,22 +155,13 @@ export function Navbar() {
           <Link
             href="/connexion"
             className={cn(
-              "ml-1 inline-flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm transition focus:outline-none focus:ring-2 focus:ring-violet-500/30",
+              "ml-1 inline-flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-violet-500/30",
               pathname === "/connexion"
-                ? "bg-violet-600 text-white shadow-sm"
-                : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                ? "text-violet-600 dark:text-violet-400"
+                : "text-muted-foreground hover:text-foreground"
             )}
           >
-            <svg
-              className="h-4 w-4"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
+            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
               <circle cx="12" cy="7" r="4" />
             </svg>
@@ -175,7 +170,7 @@ export function Navbar() {
 
           <Link
             href={ctaHref}
-            className="ml-2 inline-flex items-center justify-center rounded-2xl bg-violet-600 px-4 py-2 text-sm font-medium text-white shadow-sm shadow-violet-500/20 transition hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500/30"
+            className="ml-2 inline-flex items-center justify-center rounded-2xl bg-violet-600 px-5 py-2 text-sm font-medium text-white shadow-sm shadow-violet-500/25 transition-all duration-300 hover:bg-violet-700 hover:shadow-md hover:shadow-violet-500/30 focus:outline-none focus:ring-2 focus:ring-violet-500/30"
           >
             {ctaLabel}
           </Link>
@@ -198,7 +193,7 @@ export function Navbar() {
       <div className={cn("md:hidden", open ? "pointer-events-auto" : "pointer-events-none")} aria-hidden={!open}>
         <div
           className={cn(
-            "fixed inset-0 z-40 bg-black/40 transition-opacity",
+            "fixed inset-0 z-40 bg-black/40 backdrop-blur-sm transition-opacity",
             open ? "opacity-100" : "opacity-0"
           )}
           onClick={() => setOpen(false)}
@@ -216,16 +211,16 @@ export function Navbar() {
         >
           <div className="flex items-center justify-between border-b px-6 py-4">
             <div className="inline-flex items-center gap-3">
-            <span className="relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border bg-background shadow-sm">
-  <Image
-    src="/images/logo-wct-systems.png"
-    alt="WCT Systems"
-    width={36}
-    height={36}
-    className="h-9 w-9 rounded-full object-cover"
-  />
-</span>
-              <p className="text-sm font-medium">Navigation</p>
+              <span className="relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border bg-background shadow-sm">
+                <Image
+                  src="/images/logo-wct-systems.png"
+                  alt="WCT Systems"
+                  width={36}
+                  height={36}
+                  className="h-9 w-9 rounded-full object-cover"
+                />
+              </span>
+              <p className="text-sm font-display font-medium">Navigation</p>
             </div>
 
             <button
@@ -247,12 +242,19 @@ export function Navbar() {
                     key={it.href}
                     href={it.href}
                     className={cn(
-                      "rounded-2xl border px-4 py-3 text-sm transition focus:outline-none focus:ring-2 focus:ring-violet-500/30",
-                      active ? "bg-violet-600 text-white" : "bg-background hover:bg-muted"
+                      "rounded-2xl border px-4 py-3 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-violet-500/30",
+                      active
+                        ? "border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-800 dark:bg-violet-950/50 dark:text-violet-300"
+                        : "bg-background hover:bg-muted"
                     )}
                     aria-current={active ? "page" : undefined}
                   >
                     {it.label}
+                    {it.href === "/services" && (
+                      <span className="ml-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-violet-100 text-[10px] font-semibold text-violet-600 dark:bg-violet-900/50 dark:text-violet-400">
+                        5
+                      </span>
+                    )}
                   </Link>
                 );
               })}
@@ -261,19 +263,12 @@ export function Navbar() {
                 href="/connexion"
                 className={cn(
                   "mt-2 inline-flex items-center justify-center gap-2 rounded-2xl border px-4 py-3 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-violet-500/30",
-                  pathname === "/connexion" ? "bg-violet-600 text-white" : "bg-background hover:bg-muted"
+                  pathname === "/connexion"
+                    ? "border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-800 dark:bg-violet-950/50"
+                    : "bg-background hover:bg-muted"
                 )}
               >
-                <svg
-                  className="h-4 w-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
                   <circle cx="12" cy="7" r="4" />
                 </svg>
@@ -288,8 +283,8 @@ export function Navbar() {
               </Link>
             </div>
 
-            <div className="mt-6 rounded-3xl border bg-muted p-4 text-sm dark:border-violet-500/10 dark:bg-violet-500/[0.06]">
-              <p className="font-medium">Audit express</p>
+            <div className="mt-6 rounded-3xl border bg-gradient-to-br from-violet-50 to-indigo-50/80 p-4 text-sm dark:border-violet-500/10 dark:from-violet-950/40 dark:to-indigo-950/20">
+              <p className="font-display font-medium">Audit express</p>
               <p className="mt-1 text-muted-foreground">
                 15 minutes. 3 automatisations prioritaires. Un plan clair.
               </p>

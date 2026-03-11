@@ -1,19 +1,34 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Sora, DM_Sans } from "next/font/google";
+
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-sora",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+  weight: ["400", "500", "600"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: {
-    default: "WCT Systems — IA & Automatisation pour PME",
+    default: "WCT Systems — Digital Workplace & IA pour PME",
     template: "%s | WCT Systems",
   },
   description:
-    "On construit des systèmes IA + automatisation (n8n, dashboards, acquisition) pour PME. Rapide, mesurable, scalable.",
+    "5 SaaS pour PME : Digital Workplace gamifié, Prospection IA, Site Web Moderne, Automatisation, Intégration IA. Mise en place incluse.",
   applicationName: "WCT Systems",
   openGraph: {
-    title: "WCT Systems — IA & Automatisation pour PME",
+    title: "WCT Systems — Digital Workplace & IA pour PME",
     description:
-      "Workflows n8n, IA, dashboards, acquisition. On livre des systèmes qui rapportent, pas juste des pages.",
+      "5 SaaS pour PME : Digital Workplace, Prospection IA, Site Web, Automatisation, Intégration IA.",
     url: "/",
     siteName: "WCT Systems",
     locale: "fr_FR",
@@ -21,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "WCT Systems — IA & Automatisation pour PME",
+    title: "WCT Systems — Digital Workplace & IA pour PME",
     description:
-      "IA, automatisation, dashboards et acquisition pour PME — stack moderne, résultats mesurables.",
+      "5 SaaS pour PME — Digital Workplace, IA, automatisation, résultats mesurables.",
   },
   robots: {
     index: true,
@@ -42,8 +57,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr" suppressHydrationWarning>
-      <body className="min-h-screen bg-background text-foreground antialiased">
+    <html lang="fr" suppressHydrationWarning className={`${sora.variable} ${dmSans.variable}`}>
+      <body className="min-h-screen bg-background text-foreground antialiased font-body">
         {children}
       </body>
     </html>

@@ -3,32 +3,156 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --muted: #f5f5f5;
+  --muted-foreground: #6b7280;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #09090b;
     --foreground: #f0f0f3;
+    --muted: #18181b;
+    --muted-foreground: #a1a1aa;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* ── Dark mode glass cards ────────────────────────────────────────────── */
+/* ── Typography ────────────────────────────────────────────────────── */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ── Scroll Reveal ─────────────────────────────────────────────────── */
+
+.sr-init {
+  opacity: 0;
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.sr-visible {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+
+/* ── Glow Card ─────────────────────────────────────────────────────── */
+
+.glow-card:hover > div:first-child {
+  opacity: 1;
+}
+
+/* ── Animations ────────────────────────────────────────────────────── */
+
+@keyframes mesh-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-20px, 15px) scale(0.95); }
+}
+
+@keyframes mesh-float-reverse {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-25px, 20px) scale(0.95); }
+  66% { transform: translate(15px, -30px) scale(1.05); }
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
+  50% { transform: translateY(-40px) scale(1.1); opacity: 1; }
+}
+
+@keyframes border-rotate {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.3); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+@keyframes circuit-flow {
+  0% { stroke-dashoffset: 100; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes neural-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes grid-slide {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-48px); }
+}
+
+@keyframes float-up {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-mesh-float {
+  animation: mesh-float 20s ease-in-out infinite;
+}
+.animate-mesh-float-reverse {
+  animation: mesh-float-reverse 25s ease-in-out infinite;
+}
+.animate-orb-float {
+  animation: orb-float 8s ease-in-out infinite;
+}
+.animate-border-rotate {
+  animation: border-rotate 6s linear infinite;
+}
+.animate-radar-sweep {
+  animation: radar-sweep 4s linear infinite;
+}
+.animate-pulse-ring {
+  animation: pulse-ring 2s ease-out infinite;
+}
+.animate-circuit-flow {
+  animation: circuit-flow 3s linear infinite;
+  stroke-dasharray: 20 80;
+}
+.animate-neural-pulse {
+  animation: neural-pulse 3s ease-in-out infinite;
+}
+.animate-grid-slide {
+  animation: grid-slide 4s linear infinite;
+}
+.animate-float-up {
+  animation: float-up 6s ease-in-out infinite;
+}
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* ── Dark mode background glow ─────────────────────────────────────── */
 
 @media (prefers-color-scheme: dark) {
-  /* Subtle glow behind the page background for depth */
   body::before {
     content: "";
     position: fixed;
@@ -38,5 +162,18 @@ body {
       radial-gradient(ellipse 60% 40% at 50% 0%, rgba(139, 92, 246, 0.06) 0%, transparent 70%),
       radial-gradient(ellipse 40% 30% at 80% 20%, rgba(99, 102, 241, 0.04) 0%, transparent 60%);
     pointer-events: none;
+  }
+}
+
+/* ── Navbar scroll effect ──────────────────────────────────────────── */
+
+.navbar-scrolled {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 0 40px rgba(139, 92, 246, 0.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar-scrolled {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2), 0 0 40px rgba(139, 92, 246, 0.06);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.08);
   }
 }

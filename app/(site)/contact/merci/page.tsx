@@ -30,7 +30,7 @@ export default function MerciPage() {
   return (
     <main id="content" className="relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 -z-10 bg-linear-to-b from-violet-50/70 via-background to-background dark:from-violet-950/30" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-violet-50/40 via-background to-background dark:from-violet-950/15" />
 
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
         {/* HERO */}
@@ -57,9 +57,9 @@ export default function MerciPage() {
             </svg>
           </div>
 
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
             Merci pour votre demande
-            <span className="block bg-linear-to-r from-violet-600 to-indigo-500 bg-clip-text text-transparent dark:from-violet-400 dark:to-indigo-400">
+            <span className="block bg-gradient-to-r from-violet-600 to-indigo-500 bg-clip-text text-transparent dark:from-violet-400 dark:to-indigo-400">
               On s&apos;en occupe.
             </span>
           </h1>
@@ -73,7 +73,7 @@ export default function MerciPage() {
 
         {/* Étapes suivantes */}
         <section className="mt-14">
-          <h2 className="text-center text-xl font-semibold tracking-tight">
+          <h2 className="text-center font-display text-xl font-bold tracking-tight">
             La suite en 3 étapes
           </h2>
 
@@ -81,7 +81,7 @@ export default function MerciPage() {
             {ETAPES.map((e) => (
               <li
                 key={e.step}
-                className="rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur"
+                className="rounded-3xl border bg-background/70 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]"
               >
                 <div className="flex h-9 w-9 items-center justify-center rounded-full bg-violet-100 text-sm font-semibold text-violet-700 dark:bg-violet-950/50 dark:text-violet-300">
                   {e.step}
@@ -135,7 +135,7 @@ export default function MerciPage() {
         {/* CTA final */}
         <section className="mt-14">
           <div className="rounded-3xl border bg-linear-to-br from-violet-50 to-indigo-50/80 p-10 text-center shadow-sm dark:from-violet-950/40 dark:to-indigo-950/30">
-            <h2 className="text-2xl font-semibold tracking-tight">
+            <h2 className="font-display text-2xl font-bold tracking-tight">
               En attendant notre retour
             </h2>
             <p className="mt-3 text-sm text-muted-foreground">

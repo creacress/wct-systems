@@ -7,6 +7,7 @@ import {
   Globe,
   Zap,
   Brain,
+  Building2,
   Check,
   ArrowRight,
   ChevronDown,
@@ -17,6 +18,26 @@ import {
 /* ── Données ──────────────────────────────────────────────────────────────── */
 
 const SAAS = [
+  {
+    id: "digital-workplace",
+    icon: Building2,
+    name: "Digital Workplace",
+    badge: "Nouveau",
+    description:
+      "Bureau virtuel gamifié tout-en-un pour votre équipe.",
+    priceMonthly: 249,
+    priceYearly: 199,
+    yearlyTotal: 2388,
+    setup: 790,
+    href: "/services/digital-workplace",
+    features: [
+      "Bureau virtuel avec pièces thématiques (RH, Ventes, Support…)",
+      "Gamification intégrée (XP, badges, classements)",
+      "Messagerie temps réel + visio intégrée",
+      "Dashboard KPI par équipe",
+      "Intégration outils existants (Notion, Slack, Google…)",
+    ],
+  },
   {
     id: "prospection-ia",
     icon: Crosshair,
@@ -101,9 +122,9 @@ const PACKS = [
     id: "starter",
     name: "Starter",
     tagline: "Lancer l\u2019acquisition",
-    desc: "2 SaaS au choix parmi les 3 (sauf IA)",
-    priceMonthly: 179,
-    priceYearly: 139,
+    desc: "2 SaaS au choix parmi les 5",
+    priceMonthly: 199,
+    priceYearly: 159,
     badge: "-10% vs à la carte",
     cta: "Composer mon pack",
     highlighted: false,
@@ -112,9 +133,9 @@ const PACKS = [
     id: "business",
     name: "Business",
     tagline: "Structurer et piloter",
-    desc: "3 SaaS au choix parmi les 3 (sauf IA)",
-    priceMonthly: 299,
-    priceYearly: 229,
+    desc: "3 SaaS au choix parmi les 5",
+    priceMonthly: 349,
+    priceYearly: 279,
     badge: "-15% vs à la carte",
     cta: "Composer mon pack",
     highlighted: true,
@@ -123,9 +144,9 @@ const PACKS = [
     id: "scale",
     name: "Scale",
     tagline: "Système complet",
-    desc: "Les 4 SaaS inclus",
-    priceMonthly: 499,
-    priceYearly: 399,
+    desc: "Les 5 SaaS inclus",
+    priceMonthly: 649,
+    priceYearly: 519,
     badge: "-25% vs à la carte",
     extraBadge: "Account manager dédié",
     cta: "Choisir Scale",
@@ -156,11 +177,11 @@ const FAQ = [
   },
   {
     q: "Il y a des frais de mise en place ?",
-    a: "Non. La mise en place est incluse dans tous les tarifs (sauf le setup unique de 590 \u20ac HT pour le Site Web Moderne). On configure tout pour vous.",
+    a: "Non. La mise en place est incluse dans tous les tarifs (sauf le setup unique pour le Site Web Moderne et le Digital Workplace). On configure tout pour vous.",
   },
   {
     q: "Le paiement en 3x, comment ça marche ?",
-    a: "Pour tout engagement annuel ou setup site web, vous pouvez régler en 3 fois sans frais. Premier tiers à la commande, deuxième au 30e jour, troisième au 60e jour.",
+    a: "Pour tout engagement annuel ou setup, vous pouvez régler en 3 fois sans frais. Premier tiers à la commande, deuxième au 30e jour, troisième au 60e jour.",
   },
   {
     q: "Y a-t-il un engagement de durée ?",
@@ -173,6 +194,10 @@ const FAQ = [
   {
     q: "Et si mes besoins ne correspondent à rien ici ?",
     a: "On fait un audit gratuit de 15 à 30 minutes pour comprendre votre situation. Si un sur-mesure est plus adapté, on propose un devis personnalisé.",
+  },
+  {
+    q: "Le Digital Workplace remplace mes outils actuels ?",
+    a: "Pas forcément. Il les centralise dans un bureau virtuel unifié. Vos outils existants (Notion, Slack, Google…) s\u2019intègrent directement dans les pièces du Workplace.",
   },
 ];
 
@@ -193,7 +218,7 @@ export default function PricingContent() {
         </h1>
 
         <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-          4 SaaS conçus pour les PME françaises. Mise en place incluse.
+          5 SaaS conçus pour les PME françaises. Mise en place incluse.
           <br className="hidden sm:block" />
           Sans engagement mensuel, -20% en annuel.
         </p>
@@ -239,9 +264,9 @@ export default function PricingContent() {
       <section
         id="saas"
         className="mt-16 scroll-mt-24"
-        aria-label="Nos 4 SaaS"
+        aria-label="Nos 5 SaaS"
       >
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
           {SAAS.map((s) => {
             const Icon = s.icon;
             const price = isYearly ? s.priceYearly : s.priceMonthly;
@@ -578,7 +603,7 @@ export default function PricingContent() {
               </div>
             </div>
             <p className="mt-4 text-sm text-muted-foreground">
-              Pour tout engagement annuel ou setup site web.
+              Pour tout engagement annuel ou setup.
             </p>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li className="flex items-start gap-2.5">

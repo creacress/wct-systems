@@ -2,15 +2,30 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Services — 4 SaaS IA & Automatisation pour PME | WCT Systems",
+  title: "Services — 5 SaaS Digital Workplace & IA pour PME | WCT Systems",
   description:
-    "4 SaaS pour PME : Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA. Mise en place incluse, à partir de 79 € HT/mois. Audit gratuit.",
+    "5 SaaS pour PME : Digital Workplace gamifié, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA. Mise en place incluse, à partir de 79 € HT/mois. Audit gratuit.",
   alternates: { canonical: "/services" },
 };
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 const SERVICES = [
+  {
+    id: "digital-workplace",
+    href: "/services/digital-workplace",
+    name: "Digital Workplace",
+    badge: "Nouveau",
+    short: "Un bureau virtuel gamifié où chaque pièce est un outil métier.",
+    price: "249",
+    bullets: [
+      "Bureau virtuel avec pièces thématiques",
+      "Gamification : XP, badges, classements",
+      "Messagerie temps réel + visio",
+      "Dashboard KPI par équipe",
+      "Intégration 200+ outils existants",
+    ],
+  },
   {
     id: "prospection-ia",
     href: "/services/trouver-prospects",
@@ -85,7 +100,7 @@ const FAQ = [
   },
   {
     q: "Est-ce que je dois changer tous mes outils ?",
-    a: "Non. On s\u2019adapte à votre existant (quand c\u2019est possible) et on simplifie plutôt que compliquer.",
+    a: "Non. Le Digital Workplace centralise vos outils existants (Notion, Slack, Google…) dans un bureau virtuel unifié. On s\u2019adapte à votre existant.",
   },
 ] as const;
 
@@ -159,18 +174,18 @@ export default function ServicesPage() {
         {/* HERO */}
         <section className="space-y-8">
           <div className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-4 py-1 text-xs uppercase tracking-wide text-violet-700 dark:border-violet-800 dark:bg-violet-950/50 dark:text-violet-300">
-            4 SaaS &bull; IA &bull; Automatisation &bull; PME
+            5 SaaS &bull; Digital Workplace &bull; IA &bull; PME
           </div>
 
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
-            4 SaaS pour PME.
+            5 SaaS pour PME.
             <span className="block bg-linear-to-r from-violet-600 to-indigo-500 bg-clip-text text-transparent dark:from-violet-400 dark:to-indigo-400">
-              Un système complet.
+              Un écosystème complet.
             </span>
           </h1>
 
           <p className="max-w-2xl text-lg text-muted-foreground">
-            Prospection, site web, automatisation et IA : chaque SaaS résout un problème précis.
+            Digital Workplace, prospection, site web, automatisation et IA : chaque SaaS résout un problème précis.
             Prenez-les individuellement ou combinez-les en pack pour un système complet.
           </p>
 
@@ -191,14 +206,16 @@ export default function ServicesPage() {
         </section>
 
         {/* GRID */}
-        <section className="mt-14 grid gap-6 md:grid-cols-2" aria-label="Nos 4 SaaS">
-          {SERVICES.map((s) => (
+        <section className="mt-14 grid gap-6 md:grid-cols-2" aria-label="Nos 5 SaaS">
+          {SERVICES.map((s, i) => (
             <article
               key={s.id}
               className={`group relative flex flex-col rounded-3xl border p-6 shadow-sm backdrop-blur transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
-                "badge" in s && s.badge
-                  ? "border-violet-300 bg-linear-to-br from-violet-50/80 to-indigo-50/60 dark:border-violet-700 dark:from-violet-950/40 dark:to-indigo-950/20 dark:hover:border-violet-500/20 dark:hover:bg-white/[0.06] dark:hover:shadow-lg dark:hover:shadow-violet-500/5"
-                  : "border-border/60 bg-background/60 hover:border-violet-200 dark:border-white/[0.08] dark:bg-white/[0.04] dark:hover:border-violet-500/20 dark:hover:bg-white/[0.06] dark:hover:shadow-lg dark:hover:shadow-violet-500/5"
+                i === 0
+                  ? "md:col-span-2 border-violet-300 bg-linear-to-br from-violet-50/80 to-indigo-50/60 dark:border-violet-700 dark:from-violet-950/40 dark:to-indigo-950/20 dark:hover:border-violet-500/20 dark:hover:bg-white/[0.06] dark:hover:shadow-lg dark:hover:shadow-violet-500/5"
+                  : "badge" in s && s.badge && i !== 0
+                    ? "border-violet-300 bg-linear-to-br from-violet-50/80 to-indigo-50/60 dark:border-violet-700 dark:from-violet-950/40 dark:to-indigo-950/20 dark:hover:border-violet-500/20 dark:hover:bg-white/[0.06] dark:hover:shadow-lg dark:hover:shadow-violet-500/5"
+                    : "border-border/60 bg-background/60 hover:border-violet-200 dark:border-white/[0.08] dark:bg-white/[0.04] dark:hover:border-violet-500/20 dark:hover:bg-white/[0.06] dark:hover:shadow-lg dark:hover:shadow-violet-500/5"
               }`}
             >
               {"badge" in s && s.badge && (

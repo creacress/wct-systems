@@ -5,11 +5,11 @@ import { CookieBanner } from "@/components/site/cookie-banner";
 
 export const metadata: Metadata = {
   title: {
-    default: "WCT Systems — IA & Automatisation pour PME",
+    default: "WCT Systems — Digital Workplace & IA pour PME",
     template: "%s | WCT Systems",
   },
   description:
-    "On construit des systèmes IA + automatisation (n8n, dashboards, acquisition) pour PME. Rapide, mesurable, scalable.",
+    "Digital Workplace gamifié + IA + automatisation pour PME. 5 SaaS, un écosystème.",
 };
 
 export default function SiteLayout({

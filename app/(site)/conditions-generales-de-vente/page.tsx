@@ -75,6 +75,7 @@ export default function CGVPage() {
             <p>Le Prestataire propose les services suivants :</p>
             <ul className="grid gap-2">
               {[
+                "Conception et déploiement de Digital Workplaces (bureaux virtuels collaboratifs)",
                 "Recherche et qualification de prospects B2B",
                 "Automatisation des relances et séquences commerciales",
                 "Mise en place de CRM et gestion de rendez-vous",

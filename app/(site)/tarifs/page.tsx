@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import PricingContent from "@/components/site/pricing/PricingContent";
 
 export const metadata: Metadata = {
-  title: "Tarifs — SaaS IA & Automatisation pour PME | WCT Systems",
+  title: "Tarifs — 5 SaaS Digital Workplace & IA pour PME | WCT Systems",
   description:
-    "4 SaaS pour PME : prospection IA, site web moderne, automatisation, integration IA. A partir de 79 EUR HT/mois. Mise en place incluse. -20% en annuel. Audit gratuit.",
+    "5 SaaS pour PME : Digital Workplace gamifié, Prospection IA, Site Web Moderne, Automatisation, Intégration IA. A partir de 79 EUR HT/mois. Mise en place incluse. -20% en annuel. Audit gratuit.",
   alternates: { canonical: "/tarifs" },
 };
 
@@ -13,6 +13,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 /* ── Donnees pour JSON-LD (serveur uniquement) ────────────────────────────── */
 
 const SAAS_LD = [
+  { name: "Digital Workplace", description: "Bureau virtuel gamifie tout-en-un pour PME.", price: "249" },
   { name: "Prospection IA", description: "Ciblage, enrichissement, integration CRM par IA.", price: "99" },
   { name: "Site Web Moderne", description: "Site rapide, SEO + SEO IA, conversion, mobile-first.", price: "99" },
   { name: "Automatisation (RPA)", description: "Workflows sur mesure : relances, CRM, reporting.", price: "149" },
@@ -20,9 +21,9 @@ const SAAS_LD = [
 ];
 
 const PACKS_LD = [
-  { name: "Pack Starter", description: "2 SaaS au choix", price: "179" },
-  { name: "Pack Business", description: "3 SaaS au choix", price: "299" },
-  { name: "Pack Scale", description: "4 SaaS inclus", price: "399" },
+  { name: "Pack Starter", description: "2 SaaS au choix parmi les 5", price: "199" },
+  { name: "Pack Business", description: "3 SaaS au choix parmi les 5", price: "349" },
+  { name: "Pack Scale", description: "5 SaaS inclus", price: "649" },
 ];
 
 const FAQ_LD = [
@@ -32,10 +33,11 @@ const FAQ_LD = [
   { q: "Les prix vont-ils augmenter ?", a: "Vos prix sont garantis 12 mois apres souscription." },
   { q: "Qu'est-ce qui est inclus dans la mise en place ?", a: "Configuration, import de donnees, formation equipe (1h), accompagnement 30 jours." },
   { q: "Il y a des frais de mise en place ?", a: "Non. La mise en place est incluse dans tous les tarifs." },
-  { q: "Le paiement en 3x, comment ca marche ?", a: "Pour tout engagement annuel ou setup site web, reglez en 3 fois sans frais." },
+  { q: "Le paiement en 3x, comment ca marche ?", a: "Pour tout engagement annuel ou setup, reglez en 3 fois sans frais." },
   { q: "Y a-t-il un engagement de duree ?", a: "Pas d'engagement en mensuel. L'engagement annuel est de 12 mois avec -20%." },
   { q: "Je peux changer de formule en cours de route ?", a: "Oui, a tout moment." },
   { q: "Et si mes besoins ne correspondent a rien ici ?", a: "On fait un audit gratuit de 15 a 30 minutes." },
+  { q: "Le Digital Workplace remplace mes outils actuels ?", a: "Pas forcement. Il les centralise dans un bureau virtuel unifie. Vos outils existants s'integrent directement." },
 ];
 
 export default function TarifsPage() {

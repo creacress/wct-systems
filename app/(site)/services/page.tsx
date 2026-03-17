@@ -19,7 +19,7 @@ const SERVICES = [
     name: "Digital Workplace",
     badge: "Nouveau",
     short: "Un bureau virtuel gamifié où chaque pièce est un outil métier.",
-    price: "249",
+    price: "199",
     bullets: [
       "Bureau virtuel avec pièces thématiques",
       "Gamification : XP, badges, classements",

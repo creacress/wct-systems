@@ -6,7 +6,7 @@ import { PricingTracker } from "@/components/site/pricing-tracker";
 export const metadata: Metadata = {
   title: "Tarifs IA & Automatisation PME — À partir de 79€/mois | WCT Systems",
   description:
-    "4 SaaS pour PME : prospection IA, site web moderne, automatisation RPA, intégration IA. Mise en place incluse. -20% en annuel. Paiement en 3x.",
+    "5 SaaS pour PME : Digital Workplace, prospection IA, site web moderne, automatisation RPA, intégration IA. Mise en place incluse. -20% en annuel. Paiement en 3x.",
   keywords: ["tarifs automatisation PME", "prix SaaS PME", "abonnement IA entreprise"],
   alternates: { canonical: "/tarifs" },
 };
@@ -16,7 +16,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 /* ── Donnees pour JSON-LD (serveur uniquement) ────────────────────────────── */
 
 const SAAS_LD = [
-  { name: "Digital Workplace", description: "Bureau virtuel gamifie tout-en-un pour PME.", price: "249" },
+  { name: "Digital Workplace", description: "Bureau virtuel gamifie tout-en-un pour PME.", price: "199" },
   { name: "Prospection IA", description: "Ciblage, enrichissement, integration CRM par IA.", price: "99" },
   { name: "Site Web Moderne", description: "Site rapide, SEO + SEO IA, conversion, mobile-first.", price: "99" },
   { name: "Automatisation (RPA)", description: "Workflows sur mesure : relances, CRM, reporting.", price: "149" },

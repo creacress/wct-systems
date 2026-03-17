@@ -71,7 +71,7 @@ export default function SolutionsIndexPage() {
             </h1>
 
             <p className="max-w-2xl text-lg text-muted-foreground">
-              Chaque métier a ses défis. Découvrez comment nos 4 SaaS s&apos;adaptent à votre réalité.
+              Chaque métier a ses défis. Découvrez comment nos 5 SaaS s&apos;adaptent à votre réalité.
             </p>
           </section>
         </ScrollReveal>

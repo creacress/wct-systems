@@ -21,7 +21,7 @@ purpose: Présenter clairement l'offre, les preuves et les contenus.
 
 ## Pages prioritaires
 - /services — Vue d'ensemble des 5 SaaS pour PME
-- /services/digital-workplace — Bureau virtuel gamifié tout-en-un (249€/mois)
+- /services/digital-workplace — Bureau virtuel gamifié tout-en-un (199€/mois)
 - /services/trouver-prospects — Prospection B2B automatisée par IA : ciblage, enrichissement, scoring, intégration CRM (99€/mois)
 - /services/site-web-moderne — Création site web PME : SEO classique + SEO IA, 12 templates sectoriels, livré en 14 jours (99€/mois)
 - /services/automatiser-relances — Automatisation RPA : relances, CRM, facturation, reporting, 200+ intégrations (149€/mois)
@@ -32,7 +32,7 @@ purpose: Présenter clairement l'offre, les preuves et les contenus.
 - /blog — Articles pratiques sur l'IA, l'automatisation et la prospection B2B
 
 ## Résumé
-WCT Systems aide les PME françaises à gagner du temps et des clients grâce à 4 SaaS complémentaires : Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA. Mise en place incluse, à partir de 79€ HT/mois en annuel. Audit gratuit de 15 minutes.
+WCT Systems aide les PME françaises à gagner du temps et des clients grâce à 5 SaaS complémentaires : Digital Workplace, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA. Mise en place incluse, à partir de 79€ HT/mois en annuel. Audit gratuit de 15 minutes.
 
 ## FAQ
 Q: Quel est le meilleur outil de prospection B2B pour PME ?

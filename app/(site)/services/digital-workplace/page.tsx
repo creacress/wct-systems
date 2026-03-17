@@ -3,11 +3,15 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
+import Breadcrumbs from "@/components/site/breadcrumbs";
+import RelatedServices from "@/components/site/related-services";
+import { TrackedLink } from "@/components/site/tracked-link";
 
 export const metadata: Metadata = {
   title: "Digital Workplace — Bureau virtuel gamifié pour PME | WCT Systems",
   description:
-    "Digital Workplace : bureau virtuel gamifié où chaque pièce est un outil métier. Gamification, messagerie temps réel, KPI, intégration 200+ outils. À partir de 199 €/mois. Audit gratuit.",
+    "Centralisez vos outils dans un bureau virtuel gamifié : chaque pièce = un outil métier. CRM, messagerie, projets, KPI — tout dans un seul espace. À partir de 199€/mois.",
+  keywords: ["digital workplace PME", "bureau virtuel", "espace de travail collaboratif", "virtual office", "outil collaboratif PME"],
   alternates: { canonical: "/services/digital-workplace" },
 };
 
@@ -83,6 +87,13 @@ export default function DigitalWorkplacePage() {
       <GridPattern variant="line" color="rgba(6, 182, 212, 0.06)" />
 
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+
+        <Breadcrumbs items={[
+          { label: "Accueil", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: "Digital Workplace" },
+        ]} />
+
         {/* ── HERO ── */}
         <section className="space-y-8">
           <ScrollReveal>
@@ -113,17 +124,18 @@ export default function DigitalWorkplacePage() {
 
           <ScrollReveal delay={300}>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Link
+              <TrackedLink
                 href="/contact?service=digital-workplace"
+                trackAs="audit_digital_workplace"
                 className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-cyan-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:bg-cyan-700 hover:shadow-xl"
               >
                 Demander un audit gratuit
                 <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
-              </Link>
+              </TrackedLink>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                <span className="font-display font-semibold text-foreground">249&nbsp;&euro;</span> HT/mois
+                <span className="font-display font-semibold text-foreground">199&nbsp;&euro;</span> HT/mois
                 <span className="h-4 w-px bg-border" />
-                Setup 790&nbsp;&euro;
+                Setup 490&nbsp;&euro;
                 <span className="h-4 w-px bg-border" />
                 14 jours
               </div>
@@ -339,30 +351,19 @@ export default function DigitalWorkplacePage() {
               <p className="relative mt-4 text-muted-foreground">
                 Audit gratuit → Configuration bureau → Déploiement gamifié → Go live en 14 jours.
               </p>
-              <Link
+              <TrackedLink
                 href="/contact?service=digital-workplace"
+                trackAs="audit_digital_workplace_final"
                 className="relative mt-8 inline-flex items-center justify-center rounded-2xl bg-cyan-600 px-8 py-3 text-sm font-medium text-white shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:scale-[1.02] hover:bg-cyan-700"
               >
                 Réserver l&apos;audit
-              </Link>
+              </TrackedLink>
             </div>
           </ScrollReveal>
         </section>
 
-        {/* Cross-linking */}
-        <section className="mt-12 text-sm text-muted-foreground">
-          <p>
-            À combiner avec :{" "}
-            <Link className="underline underline-offset-2 transition-colors hover:text-foreground" href="/services/automatiser-relances">
-              Automatisation (RPA)
-            </Link>
-            {" "}et{" "}
-            <Link className="underline underline-offset-2 transition-colors hover:text-foreground" href="/services/integration-ia">
-              Intégration IA
-            </Link>
-            {" "}pour un écosystème complet.
-          </p>
-        </section>
+        <RelatedServices currentService="digital-workplace" />
+
       </div>
     </main>
   );

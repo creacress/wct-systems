@@ -10,7 +10,7 @@ import { TrackedLink } from "@/components/site/tracked-link";
 export const metadata: Metadata = {
   title: "WCT Systems — IA & Automatisation pour PME françaises",
   description:
-    "WCT Systems aide les PME françaises avec 4 SaaS : Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA. Audit gratuit en 15 min.",
+    "WCT Systems aide les PME françaises avec 5 SaaS : Digital Workplace, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA. Audit gratuit en 15 min.",
   keywords: ["IA PME France", "automatisation PME", "SaaS PME", "prospection B2B IA", "WCT Systems"],
   alternates: { canonical: "/" },
 };
@@ -50,7 +50,7 @@ const SERVICES = [
     href: "/services/digital-workplace",
     title: "Digital Workplace",
     desc: "Bureau virtuel gamifié où chaque pièce est un outil métier. XP, badges, classements.",
-    price: "249",
+    price: "199",
     color: "cyan",
     gradient: "from-cyan-500/10 to-teal-500/5",
     borderHover: "hover:border-cyan-400/40 dark:hover:border-cyan-500/30",
@@ -166,7 +166,7 @@ export default function HomePage() {
             <ScrollReveal delay={200}>
               <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
                 <strong className="text-foreground">WCT Systems</strong> conçoit le Digital Workplace des PME françaises :
-                un bureau virtuel gamifié + 4 SaaS (<strong className="text-foreground">Prospection IA, Site Web, Automatisation, Intégration IA</strong>).
+                un bureau virtuel gamifié + 5 SaaS (<strong className="text-foreground">Digital Workplace, Prospection IA, Site Web, Automatisation, Intégration IA</strong>).
               </p>
             </ScrollReveal>
 
@@ -270,7 +270,7 @@ export default function HomePage() {
               <div>
                 <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">L&apos;écosystème 5 SaaS</h2>
                 <p className="mt-2 max-w-2xl text-muted-foreground">
-                  Un Digital Workplace + 4 briques IA & automatisation. Chaque service a sa couleur.
+                  5 SaaS complémentaires : Digital Workplace + 4 briques IA & automatisation. Chaque service a sa couleur.
                 </p>
               </div>
               <Link

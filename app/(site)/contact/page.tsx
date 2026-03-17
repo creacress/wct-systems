@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 const SERVICES = [
+  { value: "digital-workplace", label: "Digital Workplace" },
   { value: "prospection-ia", label: "Prospection IA" },
   { value: "site-web", label: "Site Web Moderne" },
   { value: "automatisation", label: "Automatisation (RPA)" },

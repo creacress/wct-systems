@@ -27,10 +27,10 @@ const SAAS = [
     badge: "Nouveau",
     description:
       "Bureau virtuel gamifié tout-en-un pour votre équipe.",
-    priceMonthly: 249,
-    priceYearly: 199,
-    yearlyTotal: 2388,
-    setup: 790,
+    priceMonthly: 199,
+    priceYearly: 159,
+    yearlyTotal: 1908,
+    setup: 490,
     href: "/services/digital-workplace",
     accentHover: "hover:border-cyan-400/40",
     features: [

@@ -3,6 +3,7 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
+import { PageBackground } from "@/components/site/page-background";
 import Breadcrumbs from "@/components/site/breadcrumbs";
 import RelatedServices from "@/components/site/related-services";
 import { TrackedLink } from "@/components/site/tracked-link";
@@ -85,6 +86,7 @@ export default function DigitalWorkplacePage() {
       {/* Background: Game Office universe — Cyan/Lime with Tron grid */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-cyan-50/50 via-background to-background dark:from-cyan-950/20 dark:via-background" />
       <GridPattern variant="line" color="rgba(6, 182, 212, 0.06)" />
+      <PageBackground variant="tron" />
 
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
 

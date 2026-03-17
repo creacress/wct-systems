@@ -3,6 +3,7 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
+import { PageBackground } from "@/components/site/page-background";
 import Breadcrumbs from "@/components/site/breadcrumbs";
 import RelatedServices from "@/components/site/related-services";
 import { TrackedLink } from "@/components/site/tracked-link";
@@ -80,6 +81,7 @@ export default function TrouverProspectsPage() {
       {/* Background: Radar universe — Emerald/Green */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-emerald-50/50 via-background to-background dark:from-emerald-950/20 dark:via-background" />
       <GridPattern variant="dot" color="rgba(16, 185, 129, 0.06)" />
+      <PageBackground variant="radar" />
 
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
 

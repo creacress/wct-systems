@@ -344,7 +344,7 @@ export default function PricingContent() {
 
                   <div className="mt-5 space-y-1">
                     <div className="flex items-baseline gap-1">
-                      <span className="text-4xl font-semibold tracking-tight transition-all duration-300">
+                      <span className="text-4xl font-semibold tracking-tight transition-all duration-300 font-mono">
                         {price}&nbsp;&euro;
                       </span>
                       <span className="text-sm text-muted-foreground">
@@ -456,7 +456,7 @@ export default function PricingContent() {
 
                   <div className="mt-5 space-y-2">
                     <div className="flex items-baseline gap-1">
-                      <span className="text-4xl font-semibold tracking-tight transition-all duration-300">
+                      <span className="text-4xl font-semibold tracking-tight transition-all duration-300 font-mono">
                         {price}&nbsp;&euro;
                       </span>
                       <span className="text-sm text-muted-foreground">

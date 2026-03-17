@@ -3,6 +3,7 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
+import { PageBackground } from "@/components/site/page-background";
 import Breadcrumbs from "@/components/site/breadcrumbs";
 import RelatedServices from "@/components/site/related-services";
 import { TrackedLink } from "@/components/site/tracked-link";
@@ -198,6 +199,7 @@ export default function SiteWebModernePage() {
 
       {/* Subtle dot grid pattern */}
       <GridPattern variant="dot" color="rgba(14, 165, 233, 0.06)" />
+      <PageBackground variant="grid-iso" />
 
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
 

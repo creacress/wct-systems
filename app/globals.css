@@ -15,7 +15,7 @@
   --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
   --font-body: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: ui-monospace, monospace;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,6 +37,13 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ── Utility classes ───────────────────────────────────────────────── */
+
+.text-mono-data {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
 }
 
 /* ── Scroll Reveal ─────────────────────────────────────────────────── */
@@ -148,6 +155,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 .animate-glow-pulse {
   animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* ── Reduced motion ───────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-mesh-float,
+  .animate-mesh-float-reverse,
+  .animate-orb-float,
+  .animate-border-rotate,
+  .animate-radar-sweep,
+  .animate-pulse-ring,
+  .animate-circuit-flow,
+  .animate-neural-pulse,
+  .animate-grid-slide,
+  .animate-float-up,
+  .animate-glow-pulse {
+    animation: none !important;
+  }
+  .page-bg-animated * {
+    animation: none !important;
+  }
 }
 
 /* ── Dark mode background glow ─────────────────────────────────────── */

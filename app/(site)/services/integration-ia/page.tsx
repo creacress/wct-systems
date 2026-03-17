@@ -3,6 +3,7 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
+import { PageBackground } from "@/components/site/page-background";
 import Breadcrumbs from "@/components/site/breadcrumbs";
 import RelatedServices from "@/components/site/related-services";
 import { TrackedLink } from "@/components/site/tracked-link";
@@ -87,6 +88,7 @@ export default function IntegrationIaPage() {
       {/* Background */}
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-fuchsia-50/50 via-background to-background dark:from-fuchsia-950/20" />
       <GridPattern variant="dot" color="rgba(217, 70, 239, 0.06)" />
+      <PageBackground variant="neural" />
 
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
 

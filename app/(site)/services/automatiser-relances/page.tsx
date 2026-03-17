@@ -5,6 +5,7 @@ import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
 import Breadcrumbs from "@/components/site/breadcrumbs";
 import RelatedServices from "@/components/site/related-services";
+import { TrackedLink } from "@/components/site/tracked-link";
 
 export const metadata: Metadata = {
   title: "Automatiser relances commerciales PME — RPA sans code | WCT Systems",
@@ -116,12 +117,13 @@ export default function AutomatiserRelancesPage() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Link
+              <TrackedLink
                 href="/contact?service=automatisation"
+                trackAs="audit_automatiser_relances"
                 className="inline-flex items-center justify-center rounded-2xl bg-amber-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-amber-500/25 transition hover:scale-[1.02] hover:bg-amber-700"
               >
                 Demander un audit gratuit
-              </Link>
+              </TrackedLink>
               <div className="text-sm text-muted-foreground">
                 149 &euro; HT/mois &middot; Mise en place incluse &middot; 200+ outils
               </div>
@@ -328,12 +330,13 @@ export default function AutomatiserRelancesPage() {
                 <p className="mt-4 text-sm text-muted-foreground">
                   Audit rapide → workflows prioritaires → dashboard KPI. Ensuite on optimise en continu.
                 </p>
-                <Link
+                <TrackedLink
                   href="/contact?service=automatisation"
+                  trackAs="audit_automatiser_relances_final"
                   className="mt-8 inline-flex items-center justify-center rounded-2xl bg-amber-600 px-8 py-3 text-sm font-medium text-white shadow-lg shadow-amber-500/25 transition hover:scale-[1.02] hover:bg-amber-700"
                 >
                   Réserver l&apos;audit
-                </Link>
+                </TrackedLink>
               </div>
             </div>
           </section>

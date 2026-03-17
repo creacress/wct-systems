@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PricingContent from "@/components/site/pricing/PricingContent";
 import GridPattern from "@/components/ui/grid-pattern";
+import { PricingTracker } from "@/components/site/pricing-tracker";
 
 export const metadata: Metadata = {
   title: "Tarifs IA & Automatisation PME — À partir de 79€/mois | WCT Systems",
@@ -99,6 +100,7 @@ export default function TarifsPage() {
 
   return (
     <div id="content" className="relative overflow-hidden">
+      <PricingTracker />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -5,6 +5,7 @@ import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
 import Breadcrumbs from "@/components/site/breadcrumbs";
 import RelatedServices from "@/components/site/related-services";
+import { TrackedLink } from "@/components/site/tracked-link";
 
 export const metadata: Metadata = {
   title: "Création site web PME — SEO + IA, livré en 14 jours | WCT Systems",
@@ -226,12 +227,13 @@ export default function SiteWebModernePage() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Link
+              <TrackedLink
                 href="/contact?service=site-web"
+                trackAs="audit_site_web_moderne"
                 className="inline-flex items-center justify-center rounded-2xl bg-sky-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-sky-500/25 transition hover:scale-[1.02] hover:bg-sky-700"
               >
                 Demander un audit gratuit
-              </Link>
+              </TrackedLink>
               <a
                 href="#templates"
                 className="inline-flex items-center justify-center rounded-2xl border px-6 py-3 text-sm font-medium transition hover:bg-muted dark:border-white/[0.1]"
@@ -533,12 +535,13 @@ export default function SiteWebModernePage() {
                   Choisissez votre template → on l&apos;adapte → livré en 14 jours. Maintenance et hébergement inclus.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                  <Link
+                  <TrackedLink
                     href="/contact?service=site-web"
+                    trackAs="audit_site_web_final"
                     className="inline-flex items-center justify-center rounded-2xl bg-sky-600 px-8 py-3 text-sm font-medium text-white shadow-lg shadow-sky-500/25 transition hover:scale-[1.02] hover:bg-sky-700"
                   >
                     Réserver l&apos;audit
-                  </Link>
+                  </TrackedLink>
                   <a
                     href="#templates"
                     className="inline-flex items-center justify-center rounded-2xl border px-8 py-3 text-sm font-medium transition hover:bg-muted dark:border-white/[0.1]"

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import { ContactFormTracker } from "@/components/site/contact-form-tracker";
 
 export const metadata: Metadata = {
   title: "Contact — Audit gratuit | WCT Systems",
@@ -336,6 +337,7 @@ export default function ContactPage({
         </ScrollReveal>
 
       </div>
+      <ContactFormTracker />
     </main>
   );
 }

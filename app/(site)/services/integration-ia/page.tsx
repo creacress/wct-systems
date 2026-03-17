@@ -5,6 +5,7 @@ import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
 import Breadcrumbs from "@/components/site/breadcrumbs";
 import RelatedServices from "@/components/site/related-services";
+import { TrackedLink } from "@/components/site/tracked-link";
 
 export const metadata: Metadata = {
   title: "Intégration IA en entreprise — Chatbot, agents, RAG | WCT Systems",
@@ -121,12 +122,13 @@ export default function IntegrationIaPage() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Link
+              <TrackedLink
                 href="/contact?service=integration-ia"
+                trackAs="audit_integration_ia"
                 className="inline-flex items-center justify-center rounded-2xl bg-fuchsia-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-fuchsia-500/25 transition hover:scale-[1.02] hover:bg-fuchsia-700"
               >
                 Demander un audit gratuit
-              </Link>
+              </TrackedLink>
               <div className="text-sm text-muted-foreground">
                 199 &euro; HT/mois &middot; Mise en place incluse &middot; Formation 1h/mois
               </div>
@@ -317,12 +319,13 @@ export default function IntegrationIaPage() {
                 <p className="mt-4 text-sm text-muted-foreground">
                   Audit gratuit → cas d&apos;usage prioritaires → mise en place → formation. On vous accompagne.
                 </p>
-                <Link
+                <TrackedLink
                   href="/contact?service=integration-ia"
+                  trackAs="audit_integration_ia_final"
                   className="mt-8 inline-flex items-center justify-center rounded-2xl bg-fuchsia-600 px-8 py-3 text-sm font-medium text-white shadow-lg shadow-fuchsia-500/25 transition hover:scale-[1.02] hover:bg-fuchsia-700"
                 >
                   Réserver l&apos;audit
-                </Link>
+                </TrackedLink>
               </div>
             </div>
           </section>

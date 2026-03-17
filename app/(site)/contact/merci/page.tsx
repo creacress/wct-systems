@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import TrackConversion from "@/components/site/track-conversion";
+import { LeadTracker } from "@/components/site/lead-tracker";
 
 export const metadata: Metadata = {
   title: "Merci — Votre demande a été envoyée | WCT Systems",
@@ -30,7 +30,7 @@ const ETAPES = [
 export default function MerciPage() {
   return (
     <main id="content" className="relative overflow-hidden">
-      <TrackConversion event="form_submit" data={{ service_interest: "contact" }} />
+      <LeadTracker />
       {/* Background */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-violet-50/40 via-background to-background dark:from-violet-950/15" />
 

@@ -5,6 +5,7 @@ import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
 import { getAllPosts } from "@/lib/blog";
 import BlogCard from "@/components/blog/blog-card";
+import { TrackedLink } from "@/components/site/tracked-link";
 
 export const metadata: Metadata = {
   title: "WCT Systems — IA & Automatisation pour PME françaises",
@@ -313,12 +314,13 @@ export default function HomePage() {
                     >
                       En savoir plus
                     </Link>
-                    <Link
+                    <TrackedLink
                       href="/contact"
+                      trackAs="audit_service_card"
                       className="inline-flex items-center justify-center rounded-2xl bg-violet-600 px-4 py-2 text-sm font-medium text-white shadow-sm shadow-violet-500/20 transition hover:bg-violet-700"
                     >
                       Demander un audit
-                    </Link>
+                    </TrackedLink>
                   </div>
                 </article>
               </ScrollReveal>
@@ -394,12 +396,13 @@ export default function HomePage() {
 
           <ScrollReveal delay={300}>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
+              <TrackedLink
                 href="/contact"
+                trackAs="audit_gratuit_llms"
                 className="inline-flex items-center justify-center rounded-2xl bg-violet-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/25 transition hover:bg-violet-700"
               >
                 Démarrer avec un audit
-              </Link>
+              </TrackedLink>
               <Link
                 href="/llms.txt"
                 className="inline-flex items-center justify-center rounded-2xl border px-6 py-3 text-sm font-medium transition-colors hover:bg-muted dark:border-white/[0.12]"
@@ -493,12 +496,13 @@ export default function HomePage() {
                 Audit rapide → plan clair → Workplace qui tourne en 14 jours. Ensuite on optimise.
               </p>
               <div className="relative mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                <Link
+                <TrackedLink
                   href="/contact"
+                  trackAs="audit_gratuit_cta_final"
                   className="inline-flex items-center justify-center rounded-2xl bg-violet-600 px-8 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/25 transition-all duration-300 hover:scale-[1.02] hover:bg-violet-700 hover:shadow-xl"
                 >
                   Réserver l&apos;audit
-                </Link>
+                </TrackedLink>
                 <Link
                   href="/services"
                   className="inline-flex items-center justify-center rounded-2xl border px-8 py-3 text-sm font-medium transition-colors hover:bg-muted dark:border-white/[0.12]"

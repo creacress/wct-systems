@@ -5,6 +5,7 @@ import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
 import Breadcrumbs from "@/components/site/breadcrumbs";
 import RelatedServices from "@/components/site/related-services";
+import { TrackedLink } from "@/components/site/tracked-link";
 
 export const metadata: Metadata = {
   title: "Prospection B2B automatisée pour PME — Outil IA | WCT Systems",
@@ -117,15 +118,16 @@ export default function TrouverProspectsPage() {
 
           <ScrollReveal delay={300}>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Link
+              <TrackedLink
                 href="/contact?service=prospects"
+                trackAs="audit_trouver_prospects"
                 className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-emerald-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-emerald-500/25 transition-all duration-300 hover:bg-emerald-700 hover:shadow-xl hover:shadow-emerald-500/30 hover:scale-[1.02]"
               >
                 Demander un audit gratuit
                 <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </Link>
+              </TrackedLink>
               <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
                 <span className="flex items-center gap-1.5">
                   <span className="text-emerald-500">✓</span> Ciblage précis
@@ -390,12 +392,13 @@ export default function TrouverProspectsPage() {
                   <br className="hidden sm:block" />
                   Votre radar commercial sera opérationnel en quelques jours.
                 </p>
-                <Link
+                <TrackedLink
                   href="/contact?service=prospects"
+                  trackAs="audit_trouver_prospects_final"
                   className="mt-8 inline-flex items-center justify-center gap-2 rounded-2xl bg-emerald-600 px-8 py-3 text-sm font-medium text-white shadow-lg shadow-emerald-500/25 transition-all duration-300 hover:bg-emerald-700 hover:shadow-xl hover:shadow-emerald-500/30 hover:scale-[1.02]"
                 >
                   Réserver l&apos;audit
-                </Link>
+                </TrackedLink>
               </div>
             </div>
           </section>

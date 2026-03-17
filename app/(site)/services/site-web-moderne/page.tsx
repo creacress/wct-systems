@@ -3,11 +3,14 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
+import Breadcrumbs from "@/components/site/breadcrumbs";
+import RelatedServices from "@/components/site/related-services";
 
 export const metadata: Metadata = {
-  title: "Site Web Moderne — Rapide, SEO + SEO IA, qui convertit | WCT Systems",
+  title: "Création site web PME — SEO + IA, livré en 14 jours | WCT Systems",
   description:
-    "Un site web moderne, rapide et pensé pour convertir : SEO classique + SEO IA, mobile-first, performances A+. 12 templates métier prêts à l'emploi + option sur mesure. Livré en 14 jours.",
+    "Site web moderne pour PME : SEO classique + SEO IA (JSON-LD, llms.txt), mobile-first, templates sectoriels, performances A+. À partir de 99€/mois.",
+  keywords: ["création site web PME", "site internet professionnel", "site web SEO IA", "site web PME pas cher"],
   alternates: { canonical: "/services/site-web-moderne" },
 };
 
@@ -196,6 +199,12 @@ export default function SiteWebModernePage() {
       <GridPattern variant="dot" color="rgba(14, 165, 233, 0.06)" />
 
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+
+        <Breadcrumbs items={[
+          { label: "Accueil", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: "Site Web Moderne" },
+        ]} />
 
         {/* HERO */}
         <ScrollReveal>
@@ -542,22 +551,7 @@ export default function SiteWebModernePage() {
           </section>
         </ScrollReveal>
 
-        {/* Cross-linking */}
-        <ScrollReveal delay={50}>
-          <section className="mt-12 text-sm text-muted-foreground">
-            <p>
-              À combiner avec :{" "}
-              <Link className="underline hover:opacity-80" href="/services/trouver-prospects">
-                Prospection IA
-              </Link>
-              {" "}et{" "}
-              <Link className="underline hover:opacity-80" href="/services/automatiser-relances">
-                Automatisation (RPA)
-              </Link>
-              {" "}pour compléter la machine.
-            </p>
-          </section>
-        </ScrollReveal>
+        <RelatedServices currentService="site-web-moderne" />
 
       </div>
     </main>

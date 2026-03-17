@@ -3,11 +3,14 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
+import { getAllPosts } from "@/lib/blog";
+import BlogCard from "@/components/blog/blog-card";
 
 export const metadata: Metadata = {
-  title: "WCT Systems — Digital Workplace & IA pour PME",
+  title: "WCT Systems — IA & Automatisation pour PME françaises",
   description:
-    "WCT Systems conçoit le Digital Workplace des PME : bureau virtuel gamifié + Prospection IA, Site Web, Automatisation, Intégration IA. 5 SaaS, un écosystème. Audit gratuit.",
+    "WCT Systems aide les PME françaises avec 4 SaaS : Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA. Audit gratuit en 15 min.",
+  keywords: ["IA PME France", "automatisation PME", "SaaS PME", "prospection B2B IA", "WCT Systems"],
   alternates: { canonical: "/" },
 };
 
@@ -405,6 +408,32 @@ export default function HomePage() {
               </Link>
             </div>
           </ScrollReveal>
+        </section>
+
+        {/* ── DERNIERS ARTICLES ── */}
+        <section className="mt-24" aria-label="Derniers articles">
+          <ScrollReveal>
+            <div className="flex items-baseline justify-between gap-4 mb-8">
+              <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">Derniers articles</h2>
+              <Link href="/blog" className="text-sm font-medium text-violet-600 hover:underline dark:text-violet-400">
+                Tous les articles &rarr;
+              </Link>
+            </div>
+          </ScrollReveal>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {getAllPosts().slice(0, 3).map((post) => (
+              <ScrollReveal key={post.slug} direction="up" delay={60}>
+                <BlogCard
+                  slug={post.slug}
+                  title={post.title}
+                  description={post.description}
+                  date={post.date}
+                  tags={post.tags}
+                  readingTime={post.readingTime}
+                />
+              </ScrollReveal>
+            ))}
+          </div>
         </section>
 
         {/* ── FAQ ── */}

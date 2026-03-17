@@ -3,11 +3,14 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
+import Breadcrumbs from "@/components/site/breadcrumbs";
+import RelatedServices from "@/components/site/related-services";
 
 export const metadata: Metadata = {
-  title: "Intégration IA — Chatbot, Agents & Assistants sur mesure | WCT Systems",
+  title: "Intégration IA en entreprise — Chatbot, agents, RAG | WCT Systems",
   description:
-    "Intégrez l'IA dans votre quotidien : chatbot site/WhatsApp, agents IA métier, RAG sur vos données, connexion outils existants. Formation incluse. Audit gratuit.",
+    "Déployez un chatbot IA, des agents métier ou un assistant basé sur vos données (RAG). Formation incluse. À partir de 199€/mois.",
+  keywords: ["chatbot IA entreprise", "intégration IA PME", "agent IA sur mesure", "RAG entreprise"],
   alternates: { canonical: "/services/integration-ia" },
 };
 
@@ -85,6 +88,12 @@ export default function IntegrationIaPage() {
       <GridPattern variant="dot" color="rgba(217, 70, 239, 0.06)" />
 
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+
+        <Breadcrumbs items={[
+          { label: "Accueil", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: "Intégration IA" },
+        ]} />
 
         {/* HERO */}
         <ScrollReveal>
@@ -319,22 +328,7 @@ export default function IntegrationIaPage() {
           </section>
         </ScrollReveal>
 
-        {/* Cross-linking */}
-        <ScrollReveal delay={80}>
-          <section className="mt-12 text-sm text-muted-foreground">
-            <p>
-              À combiner avec :{" "}
-              <Link className="underline hover:opacity-80" href="/services/automatiser-relances">
-                Automatisation (RPA)
-              </Link>
-              {" "}et{" "}
-              <Link className="underline hover:opacity-80" href="/services/trouver-prospects">
-                Prospection IA
-              </Link>
-              {" "}pour un système complet.
-            </p>
-          </section>
-        </ScrollReveal>
+        <RelatedServices currentService="integration-ia" />
 
       </div>
     </main>

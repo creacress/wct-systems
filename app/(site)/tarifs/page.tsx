@@ -3,9 +3,10 @@ import PricingContent from "@/components/site/pricing/PricingContent";
 import GridPattern from "@/components/ui/grid-pattern";
 
 export const metadata: Metadata = {
-  title: "Tarifs — 5 SaaS Digital Workplace & IA pour PME | WCT Systems",
+  title: "Tarifs IA & Automatisation PME — À partir de 79€/mois | WCT Systems",
   description:
-    "5 SaaS pour PME : Digital Workplace gamifié, Prospection IA, Site Web Moderne, Automatisation, Intégration IA. A partir de 79 EUR HT/mois. Mise en place incluse. -20% en annuel. Audit gratuit.",
+    "4 SaaS pour PME : prospection IA, site web moderne, automatisation RPA, intégration IA. Mise en place incluse. -20% en annuel. Paiement en 3x.",
+  keywords: ["tarifs automatisation PME", "prix SaaS PME", "abonnement IA entreprise"],
   alternates: { canonical: "/tarifs" },
 };
 

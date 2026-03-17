@@ -3,11 +3,14 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
+import Breadcrumbs from "@/components/site/breadcrumbs";
+import RelatedServices from "@/components/site/related-services";
 
 export const metadata: Metadata = {
-  title: "Trouver des prospects qualifiés automatiquement",
+  title: "Prospection B2B automatisée pour PME — Outil IA | WCT Systems",
   description:
-    "Système automatisé de prospection B2B pour PME : ciblage par secteur et zone, liste propre sans doublons, intégration directe dans votre CRM. Audit gratuit.",
+    "Automatisez votre prospection B2B : ciblage IA par secteur et zone, enrichissement email/LinkedIn, scoring leads, intégration CRM. À partir de 99€/mois. Audit gratuit.",
+  keywords: ["prospection B2B PME", "outil prospection IA", "automatiser prospection commerciale", "trouver prospects qualifiés"],
   alternates: { canonical: "/services/trouver-prospects" },
 };
 
@@ -78,6 +81,12 @@ export default function TrouverProspectsPage() {
       <GridPattern variant="dot" color="rgba(16, 185, 129, 0.06)" />
 
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+
+        <Breadcrumbs items={[
+          { label: "Accueil", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: "Prospection IA" },
+        ]} />
 
         {/* ── HERO ── */}
         <section className="space-y-8">
@@ -391,6 +400,8 @@ export default function TrouverProspectsPage() {
             </div>
           </section>
         </ScrollReveal>
+
+        <RelatedServices currentService="trouver-prospects" />
 
       </div>
     </main>

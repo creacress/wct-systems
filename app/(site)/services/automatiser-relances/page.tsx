@@ -3,11 +3,14 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import CountUp from "@/components/ui/count-up";
 import GridPattern from "@/components/ui/grid-pattern";
+import Breadcrumbs from "@/components/site/breadcrumbs";
+import RelatedServices from "@/components/site/related-services";
 
 export const metadata: Metadata = {
-  title: "Automatisation (RPA) — Relances, CRM, Reporting | WCT Systems",
+  title: "Automatiser relances commerciales PME — RPA sans code | WCT Systems",
   description:
-    "Automatisez vos process sans coder : relances email, CRM, facturation, reporting, dashboard KPI. Intégration 200+ outils. Support inclus. Audit gratuit.",
+    "Automatisez vos relances, CRM, reporting et facturation avec des workflows sur mesure. 200+ intégrations, dashboard KPI. À partir de 149€/mois.",
+  keywords: ["automatiser relances commerciales", "RPA PME", "automatisation n8n", "workflow automatique"],
   alternates: { canonical: "/services/automatiser-relances" },
 };
 
@@ -85,6 +88,12 @@ export default function AutomatiserRelancesPage() {
       <GridPattern variant="line" color="rgba(245, 158, 11, 0.05)" />
 
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+
+        <Breadcrumbs items={[
+          { label: "Accueil", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: "Automatisation RPA" },
+        ]} />
 
         {/* HERO */}
         <ScrollReveal delay={0}>
@@ -330,22 +339,7 @@ export default function AutomatiserRelancesPage() {
           </section>
         </ScrollReveal>
 
-        {/* Cross-linking */}
-        <ScrollReveal delay={100}>
-          <section className="mt-12 text-sm text-muted-foreground">
-            <p>
-              À combiner avec :{" "}
-              <Link className="underline hover:opacity-80" href="/services/trouver-prospects">
-                Prospection IA
-              </Link>
-              {" "}pour alimenter votre pipeline et{" "}
-              <Link className="underline hover:opacity-80" href="/services/integration-ia">
-                Intégration IA
-              </Link>
-              {" "}pour aller plus loin.
-            </p>
-          </section>
-        </ScrollReveal>
+        <RelatedServices currentService="automatiser-relances" />
 
       </div>
     </main>

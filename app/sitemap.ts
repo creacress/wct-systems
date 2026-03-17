@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { SERVICES_SOLUTIONS, SECTEURS } from "@/lib/solutions-data";
+import { COMPARATIFS } from "@/lib/comparatifs-data";
 
 const SITE = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
@@ -18,6 +19,7 @@ const routes = [
   "/cas-clients",
   "/blog",
   "/solutions",
+  "/comparatifs",
   "/politique-de-confidentialite",
 ] as const;
 
@@ -49,5 +51,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...staticRoutes, ...blogRoutes, ...solutionRoutes];
+  // Comparatifs
+  const comparatifRoutes = COMPARATIFS.map((c) => ({
+    url: `${SITE}/comparatifs/${c.slug}`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...blogRoutes, ...solutionRoutes, ...comparatifRoutes];
 }

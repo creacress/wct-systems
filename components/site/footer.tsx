@@ -6,6 +6,7 @@ const NAV = [
   { href: "/tarifs", label: "Tarifs" },
   { href: "/cas-clients", label: "Cas clients" },
   { href: "/blog", label: "Blog" },
+  { href: "/comparatifs", label: "Comparatifs" },
 ] as const;
 
 const SAAS = [

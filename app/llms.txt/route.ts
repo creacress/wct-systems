@@ -1,5 +1,6 @@
 import { getAllPosts } from "@/lib/blog";
 import { SERVICES_SOLUTIONS, SECTEURS } from "@/lib/solutions-data";
+import { COMPARATIFS } from "@/lib/comparatifs-data";
 
 export async function GET() {
   const posts = getAllPosts();
@@ -69,6 +70,9 @@ ${blogSection}
 
 ## Solutions par secteur
 ${solutionsSection}
+
+## Comparatifs
+${COMPARATIFS.map((c) => `  - /comparatifs/${c.slug} — ${c.title}`).join("\n")}
 
 ## Ton / style
 Direct, concret, orienté résultats. Évite le marketing vague.

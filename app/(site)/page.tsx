@@ -413,6 +413,36 @@ export default function HomePage() {
           </ScrollReveal>
         </section>
 
+        {/* ── RÉSULTATS PME ── */}
+        <section className="mt-24" aria-label="Résultats PME">
+          <ScrollReveal direction="up">
+            <div className="rounded-3xl border bg-muted/60 p-6 sm:p-8 dark:border-white/[0.06] dark:bg-violet-500/[0.04]">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p className="font-display text-sm font-medium">Résultats PME mesurés</p>
+                  <p className="mt-1 text-sm text-muted-foreground">Cas anonymisés, chiffres réels.</p>
+                </div>
+                <Link href="/cas-clients" className="inline-flex items-center justify-center rounded-2xl border px-4 py-2 text-sm font-medium transition hover:bg-muted">
+                  Voir les cas &rarr;
+                </Link>
+              </div>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {[
+                  { value: "×6", label: "prospects/mois (cabinet RH)" },
+                  { value: "70%", label: "questions auto (chatbot e-commerce)" },
+                  { value: "28j", label: "système complet déployé (cabinet comptable)" },
+                  { value: "92%", label: "adoption Digital Workplace (ESN)" },
+                ].map((s) => (
+                  <div key={s.label} className="rounded-2xl border bg-background p-4 dark:border-white/[0.06] dark:bg-white/[0.03]">
+                    <div className="text-2xl font-bold font-mono tracking-tight">{s.value}</div>
+                    <div className="mt-1 text-xs text-muted-foreground">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+        </section>
+
         {/* ── DERNIERS ARTICLES ── */}
         <section className="mt-24" aria-label="Derniers articles">
           <ScrollReveal>

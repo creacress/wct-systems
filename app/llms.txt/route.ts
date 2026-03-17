@@ -74,6 +74,16 @@ ${solutionsSection}
 ## Comparatifs
 ${COMPARATIFS.map((c) => `  - /comparatifs/${c.slug} — ${c.title}`).join("\n")}
 
+## Cas clients
+  - Cabinet RH (12 salariés, IdF) — Prospection IA : ×6 prospects/mois
+  - Plombier (4 salariés, Lyon) — Site Web : 15 devis/mois, PageSpeed 98
+  - Agence immobilière (8 salariés, Bordeaux) — Automatisation : taux réponse ×2
+  - E-commerce cosmétiques (6 salariés, Nantes) — Chatbot IA : 70% questions auto
+  - ESN full remote (25 salariés) — Digital Workplace : 5 outils → 1, adoption 92%
+  - Cabinet comptable (18 salariés, Toulouse) — Pack Scale : système complet en 28 jours
+  - La Poste — Refonte intranet + RPA + chatbots
+  - Ministère des Armées — Refonte SI + optimisation web + automatisation
+
 ## Ton / style
 Direct, concret, orienté résultats. Évite le marketing vague.
 `;

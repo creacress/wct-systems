@@ -12,7 +12,8 @@ declare global {
  */
 export function trackEvent(event: string, data?: Record<string, unknown>) {
   try {
-    if (typeof window !== "undefined" && window.dataLayer) {
+    if (typeof window !== "undefined") {
+      window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event, ...data });
     }
   } catch {
@@ -54,7 +55,7 @@ export function trackViewPricing(plan?: string) {
  * Événement : lead généré (CONVERSION PRINCIPALE)
  */
 export function trackGenerateLead(source?: string) {
-  trackEvent("generate_lead", {
+  trackEvent("qualify_lead", {
     lead_source: source ?? "contact_form",
     currency: "EUR",
     value: 0,

@@ -1,0 +1,50 @@
+name: Auto Blog Post
+
+on:
+  schedule:
+    # Lundi et jeudi à 8h UTC (9h/10h Paris selon heure d'été)
+    - cron: '0 8 * * 1,4'
+  workflow_dispatch: # Déclenchement manuel
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Generate blog post
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx tsx scripts/generate-blog-post.ts
+
+      - name: Check for new files
+        id: check
+        run: |
+          if [ -n "$(git status --porcelain content/blog/)" ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build test
+        if: steps.check.outputs.has_changes == 'true'
+        run: npm run build
+
+      - name: Commit and push
+        if: steps.check.outputs.has_changes == 'true'
+        run: |
+          git config user.name "WCT Blog Bot"
+          git config user.email "bot@webcresson.com"
+          git add content/blog/
+          ARTICLE=$(git status --cached --name-only -- content/blog/ | head -1)
+          git commit -m "blog: auto-publish $(basename "$ARTICLE" .mdx)"
+          git push

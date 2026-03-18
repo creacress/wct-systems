@@ -40,3 +40,7 @@ ClAUDE.md
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# blog auto-publish
+logs/
+scripts/topic-backlog.md

@@ -9,24 +9,15 @@ const nextConfig: NextConfig = {
       // 1. EXPLORÉES NON INDEXÉES (484 pages)
       // =============================================
 
-      // --- 472 anciennes URLs /contact?model=... ---
-      // Une seule règle attrape TOUTES les variantes
-      {
-        source: "/contact",
-        has: [{ type: "query", key: "model" }],
-        destination: "/contact",
-        permanent: true,
-      },
-
       // --- Anciennes pages services (ancien site) ---
       {
         source: "/services/machine-deep-learning",
-        destination: "/services",
+        destination: "/services/integration-ia",
         permanent: true,
       },
       {
         source: "/services/intelligence-artificielle",
-        destination: "/services",
+        destination: "/services/integration-ia",
         permanent: true,
       },
 
@@ -38,12 +29,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/fr/services/intelligence-artificielle",
-        destination: "/services",
+        destination: "/services/integration-ia",
         permanent: true,
       },
       {
         source: "/fr/services/rpa-automatisation",
-        destination: "/services",
+        destination: "/services/automatiser-relances",
         permanent: true,
       },
       {
@@ -80,17 +71,17 @@ const nextConfig: NextConfig = {
       // --- Anciennes pages services ---
       {
         source: "/services/rpa-automatisation",
-        destination: "/services",
+        destination: "/services/automatiser-relances",
         permanent: true,
       },
       {
         source: "/services/generateur-ia",
-        destination: "/services",
+        destination: "/services/integration-ia",
         permanent: true,
       },
       {
         source: "/services/automation",
-        destination: "/services",
+        destination: "/services/automatiser-relances",
         permanent: true,
       },
       {
@@ -105,7 +96,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/services/rpa-ia",
-        destination: "/services",
+        destination: "/services/automatiser-relances",
         permanent: true,
       },
 
@@ -134,23 +125,28 @@ const nextConfig: NextConfig = {
       // --- Pages IA ---
       {
         source: "/IA",
-        destination: "/services",
+        destination: "/services/integration-ia",
         permanent: true,
       },
       {
         source: "/IA/Dev",
-        destination: "/services",
+        destination: "/services/integration-ia",
         permanent: true,
       },
 
       // --- Ancienne page Python ---
       {
         source: "/developpement-python",
-        destination: "/services",
+        destination: "/services/integration-ia",
         permanent: true,
       },
 
       // --- Ancien blog ---
+      {
+        source: "/blog/debutant/peur-ia",
+        destination: "/blog",
+        permanent: true,
+      },
       {
         source: "/blog/debutant/ia-simplement",
         destination: "/blog",
@@ -231,6 +227,23 @@ const nextConfig: NextConfig = {
       // --- Ancienne recherche ---
       {
         source: "/search",
+        destination: "/",
+        permanent: true,
+      },
+
+      // --- Anciennes pages non redirigées ---
+      {
+        source: "/automatisation-entreprise",
+        destination: "/services/automatiser-relances",
+        permanent: true,
+      },
+      {
+        source: "/creation-site-web",
+        destination: "/services/site-web-moderne",
+        permanent: true,
+      },
+      {
+        source: "/website",
         destination: "/",
         permanent: true,
       },

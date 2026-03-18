@@ -20,6 +20,5 @@ export default auth((req) => {
 })
 
 export const config = {
-  // Exclure les assets statiques, images, favicon et routes API
-  matcher: ['/((?!_next/static|_next/image|favicon.ico|api/|.*\\..*).*)'],
+  matcher: ['/prospects/:path*', '/admin/:path*', '/connexion'],
 }

@@ -10,7 +10,7 @@ import { TrackedLink } from "@/components/site/tracked-link";
 export const metadata: Metadata = {
   title: "WCT Systems — IA & Automatisation pour PME françaises",
   description:
-    "WCT Systems aide les PME françaises avec 5 SaaS : Digital Workplace, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA. Audit gratuit en 15 min.",
+    "WCT Systems aide les PME françaises avec 6 SaaS : Digital Workplace, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Q2C Facturation SaaS. Audit gratuit en 15 min.",
   keywords: ["IA PME France", "automatisation PME", "SaaS PME", "prospection B2B IA", "WCT Systems"],
   alternates: { canonical: "/" },
 };
@@ -93,6 +93,16 @@ const SERVICES = [
     borderHover: "hover:border-fuchsia-400/40 dark:hover:border-fuchsia-500/30",
     badge: "Populaire",
   },
+  {
+    href: "/services/q2c-facturation",
+    title: "Q2C — Facturation SaaS",
+    desc: "Facturation e-invoicing conforme 2026 : Factur-X, UBL, CII, TVA OSS, connecteur PA. À partir de 149 €/mois.",
+    price: "149",
+    color: "emerald",
+    gradient: "from-emerald-500/10 to-teal-500/5",
+    borderHover: "hover:border-emerald-400/40 dark:hover:border-emerald-500/30",
+    badge: "Nouveau",
+  },
 ] as const;
 
 export default function HomePage() {
@@ -103,14 +113,14 @@ export default function HomePage() {
         "@type": "Organization",
         name: SITE.name,
         url: SITE.url,
-        description: "Digital Workplace & IA pour PME françaises. 5 SaaS, un écosystème.",
+        description: "Digital Workplace & IA pour PME françaises. 6 SaaS, un écosystème.",
         sameAs: SITE.sameAs,
       },
       {
         "@type": "WebSite",
         name: SITE.name,
         url: SITE.url,
-        description: "Digital Workplace gamifié + IA + automatisation pour PME. 5 SaaS, un écosystème.",
+        description: "Digital Workplace gamifié + IA + automatisation pour PME. 6 SaaS, un écosystème.",
         potentialAction: {
           "@type": "SearchAction",
           target: `${SITE.url}/blog?q={search_term_string}`,
@@ -150,7 +160,7 @@ export default function HomePage() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-500 opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-violet-600" />
                 </span>
-                5 SaaS &bull; Digital Workplace &bull; IA
+                6 SaaS &bull; Digital Workplace &bull; IA
               </div>
             </ScrollReveal>
 
@@ -166,7 +176,7 @@ export default function HomePage() {
             <ScrollReveal delay={200}>
               <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
                 <strong className="text-foreground">WCT Systems</strong> conçoit le Digital Workplace des PME françaises :
-                un bureau virtuel gamifié + 5 SaaS (<strong className="text-foreground">Digital Workplace, Prospection IA, Site Web, Automatisation, Intégration IA</strong>).
+                un bureau virtuel gamifié + 6 SaaS (<strong className="text-foreground">Digital Workplace, Prospection IA, Site Web, Automatisation, Intégration IA, Facturation SaaS</strong>).
               </p>
             </ScrollReveal>
 
@@ -183,7 +193,7 @@ export default function HomePage() {
                   href="/services"
                   className="inline-flex items-center justify-center rounded-2xl border px-6 py-3 text-sm font-medium transition-colors hover:bg-muted dark:border-white/[0.12]"
                 >
-                  Voir les 5 services
+                  Voir les 6 services
                 </Link>
               </div>
             </ScrollReveal>
@@ -195,7 +205,7 @@ export default function HomePage() {
               {/* Stat counters row */}
               <div className="grid grid-cols-3 gap-3">
                 {[
-                  { end: 5, suffix: " SaaS", label: "Écosystème" },
+                  { end: 6, suffix: " SaaS", label: "Écosystème" },
                   { end: 14, suffix: " jours", label: "Time to live" },
                   { end: 200, suffix: "+", label: "Intégrations" },
                 ].map((s) => (
@@ -268,9 +278,9 @@ export default function HomePage() {
           <ScrollReveal>
             <div className="flex items-end justify-between gap-6">
               <div>
-                <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">L&apos;écosystème 5 SaaS</h2>
+                <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">L&apos;écosystème 6 SaaS</h2>
                 <p className="mt-2 max-w-2xl text-muted-foreground">
-                  5 SaaS complémentaires : Digital Workplace + 4 briques IA & automatisation. Chaque service a sa couleur.
+                  6 SaaS complémentaires : Digital Workplace + 5 briques IA, automatisation & facturation. Chaque service a sa couleur.
                 </p>
               </div>
               <Link

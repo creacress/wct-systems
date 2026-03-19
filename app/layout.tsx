@@ -30,12 +30,12 @@ export const metadata: Metadata = {
     template: "%s | WCT Systems",
   },
   description:
-    "5 SaaS pour PME : Digital Workplace gamifié, Prospection IA, Site Web Moderne, Automatisation, Intégration IA. Mise en place incluse.",
+    "6 SaaS pour PME : Digital Workplace gamifié, Prospection IA, Site Web Moderne, Automatisation, Intégration IA, Q2C Facturation SaaS. Mise en place incluse.",
   applicationName: "WCT Systems",
   openGraph: {
     title: "WCT Systems — Digital Workplace & IA pour PME",
     description:
-      "5 SaaS pour PME : Digital Workplace, Prospection IA, Site Web, Automatisation, Intégration IA.",
+      "6 SaaS pour PME : Digital Workplace, Prospection IA, Site Web, Automatisation, Intégration IA, Q2C Facturation.",
     url: "/",
     siteName: "WCT Systems",
     locale: "fr_FR",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "WCT Systems — Digital Workplace & IA pour PME",
     description:
-      "5 SaaS pour PME — Digital Workplace, IA, automatisation, résultats mesurables.",
+      "6 SaaS pour PME — Digital Workplace, IA, automatisation, facturation, résultats mesurables.",
   },
   robots: {
     index: true,

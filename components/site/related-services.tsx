@@ -36,6 +36,13 @@ const ALL_SERVICES = [
     href: "/services/digital-workplace",
     color: "cyan",
   },
+  {
+    id: "q2c-facturation",
+    title: "Q2C — Facturation SaaS",
+    desc: "Facturation électronique conforme 2026, Factur-X, TVA OSS, connecteur PA.",
+    href: "/services/q2c-facturation",
+    color: "emerald",
+  },
 ];
 
 const COLOR_CLASSES: Record<string, string> = {

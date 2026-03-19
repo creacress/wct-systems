@@ -18,6 +18,7 @@ const SERVICES = [
   { value: "site-web", label: "Site Web Moderne" },
   { value: "automatisation", label: "Automatisation (RPA)" },
   { value: "integration-ia", label: "Intégration IA" },
+  { value: "q2c-facturation", label: "Q2C — Facturation SaaS" },
   { value: "pack-starter", label: "Pack Starter" },
   { value: "pack-business", label: "Pack Business" },
   { value: "pack-scale", label: "Pack Scale" },

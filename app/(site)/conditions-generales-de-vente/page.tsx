@@ -81,6 +81,7 @@ export default function CGVPage() {
                 "Mise en place de CRM et gestion de rendez-vous",
                 "Création de dashboards KPI et reporting",
                 "Conception de sites web orientés génération de leads",
+                "Facturation électronique et billing SaaS B2B (Q2C SaaS)",
                 "Conseil et audit en stratégie digitale",
               ].map((s) => (
                 <li

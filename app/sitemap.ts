@@ -14,6 +14,7 @@ const routes = [
   "/services/automatiser-relances",
   "/services/site-web-moderne",
   "/services/integration-ia",
+  "/services/q2c-facturation",
   "/tarifs",
   "/contact",
   "/cas-clients",

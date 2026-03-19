@@ -4,9 +4,9 @@ import ScrollReveal from "@/components/ui/scroll-reveal";
 import GridPattern from "@/components/ui/grid-pattern";
 
 export const metadata: Metadata = {
-  title: "Services — 5 SaaS Digital Workplace & IA pour PME | WCT Systems",
+  title: "Services — 6 SaaS Digital Workplace & IA pour PME | WCT Systems",
   description:
-    "5 SaaS pour PME : Digital Workplace gamifié, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA. Mise en place incluse, à partir de 79 € HT/mois. Audit gratuit.",
+    "6 SaaS pour PME : Digital Workplace gamifié, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Q2C Facturation SaaS. Mise en place incluse, à partir de 79 € HT/mois. Audit gratuit.",
   alternates: { canonical: "/services" },
 };
 
@@ -85,6 +85,21 @@ const SERVICES = [
       "Formation équipe incluse (1h/mois)",
     ],
   },
+  {
+    id: "q2c-facturation",
+    href: "/services/q2c-facturation",
+    name: "Q2C — Facturation SaaS",
+    badge: "Nouveau",
+    short: "Facturation électronique conforme 2026 pour SaaS B2B. Devis, contrats, abonnements, Factur-X, TVA OSS.",
+    price: "149",
+    bullets: [
+      "Factur-X + UBL + CII (3 formats réglementaires)",
+      "Cycle complet devis → paiement",
+      "TVA OSS 30 pays + validation VIES",
+      "Connecteur Plateforme Agréée",
+      "Dashboard MRR/ARR + IFRS 15",
+    ],
+  },
 ] as const;
 
 const FAQ = [
@@ -142,6 +157,13 @@ const SERVICE_COLORS = [
     border: "border-fuchsia-200/60 hover:border-fuchsia-400/50 dark:border-fuchsia-700/30 dark:hover:border-fuchsia-500/20",
     check: "text-fuchsia-600 dark:text-fuchsia-400",
     badge: "bg-fuchsia-600",
+  },
+  /* 5 — Q2C Facturation SaaS */
+  {
+    card: "bg-gradient-to-br from-emerald-50/40 to-teal-50/20 dark:from-emerald-500/[0.04] dark:to-teal-500/[0.02]",
+    border: "border-emerald-200/60 hover:border-emerald-400/50 dark:border-emerald-700/30 dark:hover:border-emerald-500/20",
+    check: "text-emerald-600 dark:text-emerald-400",
+    badge: "bg-emerald-600",
   },
 ] as const;
 
@@ -221,11 +243,11 @@ export default function ServicesPage() {
         <ScrollReveal direction="up" delay={0}>
           <section className="space-y-8">
             <div className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-4 py-1 text-xs uppercase tracking-wide text-violet-700 dark:border-violet-800 dark:bg-violet-950/50 dark:text-violet-300">
-              5 SaaS &bull; Digital Workplace &bull; IA &bull; PME
+              6 SaaS &bull; Digital Workplace &bull; IA &bull; PME
             </div>
 
             <h1 className="font-display font-bold text-4xl tracking-tight sm:text-5xl md:text-6xl">
-              5 SaaS pour PME.
+              6 SaaS pour PME.
               <span className="block bg-gradient-to-r from-violet-600 via-cyan-500 to-indigo-500 bg-clip-text text-transparent dark:from-violet-400 dark:via-cyan-400 dark:to-indigo-400">
                 Un écosystème complet.
               </span>
@@ -255,7 +277,7 @@ export default function ServicesPage() {
 
         {/* GRID */}
         <ScrollReveal direction="up" delay={100}>
-          <section className="mt-14 grid gap-6 md:grid-cols-2" aria-label="Nos 5 SaaS">
+          <section className="mt-14 grid gap-6 md:grid-cols-2" aria-label="Nos 6 SaaS">
             {SERVICES.map((s, i) => {
               const colors = SERVICE_COLORS[i];
               return (

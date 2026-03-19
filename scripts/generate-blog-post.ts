@@ -131,7 +131,7 @@ function buildSystemPrompt(
   existingTitles: string[]
 ): string {
   return `Tu es un rédacteur SEO expert pour le blog de WCT Systems (webcresson.com).
-WCT Systems est une entreprise française qui propose 5 SaaS pour PME : Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Digital Workplace.
+WCT Systems est une entreprise française qui propose 6 SaaS pour PME : Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Digital Workplace, Q2C Facturation SaaS.
 
 Tu dois écrire un article de blog en français pour le service "${service.name}".
 

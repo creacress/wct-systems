@@ -8,6 +8,7 @@ import {
   Zap,
   Brain,
   Building2,
+  Receipt,
   Check,
   ArrowRight,
   ChevronDown,
@@ -122,6 +123,27 @@ const SAAS = [
       "Formation équipe incluse (1h/mois)",
     ],
   },
+  {
+    id: "q2c-facturation",
+    icon: Receipt,
+    name: "Q2C — Facturation SaaS",
+    description:
+      "Facturation électronique conforme 2026 pour SaaS B2B. Du devis au paiement, Factur-X natif.",
+    priceMonthly: 149,
+    priceYearly: 119,
+    yearlyTotal: 1428,
+    setup: 490,
+    href: "/services/q2c-facturation",
+    badge: "Nouveau",
+    accentHover: "hover:border-emerald-400/40",
+    features: [
+      "Factur-X EXTENDED + UBL + CII",
+      "Cycle complet devis → contrat → facture → paiement",
+      "TVA EU/OSS 30 pays + validation VIES",
+      "Connecteur universel Plateforme Agréée",
+      "Dashboard MRR/ARR/Churn + Revenue Recognition",
+    ],
+  },
 ];
 
 const PACKS = [
@@ -129,7 +151,7 @@ const PACKS = [
     id: "starter",
     name: "Starter",
     tagline: "Lancer l\u2019acquisition",
-    desc: "2 SaaS au choix parmi les 5",
+    desc: "2 SaaS au choix parmi les 6",
     priceMonthly: 199,
     priceYearly: 159,
     badge: "-10% vs à la carte",
@@ -141,7 +163,7 @@ const PACKS = [
     id: "business",
     name: "Business",
     tagline: "Structurer et piloter",
-    desc: "3 SaaS au choix parmi les 5",
+    desc: "3 SaaS au choix parmi les 6",
     priceMonthly: 349,
     priceYearly: 279,
     badge: "-15% vs à la carte",
@@ -153,7 +175,7 @@ const PACKS = [
     id: "scale",
     name: "Scale",
     tagline: "Système complet",
-    desc: "Les 5 SaaS inclus",
+    desc: "Les 6 SaaS inclus",
     priceMonthly: 649,
     priceYearly: 519,
     badge: "-25% vs à la carte",
@@ -236,7 +258,7 @@ export default function PricingContent() {
           </h1>
 
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            5 SaaS conçus pour les PME françaises. Mise en place incluse.
+            6 SaaS conçus pour les PME françaises. Mise en place incluse.
             <br className="hidden sm:block" />
             Sans engagement mensuel, -20% en annuel.
           </p>
@@ -245,7 +267,7 @@ export default function PricingContent() {
           <div className="flex flex-wrap items-center justify-center gap-8 pt-2">
             <div className="text-center">
               <div className="font-display font-bold text-2xl text-violet-600 dark:text-violet-400">
-                <CountUp end={5} suffix=" SaaS" />
+                <CountUp end={6} suffix=" SaaS" />
               </div>
               <div className="text-xs text-muted-foreground">à la carte ou en pack</div>
             </div>
@@ -308,9 +330,9 @@ export default function PricingContent() {
         <section
           id="saas"
           className="mt-16 scroll-mt-24"
-          aria-label="Nos 5 SaaS"
+          aria-label="Nos 6 SaaS"
         >
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {SAAS.map((s) => {
               const Icon = s.icon;
               const price = isYearly ? s.priceYearly : s.priceMonthly;

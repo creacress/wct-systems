@@ -173,7 +173,7 @@ const CASES: CaseStudy[] = [
     size: "18 salariés",
     location: "Toulouse (31)",
     service: "pack-scale",
-    serviceLabel: "Pack Scale (5 SaaS)",
+    serviceLabel: "Pack Scale (6 SaaS)",
     title: "Système complet : prospection + site + automatisation + IA en 30 jours",
     context: "Ce cabinet voulait moderniser son acquisition client en une seule fois. Prospection manuelle, site WordPress lent, aucune relance structurée, et pas d'outil IA. Objectif : un système complet, opérationnel en 1 mois.",
     delivered: [

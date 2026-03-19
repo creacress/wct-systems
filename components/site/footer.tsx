@@ -15,6 +15,7 @@ const SAAS = [
   { href: "/services/site-web-moderne", label: "Site Web Moderne" },
   { href: "/services/automatiser-relances", label: "Automatisation" },
   { href: "/services/integration-ia", label: "Intégration IA" },
+  { href: "/services/q2c-facturation", label: "Q2C Facturation" },
 ] as const;
 
 const LEGAL = [
@@ -42,7 +43,7 @@ export function Footer() {
               WCT <span className="text-muted-foreground">Systems</span>
             </p>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Digital Workplace & IA pour PME : 5 SaaS, un écosystème complet.
+              Digital Workplace & IA pour PME : 6 SaaS, un écosystème complet.
             </p>
             <div className="inline-flex items-center gap-2 rounded-2xl border bg-muted/60 px-3 py-1.5 text-xs text-muted-foreground dark:border-white/[0.08] dark:bg-white/[0.04]">
               <span className="relative flex h-1.5 w-1.5">
@@ -65,9 +66,9 @@ export function Footer() {
             </div>
           </div>
 
-          {/* 5 SaaS */}
+          {/* 6 SaaS */}
           <div className="space-y-3">
-            <p className="font-display text-sm font-medium">5 SaaS</p>
+            <p className="font-display text-sm font-medium">6 SaaS</p>
             <div className="grid gap-2 text-sm">
               {SAAS.map((l) => (
                 <Link key={l.href} href={l.href} className="text-muted-foreground transition-colors hover:text-foreground">

@@ -1,0 +1,729 @@
+{
+  "list": {
+    "metadata_title": "Services — 6 SaaS Digital Workplace & IA pour PME | WCT Systems",
+    "metadata_description": "6 SaaS pour PME : Digital Workplace gamifié, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Q2C Facturation SaaS. Mise en place incluse, à partir de 79 € HT/mois. Audit gratuit.",
+    "hero_badge": "6 SaaS \u2022 Digital Workplace \u2022 IA \u2022 PME",
+    "hero_title_line1": "6 SaaS pour PME.",
+    "hero_title_line2": "Un écosystème complet.",
+    "hero_description": "Digital Workplace, prospection, site web, automatisation et IA : chaque SaaS résout un problème précis. Prenez-les individuellement ou combinez-les en pack pour un système complet.",
+    "hero_cta_audit": "Réserver un audit gratuit",
+    "hero_cta_pricing": "Voir les tarifs",
+    "grid_aria_label": "Nos 6 SaaS",
+    "price_suffix": "HT/mois",
+    "card_cta_learn_more": "En savoir plus",
+    "card_cta_start": "Démarrer",
+    "services": {
+      "digital_workplace": {
+        "name": "Digital Workplace",
+        "badge": "Nouveau",
+        "short": "Un bureau virtuel gamifié où chaque pièce est un outil métier.",
+        "price": "199",
+        "bullets": [
+          "Bureau virtuel avec pièces thématiques",
+          "Gamification : XP, badges, classements",
+          "Messagerie temps réel + visio",
+          "Dashboard KPI par équipe",
+          "Intégration 200+ outils existants"
+        ]
+      },
+      "prospection_ia": {
+        "name": "Prospection IA",
+        "short": "Trouvez vos futurs clients grâce à l\u2019IA. Ciblage, enrichissement, intégration CRM.",
+        "price": "99",
+        "bullets": [
+          "Ciblage IA par secteur et zone géo",
+          "Enrichissement automatique (email, LinkedIn, téléphone)",
+          "Scoring des leads par IA",
+          "Intégration CRM / tableur automatique",
+          "Base mise à jour en continu"
+        ]
+      },
+      "site_web": {
+        "name": "Site Web Moderne",
+        "short": "Un site rapide, SEO + SEO IA, pensé pour convertir. 4 templates, livré en 14 jours.",
+        "price": "99",
+        "bullets": [
+          "5 à 10 pages optimisées conversion",
+          "SEO classique + SEO IA (JSON-LD, llms.txt)",
+          "Mobile-first, performances A+",
+          "4 templates personnalisables",
+          "Maintenance & hébergement inclus"
+        ]
+      },
+      "automatisation": {
+        "name": "Automatisation (RPA)",
+        "short": "Automatisez vos process : relances, CRM, reporting, facturation. Sans coder.",
+        "price": "149",
+        "bullets": [
+          "Workflows sur mesure (relances, CRM, facturation)",
+          "Intégration 200+ outils (Gmail, Notion, HubSpot\u2026)",
+          "Dashboard KPI en temps réel",
+          "Alertes et notifications automatiques",
+          "Support & maintenance inclus"
+        ]
+      },
+      "integration_ia": {
+        "name": "Intégration IA",
+        "badge": "Populaire",
+        "short": "Intégrez l\u2019IA dans votre quotidien : chatbot, agents, assistants sur mesure.",
+        "price": "199",
+        "bullets": [
+          "Chatbot IA pour votre site / WhatsApp",
+          "Agents IA métier (vente, support, RH)",
+          "Connexion à vos outils existants",
+          "Réponses basées sur vos données (RAG)",
+          "Formation équipe incluse (1h/mois)"
+        ]
+      },
+      "q2c_facturation": {
+        "name": "Q2C — Facturation SaaS",
+        "badge": "Nouveau",
+        "short": "Facturation électronique conforme 2026 pour SaaS B2B. Devis, contrats, abonnements, Factur-X, TVA OSS.",
+        "price": "149",
+        "bullets": [
+          "Factur-X + UBL + CII (3 formats réglementaires)",
+          "Cycle complet devis → paiement",
+          "TVA OSS 30 pays + validation VIES",
+          "Connecteur Plateforme Agréée",
+          "Dashboard MRR/ARR + IFRS 15"
+        ]
+      }
+    },
+    "faq": [
+      {
+        "q": "Par quoi commencer ?",
+        "a": "On commence par un audit gratuit (15-30 min). Ensuite on identifie le SaaS le plus impactant pour votre situation et on lance une V1 rapidement."
+      },
+      {
+        "q": "Je peux prendre un seul service sans pack ?",
+        "a": "Oui. Chaque SaaS est disponible individuellement. Les packs permettent d\u2019économiser 10 à 25 %."
+      },
+      {
+        "q": "Est-ce adapté à une petite entreprise ?",
+        "a": "Oui. L\u2019objectif est de simplifier votre quotidien et d\u2019augmenter vos demandes sans ajouter de complexité."
+      },
+      {
+        "q": "Est-ce que je dois changer tous mes outils ?",
+        "a": "Non. Le Digital Workplace centralise vos outils existants (Notion, Slack, Google\u2026) dans un bureau virtuel unifié. On s\u2019adapte à votre existant."
+      }
+    ],
+    "jsonld_breadcrumb_home": "Accueil",
+    "jsonld_breadcrumb_services": "Services",
+    "jsonld_itemlist_name": "Services WCT Systems",
+    "jsonld_area_served": "France",
+    "packs_title": "Combinez et économisez",
+    "packs_description": "Packs Starter, Business et Scale : de -10% à -25% vs à la carte.",
+    "packs_cta": "Voir les packs",
+    "faq_title": "Questions fréquentes",
+    "cta_title": "On démarre par l'audit",
+    "cta_description": "15–30 minutes, puis un plan clair : quel SaaS en premier, quels KPI suivre, et comment l'exécuter.",
+    "cta_button": "Réserver l'audit"
+  },
+  "digital_workplace": {
+    "metadata_title": "Digital Workplace — Bureau virtuel gamifié pour PME | WCT Systems",
+    "metadata_description": "Centralisez vos outils dans un bureau virtuel gamifié : chaque pièce = un outil métier. CRM, messagerie, projets, KPI — tout dans un seul espace. À partir de 199€/mois.",
+    "metadata_keywords": "digital workplace PME, bureau virtuel, espace de travail collaboratif, virtual office, outil collaboratif PME",
+    "breadcrumb_home": "Accueil",
+    "breadcrumb_services": "Services",
+    "breadcrumb_current": "Digital Workplace",
+    "hero_badge_new": "Nouveau",
+    "hero_badge_label": "Digital Workplace \u2022 Gamifié",
+    "hero_title_line1": "Votre bureau virtuel.",
+    "hero_title_line2": "Gamifié et tout-en-un.",
+    "hero_description": "Un espace de travail digital où chaque pièce est un outil métier. Gamification intégrée, messagerie temps réel, KPI par équipe et intégration de vos outils existants.",
+    "hero_description_bold": "Le travail devient un jeu.",
+    "hero_cta": "Demander un audit gratuit",
+    "hero_price": "199",
+    "hero_price_suffix": "HT/mois",
+    "hero_setup": "Setup 490\u00a0\u20ac",
+    "hero_delay": "14 jours",
+    "stats": [
+      { "suffix": "+", "label": "Intégrations" },
+      { "suffix": "%", "label": "Engagement en plus" },
+      { "suffix": " jours", "label": "Déploiement" },
+      { "suffix": " en 1", "label": "Outils centralisés" }
+    ],
+    "problem_title": "Le problème courant",
+    "problems": [
+      { "title": "Outils dispersés", "desc": "Email, Slack, Notion, Drive, CRM, tableur... Votre équipe jongle entre 5 à 10 outils non connectés." },
+      { "title": "Pas d'engagement", "desc": "Les outils internes sont subis, pas adoptés. Le taux d'utilisation chute après 2 mois." },
+      { "title": "Onboarding long", "desc": "Un nouveau collaborateur met 3 à 6 mois pour être pleinement opérationnel." },
+      { "title": "Données en silos", "desc": "Les infos sont éparpillées : chaque service a ses fichiers, ses habitudes, ses outils." },
+      { "title": "Pas de visibilité", "desc": "Impossible de savoir qui fait quoi, où en est un projet, quels sont les KPI d'équipe." },
+      { "title": "Temps perdu", "desc": "40% du temps de travail est consacré à des tâches admin et de la coordination manuelle." }
+    ],
+    "included_title": "Ce qui est inclus",
+    "included_items": [
+      "Bureau virtuel avec pièces thématiques (RH, Ventes, Support, Projet...)",
+      "Gamification intégrée : XP, badges, classements, quêtes quotidiennes",
+      "Messagerie d'équipe en temps réel (chat, visio, huddles)",
+      "Tableau de bord KPI par équipe et par collaborateur",
+      "Intégration outils existants (Notion, Slack, Google, Microsoft 365...)",
+      "Automatisations intégrées (workflows inter-pièces)",
+      "Templates de bureaux par secteur (agence, cabinet, startup, PME...)",
+      "Onboarding gamifié pour les nouveaux collaborateurs",
+      "Gestion documentaire centralisée (par pièce)",
+      "Mobile-first : accès depuis n'importe où"
+    ],
+    "process_title": "Comment ça marche",
+    "process_steps": [
+      { "step": "01", "title": "Audit outils", "desc": "Cartographie outils actuels, process et pain points. Gratuit, 30 min.", "days": "J1-J3" },
+      { "step": "02", "title": "Configuration bureau", "desc": "Pièces métier, connexion outils, workflows inter-pièces.", "days": "J4-J8" },
+      { "step": "03", "title": "Déploiement", "desc": "Migration données, onboarding gamifié, formation équipe.", "days": "J9-J12" },
+      { "step": "04", "title": "Gamification", "desc": "XP, badges, classements, quêtes. Optimisation continue sur KPI.", "days": "J13-J14" }
+    ],
+    "roi_title": "Exemple de ROI",
+    "roi_items": [
+      { "label": "Hypothèse", "value": "10 personnes", "detail": "40% du temps en tâches admin et coordination" },
+      { "label": "Gain", "value": "~160h/mois", "detail": "récupérées par l'équipe grâce à la centralisation" },
+      { "label": "Impact", "value": "x3 engagement", "detail": "onboarding 2x plus rapide, turnover en baisse" }
+    ],
+    "roi_business_title": "Traduction business",
+    "roi_business_desc_prefix": "Un bureau virtuel qui ",
+    "roi_business_bold1": "centralise 10 outils en 1",
+    "roi_business_mid1": ", réduit l'onboarding de ",
+    "roi_business_bold2": "6 mois à 3 mois",
+    "roi_business_mid2": " et augmente l'engagement de ",
+    "roi_business_bold3": "+48%",
+    "roi_business_suffix": " grâce à la gamification.",
+    "roi_disclaimer": "*Exemple indicatif : dépend de la taille de votre équipe et de vos process actuels.",
+    "before_after_title": "Avant / Après",
+    "before_label": "Avant",
+    "before_text": "10 onglets ouverts, pas d'engagement sur les outils internes, onboarding de 6 mois, données en silos, aucune visibilité sur les KPI d'équipe.",
+    "after_label": "Après",
+    "after_text": "1 bureau virtuel, équipe engagée grâce à la gamification, onboarding en 3 mois, données centralisées, KPI en temps réel par pièce.",
+    "faq_title": "Questions fréquentes",
+    "faq": [
+      {
+        "q": "C'est quoi un Digital Workplace exactement ?",
+        "a": "Un Digital Workplace est un bureau virtuel qui regroupe tous vos outils métier dans un seul espace. Chaque « pièce » correspond à une fonction (RH, Ventes, Support, Projet\u2026). Votre équipe y travaille, communique et collabore sans jongler entre 10 onglets."
+      },
+      {
+        "q": "La gamification, c'est sérieux ?",
+        "a": "Oui. Des études montrent que la gamification augmente l'engagement de 48% et la productivité de 36%. Les XP, badges et classements créent de la motivation intrinsèque — votre équipe progresse et le voit concrètement."
+      },
+      {
+        "q": "Le Digital Workplace remplace mes outils actuels ?",
+        "a": "Pas forcément. Il les centralise dans un bureau virtuel unifié. Vos outils existants (Notion, Slack, Google, Microsoft 365\u2026) s'intègrent directement dans les pièces du Workplace."
+      },
+      {
+        "q": "Combien de temps pour déployer le Workplace ?",
+        "a": "Environ 14 jours : audit de vos outils actuels (J1-J3), configuration des pièces métier (J4-J8), gamification et onboarding (J9-J12), go live et optimisation (J13-J14)."
+      },
+      {
+        "q": "C'est adapté à une petite équipe ?",
+        "a": "Oui. On propose des templates de bureaux par taille et secteur (agence, cabinet, startup, PME). Même une équipe de 5 personnes gagne en efficacité et en engagement."
+      },
+      {
+        "q": "Les données sont-elles sécurisées ?",
+        "a": "Oui. Hébergement européen, chiffrement de bout en bout, SSO compatible. Vos données restent privées et conformes RGPD."
+      }
+    ],
+    "cta_title": "Prêt à transformer votre façon de travailler ?",
+    "cta_description": "Audit gratuit \u2192 Configuration bureau \u2192 Déploiement gamifié \u2192 Go live en 14 jours.",
+    "cta_button": "Réserver l'audit",
+    "jsonld_service_name": "Digital Workplace — Bureau virtuel gamifié pour PME",
+    "jsonld_service_description": "Bureau virtuel gamifié tout-en-un pour PME : pièces thématiques, gamification (XP, badges, classements), messagerie temps réel, KPI, intégration 200+ outils.",
+    "jsonld_area_served": "France"
+  },
+  "trouver_prospects": {
+    "metadata_title": "Prospection B2B automatisée pour PME — Outil IA | WCT Systems",
+    "metadata_description": "Automatisez votre prospection B2B : ciblage IA par secteur et zone, enrichissement email/LinkedIn, scoring leads, intégration CRM. À partir de 99€/mois. Audit gratuit.",
+    "metadata_keywords": "prospection B2B PME, outil prospection IA, automatiser prospection commerciale, trouver prospects qualifiés",
+    "breadcrumb_home": "Accueil",
+    "breadcrumb_services": "Services",
+    "breadcrumb_current": "Prospection IA",
+    "hero_badge": "Acquisition B2B automatisée",
+    "hero_title_line1": "Trouver des prospects qualifiés",
+    "hero_title_line2": "sans perdre de temps",
+    "hero_description": "Nous mettons en place un système automatisé qui identifie les bonnes entreprises, nettoie les données et les intègre directement dans votre suivi commercial.",
+    "hero_description_bold": "Votre radar commercial, toujours actif.",
+    "hero_cta": "Demander un audit gratuit",
+    "hero_check1": "Ciblage précis",
+    "hero_check2": "Données propres",
+    "hero_check3": "Intégration CRM",
+    "stats": [
+      { "label": "récupérées par mois", "desc": "sur la prospection manuelle" },
+      { "label": "prospects/mois ciblés", "desc": "vs ~80 en manuel" },
+      { "label": "plus de volume traité", "desc": "pour le même budget temps" }
+    ],
+    "problem_title": "Le problème courant des PME",
+    "problems": [
+      { "title": "Recherche chronophage", "desc": "Recherche manuelle longue et chronophage qui mobilise vos commerciaux sur des tâches à faible valeur ajoutée." },
+      { "title": "Listes peu fiables", "desc": "Listes peu fiables ou mal ciblées, avec doublons et contacts obsolètes qui nuisent à votre réputation d'envoi." },
+      { "title": "Suivi désorganisé", "desc": "Suivi commercial désorganisé entre Excel épars, notes oubliées et relances qui tombent à l'eau." }
+    ],
+    "solution_title": "La solution en 4 étapes",
+    "solution_steps": [
+      { "step": "01", "title": "Ciblage précis", "desc": "Ciblage précis par secteur d'activité, zone géographique, taille d'entreprise et autres critères métiers." },
+      { "step": "02", "title": "Nettoyage des données", "desc": "Nettoyage automatique et suppression des doublons pour des listes exploitables immédiatement." },
+      { "step": "03", "title": "Intégration CRM", "desc": "Intégration automatique dans votre CRM ou outil de suivi existant, sans ressaisie manuelle." },
+      { "step": "04", "title": "Base prête aux relances", "desc": "Base propre et structurée, prête à alimenter vos séquences de relances automatisées." }
+    ],
+    "roi_title": "Exemple de ROI",
+    "roi_hypothesis": "2h/jour de prospection manuelle \u2192 automatisée",
+    "roi_gain": "~40h/mois récupérées (temps vendu ou réinvesti)",
+    "roi_impact": "+ volume de contacts traités \u2192 + chances de devis signés",
+    "roi_hypothesis_label": "Hypothèse",
+    "roi_gain_label": "Gain",
+    "roi_impact_label": "Impact",
+    "roi_business_title": "Traduction business",
+    "roi_business_desc_prefix": "Si votre taux de conversion est de ",
+    "roi_business_bold1": "5%",
+    "roi_business_mid": " et que vous traitez ",
+    "roi_business_bold2": "200 prospects/mois",
+    "roi_business_suffix": " au lieu de 80, vous augmentez mécaniquement le nombre d'opportunités. On met ensuite en place les relances pour améliorer le taux de réponse.",
+    "roi_disclaimer": "*Exemple indicatif : le ROI dépend de votre offre, zone, saisonnalité et qualité du suivi.",
+    "before_after_title": "Avant / Après",
+    "before_label": "Avant",
+    "before_text": "Prospection manuelle, Excel dispersés, relances oubliées. Vos commerciaux passent des heures à chercher des contacts plutôt qu'à les convertir.",
+    "after_label": "Après",
+    "after_text": "Pipeline propre, prospects ciblés automatiquement, suivi structuré et prêt à convertir. Votre radar détecte les opportunités en continu.",
+    "faq_title": "Questions fréquentes",
+    "faq": [
+      {
+        "q": "Comment est-ce que vous trouvez les prospects ?",
+        "a": "Nous utilisons des bases de données fiables et des filtres avancés pour cibler précisément les entreprises qui correspondent à vos critères."
+      },
+      {
+        "q": "Est-ce que les données sont mises à jour régulièrement ?",
+        "a": "Oui, notre système nettoie et met à jour les données automatiquement pour garantir leur fraîcheur et leur pertinence."
+      },
+      {
+        "q": "Puis-je intégrer ces prospects dans mon CRM actuel ?",
+        "a": "Absolument, nous proposons une intégration directe avec la plupart des CRM populaires."
+      }
+    ],
+    "cta_title": "Prêt à générer plus d'opportunités ?",
+    "cta_description_line1": "On définit votre cible et on lance la première version du système.",
+    "cta_description_line2": "Votre radar commercial sera opérationnel en quelques jours.",
+    "cta_button": "Réserver l'audit",
+    "jsonld_breadcrumb_name": "Trouver des prospects",
+    "jsonld_service_name": "Trouver des prospects qualifiés automatiquement",
+    "jsonld_service_description": "Système automatisé de prospection B2B pour PME : ciblage par secteur et zone, liste propre sans doublons, intégration directe dans votre suivi commercial ou CRM.",
+    "jsonld_area_served": "France"
+  },
+  "site_web_moderne": {
+    "metadata_title": "Création site web PME — SEO + IA, livré en 14 jours | WCT Systems",
+    "metadata_description": "Site web moderne pour PME : SEO classique + SEO IA (JSON-LD, llms.txt), mobile-first, templates sectoriels, performances A+. À partir de 99€/mois.",
+    "metadata_keywords": "création site web PME, site internet professionnel, site web SEO IA, site web PME pas cher",
+    "breadcrumb_home": "Accueil",
+    "breadcrumb_services": "Services",
+    "breadcrumb_current": "Site Web Moderne",
+    "hero_badge": "12 templates \u00b7 SEO + SEO IA \u00b7 Livré en 14 jours",
+    "hero_title_line1": "Un site web moderne",
+    "hero_title_line2": "adapté à votre métier",
+    "hero_description_prefix": "Choisissez parmi ",
+    "hero_description_bold": "12 templates métier",
+    "hero_description_suffix": ", on l'adapte à votre activité et on livre un site ultra rapide, optimisé SEO + SEO IA, en 14 jours.",
+    "hero_cta_audit": "Demander un audit gratuit",
+    "hero_cta_templates": "Voir les templates",
+    "hero_price_monthly": "99 \u20ac HT/mois",
+    "hero_price_setup": "Setup 590 \u20ac HT",
+    "hero_delivery": "Livré en 14 jours",
+    "included_title": "Ce qui est inclus",
+    "included_items": [
+      { "title": "5 à 10 pages optimisées", "desc": "Pages services, accueil, contact, à propos — chacune pensée conversion." },
+      { "title": "SEO classique + SEO IA", "desc": "Titres, métas, JSON-LD, llms.txt, ai.txt — visible par Google et les IA." },
+      { "title": "Mobile-first, perf A+", "desc": "PageSpeed 90+, temps de chargement < 2s, responsive parfait." },
+      { "title": "Maintenance incluse", "desc": "Mises à jour, corrections, évolutions mineures — tout est dans l'abonnement." },
+      { "title": "Hébergement premium", "desc": "Vercel Edge Network : CDN mondial, HTTPS, déploiement automatique." },
+      { "title": "Formation (1h)", "desc": "On vous montre comment mettre à jour vos contenus et suivre vos stats." }
+    ],
+    "templates_title": "12 templates métier",
+    "templates_description": "Chaque template est personnalisable à 100 %. Choisissez la base qui correspond à votre activité, on s'occupe du reste.",
+    "templates": {
+      "restaurant": { "name": "Restaurant", "description": "Menu, réservation en ligne, galerie photos. Idéal pour restaurants, brasseries et traiteurs.", "sector": "Restauration" },
+      "immobilier": { "name": "Immobilier", "description": "Listings, fiches biens, formulaire d'estimation. Parfait pour agences et agents immobiliers.", "sector": "Immobilier" },
+      "avocats": { "name": "Cabinet d'Avocats", "description": "Présentation du cabinet, domaines d'expertise, prise de RDV. Conçu pour avocats et juristes.", "sector": "Juridique" },
+      "plombier": { "name": "Plombier", "description": "Zone d'intervention, services, devis rapide. Adapté aux artisans et entreprises du bâtiment.", "sector": "Artisanat" },
+      "photographe": { "name": "Photographe", "description": "Portfolio, galeries par projet, formulaire de contact. Pour photographes et créatifs visuels.", "sector": "Créatif" },
+      "fleuriste": { "name": "Fleuriste", "description": "Catalogue de bouquets, commande en ligne, livraison. Idéal pour fleuristes et pépiniéristes.", "sector": "Commerce" },
+      "cabinet_rh": { "name": "Cabinet RH", "description": "Offres d'emploi, services RH, témoignages. Conçu pour cabinets de recrutement et conseil RH.", "sector": "RH / Conseil" },
+      "animalerie": { "name": "Animalerie", "description": "Catalogue produits, services (toilettage, pension), conseils. Pour animaleries et vétérinaires.", "sector": "Animaux" },
+      "e_commerce": { "name": "E-commerce", "description": "Catalogue produits, fiches détaillées, tunnel de conversion. Pour boutiques en ligne de toute taille.", "sector": "E-commerce" },
+      "saas": { "name": "SaaS Landing", "description": "Landing page conversion : features, pricing, CTA. Optimisé pour produits SaaS et apps.", "sector": "Tech / SaaS" },
+      "tech": { "name": "Tech & Startup", "description": "Site corporate moderne : équipe, produit, blog, intégrations. Pour startups et ESN.", "sector": "Tech" },
+      "sur_mesure": { "name": "Site Personnalisé", "description": "Votre activité ne rentre pas dans un template ? On conçoit un site 100 % sur mesure, adapté à vos besoins spécifiques.", "sector": "Sur mesure" }
+    },
+    "template_cta_choose": "Choisir",
+    "template_cta_custom": "Discuter du projet",
+    "template_cta_demo": "Démo live",
+    "template_demo_label": "Voir la démo",
+    "template_preview_label": "Aperçu du template {name}",
+    "template_sur_mesure_label": "Sur mesure",
+    "templates_fallback": "Votre secteur n'est pas dans la liste ?",
+    "templates_fallback_link": "Contactez-nous",
+    "templates_fallback_suffix": ", on crée aussi des sites sur mesure.",
+    "seo_title": "SEO + Visibilité IA",
+    "seo_items": [
+      { "k": "SEO classique", "d": "Titres, descriptions, pages canoniques, sitemap/robots, vitesse, maillage interne." },
+      { "k": "SEO IA", "d": "Structure claire + schémas JSON-LD + llms.txt/ai.txt pour guider les assistants IA." },
+      { "k": "Contenus ciblés", "d": "Pages services et articles qui répondent aux questions des clients." },
+      { "k": "Conversion", "d": "CTA visibles, preuve sociale, sections simples, mobile-first." }
+    ],
+    "process_title": "Le process en 4 étapes",
+    "process_steps": [
+      { "step": "1", "title": "Audit & brief", "desc": "On analyse votre existant et on définit la structure." },
+      { "step": "2", "title": "Template & contenu", "desc": "Choix du template, rédaction, visuels." },
+      { "step": "3", "title": "Développement", "desc": "Intégration, SEO, tests, optimisation perf." },
+      { "step": "4", "title": "Mise en ligne", "desc": "Déploiement, formation, suivi 30 jours." }
+    ],
+    "roi_title": "Exemple de ROI",
+    "roi_hypothesis_label": "Hypothèse",
+    "roi_hypothesis": "1 000 visites/mois",
+    "roi_conversion_label": "Conversion",
+    "roi_conversion": "1% \u2192 2% (demandes)",
+    "roi_impact_label": "Impact",
+    "roi_impact": "10 \u2192 20 demandes/mois",
+    "roi_business_title": "Traduction business",
+    "roi_business_desc_prefix": "Si vous signez ",
+    "roi_business_bold1": "20%",
+    "roi_business_mid": " des demandes et que votre panier moyen est de ",
+    "roi_business_bold2": "1 500\u20ac",
+    "roi_business_suffix": ", doubler les demandes peut avoir un impact direct sur votre chiffre d'affaires.",
+    "roi_disclaimer": "*Exemple indicatif : dépend de votre offre, saisonnalité et qualité du suivi.",
+    "faq_title": "Questions fréquentes",
+    "faq": [
+      {
+        "q": "J'ai déjà un site, est-ce que ça vaut le coup ?",
+        "a": "Souvent oui. Beaucoup de sites ne convertissent pas faute de message clair, preuve et CTA. On peut optimiser l'existant ou repartir sur une base plus rapide."
+      },
+      {
+        "q": "C'est quoi \"SEO IA\" concrètement ?",
+        "a": "C'est rendre votre site très compréhensible par les assistants IA : structure claire, pages canoniques, schémas JSON-LD, et fichiers llms.txt/ai.txt. Cela améliore aussi la lisibilité pour les moteurs."
+      },
+      {
+        "q": "Combien de temps pour une V1 ?",
+        "a": "En général 7 à 14 jours pour une V1 : pages clés, structure SEO, tracking minimal, et un tunnel de conversion simple."
+      },
+      {
+        "q": "Je peux personnaliser un template ?",
+        "a": "Oui. Chaque template est un point de départ. On adapte les couleurs, contenus, sections et fonctionnalités à votre activité."
+      },
+      {
+        "q": "Mon secteur n'est pas dans la liste, c'est possible quand même ?",
+        "a": "Absolument. Les templates couvrent les cas les plus courants, mais on crée aussi des sites sur mesure. Le process reste le même."
+      },
+      {
+        "q": "Le site est-il maintenu ensuite ?",
+        "a": "Oui. L'abonnement inclut la maintenance, les évolutions et l'hébergement premium. Vous n'avez rien à gérer côté technique."
+      }
+    ],
+    "cta_title": "Prêt pour un site qui convertit ?",
+    "cta_description": "Choisissez votre template \u2192 on l'adapte \u2192 livré en 14 jours. Maintenance et hébergement inclus.",
+    "cta_button": "Réserver l'audit",
+    "cta_templates": "Voir les templates",
+    "jsonld_service_name": "Site Web Moderne",
+    "jsonld_service_description": "Création d'un site web moderne, rapide et pensé pour convertir : SEO classique + SEO IA, mobile-first, performances A+. 12 templates métier personnalisables, livré en 14 jours.",
+    "jsonld_area_served": "France"
+  },
+  "automatiser_relances": {
+    "metadata_title": "Automatiser relances commerciales PME — RPA sans code | WCT Systems",
+    "metadata_description": "Automatisez vos relances, CRM, reporting et facturation avec des workflows sur mesure. 200+ intégrations, dashboard KPI. À partir de 149€/mois.",
+    "metadata_keywords": "automatiser relances commerciales, RPA PME, automatisation n8n, workflow automatique",
+    "breadcrumb_home": "Accueil",
+    "breadcrumb_services": "Services",
+    "breadcrumb_current": "Automatisation RPA",
+    "hero_badge": "RPA \u2022 Relances \u2022 CRM \u2022 KPI",
+    "hero_title_line1": "Automatisez vos process",
+    "hero_title_line2": "sans coder",
+    "hero_description": "Relances, CRM, facturation, reporting : on automatise vos workflows sur mesure. Intégration avec 200+ outils, dashboard KPI en temps réel, alertes automatiques. Vous gardez le contrôle, sans les tâches répétitives.",
+    "hero_cta": "Demander un audit gratuit",
+    "hero_pricing": "149 \u20ac HT/mois \u00b7 Mise en place incluse \u00b7 200+ outils",
+    "stats": [
+      { "suffix": "+", "label": "outils connectés" },
+      { "suffix": "%", "label": "de tâches répétitives éliminées" },
+      { "suffix": "%", "label": "de taux de réponse moyen" }
+    ],
+    "problem_title": "Le problème courant",
+    "problems": [
+      "Prospects oubliés ou relancés trop tard",
+      "Suivi dispersé entre 5 outils différents",
+      "Pas de visibilité sur ce qui marche (KPI flous)"
+    ],
+    "included_title": "Ce qui est inclus",
+    "included_items": [
+      { "title": "Workflows sur mesure", "desc": "Relances, CRM, facturation, onboarding — on automatise vos process clés." },
+      { "title": "Intégration 200+ outils", "desc": "Gmail, Notion, HubSpot, Airtable, Slack, Stripe, et bien plus." },
+      { "title": "Dashboard KPI", "desc": "Leads, réponses, devis, signatures — suivi en temps réel." },
+      { "title": "Alertes automatiques", "desc": "Notifications quand un seuil est atteint ou qu'une action est nécessaire." },
+      { "title": "Pipeline CRM clair", "desc": "Suivi des prospects du premier contact à la signature." },
+      { "title": "Support & maintenance", "desc": "On maintient et fait évoluer vos automations en continu." }
+    ],
+    "roi_title": "Exemple de ROI",
+    "roi_hypothesis_label": "Hypothèse",
+    "roi_hypothesis": "100 prospects/mois \u2022 10% répondent",
+    "roi_after_label": "Après automatisation",
+    "roi_after": "10% \u2192 18% de réponses + pipeline clair",
+    "roi_impact_label": "Impact",
+    "roi_impact": "+ opportunités, + devis, + signatures",
+    "roi_business_title": "Traduction business",
+    "roi_business_desc_prefix": "Si votre panier moyen est de ",
+    "roi_business_bold1": "1 500\u20ac",
+    "roi_business_mid": " et que vous signez ",
+    "roi_business_bold2": "20%",
+    "roi_business_suffix": " des prospects qui répondent, passer de 10 à 18 réponses + un pipeline structuré peut ajouter plusieurs ventes chaque mois.",
+    "roi_disclaimer": "*Exemple indicatif : dépend de votre offre, délai de décision et qualité des messages.",
+    "process_title": "Comment ça marche",
+    "process_steps": [
+      { "step": 1, "title": "Audit des process", "desc": "On cartographie vos workflows actuels et identifions les tâches à automatiser en priorité." },
+      { "step": 2, "title": "Conception des automations", "desc": "On conçoit vos workflows sur mesure, branchés sur vos outils existants." },
+      { "step": 3, "title": "Mise en production", "desc": "On déploie, on teste et on forme votre équipe sur les nouvelles automations." },
+      { "step": 4, "title": "Optimisation continue", "desc": "On mesure les résultats via le dashboard KPI et on ajuste en continu." }
+    ],
+    "before_after_title": "Avant / Après",
+    "before_label": "Avant",
+    "before_text": "Relances manuelles, suivi dispersé, KPI flous, prospects perdus.",
+    "after_label": "Après",
+    "after_text": "Workflows automatisés, pipeline clair, dashboard KPI, alertes en temps réel.",
+    "faq_title": "Questions fréquentes",
+    "faq": [
+      {
+        "q": "Est-ce que ça risque d'envoyer des emails 'robot' ?",
+        "a": "Non. On écrit des séquences simples et humaines, avec des relances sobres. L'objectif est d'éviter les oublis, pas de spammer."
+      },
+      {
+        "q": "Vous pouvez vous connecter à mon outil actuel ?",
+        "a": "Oui : CRM, tableur, Notion, Airtable, HubSpot, Gmail/Outlook, Slack, et 200+ autres outils. On s'adapte et on simplifie."
+      },
+      {
+        "q": "Je n'ai pas beaucoup de prospects, c'est utile quand même ?",
+        "a": "Oui. Même avec peu de leads, les relances augmentent fortement le taux de réponse. Et l'automatisation CRM/reporting vous fait gagner du temps immédiatement."
+      },
+      {
+        "q": "Est-ce que le dashboard KPI est inclus ?",
+        "a": "Oui. Un dashboard en temps réel fait partie du service : leads, réponses, devis, signatures, alertes."
+      }
+    ],
+    "cta_title": "On automatise vos process",
+    "cta_description": "Audit rapide \u2192 workflows prioritaires \u2192 dashboard KPI. Ensuite on optimise en continu.",
+    "cta_button": "Réserver l'audit",
+    "jsonld_breadcrumb_name": "Automatisation (RPA)",
+    "jsonld_service_name": "Automatisation (RPA) — Relances, CRM, Reporting",
+    "jsonld_service_description": "Service d'automatisation RPA pour PME : workflows sur mesure, relances email, CRM, facturation, reporting, dashboard KPI, intégration 200+ outils.",
+    "jsonld_area_served": "France"
+  },
+  "integration_ia": {
+    "metadata_title": "Intégration IA en entreprise — Chatbot, agents, RAG | WCT Systems",
+    "metadata_description": "Déployez un chatbot IA, des agents métier ou un assistant basé sur vos données (RAG). Formation incluse. À partir de 199€/mois.",
+    "metadata_keywords": "chatbot IA entreprise, intégration IA PME, agent IA sur mesure, RAG entreprise",
+    "breadcrumb_home": "Accueil",
+    "breadcrumb_services": "Services",
+    "breadcrumb_current": "Intégration IA",
+    "hero_badge": "IA sur mesure \u2022 Chatbot \u2022 Agents \u2022 RAG",
+    "hero_badge_popular": "Populaire",
+    "hero_title_line1": "L'IA intégrée",
+    "hero_title_line2": "dans votre quotidien",
+    "hero_description": "Chatbot pour votre site ou WhatsApp, agents IA pour la vente, le support ou les RH, assistants connectés à vos données. On met en place l'IA qui a un impact réel sur votre productivité.",
+    "hero_cta": "Demander un audit gratuit",
+    "hero_pricing": "199 \u20ac HT/mois \u00b7 Mise en place incluse \u00b7 Formation 1h/mois",
+    "use_cases_title": "Cas d'usage concrets",
+    "use_cases": [
+      { "title": "Chatbot site / WhatsApp", "desc": "Répondez aux visiteurs 24/7, qualifiez les leads, prenez des RDV automatiquement." },
+      { "title": "Agent IA vente", "desc": "Rédaction d'emails, scoring de leads, synthèse de conversations, relances intelligentes." },
+      { "title": "Agent IA support", "desc": "Réponses automatiques basées sur votre FAQ et documentation. Escalade aux humains si besoin." },
+      { "title": "Agent IA RH", "desc": "Tri de CV, réponses candidats, synthèse d'entretiens, onboarding automatisé." },
+      { "title": "RAG sur vos données", "desc": "L'IA répond en se basant sur vos documents internes, fiches produits ou base de connaissances." },
+      { "title": "Connexion outils", "desc": "CRM, Notion, HubSpot, Gmail, Slack — l'IA s'intègre dans votre workflow existant." }
+    ],
+    "included_title": "Ce qui est inclus",
+    "included_items": [
+      "Chatbot IA pour votre site / WhatsApp",
+      "Agents IA métier (vente, support, RH)",
+      "Connexion à vos outils existants",
+      "Réponses basées sur vos données (RAG)",
+      "Formation équipe incluse (1h/mois)",
+      "Support & maintenance continus"
+    ],
+    "roi_title": "Exemple de ROI",
+    "roi_hypothesis_label": "Hypothèse",
+    "roi_hypothesis": "3h/jour de tâches répétitives (emails, réponses, tri)",
+    "roi_gain_label": "Gain",
+    "roi_gain_suffix": "h/mois",
+    "roi_gain_text": " récupérées par l'équipe",
+    "roi_impact_label": "Impact",
+    "roi_impact": "Réponses plus rapides, leads qualifiés, satisfaction client",
+    "roi_business_title": "Traduction business",
+    "roi_business_desc_prefix": "Un chatbot qui qualifie ",
+    "roi_business_bold1": "20 leads/mois",
+    "roi_business_mid": " à votre place et un agent qui rédige ",
+    "roi_business_bold2": "50 emails/semaine",
+    "roi_business_suffix": " — c'est l'équivalent d'un mi-temps en moins.",
+    "roi_disclaimer": "*Exemple indicatif : dépend de votre volume et complexité des tâches.",
+    "before_after_title": "Avant / Après",
+    "before_label": "Avant",
+    "before_text": "Tâches manuelles répétitives, réponses lentes, leads non qualifiés, données dispersées.",
+    "after_label": "Après",
+    "after_text": "IA qui répond 24/7, leads qualifiés automatiquement, emails rédigés, données centralisées.",
+    "faq_title": "Questions fréquentes",
+    "faq": [
+      {
+        "q": "C'est quoi un agent IA exactement ?",
+        "a": "Un agent IA est un assistant automatisé qui exécute des tâches : répondre aux clients, qualifier des leads, rédiger des emails, analyser des données. Il s'adapte à votre métier et vos process."
+      },
+      {
+        "q": "Est-ce que l'IA peut utiliser mes données internes ?",
+        "a": "Oui. Grâce au RAG (Retrieval Augmented Generation), l'IA peut répondre en se basant sur vos documents, FAQ, fiches produits ou base de connaissances. Vos données restent privées."
+      },
+      {
+        "q": "Vous pouvez connecter l'IA à mes outils actuels ?",
+        "a": "Oui : CRM, Notion, HubSpot, Gmail, Slack, WhatsApp, etc. L'IA s'intègre dans votre workflow existant."
+      },
+      {
+        "q": "Faut-il des compétences techniques pour l'utiliser ?",
+        "a": "Non. On configure tout pour vous et on forme votre équipe (1h/mois incluse). L'IA est prête à l'emploi."
+      }
+    ],
+    "cta_title": "Prêt à intégrer l'IA ?",
+    "cta_description": "Audit gratuit \u2192 cas d'usage prioritaires \u2192 mise en place \u2192 formation. On vous accompagne.",
+    "cta_button": "Réserver l'audit",
+    "jsonld_service_name": "Intégration IA — Chatbot, Agents & Assistants sur mesure",
+    "jsonld_service_description": "Service d'intégration IA pour PME : chatbot site/WhatsApp, agents IA métier (vente, support, RH), RAG sur vos données, connexion outils existants.",
+    "jsonld_area_served": "France"
+  },
+  "q2c_facturation": {
+    "metadata_title": "Q2C SaaS — Facturation électronique e-invoicing pour SaaS B2B | WCT Systems",
+    "metadata_description": "Le premier SI Full Quote-to-Cash nativement conforme e-facturation 2026 : Factur-X, UBL, CII, TVA OSS 30 pays, connecteur Plateforme Agréée, Revenue Recognition IFRS 15. À partir de 149€/mois.",
+    "metadata_keywords": "facturation électronique SaaS, e-facturation 2026, Factur-X, quote-to-cash, billing SaaS B2B, TVA OSS",
+    "breadcrumb_home": "Accueil",
+    "breadcrumb_services": "Services",
+    "breadcrumb_current": "Q2C SaaS",
+    "hero_badge": "E-facturation \u2022 Quote-to-Cash \u2022 SaaS B2B",
+    "hero_badge_new": "Nouveau",
+    "hero_title_line1": "Facturation électronique",
+    "hero_title_line2": "conforme 2026, nativement",
+    "hero_description": "La réforme e-facturation arrive en septembre 2026. Q2C SaaS est le premier SI Full Quote-to-Cash nativement conforme : du devis au paiement, Factur-X natif, TVA OSS 30 pays, connecteur Plateforme Agréée.",
+    "hero_cta_discover": "Découvrir Q2C SaaS",
+    "hero_cta_audit": "Demander un audit",
+    "hero_pricing": "À partir de 149 \u20ac HT/mois \u00b7 Mise en place incluse",
+    "problem_title": "Le problème",
+    "problems": [
+      { "title": "La réforme arrive sept. 2026", "desc": "Toutes les entreprises assujetties à la TVA devront émettre des factures électroniques via une PDP. Plus de PDF envoyé par email." },
+      { "title": "Aucun billing SaaS n'est conforme", "desc": "Stripe, Chargebee, Zuora : aucun ne génère nativement du Factur-X EXTENDED ni ne transmet à une Plateforme Agréée française." },
+      { "title": "15 \u20ac d'amende par facture", "desc": "15 \u20ac par facture non conforme, plafonnés à 15 000 \u20ac/an. Pour un SaaS à 500 clients, c'est jusqu'à 7 500 \u20ac/mois de pénalités." }
+    ],
+    "included_title": "Ce qui est inclus",
+    "included_items": [
+      "Factur-X EXTENDED-CTC-FR — le profil le plus complet",
+      "Multi-format UBL + CII pour l'interopérabilité EU",
+      "PricingEngine 6 modèles (flat, per-seat, usage, tiered, hybrid, custom)",
+      "Stripe CB + GoCardless SEPA intégrés",
+      "TVA OSS 30 pays + validation VIES temps réel",
+      "Dashboard MRR/ARR/Churn + Revenue Recognition IFRS 15"
+    ],
+    "cycle_title": "Le cycle complet",
+    "cycle_description": "Du premier devis jusqu'au reporting financier — tout est connecté.",
+    "cycle_steps": [
+      { "step": "01", "label": "Devis", "desc": "CPQ multi-modèle" },
+      { "step": "02", "label": "Contrat", "desc": "Signature électronique" },
+      { "step": "03", "label": "Abonnement", "desc": "Recurring billing" },
+      { "step": "04", "label": "Facturation", "desc": "Factur-X natif" },
+      { "step": "05", "label": "Paiement", "desc": "CB + SEPA" },
+      { "step": "06", "label": "Dunning", "desc": "Relances auto" },
+      { "step": "07", "label": "E-facture \u2192 PA", "desc": "Transmission PDP" },
+      { "step": "08", "label": "Analytics", "desc": "MRR/ARR/Churn" }
+    ],
+    "comparison_title": "Pourquoi Q2C vs les autres",
+    "comparison_header_feature": "Fonctionnalité",
+    "comparison_headers": ["Q2C", "Chargebee", "Zuora", "Stripe Billing", "Pennylane"],
+    "comparison_rows": [
+      { "feature": "Factur-X natif", "q2c": "\u2705", "chargebee": "\u274c", "zuora": "\u274c", "stripe": "\u274c", "pennylane": "\u26a0\ufe0f Comptable" },
+      { "feature": "TVA OSS 30 pays", "q2c": "\u2705", "chargebee": "\u2705", "zuora": "\u2705", "stripe": "\u26a0\ufe0f Tax", "pennylane": "\u274c" },
+      { "feature": "CPQ intégré", "q2c": "\u2705", "chargebee": "\u274c", "zuora": "\u2705", "stripe": "\u274c", "pennylane": "\u274c" },
+      { "feature": "Revenue Recognition", "q2c": "\u2705", "chargebee": "\u26a0\ufe0f Add-on", "zuora": "\u2705", "stripe": "\u2705", "pennylane": "\u274c" },
+      { "feature": "Connecteur PA", "q2c": "\u2705", "chargebee": "\u274c", "zuora": "\u274c", "stripe": "\u274c", "pennylane": "\u2705" },
+      { "feature": "Prix (départ)", "q2c": "149\u20ac", "chargebee": "599$", "zuora": "Sur devis", "stripe": "0.5%", "pennylane": "35\u20ac" }
+    ],
+    "plans_title": "Plans & tarifs",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "149",
+        "desc": "Pour les SaaS en lancement",
+        "features": [
+          "Jusqu'à 100 factures/mois",
+          "Factur-X EXTENDED + UBL",
+          "1 connecteur PA",
+          "Stripe CB",
+          "Dashboard MRR/ARR"
+        ]
+      },
+      {
+        "name": "Growth",
+        "price": "399",
+        "desc": "Pour les SaaS en croissance",
+        "highlighted": true,
+        "features": [
+          "Jusqu'à 1 000 factures/mois",
+          "Factur-X + UBL + CII",
+          "3 connecteurs PA",
+          "Stripe CB + GoCardless SEPA",
+          "TVA OSS 30 pays + VIES",
+          "Revenue Recognition IFRS 15",
+          "CPQ 6 modèles de pricing"
+        ]
+      },
+      {
+        "name": "Scale",
+        "price": "Sur devis",
+        "desc": "Pour les SaaS établis",
+        "features": [
+          "Factures illimitées",
+          "Tous formats + connecteurs",
+          "API white-label",
+          "Multi-entités juridiques",
+          "Account manager dédié",
+          "SLA 99.9%",
+          "Audit conformité annuel inclus"
+        ]
+      }
+    ],
+    "plan_recommended": "Recommandé",
+    "plan_price_suffix": "HT / mois",
+    "plan_cta_start": "Commencer",
+    "plan_cta_contact": "Nous contacter",
+    "roi_title": "Exemple de ROI",
+    "roi_hypothesis_label": "Hypothèse",
+    "roi_hypothesis": "SaaS B2B, 500 clients, 500 factures/mois",
+    "roi_without_label": "Sans Q2C",
+    "roi_without_suffix": "\u20ac/mois",
+    "roi_without_text": " de pénalités potentielles",
+    "roi_with_label": "Avec Q2C",
+    "roi_with_text": "149\u20ac/mois — conformité totale + temps admin divisé par 5",
+    "faq_title": "Questions fréquentes",
+    "faq": [
+      {
+        "q": "C'est quoi la réforme e-facturation 2026 ?",
+        "a": "À partir de septembre 2026, toutes les entreprises assujetties à la TVA en France devront émettre et recevoir des factures électroniques via une Plateforme de Dématérialisation Partenaire (PDP) ou le portail public Chorus Pro. Les factures devront respecter les formats Factur-X, UBL ou CII."
+      },
+      {
+        "q": "Mon SaaS facture déjà avec Stripe, pourquoi Q2C ?",
+        "a": "Stripe génère des reçus de paiement, pas des factures conformes e-facturation. Q2C émet des Factur-X EXTENDED valides, gère la TVA OSS 30 pays, et transmet automatiquement à votre Plateforme Agréée. Stripe reste votre processeur de paiement, Q2C gère la conformité."
+      },
+      {
+        "q": "Q2C remplace Pennylane ?",
+        "a": "Non. Pennylane est un outil comptable. Q2C couvre le cycle commercial amont : devis \u2192 contrat \u2192 abonnement \u2192 facturation \u2192 paiement \u2192 dunning. Q2C transmet les factures conformes à Pennylane (ou tout autre outil comptable) via le connecteur Plateforme Agréée."
+      },
+      {
+        "q": "Quels formats sont acceptés ?",
+        "a": "Q2C génère nativement les 3 formats réglementaires : Factur-X EXTENDED (PDF/A-3 avec XML intégré), UBL (Universal Business Language) et CII (Cross-Industry Invoice). Le format est choisi automatiquement selon le destinataire."
+      },
+      {
+        "q": "Comment se connecter à une Plateforme Agréée ?",
+        "a": "Q2C intègre un connecteur universel compatible avec les principales PDP : Chorus Pro, Dext, Pennylane, Sage, etc. La connexion se fait en quelques clics depuis le dashboard, sans développement."
+      },
+      {
+        "q": "Est-ce que Q2C gère le prélèvement SEPA ?",
+        "a": "Oui. Q2C intègre GoCardless pour les prélèvements SEPA (mandat B2B et Core) et Stripe pour les paiements par carte bancaire. Les deux modes sont combinables par client."
+      }
+    ],
+    "cta_title": "Prêt pour la conformité 2026 ?",
+    "cta_description": "Découvrez Q2C SaaS et soyez conforme avant l'échéance.",
+    "cta_discover": "Découvrir Q2C SaaS",
+    "cta_audit": "Demander un audit",
+    "jsonld_service_name": "Q2C SaaS — Facturation électronique Quote-to-Cash pour SaaS B2B",
+    "jsonld_service_description": "SI de facturation électronique Full Quote-to-Cash nativement conforme e-facturation 2026 : Factur-X, UBL, CII, TVA OSS 30 pays, connecteur Plateforme Agréée, Revenue Recognition IFRS 15.",
+    "jsonld_area_served": "France"
+  }
+}

@@ -1,0 +1,98 @@
+---
+title: "5 automatizações n8n que poupam 10h/semana às PMEs"
+description: "Exemplos concretos de workflows n8n para PMEs: follow-ups por email, alertas CRM, relatórios automáticos, onboarding de clientes e sincronização de ferramentas. Com detalhes de cada workflow."
+date: "2026-03-17"
+tags: ["Automatização", "n8n", "Workflows"]
+author: "WCT Systems"
+service: "automatisation"
+---
+
+## Porquê o n8n?
+
+Se já ouviu falar do Zapier ou do Make, o n8n joga na mesma categoria: é uma ferramenta de automatização que liga as suas aplicações entre si. A diferença: o n8n é **open-source**, pode ser alojado nos seus próprios servidores e não tem limite de workflows.
+
+Na WCT, utilizamos o n8n para os nossos clientes porque é poderoso sem ser caro. Sem tarifação por execução que dispara quando as suas automatizações funcionam bem. Para uma comparação detalhada, [Zapier vs n8n](/comparatifs/zapier-vs-n8n) e [Make vs n8n](/comparatifs/make-vs-n8n) apresentam os números.
+
+Aqui ficam 5 workflows concretos que implementamos regularmente para PMEs portuguesas.
+
+## Workflow 1: Follow-ups automáticos D+3, D+7, D+14
+
+**O problema**: envia um email comercial, o prospect não responde, e você esquece-se de fazer follow-up. Ou pior: faz o follow-up demasiado tarde, quando a necessidade já desapareceu.
+
+**O workflow**:
+1. **Trigger**: um prospect passa ao estado "Em espera" no CRM
+2. **D+3**: envio de um email de follow-up curto ("Já teve oportunidade de analisar?")
+3. **D+7**: segundo follow-up com um ângulo diferente (testemunho de cliente, resultado quantificado)
+4. **D+14**: último follow-up ("Encerramos o processo?") — frequentemente o mais eficaz
+5. **Se houver resposta**: o workflow para automaticamente, sem follow-ups desnecessários
+
+**Tempo poupado**: 3-5h/semana para um comercial que gere mais de 50 prospects.
+
+Uma agência imobiliária no Porto duplicou a sua taxa de resposta de proprietários com este tipo de sequência — [o detalhe está nos nossos casos de sucesso](/pt/casos-de-sucesso#agencia-imobiliaria-porto).
+
+## Workflow 2: Alerta Slack quando um prospect aquece
+
+**O problema**: o seu prospect visita a sua página de preços 3 vezes numa semana, abre todos os seus emails e clica no link de marcação de reunião... mas ninguém sabe.
+
+**O workflow**:
+1. **Trigger**: a pontuação do prospect ultrapassa um limiar (por exemplo 70/100)
+2. **Ação 1**: notificação Slack no canal #vendas com o nome, a empresa e a pontuação
+3. **Ação 2**: o prospect é movido para o topo do pipeline CRM
+4. **Ação 3**: é criado um lembrete para o comercial atribuído
+
+**Resultado**: os prospects quentes são contactados em menos de uma hora, não numa semana. O timing é frequentemente o que faz a diferença entre um negócio fechado e um negócio perdido.
+
+## Workflow 3: Relatório KPI semanal automático
+
+**O problema**: todas as segundas-feiras, alguém compila os números da semana numa folha de cálculo. Prospects contactados, reuniões marcadas, orçamentos enviados, faturação fechada. Demora 1-2 horas e está sempre atrasado.
+
+**O workflow**:
+1. **Trigger**: todas as segundas-feiras às 7h
+2. **Recolha**: o n8n obtém os dados do CRM, da ferramenta de faturação e do Google Analytics
+3. **Cálculo**: agregação dos KPI principais (prospects, conversão, faturação, tempo médio de resposta)
+4. **Formatação**: geração de um relatório legível (HTML ou PDF)
+5. **Envio**: email automático para a equipa de direção
+
+**Tempo poupado**: 1-2h/semana + o relatório está sempre pronto e sempre fiável (sem erros de introdução de dados).
+
+## Workflow 4: Onboarding de cliente automatizado
+
+**O problema**: um cliente assina o contrato, e depois é a confusão. O email de boas-vindas é enviado 3 dias depois, os acessos são criados manualmente, a checklist de implementação é esquecida.
+
+**O workflow**:
+1. **Trigger**: novo negócio com estado "Assinado" no CRM
+2. **Email de boas-vindas** enviado instantaneamente com os próximos passos
+3. **Criação automática** da pasta do cliente (Drive/Notion)
+4. **Checklist do projeto** gerada e atribuída ao gestor de projeto
+5. **Lembrete D+3** ao cliente: "Recebeu os seus acessos corretamente?"
+6. **Lembrete D+14** interno: "Primeira reunião com o cliente a agendar"
+
+**Resultado**: o cliente tem uma primeira impressão profissional e estruturada. Zero esquecimentos, zero atrasos.
+
+## Workflow 5: Sincronização CRM <> Faturação
+
+**O problema**: as informações do cliente estão duplicadas — uma versão no CRM, outra na ferramenta de faturação. Quando a morada muda ou um contacto é adicionado, é preciso atualizar nos dois sítios. Esquece-se uma em cada duas vezes.
+
+**O workflow**:
+1. **Trigger**: modificação de uma ficha de cliente no CRM
+2. **Verificação**: o cliente já existe na ferramenta de faturação?
+3. **Se sim**: atualização dos campos modificados (morada, contacto, email)
+4. **Se não**: criação automática da ficha do cliente na ferramenta de faturação
+5. **Log**: cada sincronização é registada para auditoria
+
+**Resultado**: uma única fonte de verdade. Atualiza o CRM, a faturação acompanha. Sem duplicados, sem esquecimentos.
+
+## Como implementamos isto na WCT
+
+Os nossos clientes não tocam no n8n. Fazemos tudo:
+
+1. **Auditoria**: identificamos as 3-5 tarefas mais demoradas e automatizáveis
+2. **Conceção**: desenhamos os workflows consigo (validação antes do desenvolvimento)
+3. **Implementação**: configuramos, testamos e colocamos em produção
+4. **Monitorização**: monitorizamos que tudo funciona e ajustamos se necessário
+
+Tudo isto no âmbito do nosso [serviço de automatização RPA](/pt/servicos/automatizar-relances) a 149€ s/IVA/mês. Sem tarifação por execução, sem surpresas.
+
+---
+
+**Quer automatizar as suas tarefas repetitivas?** [Reserve uma auditoria gratuita →](/pt/contacto?service=automatisation)

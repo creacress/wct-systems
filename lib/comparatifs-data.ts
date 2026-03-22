@@ -1,201 +1,85 @@
-export type ComparatifFeature = {
-  feature: string;
-  optionA: string;
-  optionB: string;
-  wct: string;
-};
+export const COMPARATIF_SLUGS = [
+  "zapier-vs-n8n",
+  "prospection-manuelle-vs-ia",
+  "wordpress-vs-nextjs-site-pme",
+  "chatbot-ia-vs-faq-statique",
+  "make-vs-n8n",
+] as const;
 
-export type ComparatifData = {
-  slug: string;
-  title: string;
-  metaTitle: string;
-  metaDescription: string;
-  keywords: string[];
+export type ComparatifSlug = (typeof COMPARATIF_SLUGS)[number];
+
+export type ComparatifStructural = {
+  slug: ComparatifSlug;
   category: "automatisation" | "prospection" | "site-web" | "ia";
   serviceHref: string;
-  serviceLabel: string;
-  optionAName: string;
-  optionBName: string;
-  intro: string;
-  features: ComparatifFeature[];
-  prosA: string[];
-  consA: string[];
-  prosB: string[];
-  consB: string[];
-  prosWCT: string[];
-  verdict: string;
-  faq: { q: string; a: string }[];
+  featureCount: number;
+  faqCount: number;
+  prosACount: number;
+  consACount: number;
+  prosBCount: number;
+  consBCount: number;
+  prosWCTCount: number;
 };
 
-export const COMPARATIFS: ComparatifData[] = [
+export const COMPARATIFS: ComparatifStructural[] = [
   {
     slug: "zapier-vs-n8n",
-    title: "Zapier vs n8n : quel outil d'automatisation pour PME ?",
-    metaTitle: "Zapier vs n8n — Comparatif automatisation PME 2026 | WCT Systems",
-    metaDescription: "Zapier ou n8n pour automatiser vos process PME ? Comparatif prix, fonctionnalités, intégrations et facilité d'utilisation. + l'alternative clé en main WCT.",
-    keywords: ["zapier vs n8n", "comparatif automatisation", "outil automatisation PME", "n8n avis", "alternative zapier"],
     category: "automatisation",
     serviceHref: "/services/automatiser-relances",
-    serviceLabel: "Automatisation RPA",
-    optionAName: "Zapier",
-    optionBName: "n8n",
-    intro: "Zapier et n8n sont les deux outils d'automatisation les plus populaires. Zapier mise sur la simplicité (no-code, 5000+ intégrations), n8n sur la flexibilité (open-source, auto-hébergeable). Mais pour une PME qui veut des résultats sans gérer la technique, il y a une troisième voie.",
-    features: [
-      { feature: "Prix mensuel", optionA: "À partir de 19$/mois (limité)", optionB: "Gratuit (self-hosted) ou 20€/mois (cloud)", wct: "149€/mois tout inclus (workflows + support)" },
-      { feature: "Nombre d'intégrations", optionA: "5000+", optionB: "400+ (+ nodes custom)", wct: "200+ (les plus utilisées par les PME)" },
-      { feature: "Facilité d'utilisation", optionA: "Très simple (no-code)", optionB: "Moyenne (interface technique)", wct: "Pas besoin de l'utiliser — on configure pour vous" },
-      { feature: "Hébergement", optionA: "Cloud uniquement", optionB: "Cloud ou self-hosted", wct: "Géré par WCT (rien à installer)" },
-      { feature: "Support", optionA: "Email / docs", optionB: "Communauté / docs", wct: "Support dédié + maintenance continue" },
-      { feature: "Mise en place", optionA: "À faire soi-même", optionB: "À faire soi-même (technique)", wct: "On configure tout, formation incluse" },
-      { feature: "Dashboard KPI", optionA: "Non inclus", optionB: "Non inclus", wct: "Inclus (leads, réponses, devis, signatures)" },
-      { feature: "Workflows sur mesure", optionA: "Templates + customisation", optionB: "100% customisable", wct: "Conçus pour votre process exact" },
-    ],
-    prosA: ["Interface très simple", "5000+ intégrations", "Communauté et templates riches", "Fiable, zéro maintenance"],
-    consA: ["Cher à l'échelle (prix par tâche)", "Limité sans plan premium", "Pas de dashboard métier", "Workflows complexes = difficile"],
-    prosB: ["Open-source, gratuit self-hosted", "Très flexible, workflows complexes", "Hébergement au choix", "Pas de limite de tâches (self-hosted)"],
-    consB: ["Interface technique (courbe d'apprentissage)", "Maintenance serveur si self-hosted", "Moins d'intégrations natives", "Pas de support dédié (communauté)"],
-    prosWCT: ["Aucune configuration à faire", "Workflows conçus pour vos process PME", "Dashboard KPI inclus", "Support et maintenance continus", "Résultats en 7-14 jours"],
-    verdict: "Zapier est idéal si vous voulez automatiser des tâches simples rapidement et que vous êtes à l'aise en no-code. n8n est le choix technique : puissant, flexible, mais demande du temps et des compétences. Si vous êtes une PME qui veut des workflows qui tournent sans s'en occuper, avec un dashboard KPI et un support dédié, WCT Systems est l'approche clé en main.",
-    faq: [
-      { q: "Zapier ou n8n pour une PME sans développeur ?", a: "Zapier sera plus accessible, mais les deux demandent du temps de configuration et de maintenance. L'approche WCT supprime cette charge : on configure, on maintient, vous utilisez." },
-      { q: "Peut-on migrer de Zapier vers n8n (ou l'inverse) ?", a: "Oui, mais c'est un travail de reconstruction. Les workflows ne sont pas directement transférables. Avec WCT, on s'adapte à vos outils existants." },
-      { q: "Quel est le ROI de l'automatisation des relances ?", a: "En moyenne, les PME qui automatisent leurs relances voient leur taux de réponse passer de 10% à 18%, et récupèrent ~40h/mois. Le ROI dépend de votre panier moyen et de votre taux de conversion." },
-    ],
+    featureCount: 8,
+    faqCount: 3,
+    prosACount: 4,
+    consACount: 4,
+    prosBCount: 4,
+    consBCount: 4,
+    prosWCTCount: 5,
   },
   {
     slug: "prospection-manuelle-vs-ia",
-    title: "Prospection manuelle vs IA : comparatif pour PME",
-    metaTitle: "Prospection manuelle vs IA — Comparatif PME 2026 | WCT Systems",
-    metaDescription: "Prospection manuelle ou automatisée par IA ? Comparatif temps, coût, qualité des leads et ROI pour PME. Découvrez l'approche WCT Systems.",
-    keywords: ["prospection manuelle vs ia", "automatiser prospection", "outil prospection B2B", "prospection PME"],
     category: "prospection",
     serviceHref: "/services/trouver-prospects",
-    serviceLabel: "Prospection IA",
-    optionAName: "Prospection manuelle",
-    optionBName: "Prospection IA (outils SaaS)",
-    intro: "La prospection manuelle (LinkedIn, annuaires, bouche-à-oreille) reste le réflexe de beaucoup de PME. Les outils IA (Lemlist, Apollo, Waalaxy) automatisent le ciblage et l'enrichissement. Mais aucun des deux ne résout le problème complet : ciblage + enrichissement + CRM + suivi.",
-    features: [
-      { feature: "Temps par semaine", optionA: "8-15h (recherche + saisie)", optionB: "2-4h (configuration + supervision)", wct: "0h — on gère tout pour vous" },
-      { feature: "Coût mensuel", optionA: "Gratuit (mais coût en temps)", optionB: "50-300€/mois selon l'outil", wct: "99€/mois tout inclus" },
-      { feature: "Volume de prospects", optionA: "20-50 / semaine", optionB: "100-500 / semaine", wct: "Adapté à votre capacité de traitement" },
-      { feature: "Qualité du ciblage", optionA: "Variable (intuition)", optionB: "Bonne (filtres avancés)", wct: "IA + filtres secteur/zone/taille" },
-      { feature: "Enrichissement email", optionA: "Manuel (recherche Google)", optionB: "Automatique (bases de données)", wct: "Automatique + scoring confiance" },
-      { feature: "Intégration CRM", optionA: "Copier-coller Excel", optionB: "Export CSV ou API", wct: "Intégration directe automatique" },
-      { feature: "Scoring des leads", optionA: "Non", optionB: "Basique", wct: "Scoring IA (1-10) avec critères personnalisés" },
-      { feature: "Suivi / relances", optionA: "Mémoire + post-it", optionB: "Séquences email automatiques", wct: "Pipeline complet + relances auto" },
-    ],
-    prosA: ["Gratuit", "Contrôle total sur la sélection", "Contact humain direct", "Pas de courbe d'apprentissage"],
-    consA: ["Très chronophage", "Volume limité", "Données non structurées", "Oublis et relances manquées"],
-    prosB: ["Volume élevé", "Enrichissement automatique", "Séquences de relance", "Données structurées"],
-    consB: ["Coût qui monte vite", "Courbe d'apprentissage", "Qualité variable des données", "Plusieurs outils à gérer"],
-    prosWCT: ["Aucun outil à apprendre", "Ciblage IA personnalisé (secteur, zone, taille)", "Scoring et enrichissement inclus", "Intégration CRM directe", "Support humain dédié"],
-    verdict: "La prospection manuelle convient si vous avez du temps et peu de volume. Les outils SaaS (Apollo, Lemlist, Waalaxy) conviennent si vous êtes à l'aise avec la tech et prêt à gérer 2-3 outils. WCT Systems est l'option pour les PME qui veulent un pipeline propre, sans gérer la technique, avec un scoring IA et une intégration CRM directe.",
-    faq: [
-      { q: "Combien de prospects peut-on traiter par mois avec l'IA ?", a: "Ça dépend de votre capacité de suivi. On adapte le volume à ce que vous pouvez réellement traiter — mieux vaut 50 prospects bien suivis que 500 ignorés." },
-      { q: "L'IA remplace-t-elle le commercial ?", a: "Non. L'IA automatise le ciblage, l'enrichissement et le scoring. Le contact humain reste essentiel pour convertir. L'IA vous fait gagner du temps sur les tâches à faible valeur." },
-      { q: "Les données sont-elles conformes RGPD ?", a: "Oui. On utilise des sources publiques (annuaires, registres) et on respecte les obligations RGPD pour la prospection B2B." },
-    ],
+    featureCount: 8,
+    faqCount: 3,
+    prosACount: 4,
+    consACount: 4,
+    prosBCount: 4,
+    consBCount: 4,
+    prosWCTCount: 5,
   },
   {
     slug: "wordpress-vs-nextjs-site-pme",
-    title: "WordPress vs Next.js : quel choix pour un site PME ?",
-    metaTitle: "WordPress vs Next.js — Quel site web pour PME en 2026 | WCT Systems",
-    metaDescription: "WordPress ou Next.js pour votre site PME ? Comparatif performances, SEO, maintenance et coût. Pourquoi WCT Systems utilise Next.js.",
-    keywords: ["wordpress vs nextjs", "site web PME", "création site internet", "nextjs vs wordpress"],
     category: "site-web",
     serviceHref: "/services/site-web-moderne",
-    serviceLabel: "Site Web Moderne",
-    optionAName: "WordPress",
-    optionBName: "Next.js",
-    intro: "WordPress propulse 40% du web. C'est le réflexe pour créer un site. Mais les sites WordPress sont souvent lents, vulnérables aux failles de sécurité, et demandent une maintenance constante. Next.js est un framework moderne utilisé par Nike, TikTok et Notion. Plus rapide, plus sécurisé, mais plus technique.",
-    features: [
-      { feature: "Performances (PageSpeed)", optionA: "40-70/100 (souvent)", optionB: "90-100/100", wct: "95-100/100 (optimisé par nos soins)" },
-      { feature: "SEO", optionA: "Plugins (Yoast, Rank Math)", optionB: "Natif (metadata, sitemap, JSON-LD)", wct: "SEO classique + SEO IA (llms.txt, JSON-LD)" },
-      { feature: "Sécurité", optionA: "Failles fréquentes (plugins)", optionB: "Très sécurisé (pas de base exposée)", wct: "Hébergé sur Vercel, aucune faille plugin" },
-      { feature: "Maintenance", optionA: "Mises à jour régulières obligatoires", optionB: "Minimale (pas de plugins)", wct: "Incluse dans l'abonnement" },
-      { feature: "Coût initial", optionA: "500-3000€ (thème + setup)", optionB: "3000-10000€ (développement)", wct: "590€ de setup + 99€/mois" },
-      { feature: "Éditeur de contenu", optionA: "Gutenberg / Elementor", optionB: "Code ou CMS headless", wct: "On gère les modifications pour vous" },
-      { feature: "Temps de livraison", optionA: "1-4 semaines", optionB: "2-8 semaines", wct: "7-14 jours (templates optimisés)" },
-      { feature: "Hébergement", optionA: "Hosting classique (OVH, etc.)", optionB: "Vercel, Netlify (edge)", wct: "Vercel premium inclus" },
-    ],
-    prosA: ["Écosystème immense", "Facile à modifier soi-même", "Coût initial bas", "Des milliers de thèmes"],
-    consA: ["Lent sans optimisation", "Failles de sécurité fréquentes", "Maintenance constante (updates plugins)", "SEO IA = inexistant"],
-    prosB: ["Ultra rapide (SSG/SSR)", "Très sécurisé", "SEO optimal natif", "Scalable"],
-    consB: ["Nécessite un développeur", "Coût initial plus élevé", "Modifications = code", "Pas de WYSIWYG simple"],
-    prosWCT: ["Performances Next.js sans la complexité technique", "SEO classique + SEO IA inclus", "Templates métier personnalisables", "Livraison en 7-14 jours", "Maintenance et hébergement inclus"],
-    verdict: "WordPress reste adapté si vous voulez modifier votre site vous-même et que vous acceptez la maintenance. Next.js est supérieur en performances et SEO mais demande un développeur. WCT Systems vous donne le meilleur de Next.js (vitesse, SEO, sécurité) sans la complexité : on livre un site rapide en 14 jours, avec maintenance incluse.",
-    faq: [
-      { q: "Puis-je modifier le site moi-même avec WCT ?", a: "Les modifications sont gérées par notre équipe dans le cadre de l'abonnement. Vous nous dites ce que vous voulez changer, on le fait." },
-      { q: "WordPress est-il mauvais pour le SEO ?", a: "Non, WordPress peut avoir un bon SEO. Mais il nécessite des plugins, de l'optimisation technique et une maintenance que beaucoup de PME négligent. Avec Next.js, le SEO est natif et performant par défaut." },
-      { q: "Combien de temps pour migrer de WordPress vers Next.js ?", a: "En général 7-14 jours. On récupère votre contenu et on le structure dans un site Next.js optimisé." },
-    ],
+    featureCount: 8,
+    faqCount: 3,
+    prosACount: 4,
+    consACount: 4,
+    prosBCount: 4,
+    consBCount: 4,
+    prosWCTCount: 5,
   },
   {
     slug: "chatbot-ia-vs-faq-statique",
-    title: "Chatbot IA vs FAQ statique : que choisir pour votre site ?",
-    metaTitle: "Chatbot IA vs FAQ statique — Comparatif PME 2026 | WCT Systems",
-    metaDescription: "Chatbot IA ou simple FAQ sur votre site ? Comparatif coût, efficacité et satisfaction client pour PME. Découvrez l'intégration IA WCT Systems.",
-    keywords: ["chatbot ia vs faq", "chatbot entreprise", "intégration ia site", "chatbot PME"],
     category: "ia",
     serviceHref: "/services/integration-ia",
-    serviceLabel: "Intégration IA",
-    optionAName: "FAQ statique",
-    optionBName: "Chatbot IA",
-    intro: "Une page FAQ répond aux questions fréquentes. Un chatbot IA répond à n'importe quelle question, 24h/24, en s'appuyant sur vos données. Mais un chatbot mal configuré peut frustrer plus qu'aider. Voici comment choisir.",
-    features: [
-      { feature: "Coût", optionA: "Gratuit (page HTML)", optionB: "20-500€/mois selon la solution", wct: "Inclus dans Intégration IA (199€/mois)" },
-      { feature: "Questions couvertes", optionA: "Seulement les questions prévues", optionB: "Toute question formulée librement", wct: "Questions libres + données internes (RAG)" },
-      { feature: "Mise à jour", optionA: "Manuelle (éditer la page)", optionB: "Automatique si connecté aux données", wct: "Automatique (RAG sur vos docs)" },
-      { feature: "Disponibilité", optionA: "24/7 (page statique)", optionB: "24/7 (robot)", wct: "24/7 + escalade humaine si besoin" },
-      { feature: "Personnalisation", optionA: "Aucune", optionB: "Réponses adaptées au contexte", wct: "Réponses basées sur vos données métier" },
-      { feature: "SEO", optionA: "Bon (indexable par Google)", optionB: "Nul (contenu dynamique non indexé)", wct: "FAQ indexée + chatbot complémentaire" },
-      { feature: "Qualification de leads", optionA: "Non", optionB: "Possible (collecte email/besoin)", wct: "Intégré (scoring + CRM)" },
-      { feature: "Confiance utilisateur", optionA: "Haute (réponses vérifiées)", optionB: "Variable (hallucinations possibles)", wct: "RAG = réponses basées sur vos données" },
-    ],
-    prosA: ["Gratuit", "Indexable par Google (bon pour le SEO)", "Réponses vérifiées", "Pas de maintenance technique"],
-    consA: ["Rigide (seulement les questions prévues)", "Pas de personnalisation", "Pas de qualification de leads", "Mise à jour manuelle"],
-    prosB: ["Répond à tout type de question", "24/7, sans intervention humaine", "Peut qualifier des leads", "Expérience utilisateur moderne"],
-    consB: ["Coût mensuel", "Hallucinations possibles", "Configuration nécessaire", "Non indexable par Google"],
-    prosWCT: ["Chatbot RAG basé sur vos données (pas d'hallucinations)", "FAQ indexée + chatbot complémentaire", "Qualification de leads intégrée", "Connexion à votre CRM et outils existants", "Formation équipe incluse"],
-    verdict: "La FAQ statique est suffisante pour un site avec peu de trafic et des questions prévisibles. Le chatbot IA devient rentable quand vous avez du volume ou des questions complexes. L'idéal est de combiner les deux : FAQ pour le SEO, chatbot pour l'expérience. C'est exactement ce que propose WCT Systems avec l'Intégration IA.",
-    faq: [
-      { q: "Un chatbot IA peut-il donner des mauvaises réponses ?", a: "Oui, c'est le risque des modèles génératifs (hallucinations). Le RAG (Retrieval Augmented Generation) réduit ce risque en forçant le chatbot à répondre uniquement à partir de vos données vérifiées." },
-      { q: "Faut-il beaucoup de données pour un chatbot RAG ?", a: "Non. Une dizaine de pages (FAQ, fiches produits, conditions) suffisent pour démarrer. On enrichit au fil du temps." },
-      { q: "Le chatbot peut-il prendre des rendez-vous ?", a: "Oui. On peut le connecter à votre agenda (Google Calendar, Calendly) pour qualifier et planifier des RDV automatiquement." },
-    ],
+    featureCount: 8,
+    faqCount: 3,
+    prosACount: 4,
+    consACount: 4,
+    prosBCount: 4,
+    consBCount: 4,
+    prosWCTCount: 5,
   },
   {
     slug: "make-vs-n8n",
-    title: "Make (ex-Integromat) vs n8n : comparatif automatisation",
-    metaTitle: "Make vs n8n — Comparatif automatisation PME 2026 | WCT Systems",
-    metaDescription: "Make (Integromat) ou n8n pour automatiser vos process ? Comparatif prix, fonctionnalités, complexité et support pour PME françaises.",
-    keywords: ["make vs n8n", "integromat vs n8n", "comparatif automatisation", "outil automation PME"],
     category: "automatisation",
     serviceHref: "/services/automatiser-relances",
-    serviceLabel: "Automatisation RPA",
-    optionAName: "Make (ex-Integromat)",
-    optionBName: "n8n",
-    intro: "Make (anciennement Integromat) et n8n sont deux alternatives sérieuses à Zapier. Make est visuel et intuitif, n8n est open-source et flexible. Les deux ont leurs forces — mais la vraie question pour une PME est : avez-vous le temps de configurer et maintenir vos workflows ?",
-    features: [
-      { feature: "Prix", optionA: "À partir de 9€/mois", optionB: "Gratuit (self-hosted) ou 20€/mois", wct: "149€/mois (tout inclus, on gère tout)" },
-      { feature: "Interface", optionA: "Visuelle, intuitive", optionB: "Technique, puissante", wct: "Pas d'interface à apprendre" },
-      { feature: "Intégrations", optionA: "1500+", optionB: "400+ nodes", wct: "200+ (sélection PME)" },
-      { feature: "Complexité workflows", optionA: "Bonne pour workflows moyens", optionB: "Excellente pour workflows complexes", wct: "Adaptée à vos besoins exacts" },
-      { feature: "Auto-hébergement", optionA: "Non (cloud only)", optionB: "Oui", wct: "Géré par WCT" },
-      { feature: "Support", optionA: "Email + communauté", optionB: "Communauté", wct: "Support dédié continu" },
-      { feature: "Temps de mise en place", optionA: "Quelques heures à jours", optionB: "Jours à semaines", wct: "7-14 jours, clé en main" },
-      { feature: "Dashboard KPI", optionA: "Non", optionB: "Non", wct: "Inclus" },
-    ],
-    prosA: ["Interface visuelle élégante", "Bon rapport qualité/prix", "Workflows complexes bien gérés", "1500+ intégrations"],
-    consA: ["Limité par le plan (opérations/mois)", "Pas d'auto-hébergement", "Support basique", "Pas de dashboard métier"],
-    prosB: ["Open-source, gratuit self-hosted", "Très puissant pour les workflows complexes", "Données restent chez vous", "Communauté active"],
-    consB: ["Courbe d'apprentissage raide", "Maintenance serveur (self-hosted)", "Moins d'intégrations que Make", "Interface moins intuitive"],
-    prosWCT: ["On utilise n8n en interne — vous avez la puissance sans la complexité", "Workflows configurés et maintenus pour vous", "Dashboard KPI inclus", "Support humain dédié", "Résultats en 7-14 jours"],
-    verdict: "Make est le meilleur choix DIY pour une PME qui veut un outil visuel et accessible. n8n est idéal pour les profils techniques qui veulent garder le contrôle total. WCT Systems utilise n8n en interne et vous offre sa puissance sans la complexité technique : on configure, on maintient, vous pilotez avec un dashboard.",
-    faq: [
-      { q: "WCT utilise quel outil en interne ?", a: "On utilise principalement n8n pour sa puissance et sa flexibilité. Mais on s'adapte aussi à Zapier ou Make si vous avez déjà des workflows en place." },
-      { q: "Peut-on voir les workflows configurés ?", a: "Oui. On vous donne accès et on vous forme si vous voulez comprendre ou modifier les automations." },
-      { q: "Que se passe-t-il si un workflow casse ?", a: "Notre monitoring détecte les erreurs automatiquement. On intervient et corrige, souvent avant que vous ne le remarquiez." },
-    ],
+    featureCount: 8,
+    faqCount: 3,
+    prosACount: 4,
+    consACount: 4,
+    prosBCount: 4,
+    consBCount: 4,
+    prosWCTCount: 5,
   },
 ];

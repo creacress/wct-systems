@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const STORAGE_KEY = "cookie-consent";
 const GTM_ID = "GTM-5SG8GNR8";
@@ -108,6 +109,7 @@ function updateConsent(granted: boolean) {
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false);
+  const t = useTranslations("common.cookie_banner");
 
   useEffect(() => {
     const consent = getConsent();
@@ -142,17 +144,16 @@ export function CookieBanner() {
     <div
       className="fixed inset-x-0 bottom-0 z-50 p-4 sm:p-6"
       role="dialog"
-      aria-label="Gestion des cookies"
+      aria-label={t("aria_dialog")}
     >
       <div className="mx-auto max-w-xl rounded-3xl border bg-background/95 p-5 shadow-lg backdrop-blur sm:p-6">
         <p className="text-sm text-muted-foreground">
-          Ce site utilise des cookies pour améliorer votre expérience et analyser
-          le trafic.{" "}
+          {t("message")}{" "}
           <Link
             href="/mentions-legales"
             className="underline underline-offset-2 hover:text-foreground"
           >
-            En savoir plus
+            {t("learn_more")}
           </Link>
         </p>
 
@@ -162,14 +163,14 @@ export function CookieBanner() {
             onClick={handleRefuse}
             className="flex-1 rounded-2xl border px-4 py-2.5 text-sm font-medium transition hover:bg-muted"
           >
-            Refuser
+            {t("refuse")}
           </button>
           <button
             type="button"
             onClick={handleAccept}
             className="flex-1 rounded-2xl bg-violet-600 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-violet-700"
           >
-            Accepter
+            {t("accept")}
           </button>
         </div>
       </div>

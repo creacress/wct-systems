@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "title": "Contact — Audit gratuit | WCT Systems",
+    "description": "Contactez WCT Systems. Formulaire simple et rapide pour demander un audit gratuit : prospects, relances, CRM/RDV, KPI, site SEO. Réponse sous 24–48h ouvrées."
+  },
+  "jsonLd": {
+    "contactPageName": "Contact — WCT Systems",
+    "contactPageDescription": "Page de contact pour demander un audit gratuit (prospects, relances, CRM/RDV, KPI, site SEO)."
+  },
+  "hero": {
+    "badge": "Contact \u2022 Audit gratuit \u2022 R\u00e9ponse 24\u201348h",
+    "title": "Parlons de votre contexte",
+    "titleSub": "et livrons une V1 utile",
+    "description": "D\u00e9crivez votre situation en 60 secondes. On revient vers vous avec un plan clair : <strong>3 priorit\u00e9s</strong>, une <strong>V1</strong> rapidement, puis optimisation.",
+    "ctaServices": "Voir les services",
+    "ctaCases": "Voir des cas clients"
+  },
+  "form": {
+    "title": "Demander un audit",
+    "subtitle": "Pas de blabla : vous expliquez, on structure, on propose un plan d\u2019ex\u00e9cution.",
+    "ariaLabel": "Formulaire de contact",
+    "honeypotLabel": "Ne pas remplir",
+    "labelName": "Nom",
+    "placeholderName": "Votre nom",
+    "labelEmail": "Email",
+    "placeholderEmail": "vous@entreprise.fr",
+    "labelCompany": "Entreprise",
+    "optional": "(optionnel)",
+    "placeholderCompany": "Nom de votre entreprise",
+    "labelPhone": "T\u00e9l\u00e9phone",
+    "placeholderPhone": "06 00 00 00 00",
+    "labelSubject": "Sujet",
+    "placeholderSubject": "Choisir\u2026",
+    "labelMessage": "Message",
+    "placeholderMessage": "En 3 lignes : votre objectif + votre situation actuelle + votre urgence.",
+    "messageExample": "Exemple : \"Je veux 20 demandes/mois. Aujourd'hui je fais tout \u00e0 la main. Je veux une V1 en 2 semaines.\"",
+    "consent": "J\u2019accepte d\u2019\u00eatre recontact\u00e9(e) au sujet de ma demande. (Aucun spam.)",
+    "submit": "Envoyer la demande",
+    "responseTime": "R\u00e9ponse sous 24\u201348h ouvr\u00e9es. Si votre demande est urgente, indiquez-le dans le message."
+  },
+  "services": {
+    "digital-workplace": "Digital Workplace",
+    "prospection-ia": "Prospection IA",
+    "site-web": "Site Web Moderne",
+    "automatisation": "Automatisation (RPA)",
+    "integration-ia": "Int\u00e9gration IA",
+    "q2c-facturation": "Q2C — Facturation SaaS",
+    "pack-starter": "Pack Starter",
+    "pack-business": "Pack Business",
+    "pack-scale": "Pack Scale",
+    "autre": "Autre / \u00e0 discuter"
+  },
+  "sidebar": {
+    "whatYouGet": "Ce que vous obtenez",
+    "benefits": {
+      "0": "3 priorit\u00e9s concr\u00e8tes",
+      "1": "Un plan d\u2019ex\u00e9cution",
+      "2": "Une V1 utile rapidement",
+      "3": "Des KPI pour piloter"
+    },
+    "goFaster": "Pour aller plus vite",
+    "goFasterDesc": "Donnez ces 3 infos dans votre message :",
+    "tip1": "Objectif (ex: 20 demandes/mois)",
+    "tip2": "Votre process actuel",
+    "tip3": "D\u00e9lai souhait\u00e9",
+    "alternative": "Alternative",
+    "alternativeDesc": "Vous pouvez aussi passer par la page services pour choisir exactement la brique qui vous int\u00e9resse.",
+    "chooseService": "Choisir un service"
+  },
+  "merci": {
+    "metadata": {
+      "title": "Merci — Votre demande a \u00e9t\u00e9 envoy\u00e9e | WCT Systems",
+      "description": "Votre demande a bien \u00e9t\u00e9 re\u00e7ue. Nous revenons vers vous sous 24 \u00e0 48h ouvr\u00e9es avec un plan clair."
+    },
+    "badge": "Demande envoy\u00e9e",
+    "title": "Merci pour votre demande",
+    "titleHighlight": "On s\u2019en occupe.",
+    "description": "Votre message a bien \u00e9t\u00e9 envoy\u00e9. On revient vers vous sous <strong>24 \u00e0 48h ouvr\u00e9es</strong> avec un plan adapt\u00e9 \u00e0 votre situation.",
+    "stepsTitle": "La suite en 3 \u00e9tapes",
+    "steps": {
+      "0": {
+        "title": "Confirmation re\u00e7ue",
+        "desc": "Votre message est bien arriv\u00e9. Vous recevrez un email de confirmation sous quelques minutes."
+      },
+      "1": {
+        "title": "Analyse de votre demande",
+        "desc": "On \u00e9tudie votre contexte et on pr\u00e9pare 3 priorit\u00e9s concr\u00e8tes adapt\u00e9es \u00e0 votre situation."
+      },
+      "2": {
+        "title": "Retour sous 24\u201348h",
+        "desc": "On vous recontacte avec un plan clair : priorit\u00e9s, V1, et KPI \u00e0 suivre."
+      }
+    },
+    "meanwhile": "En attendant, vous pouvez\u2026",
+    "tips": {
+      "0": "Consulter nos cas clients pour voir des exemples concrets",
+      "1": "Explorer nos services pour affiner votre besoin",
+      "2": "Pr\u00e9parer les acc\u00e8s \u00e0 vos outils actuels (CRM, fichiers\u2026)",
+      "3": "Lister vos 3 priorit\u00e9s business du moment"
+    },
+    "urgent": "Besoin urgent ?",
+    "urgentDesc": "Si votre demande est critique, renvoyez un message en pr\u00e9cisant l\u2019urgence \u2014 on priorise les demandes qui l\u2019indiquent clairement.",
+    "resend": "Renvoyer un message",
+    "ctaTitle": "En attendant notre retour",
+    "ctaDesc": "D\u00e9couvrez comment on aide les PME \u00e0 g\u00e9n\u00e9rer plus de clients avec des syst\u00e8mes simples.",
+    "ctaCases": "Voir les cas clients",
+    "ctaServices": "Explorer les services"
+  }
+}

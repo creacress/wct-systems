@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "title": "Blog — IA, automatisation et prospection B2B pour PME | WCT Systems",
+    "description": "Articles pratiques sur l'IA appliquée, l'automatisation (n8n), la prospection B2B, les relances, le CRM et le SEO pour PME.",
+    "keywords": "blog IA PME, automatisation PME, prospection B2B, SEO IA, RPA PME"
+  },
+  "jsonLd": {
+    "breadcrumbHome": "Accueil",
+    "breadcrumbBlog": "Blog",
+    "blogName": "Blog WCT Systems",
+    "blogDescription": "Articles pratiques sur l'IA appliquée, l'automatisation, la prospection B2B et le SEO pour PME."
+  },
+  "list": {
+    "badge": "Blog \u2022 IA \u2022 Automatisation \u2022 Acquisition",
+    "titleLine1": "Ressources pratiques",
+    "titleLine2": "pour PME ambitieuses",
+    "description": "Des articles concrets sur l'IA appliquée, l'automatisation (n8n), la prospection B2B, les relances et le SEO. Pas de théorie : des systèmes qui tournent en production.",
+    "ctaPrimary": "Réserver un audit gratuit",
+    "ctaSecondary": "Voir les services",
+    "allArticles": "Tous les articles",
+    "articleCount": "{count} article{count, plural, one {} other {s}} publié{count, plural, one {} other {s}}",
+    "ctaTitle": "Un projet en tête ?",
+    "ctaDescription": "Audit rapide de 15 min, gratuit, sans engagement. On répond aux vraies questions dans votre contexte.",
+    "ctaReserve": "Réserver l'audit",
+    "ctaExplore": "Explorer les services"
+  },
+  "post": {
+    "metaTitleSuffix": "Blog WCT Systems",
+    "breadcrumbHome": "Accueil",
+    "breadcrumbBlog": "Blog",
+    "breadcrumbLabel": "Fil d'Ariane",
+    "ctaTitle": "Besoin d'aide pour mettre ça en place ?",
+    "ctaDescription": "Audit rapide de 15 min, gratuit, sans engagement.",
+    "ctaReserve": "Réserver l'audit",
+    "ctaAllArticles": "Tous les articles"
+  }
+}

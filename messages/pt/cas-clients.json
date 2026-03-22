@@ -1,0 +1,275 @@
+{
+  "metadata": {
+    "title": "Casos de clientes PME — Resultados concretos IA & Automatização | WCT Systems",
+    "description": "Exemplos concretos de PME acompanhadas pela WCT Systems: prospeção IA, site web, automatização, chatbot IA, digital workplace. Resultados mensuráveis.",
+    "keywords": "casos de clientes PME, resultados automatização PME, testemunhos IA empresa, exemplos prospeção B2B"
+  },
+  "breadcrumbs": {
+    "home": "Início",
+    "casClients": "Casos de clientes"
+  },
+  "jsonLd": {
+    "breadcrumbHome": "Início",
+    "breadcrumbCasClients": "Casos de clientes",
+    "collectionName": "Casos de clientes PME — WCT Systems",
+    "collectionDescription": "Exemplos concretos de PME acompanhadas pela WCT Systems.",
+    "itemListName": "Casos de clientes"
+  },
+  "hero": {
+    "badge": "Casos de clientes \u2022 PME \u2022 Grandes empresas",
+    "titleLine1": "Casos de clientes",
+    "titleLine2": "de PME a grandes empresas",
+    "description": "Sem promessas mágicas. Resultados mensuráveis para PME: prospeção IA, sites web que convertem, automatizações que poupam tempo, chatbots IA e digital workplace. + Grandes empresas e instituições.",
+    "ctaPrimary": "Falar sobre o seu projeto",
+    "ctaSecondary": "Ver os serviços"
+  },
+  "cases": {
+    "0": {
+      "slug": "cabinet-conseil-rh",
+      "org": "Consultora de Recursos Humanos",
+      "sector": "Consultoria / RH",
+      "size": "12 colaboradores",
+      "location": "Região de Lisboa",
+      "serviceLabel": "Prospeção IA",
+      "title": "De 30 a 180 prospects qualificados por mês graças à segmentação IA",
+      "context": "Esta consultora de RH fazia prospeção manual via LinkedIn e boca-a-boca. 2h/dia para 30 contactos pouco qualificados por mês. Sem CRM, acompanhamento em Excel.",
+      "delivered": {
+        "0": "Segmentação IA por setor, dimensão de empresa e zona geográfica",
+        "1": "Enriquecimento automático (email profissional, LinkedIn, telefone)",
+        "2": "Scoring de leads por IA (score 1-10)",
+        "3": "Integração direta num pipeline CRM estruturado"
+      },
+      "results": {
+        "0": "180 prospects qualificados/mês (×6) em vez de 30",
+        "1": "Taxa de resposta de 4% para 12% graças a melhor segmentação",
+        "2": "40h/mês recuperadas (reinvestidas em reuniões com clientes)",
+        "3": "3 contratos adicionais no primeiro trimestre"
+      },
+      "metrics": {
+        "0": { "label": "Prospects/mês", "value": "×6" },
+        "1": { "label": "Taxa de resposta", "value": "12%" },
+        "2": { "label": "Tempo recuperado", "value": "40h/mês" }
+      }
+    },
+    "1": {
+      "slug": "artisan-plombier-lyon",
+      "org": "Empresa de canalização",
+      "sector": "Serviços / Construção",
+      "size": "4 colaboradores",
+      "location": "Porto",
+      "serviceLabel": "Site Web Moderno",
+      "title": "De 0 a 15 pedidos de orçamento por mês com um site SEO + IA",
+      "context": "Esta empresa de canalização não tinha presença online. 100% do negócio vinha do boca-a-boca. Sem site web, sem visibilidade no Google.",
+      "delivered": {
+        "0": "Site Next.js entregue em 10 dias (template de serviços personalizado)",
+        "1": "SEO local otimizado (canalizador + cidade + zona)",
+        "2": "SEO IA (JSON-LD, llms.txt) para aparecer nas respostas IA",
+        "3": "Formulário de pedido de orçamento com notificação instantânea"
+      },
+      "results": {
+        "0": "15 pedidos de orçamento/mês via o site (partindo de 0)",
+        "1": "PageSpeed score 98/100",
+        "2": "Aparição na página 1 do Google em 'canalizador Porto [zona]' em 6 semanas",
+        "3": "Citado nas respostas do ChatGPT em pesquisas locais"
+      },
+      "metrics": {
+        "0": { "label": "Orçamentos/mês", "value": "15" },
+        "1": { "label": "PageSpeed", "value": "98/100" },
+        "2": { "label": "Prazo de entrega", "value": "10 dias" }
+      }
+    },
+    "2": {
+      "slug": "agence-immobiliere-bordeaux",
+      "org": "Agência imobiliária independente",
+      "sector": "Imobiliário",
+      "size": "8 colaboradores",
+      "location": "Lisboa",
+      "serviceLabel": "Automatização RPA",
+      "title": "Follow-ups automatizados: taxa de resposta de proprietários duplicada",
+      "context": "Esta agência geria os follow-ups de proprietários manualmente. Os agentes esqueciam-se de dar seguimento, os mandatos expiravam sem acompanhamento. Sem dashboard, KPI inexistentes.",
+      "delivered": {
+        "0": "Sequência de follow-up automática em 4 etapas (email + SMS)",
+        "1": "Pipeline de proprietários estruturado com alertas automáticos",
+        "2": "Dashboard KPI: mandatos ativos, follow-ups enviados, taxa de resposta",
+        "3": "Integração com o software imobiliário existente"
+      },
+      "results": {
+        "0": "Taxa de resposta de proprietários: 11% → 23%",
+        "1": "Zero mandatos esquecidos (alertas automáticos antes da expiração)",
+        "2": "15h/semana recuperadas pela equipa (3 agentes)",
+        "3": "2 mandatos exclusivos adicionais por mês"
+      },
+      "metrics": {
+        "0": { "label": "Taxa resposta", "value": "×2" },
+        "1": { "label": "Tempo ganho", "value": "15h/sem" },
+        "2": { "label": "Mandatos/mês", "value": "+2" }
+      }
+    },
+    "3": {
+      "slug": "e-commerce-cosmetiques",
+      "org": "Loja e-commerce de cosmética",
+      "sector": "E-commerce / Beleza",
+      "size": "6 colaboradores",
+      "location": "Braga",
+      "serviceLabel": "Integração IA",
+      "title": "Chatbot IA: 70% das perguntas de clientes resolvidas sem intervenção humana",
+      "context": "Esta loja online recebia 50+ emails/dia de perguntas recorrentes (prazos, ingredientes, devoluções). 2 pessoas a tempo parcial para responder. Tempo de resposta médio: 8h.",
+      "delivered": {
+        "0": "Chatbot IA (RAG) treinado no catálogo de produtos e na FAQ",
+        "1": "Integração no site e-commerce + WhatsApp Business",
+        "2": "Escalamento automático para a equipa se o chatbot não souber responder",
+        "3": "Dashboard: perguntas resolvidas, taxa de satisfação, escalamentos"
+      },
+      "results": {
+        "0": "70% das perguntas resolvidas automaticamente pelo chatbot",
+        "1": "Tempo de resposta médio: 8h → 12 segundos (chatbot)",
+        "2": "Equipa de suporte reduzida de 2 pessoas para 0,5 ETP",
+        "3": "Satisfação do cliente melhorada (menos espera, respostas precisas)"
+      },
+      "metrics": {
+        "0": { "label": "Perguntas auto", "value": "70%" },
+        "1": { "label": "Tempo resposta", "value": "12s" },
+        "2": { "label": "Suporte reduzido", "value": "÷4" }
+      }
+    },
+    "4": {
+      "slug": "esn-teletravail",
+      "org": "Empresa de serviços digitais em full remote",
+      "sector": "Tecnologia / Serviços digitais",
+      "size": "25 colaboradores",
+      "location": "Portugal (full remote)",
+      "serviceLabel": "Digital Workplace",
+      "title": "Escritório virtual: 5 ferramentas substituídas, adoção de 92% em 3 semanas",
+      "context": "Esta empresa de serviços digitais em full remote utilizava Slack, Trello, Google Drive, Zoom e HubSpot em paralelo. A informação estava dispersa, o onboarding dos novos demorava 2 semanas, e ninguém sabia onde encontrar o quê.",
+      "delivered": {
+        "0": "Escritório virtual com 6 salas temáticas (hall, open space, sala de projeto, etc.)",
+        "1": "CRM integrado (pipeline de clientes e pré-vendas)",
+        "2": "Mensagens de equipa por sala + canais de projeto",
+        "3": "Gamificação: XP por tarefa concluída, ranking mensal, badges"
+      },
+      "results": {
+        "0": "5 ferramentas consolidadas num único espaço",
+        "1": "Taxa de adoção: 92% da equipa em 3 semanas",
+        "2": "Onboarding de novos: 2 semanas → 3 dias",
+        "3": "Engagement da equipa +35% (medido por atividade no espaço)"
+      },
+      "metrics": {
+        "0": { "label": "Ferramentas substituídas", "value": "5→1" },
+        "1": { "label": "Adoção", "value": "92%" },
+        "2": { "label": "Onboarding", "value": "÷5" }
+      }
+    },
+    "5": {
+      "slug": "cabinet-comptable-pack",
+      "org": "Gabinete de contabilidade",
+      "sector": "Contabilidade / Finanças",
+      "size": "18 colaboradores",
+      "location": "Coimbra",
+      "serviceLabel": "Pack Scale (6 SaaS)",
+      "title": "Sistema completo: prospeção + site + automatização + IA em 30 dias",
+      "context": "Este gabinete queria modernizar a sua aquisição de clientes de uma só vez. Prospeção manual, site WordPress lento, nenhum follow-up estruturado e nenhuma ferramenta IA. Objetivo: um sistema completo, operacional em 1 mês.",
+      "delivered": {
+        "0": "Prospeção IA: segmentação de PME por CAE + zona geográfica",
+        "1": "Site Next.js (template de gabinete de contabilidade) com SEO + SEO IA",
+        "2": "Automatização: follow-ups de prospects + envio de documentos + lembretes de prazos",
+        "3": "Chatbot IA para as perguntas frequentes dos clientes do gabinete",
+        "4": "Digital Workplace para a equipa (5 salas, KPI no hall)"
+      },
+      "results": {
+        "0": "Sistema completo operacional em 28 dias",
+        "1": "45 prospects qualificados logo no primeiro mês",
+        "2": "12 pedidos de orçamento via o novo site",
+        "3": "Taxa de resposta de follow-ups: 19%",
+        "4": "Tempo administrativo recuperado: ~25h/mês"
+      },
+      "metrics": {
+        "0": { "label": "Implementação", "value": "28 dias" },
+        "1": { "label": "Prospects M1", "value": "45" },
+        "2": { "label": "Tempo ganho", "value": "25h/mês" }
+      }
+    },
+    "6": {
+      "slug": "la-poste",
+      "org": "La Poste",
+      "sector": "Serviços / Intranet",
+      "size": "Grande empresa",
+      "location": "França",
+      "serviceLabel": "Automatização + Chatbot",
+      "title": "Reformulação intranet + automatizações (RPA) + chatbots",
+      "context": "Modernizar ambientes intranet e garantir a fiabilidade de migrações SI, reduzindo tarefas repetitivas.",
+      "delivered": {
+        "0": "Reformulação e upgrade de sites intranet (modernização UI/UX)",
+        "1": "Automatizações RPA (processos internos, tarefas repetitivas)",
+        "2": "Chatbots de assistência (suporte, pesquisa, FAQ interna)",
+        "3": "Migração SI controlada: planeamento, execução, validação"
+      },
+      "results": {
+        "0": "Migração SI controlada e segura",
+        "1": "Intranet modernizada e mais clara para as equipas",
+        "2": "Redução das fricções operacionais graças à automatização"
+      },
+      "metrics": {
+        "0": { "label": "Migração SI", "value": "Concluída" },
+        "1": { "label": "Intranet", "value": "Modernizada" },
+        "2": { "label": "RPA", "value": "Implementado" }
+      }
+    },
+    "7": {
+      "slug": "ministere-des-armees",
+      "org": "Ministério da Defesa (França)",
+      "sector": "SI / Web",
+      "size": "Instituição",
+      "location": "França",
+      "serviceLabel": "SI + Automatização",
+      "title": "Reformulação SI ROC + otimização do site web da reserva + automatizações run API",
+      "context": "Melhorar a robustez do SI ROC, otimizar um site público e automatizar tarefas de run em torno das APIs.",
+      "delivered": {
+        "0": "Reformulação / melhoria do SI ROC (fiabilidade, estrutura, exploração)",
+        "1": "Otimização do site web da reserva (estrutura, performance, SEO)",
+        "2": "Automatização das tarefas de run (APIs, controlos, rotinas)",
+        "3": "Industrialização: procedimentos, monitorização e standards"
+      },
+      "results": {
+        "0": "SI mais estável e explorável no quotidiano",
+        "1": "Site web mais performante e mais legível",
+        "2": "Run API racionalizado (menos ações manuais)"
+      },
+      "metrics": {
+        "0": { "label": "SI ROC", "value": "Estabilizado" },
+        "1": { "label": "Run API", "value": "Automatizado" },
+        "2": { "label": "Site web", "value": "Otimizado" }
+      }
+    }
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "items": {
+      "0": {
+        "q": "Os números são reais?",
+        "a": "Sim. Todos os resultados são medidos e verificáveis. Os nomes são anonimizados a pedido dos clientes, mas os dados são exatos."
+      },
+      "1": {
+        "q": "Quanto tempo para obter resultados?",
+        "a": "Em geral, uma V1 está em produção em 7-14 dias. Os primeiros resultados (prospects, pedidos, ganho de tempo) surgem no primeiro mês."
+      },
+      "2": {
+        "q": "Trabalham com que tipos de PME?",
+        "a": "Todas as dimensões: do profissional individual ao gabinete de 50 colaboradores. Adaptamos o serviço e o orçamento. A auditoria gratuita permite dimensionar."
+      },
+      "3": {
+        "q": "Posso falar com um dos vossos clientes?",
+        "a": "Sim, sob reserva do acordo do cliente em questão. Solicite-o durante a auditoria e organizamos uma conversa."
+      },
+      "4": {
+        "q": "Trabalham também com grandes empresas?",
+        "a": "Sim. Acompanhámos a La Poste e o Ministério da Defesa francês em projetos SI, automatização e chatbot. O método é o mesmo, adaptado à escala."
+      }
+    }
+  },
+  "cta": {
+    "title": "Falamos sobre o seu contexto?",
+    "description": "Auditoria rápida de 15 min, gratuita, sem compromisso. Analisamos a sua situação e propomos um plano concreto.",
+    "ctaPrimary": "Reservar a auditoria",
+    "ctaSecondary": "Explorar os serviços"
+  }
+}

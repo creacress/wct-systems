@@ -4,13 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "./language-switcher";
 
-const NAV_ITEMS = [
-  { href: "/services", label: "Services" },
-  { href: "/tarifs", label: "Tarifs" },
-  { href: "/cas-clients", label: "Cas clients" },
-  { href: "/blog", label: "Blog" },
-  { href: "/a-propos", label: "A propos" },
+const NAV_KEYS = [
+  { href: "/services", key: "nav_services" },
+  { href: "/tarifs", key: "nav_tarifs" },
+  { href: "/cas-clients", key: "nav_cas_clients" },
+  { href: "/blog", key: "nav_blog" },
+  { href: "/a-propos", key: "nav_a_propos" },
 ] as const;
 
 function cn(...classes: Array<string | false | null | undefined>) {
@@ -40,11 +42,15 @@ export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const t = useTranslations("common.navbar");
 
   const ctaHref = "/contact";
-  const ctaLabel = "Audit gratuit";
+  const ctaLabel = t("cta_audit");
 
-  const items = useMemo(() => NAV_ITEMS, []);
+  const items = useMemo(
+    () => NAV_KEYS.map((it) => ({ href: it.href, label: t(it.key) })),
+    [t]
+  );
 
   // Scroll detection
   useEffect(() => {
@@ -93,7 +99,7 @@ export function Navbar() {
         href="#content"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-60 focus:rounded-lg focus:bg-background focus:px-3 focus:py-2 focus:text-sm focus:shadow"
       >
-        Aller au contenu
+        {t("skip_to_content")}
       </a>
 
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
@@ -101,7 +107,7 @@ export function Navbar() {
         <Link
           href="/"
           className="group inline-flex items-center gap-3 font-display font-semibold tracking-tight"
-          aria-label="Aller à l'accueil"
+          aria-label={t("aria_go_home")}
         >
           <span className="relative inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border bg-background shadow-sm transition-transform duration-300 group-hover:rotate-12">
             <Image
@@ -120,7 +126,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Navigation principale">
+        <nav className="hidden items-center gap-1 md:flex" aria-label={t("aria_main_nav")}>
           {items.map((it) => {
             const active = pathname === it.href || pathname?.startsWith(`${it.href}/`);
             return (
@@ -165,8 +171,10 @@ export function Navbar() {
               <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
               <circle cx="12" cy="7" r="4" />
             </svg>
-            Connexion
+            {t("nav_connexion")}
           </Link>
+
+          <LanguageSwitcher />
 
           <Link
             href={ctaHref}
@@ -180,7 +188,7 @@ export function Navbar() {
         <button
           type="button"
           className="inline-flex items-center justify-center rounded-2xl border bg-background p-2 shadow-sm transition hover:bg-muted focus:outline-none focus:ring-2 focus:ring-violet-500/30 md:hidden dark:border-white/[0.12] dark:bg-white/[0.05]"
-          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-label={open ? t("aria_close_menu") : t("aria_open_menu")}
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
@@ -207,7 +215,7 @@ export function Navbar() {
           )}
           role="dialog"
           aria-modal="true"
-          aria-label="Menu mobile"
+          aria-label={t("aria_mobile_menu")}
         >
           <div className="flex items-center justify-between border-b px-6 py-4">
             <div className="inline-flex items-center gap-3">
@@ -220,14 +228,14 @@ export function Navbar() {
                   className="h-9 w-9 rounded-full object-cover"
                 />
               </span>
-              <p className="text-sm font-display font-medium">Navigation</p>
+              <p className="text-sm font-display font-medium">{t("mobile_navigation")}</p>
             </div>
 
             <button
               type="button"
               className="rounded-2xl border bg-background p-2 hover:bg-muted focus:outline-none focus:ring-2 focus:ring-violet-500/30"
               onClick={() => setOpen(false)}
-              aria-label="Fermer"
+              aria-label={t("aria_close")}
             >
               <CloseIcon className="h-5 w-5" />
             </button>
@@ -272,8 +280,12 @@ export function Navbar() {
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
                   <circle cx="12" cy="7" r="4" />
                 </svg>
-                Espace client
+                {t("nav_espace_client")}
               </Link>
+
+              <div className="mt-2 flex items-center justify-center">
+                <LanguageSwitcher />
+              </div>
 
               <Link
                 href={ctaHref}
@@ -284,9 +296,9 @@ export function Navbar() {
             </div>
 
             <div className="mt-6 rounded-3xl border bg-gradient-to-br from-violet-50 to-indigo-50/80 p-4 text-sm dark:border-violet-500/10 dark:from-violet-950/40 dark:to-indigo-950/20">
-              <p className="font-display font-medium">Audit express</p>
+              <p className="font-display font-medium">{t("mobile_audit_title")}</p>
               <p className="mt-1 text-muted-foreground">
-                15 minutes. 3 automatisations prioritaires. Un plan clair.
+                {t("mobile_audit_desc")}
               </p>
             </div>
           </div>

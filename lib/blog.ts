@@ -3,7 +3,15 @@ import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 
-const BLOG_DIR = path.join(process.cwd(), "content/blog");
+const BLOG_DIRS: Record<string, string> = {
+  fr: path.join(process.cwd(), "content/blog"),
+  pt: path.join(process.cwd(), "content/blog/pt"),
+};
+
+const READING_TIME_LABEL: Record<string, string> = {
+  fr: "de lecture",
+  pt: "de leitura",
+};
 
 export interface BlogPost {
   slug: string;
@@ -16,13 +24,16 @@ export interface BlogPost {
   content: string;
 }
 
-export function getAllPosts(): BlogPost[] {
-  const files = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".mdx"));
+export function getAllPosts(locale: string = "fr"): BlogPost[] {
+  const dir = BLOG_DIRS[locale] ?? BLOG_DIRS.fr;
+  if (!fs.existsSync(dir)) return [];
+
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".mdx"));
 
   return files
     .map((file) => {
       const slug = file.replace(/\.mdx$/, "");
-      const raw = fs.readFileSync(path.join(BLOG_DIR, file), "utf-8");
+      const raw = fs.readFileSync(path.join(dir, file), "utf-8");
       const { data, content } = matter(raw);
       const stats = readingTime(content);
 
@@ -33,15 +44,16 @@ export function getAllPosts(): BlogPost[] {
         date: data.date ?? "",
         tags: data.tags ?? [],
         author: data.author ?? "WCT Systems",
-        readingTime: stats.text.replace("read", "de lecture"),
+        readingTime: stats.text.replace("read", READING_TIME_LABEL[locale] ?? READING_TIME_LABEL.fr),
         content,
       };
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-export function getPostBySlug(slug: string): BlogPost | undefined {
-  const filePath = path.join(BLOG_DIR, `${slug}.mdx`);
+export function getPostBySlug(slug: string, locale: string = "fr"): BlogPost | undefined {
+  const dir = BLOG_DIRS[locale] ?? BLOG_DIRS.fr;
+  const filePath = path.join(dir, `${slug}.mdx`);
   if (!fs.existsSync(filePath)) return undefined;
 
   const raw = fs.readFileSync(filePath, "utf-8");
@@ -55,7 +67,7 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
     date: data.date ?? "",
     tags: data.tags ?? [],
     author: data.author ?? "WCT Systems",
-    readingTime: stats.text.replace("read", "de lecture"),
+    readingTime: stats.text.replace("read", READING_TIME_LABEL[locale] ?? READING_TIME_LABEL.fr),
     content,
   };
 }

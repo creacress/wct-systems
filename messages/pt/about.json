@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "title": "Sobre n\u00f3s \u2014 WCT Systems",
+    "description": "A WCT Systems concebe sistemas simples e robustos para ajudar PMEs portuguesas a gerar mais clientes: prospe\u00e7\u00e3o, follow-ups, CRM/reuni\u00f5es e KPIs. Abordagem pragm\u00e1tica, entrega r\u00e1pida."
+  },
+  "jsonLd": {
+    "pageName": "Sobre n\u00f3s \u2014 WCT Systems",
+    "pageDescription": "Apresenta\u00e7\u00e3o da WCT Systems: sistemas IA & automatiza\u00e7\u00e3o para PMEs (prospe\u00e7\u00e3o, follow-ups, CRM/reuni\u00f5es, KPIs).",
+    "orgDescription": "A WCT Systems concebe sistemas simples e robustos para ajudar PMEs portuguesas a gerar mais clientes."
+  },
+  "hero": {
+    "badge": "Sobre n\u00f3s \u2022 Humano \u2022 Pragm\u00e1tico \u2022 Mensur\u00e1vel",
+    "title": "Uma abordagem simples",
+    "titleHighlight": "para resultados concretos",
+    "description": "A <strong>WCT Systems</strong> constr\u00f3i sistemas claros para ajudar PMEs portuguesas a gerar mais clientes \u2014 sem transformar o seu dia a dia numa f\u00e1brica de complica\u00e7\u00f5es.",
+    "llmParagraph": "A WCT Systems \u00e9 uma empresa especializada em IA aplicada e automatiza\u00e7\u00e3o. Implementamos um sistema completo: <strong>prospe\u00e7\u00e3o \u2192 follow-ups \u2192 CRM/reuni\u00f5es \u2192 KPIs</strong>.",
+    "ctaContact": "Falar sobre o seu projeto",
+    "ctaCases": "Ver casos de clientes"
+  },
+  "story": {
+    "sectionLabel": "Hist\u00f3ria e m\u00e9todo",
+    "whyTitle": "Porqu\u00ea a WCT Systems?",
+    "whyP1": "Muitas empresas t\u00eam os mesmos sintomas: prospetar demora tempo, os follow-ups s\u00e3o esquecidos, o acompanhamento est\u00e1 disperso e os KPIs chegam tarde demais.",
+    "whyP2": "O nosso trabalho \u00e9 <strong>reduzir o ru\u00eddo</strong> e instalar uma mec\u00e2nica simples e robusta. N\u00e3o \u00e9 preciso \"refazer tudo\". Come\u00e7amos pelo que cria impacto r\u00e1pido.",
+    "methodTitle": "O m\u00e9todo",
+    "methodSteps": {
+      "0": "<strong>Auditoria</strong>: clarificamos o objetivo, o processo atual e as restri\u00e7\u00f5es.",
+      "1": "<strong>V1 \u00fatil</strong>: uma primeira vers\u00e3o em produ\u00e7\u00e3o (prospe\u00e7\u00e3o + acompanhamento + follow-ups).",
+      "2": "<strong>Otimiza\u00e7\u00e3o</strong>: itera\u00e7\u00f5es curtas, KPIs, SEO, automatiza\u00e7\u00f5es adicionais."
+    }
+  },
+  "values": {
+    "sectionLabel": "Valores",
+    "title": "O que realmente importa",
+    "subtitle": "Princ\u00edpios simples que evitam 90% dos projetos que se arrastam.",
+    "items": {
+      "0": {
+        "title": "Clareza",
+        "desc": "Um problema = uma solu\u00e7\u00e3o leg\u00edvel. Evitamos a complexidade que mata os projetos.",
+        "icon": "\u25ce"
+      },
+      "1": {
+        "title": "Execu\u00e7\u00e3o",
+        "desc": "Entregamos uma V1 \u00fatil, depois melhoramos. O valor vem do terreno, n\u00e3o dos slides.",
+        "icon": "\u25c8"
+      },
+      "2": {
+        "title": "Medi\u00e7\u00e3o",
+        "desc": "KPIs simples para decidir r\u00e1pido: o que funciona, o que n\u00e3o funciona e porqu\u00ea.",
+        "icon": "\u25c9"
+      },
+      "3": {
+        "title": "Fiabilidade",
+        "desc": "Automatizar sim \u2014 mas com rigor: controlos, logs e transi\u00e7\u00f5es controladas.",
+        "icon": "\u25c7"
+      }
+    }
+  },
+  "whatWeDo": {
+    "sectionLabel": "O que fazemos",
+    "title": "Concretamente, o que fazemos?",
+    "subtitle": "Constru\u00edmos uma m\u00e1quina comercial simples e tornamo-la fi\u00e1vel. Mant\u00e9m o controlo, com indicadores claros.",
+    "items": {
+      "0": "Gera\u00e7\u00e3o de prospects qualificados (segmenta\u00e7\u00e3o + dados limpos)",
+      "1": "Automatiza\u00e7\u00e3o dos follow-ups (sequ\u00eancias simples, acompanhamento de respostas)",
+      "2": "CRM & reuni\u00f5es (pipeline utiliz\u00e1vel, sem complica\u00e7\u00f5es)",
+      "3": "Dashboard KPI (leads, respostas, reuni\u00f5es, assinaturas)",
+      "4": "Sites SEO + SEO IA (estrutura clara, 1 servi\u00e7o = 1 p\u00e1gina)",
+      "5": "Automatiza\u00e7\u00f5es fi\u00e1veis (controlos, logs, execu\u00e7\u00e3o controlada)"
+    },
+    "ctaServices": "Ver os servi\u00e7os",
+    "ctaAudit": "Solicitar uma auditoria"
+  },
+  "faq": {
+    "sectionLabel": "FAQ",
+    "title": "FAQ",
+    "items": {
+      "0": {
+        "q": "Com que tipos de empresas trabalham?",
+        "a": "Principalmente PMEs e estruturas que querem mais clientes sem acrescentar carga mental: aquisi\u00e7\u00e3o, follow-ups, acompanhamento, KPIs."
+      },
+      "1": {
+        "q": "A vossa abordagem \u00e9 mais site web ou automatiza\u00e7\u00e3o?",
+        "a": "Ambos, mas sempre com um objetivo de neg\u00f3cio: um sistema completo prospe\u00e7\u00e3o \u2192 follow-ups \u2192 CRM/reuni\u00f5es \u2192 KPIs."
+      },
+      "2": {
+        "q": "O que \u00e9 uma \"V1 \u00fatil\"?",
+        "a": "Uma primeira vers\u00e3o em produ\u00e7\u00e3o que j\u00e1 traz resultados: menos tarefas manuais, pipeline claro e primeiros KPIs."
+      }
+    }
+  },
+  "cta": {
+    "sectionLabel": "Apelo \u00e0 a\u00e7\u00e3o",
+    "title": "Come\u00e7amos pela auditoria",
+    "subtitle": "15\u201330 minutos. 3 prioridades. Um plano claro. Depois uma V1 \u00fatil.",
+    "ctaAudit": "Reservar a auditoria",
+    "ctaResults": "Ver resultados"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "title": "\u00c0 propos \u2014 WCT Systems",
+    "description": "WCT Systems con\u00e7oit des syst\u00e8mes simples et robustes pour aider les PME \u00e0 g\u00e9n\u00e9rer plus de clients : prospects, relances, CRM/RDV et KPI. Approche pragmatique, livraison rapide."
+  },
+  "jsonLd": {
+    "pageName": "\u00c0 propos \u2014 WCT Systems",
+    "pageDescription": "Pr\u00e9sentation de WCT Systems : syst\u00e8mes IA & automatisation pour PME (prospects, relances, CRM/RDV, KPI).",
+    "orgDescription": "WCT Systems con\u00e7oit des syst\u00e8mes simples et robustes pour aider les PME \u00e0 g\u00e9n\u00e9rer plus de clients."
+  },
+  "hero": {
+    "badge": "\u00c0 propos \u2022 Humain \u2022 Pragmatique \u2022 Mesurable",
+    "title": "Une approche simple",
+    "titleHighlight": "pour des r\u00e9sultats concrets",
+    "description": "<strong>WCT Systems</strong> construit des syst\u00e8mes clairs pour aider les PME \u00e0 g\u00e9n\u00e9rer plus de clients \u2014 sans transformer votre quotidien en usine \u00e0 gaz.",
+    "llmParagraph": "WCT Systems est une entreprise fran\u00e7aise sp\u00e9cialis\u00e9e dans l\u2019IA appliqu\u00e9e et l\u2019automatisation. Nous mettons en place un syst\u00e8me complet : <strong>prospects \u2192 relances \u2192 CRM/RDV \u2192 KPI</strong>.",
+    "ctaContact": "Parler de votre projet",
+    "ctaCases": "Voir des cas clients"
+  },
+  "story": {
+    "sectionLabel": "Histoire et m\u00e9thode",
+    "whyTitle": "Pourquoi WCT Systems ?",
+    "whyP1": "Beaucoup d\u2019entreprises ont les m\u00eames sympt\u00f4mes : prospecter prend du temps, les relances sont oubli\u00e9es, le suivi est \u00e9parpill\u00e9, et les KPI arrivent trop tard.",
+    "whyP2": "Notre job, c\u2019est de <strong>r\u00e9duire le bruit</strong> et d\u2019installer une m\u00e9canique simple et robuste. Pas besoin de \"tout refaire\". On commence par ce qui cr\u00e9e un impact rapide.",
+    "methodTitle": "La m\u00e9thode",
+    "methodSteps": {
+      "0": "<strong>Audit</strong> : on clarifie l\u2019objectif, le process actuel, et les contraintes.",
+      "1": "<strong>V1 utile</strong> : une premi\u00e8re version en production (prospects + suivi + relances).",
+      "2": "<strong>Optimisation</strong> : it\u00e9rations courtes, KPI, SEO, automatisations suppl\u00e9mentaires."
+    }
+  },
+  "values": {
+    "sectionLabel": "Valeurs",
+    "title": "Ce qui compte vraiment",
+    "subtitle": "Des principes simples qui \u00e9vitent 90% des projets qui s\u2019enlisent.",
+    "items": {
+      "0": {
+        "title": "Clart\u00e9",
+        "desc": "Un probl\u00e8me = une solution lisible. On \u00e9vite la complexit\u00e9 qui tue les projets.",
+        "icon": "\u25ce"
+      },
+      "1": {
+        "title": "Ex\u00e9cution",
+        "desc": "On livre une V1 utile, puis on am\u00e9liore. La valeur vient du terrain, pas des slides.",
+        "icon": "\u25c8"
+      },
+      "2": {
+        "title": "Mesure",
+        "desc": "Des KPI simples pour d\u00e9cider vite : ce qui marche, ce qui ne marche pas, et pourquoi.",
+        "icon": "\u25c9"
+      },
+      "3": {
+        "title": "Fiabilit\u00e9",
+        "desc": "Automatiser oui \u2014 mais proprement : contr\u00f4les, logs, et bascules ma\u00eetris\u00e9es.",
+        "icon": "\u25c7"
+      }
+    }
+  },
+  "whatWeDo": {
+    "sectionLabel": "Ce que nous faisons",
+    "title": "Concr\u00e8tement, on fait quoi ?",
+    "subtitle": "On construit une machine commerciale simple, et on la rend fiable. Vous gardez le contr\u00f4le, avec des indicateurs clairs.",
+    "items": {
+      "0": "G\u00e9n\u00e9ration de prospects qualifi\u00e9s (ciblage + donn\u00e9es propres)",
+      "1": "Automatisation des relances (s\u00e9quences simples, suivi r\u00e9ponses)",
+      "2": "CRM & RDV (pipeline utilisable, pas \"usine \u00e0 gaz\")",
+      "3": "Dashboard KPI (leads, r\u00e9ponses, RDV, signatures)",
+      "4": "Sites SEO + SEO IA (structure claire, 1 service = 1 page)",
+      "5": "Automatisations fiables (contr\u00f4les, logs, run ma\u00eetris\u00e9)"
+    },
+    "ctaServices": "Voir les services",
+    "ctaAudit": "Demander un audit"
+  },
+  "faq": {
+    "sectionLabel": "FAQ",
+    "title": "FAQ",
+    "items": {
+      "0": {
+        "q": "Vous travaillez avec quels types d\u2019entreprises ?",
+        "a": "Principalement des PME et structures qui veulent plus de clients sans ajouter de charge mentale : acquisition, relances, suivi, KPI."
+      },
+      "1": {
+        "q": "Votre approche est plut\u00f4t site web ou automatisation ?",
+        "a": "Les deux, mais toujours avec un objectif business : un syst\u00e8me complet prospects \u2192 relances \u2192 CRM/RDV \u2192 KPI."
+      },
+      "2": {
+        "q": "C\u2019est quoi une \"V1 utile\" ?",
+        "a": "Une premi\u00e8re version en production qui apporte d\u00e9j\u00e0 du r\u00e9sultat : moins de t\u00e2ches manuelles, pipeline clair, et premiers KPI."
+      }
+    }
+  },
+  "cta": {
+    "sectionLabel": "Appel \u00e0 l\u2019action",
+    "title": "On d\u00e9marre par l\u2019audit",
+    "subtitle": "15\u201330 minutes. 3 priorit\u00e9s. Un plan clair. Puis une V1 utile.",
+    "ctaAudit": "R\u00e9server l\u2019audit",
+    "ctaResults": "Voir des r\u00e9sultats"
+  }
+}

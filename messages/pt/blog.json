@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "title": "Blog — IA, automatização e prospeção B2B para PME | WCT Systems",
+    "description": "Artigos práticos sobre IA aplicada, automatização (n8n), prospeção B2B, follow-ups, CRM e SEO para PME.",
+    "keywords": "blog IA PME, automatização PME, prospeção B2B, SEO IA, RPA PME"
+  },
+  "jsonLd": {
+    "breadcrumbHome": "Início",
+    "breadcrumbBlog": "Blog",
+    "blogName": "Blog WCT Systems",
+    "blogDescription": "Artigos práticos sobre IA aplicada, automatização, prospeção B2B e SEO para PME."
+  },
+  "list": {
+    "badge": "Blog \u2022 IA \u2022 Automatização \u2022 Aquisição",
+    "titleLine1": "Recursos práticos",
+    "titleLine2": "para PME ambiciosas",
+    "description": "Artigos concretos sobre IA aplicada, automatização (n8n), prospeção B2B, follow-ups e SEO. Sem teoria: sistemas que funcionam em produção.",
+    "ctaPrimary": "Reservar uma auditoria gratuita",
+    "ctaSecondary": "Ver os serviços",
+    "allArticles": "Todos os artigos",
+    "articleCount": "{count} artigo{count, plural, one {} other {s}} publicado{count, plural, one {} other {s}}",
+    "ctaTitle": "Tem um projeto em mente?",
+    "ctaDescription": "Auditoria rápida de 15 min, gratuita, sem compromisso. Respondemos às verdadeiras questões no seu contexto.",
+    "ctaReserve": "Reservar a auditoria",
+    "ctaExplore": "Explorar os serviços"
+  },
+  "post": {
+    "metaTitleSuffix": "Blog WCT Systems",
+    "breadcrumbHome": "Início",
+    "breadcrumbBlog": "Blog",
+    "breadcrumbLabel": "Navegação estrutural",
+    "ctaTitle": "Precisa de ajuda para implementar isto?",
+    "ctaDescription": "Auditoria rápida de 15 min, gratuita, sem compromisso.",
+    "ctaReserve": "Reservar a auditoria",
+    "ctaAllArticles": "Todos os artigos"
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "mentionsLegales": {
+    "metadata": {
+      "title": "Mentions légales",
+      "description": "Mentions légales, politique de confidentialité et gestion des cookies du site webcresson.com — WCT Systems."
+    },
+    "badge": "Informations légales",
+    "title": "Mentions légales",
+    "subtitle": "Conformément aux articles 6-III et 19 de la Loi n° 2004-575 du 21 juin 2004 pour la Confiance dans l'économie numérique (LCEN).",
+    "section1": {
+      "title": "1. Éditeur du site",
+      "raisonSociale": "WebCresson",
+      "formeJuridique": "EI",
+      "capitalSocial": "[MONTANT] €",
+      "siren": "[NUMÉRO SIREN]",
+      "siret": "[NUMÉRO SIRET]",
+      "rcs": "[VILLE] — n° [NUMÉRO]",
+      "tva": "[NUMÉRO TVA]",
+      "siege": "Rue des Sirènes, 78180 Montigny",
+      "telephone": "0766029632",
+      "email": "contact@webcresson.com",
+      "directeur": "CRESSON Alexis"
+    },
+    "section1Labels": {
+      "raisonSociale": "Raison sociale",
+      "formeJuridique": "Forme juridique",
+      "capitalSocial": "Capital social",
+      "siren": "SIREN",
+      "siret": "SIRET",
+      "rcs": "RCS",
+      "tva": "N° TVA intracommunautaire",
+      "siege": "Siège social",
+      "telephone": "Téléphone",
+      "email": "Email",
+      "directeur": "Directeur de la publication"
+    },
+    "section2": {
+      "title": "2. Hébergeur",
+      "raisonSociale": "Vercel Inc.",
+      "adresse": "440 N Barranca Ave #4133, Covina, CA 91723, États-Unis",
+      "siteWeb": "vercel.com"
+    },
+    "section2Labels": {
+      "raisonSociale": "Raison sociale",
+      "adresse": "Adresse",
+      "siteWeb": "Site web"
+    },
+    "section3": {
+      "title": "3. Propriété intellectuelle",
+      "p1": "L'ensemble du contenu du site {siteUrl} (textes, images, graphismes, logo, icônes, code source) est la propriété exclusive de WCT Systems ou de ses partenaires et est protégé par les lois françaises et internationales relatives à la propriété intellectuelle.",
+      "p2": "Toute reproduction, représentation, modification, publication ou adaptation totale ou partielle est interdite sans accord préalable écrit de WCT Systems."
+    },
+    "section4": {
+      "title": "4. Protection des données personnelles (RGPD)",
+      "intro": "Conformément au Règlement Général sur la Protection des Données (UE 2016/679) et à la loi Informatique et Libertés du 6 janvier 1978 modifiée, vous disposez de droits sur vos données personnelles.",
+      "responsableTitle": "Responsable du traitement",
+      "responsable": "WCT Systems — contact@webcresson.com",
+      "donneesTitle": "Données collectées et finalités",
+      "formulaireLabel": "Formulaire de contact",
+      "formulaireText": "— nom, email, entreprise, téléphone, message. Finalité : répondre à votre demande. Base légale : consentement.",
+      "cookiesLabel": "Cookies analytics",
+      "cookiesText": "— données de navigation anonymisées (pages vues, durée). Finalité : améliorer le site. Base légale : consentement (bannière cookies).",
+      "espaceLabel": "Espace client",
+      "espaceText": "— email, mot de passe (hashé). Finalité : authentification et accès au tableau de bord. Base légale : exécution du contrat.",
+      "dureeTitle": "Durée de conservation",
+      "dureeText": "Données de contact : 3 ans après le dernier échange. Données analytics : 14 mois. Données de compte client : durée de la relation contractuelle + 3 ans.",
+      "droitsTitle": "Vos droits",
+      "droitsText": "Vous pouvez exercer vos droits d'accès, de rectification, de suppression, de portabilité et d'opposition en écrivant à",
+      "droitsDelai": ". Réponse sous 30 jours.",
+      "litigeText": "En cas de litige, vous pouvez introduire une réclamation auprès de la CNIL :"
+    },
+    "section5": {
+      "title": "5. Cookies",
+      "intro": "Ce site utilise des cookies strictement nécessaires et des cookies d'analyse soumis à votre consentement.",
+      "essentielTitle": "Cookies essentiels (toujours actifs)",
+      "sessionLabel": "Session / authentification",
+      "sessionText": "— nécessaire au fonctionnement de l'espace client.",
+      "consentLabel": "cookie-consent",
+      "consentText": "— enregistre votre choix de cookies. Durée : 6 mois.",
+      "analyticsTitle": "Cookies analytics (soumis à consentement)",
+      "gaLabel": "Google Tag Manager / Google Analytics (GA4)",
+      "gaText": "— mesure d'audience anonymisée. Durée : 14 mois max.",
+      "modifierText": "Vous pouvez modifier votre choix à tout moment en supprimant le cookie \"cookie-consent\" dans les paramètres de votre navigateur, ou en cliquant ci-dessous."
+    },
+    "section6": {
+      "title": "6. Crédits",
+      "text": "Site conçu et développé par WCT Systems. Hébergé sur Vercel. Construit avec Next.js, Tailwind CSS et TypeScript."
+    },
+    "links": {
+      "cgv": "Conditions générales de vente",
+      "contact": "Nous contacter"
+    },
+    "lastUpdate": "Dernière mise à jour : mars 2026",
+    "resetCookies": "Réinitialiser mes préférences cookies"
+  },
+  "privacy": {
+    "metadata": {
+      "title": "Politique de confidentialité",
+      "description": "Politique de confidentialité de WebCresson (WCT Systems) — données collectées, utilisation, partage avec des tiers et vos droits RGPD."
+    },
+    "badge": "Protection des données",
+    "title": "Politique de confidentialité",
+    "subtitle": "Cette politique explique quelles données personnelles nous collectons, comment nous les utilisons et les protégeons, et quels sont vos droits conformément au RGPD (Règlement UE 2016/679).",
+    "section1": {
+      "title": "1. Responsable du traitement",
+      "intro": "Le responsable du traitement des données personnelles collectées sur le site webcresson.com est :",
+      "raisonSociale": "WebCresson (WCT Systems)",
+      "formeJuridique": "EI",
+      "adresse": "Rue des Sirènes, 78180 Montigny",
+      "email": "contact@webcresson.com",
+      "telephone": "07 66 02 96 32",
+      "responsable": "CRESSON Alexis"
+    },
+    "section1Labels": {
+      "raisonSociale": "Raison sociale",
+      "formeJuridique": "Forme juridique",
+      "adresse": "Adresse",
+      "email": "Email",
+      "telephone": "Téléphone",
+      "responsable": "Responsable"
+    },
+    "section2": {
+      "title": "2. Données personnelles collectées",
+      "intro": "Nous collectons uniquement les données nécessaires au fonctionnement de nos services. Voici le détail par catégorie :",
+      "contactTitle": "a) Formulaire de contact",
+      "contactDonnees": "Nom, prénom, adresse email, numéro de téléphone (facultatif), nom de l'entreprise (facultatif), message",
+      "contactFinalite": "Répondre à votre demande de contact ou de devis",
+      "contactBase": "Consentement (article 6.1.a du RGPD)",
+      "contactDuree": "3 ans après le dernier échange",
+      "compteTitle": "b) Création de compte / Espace client",
+      "compteDonnees": "Adresse email, mot de passe (stocké sous forme hashée, jamais en clair)",
+      "compteFinalite": "Authentification et accès à votre tableau de bord client",
+      "compteBase": "Exécution du contrat (article 6.1.b du RGPD)",
+      "compteDuree": "Durée de la relation contractuelle + 3 ans",
+      "prospectionTitle": "c) Prospection B2B (espace client)",
+      "prospectionDonnees": "Données d'entreprises publiques (SIREN, raison sociale, secteur d'activité, coordonnées professionnelles)",
+      "prospectionFinalite": "Enrichissement et qualification de prospects B2B pour nos clients",
+      "prospectionBase": "Intérêt légitime (article 6.1.f du RGPD)",
+      "prospectionDuree": "Durée du contrat client. Supprimées sur demande",
+      "cookiesTitle": "d) Cookies et données de navigation",
+      "cookiesDonnees": "Pages visitées, durée de session, type d'appareil, navigateur (données anonymisées)",
+      "cookiesFinalite": "Amélioration de l'expérience utilisateur et mesure d'audience",
+      "cookiesBase": "Consentement via la bannière cookies (article 6.1.a du RGPD)",
+      "cookiesDuree": "14 mois maximum",
+      "linkedinTitle": "e) Connexion via LinkedIn ou réseaux sociaux",
+      "linkedinDonnees": "Nom, prénom, adresse email, photo de profil (selon les autorisations accordées)",
+      "linkedinFinalite": "Simplifier la création de compte et l'authentification",
+      "linkedinBase": "Consentement (article 6.1.a du RGPD)",
+      "linkedinDuree": "Durée de la relation contractuelle + 3 ans"
+    },
+    "section2Labels": {
+      "donnees": "Données",
+      "finalite": "Finalité",
+      "baseLegale": "Base légale",
+      "duree": "Durée de conservation"
+    },
+    "section3": {
+      "title": "3. Comment nous utilisons vos données",
+      "intro": "Vos données personnelles sont utilisées exclusivement pour :",
+      "items": {
+        "0": "Répondre à vos demandes de contact et de devis",
+        "1": "Gérer votre compte client et vous fournir accès à nos services",
+        "2": "Exécuter les prestations commandées (prospection, automatisation, etc.)",
+        "3": "Améliorer notre site web et nos services grâce aux données d'audience anonymisées",
+        "4": "Vous envoyer des communications commerciales (uniquement avec votre consentement préalable)",
+        "5": "Respecter nos obligations légales et réglementaires"
+      },
+      "noProfiling": "Nous ne procédons à aucun profilage automatisé produisant des effets juridiques ou significatifs sur les personnes."
+    },
+    "section4": {
+      "title": "4. Partage des données avec des tiers",
+      "intro": "Nous ne vendons jamais vos données personnelles. Nous pouvons être amenés à les partager uniquement avec les catégories de tiers suivantes, dans le strict cadre des finalités décrites :",
+      "hebergementLabel": "Hébergement",
+      "hebergementText": "— Vercel Inc. (USA) pour l'hébergement du site web. Transfert encadré par les clauses contractuelles types (CCT) de la Commission européenne.",
+      "bddLabel": "Base de données",
+      "bddText": "— Neon (PostgreSQL serverless) pour le stockage sécurisé des comptes utilisateurs et des données de prospection.",
+      "analyticsLabel": "Analytics",
+      "analyticsText": "— Google Analytics (GA4) pour la mesure d'audience anonymisée, uniquement avec votre consentement cookies.",
+      "iaLabel": "Intelligence artificielle",
+      "iaText": "— Anthropic (API Claude) pour l'enrichissement automatisé de fiches prospects. Les données traitées sont des informations d'entreprise publiques.",
+      "emailLabel": "Emailing",
+      "emailText": "— Envoi d'emails transactionnels (confirmations, réponses aux demandes) via notre serveur SMTP.",
+      "noOtherSharing": "En dehors de ces sous-traitants, nous ne communiquons vos données à aucun tiers, sauf obligation légale (réquisition judiciaire, autorité de contrôle)."
+    },
+    "section5": {
+      "title": "5. Transferts de données hors UE",
+      "intro": "Certains de nos sous-traitants (Vercel, Google, Anthropic) sont basés aux États-Unis. Ces transferts sont encadrés par :",
+      "items": {
+        "0": "Les clauses contractuelles types (CCT) adoptées par la Commission européenne",
+        "1": "Le EU-US Data Privacy Framework lorsque applicable"
+      }
+    },
+    "section6": {
+      "title": "6. Sécurité des données",
+      "intro": "Nous mettons en œuvre des mesures techniques et organisationnelles pour protéger vos données :",
+      "items": {
+        "0": "Chiffrement HTTPS (TLS) sur l'ensemble du site",
+        "1": "Mots de passe hashés avec bcrypt (jamais stockés en clair)",
+        "2": "Accès aux données restreint aux personnes autorisées",
+        "3": "Hébergement sécurisé avec sauvegardes automatiques",
+        "4": "Sessions authentifiées par JWT avec expiration"
+      }
+    },
+    "section7": {
+      "title": "7. Cookies",
+      "p1": "Pour une information détaillée sur les cookies utilisés sur ce site, veuillez consulter la section cookies de nos",
+      "mentionsLink": "mentions légales",
+      "p2": "Vous pouvez à tout moment modifier vos préférences de cookies via la bannière de consentement ou les paramètres de votre navigateur."
+    },
+    "section8": {
+      "title": "8. Vos droits",
+      "intro": "Conformément au RGPD et à la loi Informatique et Libertés, vous disposez des droits suivants sur vos données personnelles :",
+      "droitAccesLabel": "Droit d'accès",
+      "droitAccesValue": "Obtenir la confirmation que vos données sont traitées et en recevoir une copie",
+      "droitRectificationLabel": "Droit de rectification",
+      "droitRectificationValue": "Corriger des données inexactes ou incomplètes",
+      "droitSuppressionLabel": "Droit de suppression",
+      "droitSuppressionValue": "Demander l'effacement de vos données personnelles",
+      "droitPortabiliteLabel": "Droit à la portabilité",
+      "droitPortabiliteValue": "Recevoir vos données dans un format structuré et lisible par machine",
+      "droitOppositionLabel": "Droit d'opposition",
+      "droitOppositionValue": "Vous opposer au traitement de vos données pour des motifs légitimes",
+      "droitLimitationLabel": "Droit à la limitation",
+      "droitLimitationValue": "Demander la suspension du traitement dans certains cas",
+      "retraitConsentementLabel": "Retrait du consentement",
+      "retraitConsentementValue": "Retirer votre consentement à tout moment, sans affecter la licéité du traitement antérieur",
+      "exercerTitle": "Comment exercer vos droits",
+      "exercerText": "Envoyez votre demande par email à",
+      "exercerSuffix": "en précisant votre identité et la nature de votre demande. Nous répondons sous 30 jours maximum.",
+      "cnilTitle": "Réclamation auprès de la CNIL",
+      "cnilText": "Si vous estimez que le traitement de vos données ne respecte pas la réglementation, vous pouvez introduire une réclamation auprès de la CNIL :"
+    },
+    "section9": {
+      "title": "9. Données des mineurs",
+      "text": "Nos services s'adressent exclusivement aux professionnels (B2B). Nous ne collectons pas sciemment de données personnelles de mineurs de moins de 16 ans. Si vous constatez qu'un mineur nous a fourni des données, contactez-nous pour que nous les supprimions."
+    },
+    "section10": {
+      "title": "10. Modifications de cette politique",
+      "text": "Nous pouvons mettre à jour cette politique de confidentialité à tout moment. La date de dernière mise à jour est indiquée en bas de page. En cas de modification substantielle, nous vous en informerons par email ou via une notification sur le site."
+    },
+    "links": {
+      "mentionsLegales": "Mentions légales",
+      "cgv": "CGV",
+      "contact": "Nous contacter"
+    },
+    "lastUpdate": "Dernière mise à jour : mars 2026"
+  },
+  "cgv": {
+    "metadata": {
+      "title": "Conditions générales de vente",
+      "description": "Conditions générales de vente de WCT Systems — prestations IA & automatisation pour PME."
+    },
+    "badge": "Conditions commerciales",
+    "title": "Conditions générales de vente",
+    "subtitle": "Applicables à l'ensemble des prestations proposées par WCT Systems ([RAISON SOCIALE]) aux clients professionnels (B2B).",
+    "article1": {
+      "title": "Article 1 — Objet",
+      "p1": "Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre WCT Systems, ci-après « le Prestataire », et tout client professionnel, ci-après « le Client », dans le cadre de prestations de services en intelligence artificielle, automatisation et développement numérique.",
+      "p2": "Toute commande implique l'acceptation pleine et entière des présentes CGV, qui prévalent sur tout autre document du Client."
+    },
+    "article2": {
+      "title": "Article 2 — Services proposés",
+      "intro": "Le Prestataire propose les services suivants :",
+      "items": {
+        "0": "Conception et déploiement de Digital Workplaces (bureaux virtuels collaboratifs)",
+        "1": "Recherche et qualification de prospects B2B",
+        "2": "Automatisation des relances et séquences commerciales",
+        "3": "Mise en place de CRM et gestion de rendez-vous",
+        "4": "Création de dashboards KPI et reporting",
+        "5": "Conception de sites web orientés génération de leads",
+        "6": "Facturation électronique et billing SaaS B2B (Q2C SaaS)",
+        "7": "Conseil et audit en stratégie digitale"
+      },
+      "perimetre": "Le périmètre exact de chaque prestation est défini dans le devis ou la proposition commerciale acceptée par le Client."
+    },
+    "article3": {
+      "title": "Article 3 — Tarifs et modalités",
+      "intro": "Les prestations sont facturées selon deux modalités, combinables :",
+      "forfaitTitle": "Forfait initial",
+      "forfaitText": "Un montant fixe couvre la conception, le développement et la livraison de la V1 du système commandé. Le montant est défini dans le devis signé.",
+      "aboTitle": "Abonnement mensuel",
+      "aboText": "Un montant récurrent couvre la maintenance, les mises à jour, l'hébergement et le support continu. Le montant et la périodicité sont précisés dans le devis.",
+      "prixHT": "Tous les prix sont indiqués en euros et hors taxes (HT). La TVA applicable est ajoutée au taux en vigueur au jour de la facturation.",
+      "modifTarifs": "Le Prestataire se réserve le droit de modifier ses tarifs. Les nouveaux tarifs s'appliquent aux commandes passées après la date de modification. Pour les abonnements en cours, tout changement tarifaire sera notifié avec un préavis de 30 jours."
+    },
+    "article4": {
+      "title": "Article 4 — Conditions de paiement",
+      "intro": "Les factures sont payables à 30 jours date de facture.",
+      "forfaitTitle": "Forfait initial",
+      "forfaitText": "Sauf accord contraire : 50 % à la commande, 50 % à la livraison de la V1.",
+      "aboTitle": "Abonnement",
+      "aboText": "Facturé mensuellement, payable par virement ou prélèvement automatique.",
+      "retardTitle": "Retards de paiement",
+      "retardIntro": "Conformément aux articles L.441-10 et suivants du Code de commerce, tout retard de paiement entraîne de plein droit :",
+      "retardItems": {
+        "0": "Des pénalités de retard au taux directeur de la BCE majoré de 10 points, appliquées sur le montant TTC",
+        "1": "Une indemnité forfaitaire de 40 € pour frais de recouvrement"
+      }
+    },
+    "article5": {
+      "title": "Article 5 — Exécution des prestations",
+      "intro": "Les délais de livraison sont indicatifs et communiqués dans le devis. Le Prestataire s'engage à mettre en œuvre tous les moyens nécessaires pour respecter les délais convenus.",
+      "obligPresTitle": "Obligations du Prestataire",
+      "obligPresText": "Fournir les prestations conformément au devis accepté, informer le Client de l'avancement, et livrer les livrables dans les délais convenus.",
+      "obligClientTitle": "Obligations du Client",
+      "obligClientText": "Fournir les informations et accès nécessaires à la réalisation des prestations, valider les livrables dans un délai de 10 jours ouvrés après livraison, et régler les factures aux échéances convenues."
+    },
+    "article6": {
+      "title": "Article 6 — Propriété intellectuelle",
+      "p1": "Le Client reste propriétaire de ses données (listes de prospects, contenus fournis, données CRM).",
+      "p2": "Le Prestataire conserve la propriété intellectuelle des outils, scripts, workflows et systèmes développés, sauf cession expressément prévue dans le devis. Le Client bénéficie d'un droit d'utilisation non exclusif pour la durée du contrat.",
+      "p3": "Les développements spécifiques réalisés sur mesure pour le Client lui sont cédés à la livraison et au paiement intégral, sauf mention contraire."
+    },
+    "article7": {
+      "title": "Article 7 — Responsabilité",
+      "p1": "Le Prestataire est soumis à une obligation de moyens. Sa responsabilité ne peut être engagée qu'en cas de faute prouvée.",
+      "p2": "En tout état de cause, la responsabilité du Prestataire est limitée au montant total des sommes effectivement perçues au titre du contrat concerné au cours des 12 derniers mois.",
+      "p3": "Le Prestataire ne saurait être tenu responsable des dommages indirects, pertes de données, pertes de chiffre d'affaires ou manque à gagner."
+    },
+    "article8": {
+      "title": "Article 8 — Résiliation",
+      "forfaitTitle": "Forfait",
+      "forfaitText": "Le Client peut résilier avant la livraison moyennant le paiement des prestations déjà réalisées.",
+      "aboTitle": "Abonnement",
+      "aboText": "Chaque partie peut résilier l'abonnement avec un préavis de 30 jours avant la prochaine échéance mensuelle, par email à contact@webcresson.com.",
+      "consequencesTitle": "Conséquences",
+      "consequencesText": "En cas de résiliation, le Prestataire fournit au Client un export de ses données dans un format standard (CSV, JSON) dans un délai de 15 jours. L'accès aux services est maintenu jusqu'à la fin de la période payée."
+    },
+    "article9": {
+      "title": "Article 9 — Données personnelles",
+      "p1": "Le Prestataire traite des données personnelles dans le cadre de l'exécution des prestations, en qualité de sous-traitant au sens du RGPD.",
+      "p2prefix": "Les modalités de traitement, les droits des personnes concernées et les engagements du Prestataire sont détaillés dans les",
+      "p2link": "mentions légales et politique de confidentialité",
+      "p2suffix": "."
+    },
+    "article10": {
+      "title": "Article 10 — Force majeure",
+      "p1": "Aucune des parties ne pourra être tenue responsable d'un manquement à ses obligations contractuelles en cas de force majeure telle que définie par l'article 1218 du Code civil (événement imprévisible, irrésistible et extérieur).",
+      "p2": "En cas de force majeure supérieure à 60 jours, chaque partie pourra résilier le contrat sans indemnité."
+    },
+    "article11": {
+      "title": "Article 11 — Droit applicable et litiges",
+      "p1": "Les présentes CGV sont régies par le droit français. En cas de litige, les parties s'engagent à rechercher une solution amiable avant toute action judiciaire.",
+      "p2": "À défaut d'accord amiable dans un délai de 30 jours, le litige sera porté devant les tribunaux compétents du ressort du siège social du Prestataire."
+    },
+    "links": {
+      "mentionsLegales": "Mentions légales",
+      "contact": "Nous contacter"
+    },
+    "lastUpdate": "Dernière mise à jour : mars 2026"
+  }
+}

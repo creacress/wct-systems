@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "title": "WCT Systems — IA & Automatização para PMEs portuguesas",
+    "description": "A WCT Systems ajuda PMEs portuguesas com 6 SaaS: Digital Workplace, Prospeção IA, Site Web Moderno, Automatização RPA, Integração IA, Q2C Faturação SaaS. Auditoria gratuita em 15 min.",
+    "keywords": "IA PME Portugal, automatização PME, SaaS PME, prospeção B2B IA, WCT Systems"
+  },
+  "site": {
+    "tagline": "Digital Workplace & IA para PMEs",
+    "orgDescription": "Digital Workplace & IA para PMEs portuguesas. 6 SaaS, um ecossistema.",
+    "webDescription": "Digital Workplace gamificado + IA + automatização para PMEs. 6 SaaS, um ecossistema."
+  },
+  "hero": {
+    "badge": "6 SaaS \u2022 Digital Workplace \u2022 IA",
+    "titleLine1": "O seu escritório digital.",
+    "titleLine2": "Tudo-em-um, gamificado, orientado por IA.",
+    "description": "<strong>WCT Systems</strong> concebe o Digital Workplace das PMEs portuguesas: um escritório virtual gamificado + 6 SaaS (<strong>Digital Workplace, Prospeção IA, Site Web, Automatização, Integração IA, Faturação SaaS</strong>).",
+    "ctaPrimary": "Descobrir o Workplace",
+    "ctaSecondary": "Ver os 6 serviços"
+  },
+  "stats": {
+    "items": {
+      "0": { "suffix": " SaaS", "label": "Ecossistema" },
+      "1": { "suffix": " dias", "label": "Time to live" },
+      "2": { "suffix": "+", "label": "Integrações" }
+    }
+  },
+  "process_mini": {
+    "title": "O seu Workplace em 14 dias",
+    "steps": {
+      "0": { "title": "Auditoria", "desc": "Mapeamento de ferramentas e processos" },
+      "1": { "title": "Configuração", "desc": "Áreas funcionais + conexões" },
+      "2": { "title": "Gamificação", "desc": "XP, badges + formação" },
+      "3": { "title": "Go live", "desc": "Implementação + KPI em tempo real" }
+    }
+  },
+  "why": {
+    "title": "Porquê um Digital Workplace?",
+    "subtitle": "Os números falam por si.",
+    "items": {
+      "0": {
+        "suffix": "%",
+        "sub": "das PMEs",
+        "value": "utilizam +5 ferramentas não conectadas",
+        "desc": "O Workplace reúne-as num escritório virtual unificado."
+      },
+      "1": {
+        "suffix": "-9 meses",
+        "sub": "de salário",
+        "value": "custo do turnover por saída",
+        "desc": "A gamificação envolve as equipas e reduz o turnover."
+      },
+      "2": {
+        "suffix": "%",
+        "sub": "do tempo",
+        "value": "perdido em tarefas administrativas",
+        "desc": "A automatização integrada liberta tempo para o que realmente importa."
+      }
+    }
+  },
+  "ecosystem": {
+    "title": "O ecossistema 6 SaaS",
+    "subtitle": "6 SaaS complementares: Digital Workplace + 5 módulos de IA, automatização e faturação. Cada serviço tem a sua cor.",
+    "viewAll": "Ver tudo",
+    "learnMore": "Saber mais",
+    "requestAudit": "Pedir uma auditoria",
+    "viewAllServices": "Ver todos os serviços",
+    "priceUnit": "s/IVA/mês"
+  },
+  "services": {
+    "0": {
+      "title": "Digital Workplace",
+      "desc": "Escritório virtual gamificado onde cada divisão é uma ferramenta de trabalho. XP, badges, rankings.",
+      "badge": "Novo"
+    },
+    "1": {
+      "title": "Prospeção IA",
+      "desc": "Segmentação IA, enriquecimento automático, scoring, integração CRM."
+    },
+    "2": {
+      "title": "Site Web Moderno",
+      "desc": "Site rápido, SEO + SEO IA, 4 templates. Entregue em 14 dias."
+    },
+    "3": {
+      "title": "Automatização (RPA)",
+      "desc": "Workflows à medida: follow-ups, CRM, reporting, dashboard KPI."
+    },
+    "4": {
+      "title": "Integração IA",
+      "desc": "Chatbot, agentes IA, assistentes à medida conectados aos seus dados.",
+      "badge": "Popular"
+    },
+    "5": {
+      "title": "Q2C — Faturação SaaS",
+      "desc": "Faturação eletrónica em conformidade: Factur-X, UBL, CII, IVA OSS, conector AP. A partir de 149 €/mês.",
+      "badge": "Novo"
+    }
+  },
+  "roi": {
+    "title": "Exemplo de ROI",
+    "subtitle": "Transformar tempo perdido em oportunidades mensuráveis. Exemplo indicativo para uma PME.",
+    "disclaimer": "*Indicação: o ROI depende da sua oferta, zona, sazonalidade e qualidade do acompanhamento.",
+    "items": {
+      "0": { "label": "Hipótese", "value": "2h/dia", "detail": "de prospeção manual automatizada" },
+      "1": { "label": "Ganho", "value": "~40h/mês", "detail": "recuperadas (vendidas ou reinvestidas)" },
+      "2": { "label": "Impacto", "value": "+volume", "detail": "tratado = mais hipóteses de fecho" }
+    }
+  },
+  "process": {
+    "title": "Processo simples, resultados rápidos",
+    "subtitle": "Auditoria → V1 → otimização. Cada etapa produz algo utilizável.",
+    "ctaPrimary": "Começar com uma auditoria",
+    "ctaSecondary": "Ler llms.txt",
+    "steps": {
+      "0": { "title": "Auditoria & plano", "desc": "3 prioridades + KPI + plano de execução." },
+      "1": { "title": "V1 em produção", "desc": "Um sistema simples que funciona (prospects + acompanhamento + follow-ups)." },
+      "2": { "title": "Otimização", "desc": "SEO, conteúdos, follow-ups, dashboards: escalamos." }
+    }
+  },
+  "results": {
+    "title": "Resultados PME comprovados",
+    "subtitle": "Casos anonimizados, números reais.",
+    "viewCases": "Ver os casos →",
+    "items": {
+      "0": { "value": "×6", "label": "prospects/mês (consultora RH)" },
+      "1": { "value": "70%", "label": "questões automáticas (chatbot e-commerce)" },
+      "2": { "value": "28d", "label": "sistema completo implementado (gabinete de contabilidade)" },
+      "3": { "value": "92%", "label": "adoção Digital Workplace (empresa de TI)" }
+    }
+  },
+  "blog": {
+    "title": "Últimos artigos",
+    "viewAll": "Todos os artigos →"
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": {
+      "0": {
+        "q": "Quanto tempo para entregar uma primeira versão?",
+        "a": "Geralmente 7 a 14 dias para uma V1: um sistema simples (prospects + acompanhamento + follow-ups) e um controlo KPI mínimo."
+      },
+      "1": {
+        "q": "É adequado para uma pequena empresa?",
+        "a": "Sim. Visamos o impacto: menos tarefas repetitivas e mais oportunidades, sem complicar a sua organização."
+      },
+      "2": {
+        "q": "O que é a auditoria gratuita?",
+        "a": "Uma conversa breve (15–30 min) + uma síntese: 3 prioridades, um plano de execução e KPIs a acompanhar."
+      },
+      "3": {
+        "q": "O que é um Digital Workplace?",
+        "a": "Um escritório virtual que reúne todas as suas ferramentas de trabalho num único espaço. Cada «divisão» corresponde a uma função (RH, Vendas, Suporte…). A sua equipa trabalha, comunica e colabora sem alternar entre 10 separadores."
+      },
+      "4": {
+        "q": "A gamificação é algo sério?",
+        "a": "Sim. Estudos demonstram que a gamificação aumenta o envolvimento em 48% e a produtividade em 36%. Os XP, badges e rankings criam motivação concreta e mensurável."
+      }
+    }
+  },
+  "client": {
+    "title": "Já é cliente?",
+    "description": "Aceda ao seu painel de controlo para gerir os seus prospects, acompanhar os seus follow-ups e monitorizar os seus KPI.",
+    "cta": "Área de cliente"
+  },
+  "cta": {
+    "title": "Pronto para transformar a sua forma de trabalhar?",
+    "subtitle": "Auditoria rápida → plano claro → Workplace operacional em 14 dias. Depois otimizamos.",
+    "ctaPrimary": "Reservar a auditoria",
+    "ctaSecondary": "Explorar os serviços"
+  }
+}

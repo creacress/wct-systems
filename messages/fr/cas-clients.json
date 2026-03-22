@@ -1,0 +1,275 @@
+{
+  "metadata": {
+    "title": "Cas clients PME — Résultats concrets IA & Automatisation | WCT Systems",
+    "description": "Exemples concrets de PME françaises accompagnées par WCT Systems : prospection IA, site web, automatisation, chatbot IA, digital workplace. Résultats mesurables.",
+    "keywords": "cas clients PME, résultats automatisation PME, témoignages IA entreprise, exemples prospection B2B"
+  },
+  "breadcrumbs": {
+    "home": "Accueil",
+    "casClients": "Cas clients"
+  },
+  "jsonLd": {
+    "breadcrumbHome": "Accueil",
+    "breadcrumbCasClients": "Cas clients",
+    "collectionName": "Cas clients PME — WCT Systems",
+    "collectionDescription": "Exemples concrets de PME françaises accompagnées par WCT Systems.",
+    "itemListName": "Cas clients"
+  },
+  "hero": {
+    "badge": "Cas clients \u2022 PME \u2022 Grands comptes",
+    "titleLine1": "Cas clients",
+    "titleLine2": "des PME aux grands comptes",
+    "description": "Pas de promesses magiques. Des résultats mesurables pour des PME françaises : prospection IA, sites web qui convertissent, automatisations qui font gagner du temps, chatbots IA et digital workplace. + Grands comptes & institutions.",
+    "ctaPrimary": "Parler de votre projet",
+    "ctaSecondary": "Voir les services"
+  },
+  "cases": {
+    "0": {
+      "slug": "cabinet-conseil-rh",
+      "org": "Cabinet de conseil RH",
+      "sector": "Conseil / RH",
+      "size": "12 salariés",
+      "location": "Île-de-France",
+      "serviceLabel": "Prospection IA",
+      "title": "De 30 à 180 prospects qualifiés par mois grâce au ciblage IA",
+      "context": "Ce cabinet RH prospectait manuellement via LinkedIn et le bouche-à-oreille. 2h/jour pour 30 contacts peu qualifiés par mois. Pas de CRM, suivi sur Excel.",
+      "delivered": {
+        "0": "Ciblage IA par secteur, taille d'entreprise et zone géographique",
+        "1": "Enrichissement automatique (email pro, LinkedIn, téléphone)",
+        "2": "Scoring des leads par IA (score 1-10)",
+        "3": "Intégration directe dans un pipeline CRM structuré"
+      },
+      "results": {
+        "0": "180 prospects qualifiés/mois (×6) au lieu de 30",
+        "1": "Taux de réponse passé de 4% à 12% grâce à un meilleur ciblage",
+        "2": "40h/mois récupérées (réinvesties en rendez-vous clients)",
+        "3": "3 signatures supplémentaires le premier trimestre"
+      },
+      "metrics": {
+        "0": { "label": "Prospects/mois", "value": "×6" },
+        "1": { "label": "Taux de réponse", "value": "12%" },
+        "2": { "label": "Temps récupéré", "value": "40h/mois" }
+      }
+    },
+    "1": {
+      "slug": "artisan-plombier-lyon",
+      "org": "Entreprise de plomberie",
+      "sector": "Artisanat / BTP",
+      "size": "4 salariés",
+      "location": "Lyon (69)",
+      "serviceLabel": "Site Web Moderne",
+      "title": "De 0 à 15 demandes de devis par mois avec un site SEO + IA",
+      "context": "Cette entreprise de plomberie n'avait aucune présence en ligne. 100% du business venait du bouche-à-oreille. Pas de site web, pas de visibilité Google.",
+      "delivered": {
+        "0": "Site Next.js livré en 10 jours (template artisan personnalisé)",
+        "1": "SEO local optimisé (plombier + ville + quartier)",
+        "2": "SEO IA (JSON-LD, llms.txt) pour apparaître dans les réponses IA",
+        "3": "Formulaire de demande de devis avec notification instantanée"
+      },
+      "results": {
+        "0": "15 demandes de devis/mois via le site (partant de 0)",
+        "1": "PageSpeed score 98/100",
+        "2": "Apparition en page 1 Google sur 'plombier Lyon [quartier]' en 6 semaines",
+        "3": "Cité dans les réponses de ChatGPT sur les recherches locales"
+      },
+      "metrics": {
+        "0": { "label": "Devis/mois", "value": "15" },
+        "1": { "label": "PageSpeed", "value": "98/100" },
+        "2": { "label": "Délai livraison", "value": "10 jours" }
+      }
+    },
+    "2": {
+      "slug": "agence-immobiliere-bordeaux",
+      "org": "Agence immobilière indépendante",
+      "sector": "Immobilier",
+      "size": "8 salariés",
+      "location": "Bordeaux (33)",
+      "serviceLabel": "Automatisation RPA",
+      "title": "Relances automatisées : taux de réponse propriétaires doublé",
+      "context": "Cette agence gérait les relances propriétaires manuellement. Les agents oubliaient de relancer, les mandats expiraient sans suivi. Pas de dashboard, KPI inexistants.",
+      "delivered": {
+        "0": "Séquence de relance automatique en 4 étapes (email + SMS)",
+        "1": "Pipeline propriétaires structuré avec alertes automatiques",
+        "2": "Dashboard KPI : mandats actifs, relances envoyées, taux de réponse",
+        "3": "Intégration avec leur logiciel immobilier existant"
+      },
+      "results": {
+        "0": "Taux de réponse propriétaires : 11% → 23%",
+        "1": "Zéro mandat oublié (alertes automatiques avant expiration)",
+        "2": "15h/semaine récupérées sur l'équipe (3 agents)",
+        "3": "2 mandats exclusifs supplémentaires par mois"
+      },
+      "metrics": {
+        "0": { "label": "Taux réponse", "value": "×2" },
+        "1": { "label": "Temps gagné", "value": "15h/sem" },
+        "2": { "label": "Mandats/mois", "value": "+2" }
+      }
+    },
+    "3": {
+      "slug": "e-commerce-cosmetiques",
+      "org": "Boutique e-commerce cosmétiques",
+      "sector": "E-commerce / Beauté",
+      "size": "6 salariés",
+      "location": "Nantes (44)",
+      "serviceLabel": "Intégration IA",
+      "title": "Chatbot IA : 70% des questions clients résolues sans intervention humaine",
+      "context": "Cette boutique en ligne recevait 50+ emails/jour de questions récurrentes (délais, ingrédients, retours). 2 personnes à temps partiel pour répondre. Temps de réponse moyen : 8h.",
+      "delivered": {
+        "0": "Chatbot IA (RAG) formé sur le catalogue produit et la FAQ",
+        "1": "Intégration sur le site e-commerce + WhatsApp Business",
+        "2": "Escalade automatique vers l'équipe si le chatbot ne sait pas répondre",
+        "3": "Dashboard : questions résolues, taux de satisfaction, escalades"
+      },
+      "results": {
+        "0": "70% des questions résolues automatiquement par le chatbot",
+        "1": "Temps de réponse moyen : 8h → 12 secondes (chatbot)",
+        "2": "Équipe support réduite de 2 personnes à 0.5 ETP",
+        "3": "Satisfaction client améliorée (moins d'attente, réponses précises)"
+      },
+      "metrics": {
+        "0": { "label": "Questions auto", "value": "70%" },
+        "1": { "label": "Temps réponse", "value": "12s" },
+        "2": { "label": "Support réduit", "value": "÷4" }
+      }
+    },
+    "4": {
+      "slug": "esn-teletravail",
+      "org": "ESN / SSII en full remote",
+      "sector": "Tech / Services numériques",
+      "size": "25 salariés",
+      "location": "France (full remote)",
+      "serviceLabel": "Digital Workplace",
+      "title": "Bureau virtuel : 5 outils remplacés, adoption à 92% en 3 semaines",
+      "context": "Cette ESN en full remote utilisait Slack, Trello, Google Drive, Zoom et HubSpot en parallèle. L'information était dispersée, l'onboarding des nouveaux prenait 2 semaines, et personne ne savait où trouver quoi.",
+      "delivered": {
+        "0": "Bureau virtuel avec 6 pièces thématiques (hall, open space, salle projet, etc.)",
+        "1": "CRM intégré (pipeline clients et avant-ventes)",
+        "2": "Messagerie d'équipe par pièce + canaux projet",
+        "3": "Gamification : XP par tâche complétée, classement mensuel, badges"
+      },
+      "results": {
+        "0": "5 outils consolidés en 1 seul espace",
+        "1": "Taux d'adoption : 92% de l'équipe en 3 semaines",
+        "2": "Onboarding nouveaux : 2 semaines → 3 jours",
+        "3": "Engagement équipe +35% (mesuré par activité dans l'espace)"
+      },
+      "metrics": {
+        "0": { "label": "Outils remplacés", "value": "5→1" },
+        "1": { "label": "Adoption", "value": "92%" },
+        "2": { "label": "Onboarding", "value": "÷5" }
+      }
+    },
+    "5": {
+      "slug": "cabinet-comptable-pack",
+      "org": "Cabinet d'expertise comptable",
+      "sector": "Comptabilité / Finance",
+      "size": "18 salariés",
+      "location": "Toulouse (31)",
+      "serviceLabel": "Pack Scale (6 SaaS)",
+      "title": "Système complet : prospection + site + automatisation + IA en 30 jours",
+      "context": "Ce cabinet voulait moderniser son acquisition client en une seule fois. Prospection manuelle, site WordPress lent, aucune relance structurée, et pas d'outil IA. Objectif : un système complet, opérationnel en 1 mois.",
+      "delivered": {
+        "0": "Prospection IA : ciblage TPE/PME par code NAF + zone géo",
+        "1": "Site Next.js (template cabinet comptable) avec SEO + SEO IA",
+        "2": "Automatisation : relances prospect + envoi documents + rappels échéances",
+        "3": "Chatbot IA pour les questions fréquentes des clients du cabinet",
+        "4": "Digital Workplace pour l'équipe (5 pièces, KPI dans le hall)"
+      },
+      "results": {
+        "0": "Système complet opérationnel en 28 jours",
+        "1": "45 prospects qualifiés dès le premier mois",
+        "2": "12 demandes de devis via le nouveau site",
+        "3": "Taux de réponse relances : 19%",
+        "4": "Temps admin récupéré : ~25h/mois"
+      },
+      "metrics": {
+        "0": { "label": "Déploiement", "value": "28 jours" },
+        "1": { "label": "Prospects M1", "value": "45" },
+        "2": { "label": "Temps gagné", "value": "25h/mois" }
+      }
+    },
+    "6": {
+      "slug": "la-poste",
+      "org": "La Poste",
+      "sector": "Services / Intranet",
+      "size": "Grand groupe",
+      "location": "France",
+      "serviceLabel": "Automatisation + Chatbot",
+      "title": "Refonte intranet + automatisations (RPA) + chatbots",
+      "context": "Moderniser des environnements intranet et fiabiliser des bascules SI tout en réduisant les tâches répétitives.",
+      "delivered": {
+        "0": "Refontes et upgrade de sites intranet (modernisation UI/UX)",
+        "1": "Automatisations RPA (process internes, tâches répétitives)",
+        "2": "Chatbots d'assistance (support, recherche, FAQ interne)",
+        "3": "Bascule SI maîtrisée : plan, exécution, validation"
+      },
+      "results": {
+        "0": "Bascule SI maîtrisée et sécurisée",
+        "1": "Intranet modernisé et plus clair pour les équipes",
+        "2": "Réduction des frictions opérationnelles grâce à l'automatisation"
+      },
+      "metrics": {
+        "0": { "label": "Bascule SI", "value": "Réussie" },
+        "1": { "label": "Intranet", "value": "Modernisé" },
+        "2": { "label": "RPA", "value": "Déployé" }
+      }
+    },
+    "7": {
+      "slug": "ministere-des-armees",
+      "org": "Ministère des Armées",
+      "sector": "SI / Web",
+      "size": "Institution",
+      "location": "France",
+      "serviceLabel": "SI + Automatisation",
+      "title": "Refonte SI ROC + optimisation site web de la réserve + automatisations run API",
+      "context": "Améliorer la robustesse du SI ROC, optimiser un site public, et automatiser des tâches de run autour des APIs.",
+      "delivered": {
+        "0": "Refonte / amélioration du SI ROC (fiabilité, structure, exploitation)",
+        "1": "Optimisation du site web de la réserve (structure, perf, SEO)",
+        "2": "Automatisation des tâches de run (APIs, contrôles, routines)",
+        "3": "Industrialisation : procédures, monitoring et standards"
+      },
+      "results": {
+        "0": "SI plus stable et exploitable au quotidien",
+        "1": "Site web plus performant et plus lisible",
+        "2": "Run API rationalisé (moins d'actions manuelles)"
+      },
+      "metrics": {
+        "0": { "label": "SI ROC", "value": "Stabilisé" },
+        "1": { "label": "Run API", "value": "Automatisé" },
+        "2": { "label": "Site web", "value": "Optimisé" }
+      }
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": {
+      "0": {
+        "q": "Les chiffres sont-ils réels ?",
+        "a": "Oui. Tous les résultats sont mesurés et vérifiables. Les noms sont anonymisés à la demande des clients, mais les données sont exactes."
+      },
+      "1": {
+        "q": "Combien de temps pour obtenir des résultats ?",
+        "a": "En général, une V1 est en production en 7-14 jours. Les premiers résultats (prospects, demandes, gain de temps) arrivent dans le premier mois."
+      },
+      "2": {
+        "q": "Vous travaillez avec quels types de PME ?",
+        "a": "Toutes tailles : de l'artisan solo au cabinet de 50 salariés. On adapte le service et le budget. L'audit gratuit permet de dimensionner."
+      },
+      "3": {
+        "q": "Je peux parler à un de vos clients ?",
+        "a": "Oui, sous réserve de l'accord du client concerné. Demandez-le lors de l'audit et on organise un échange."
+      },
+      "4": {
+        "q": "Vous travaillez aussi avec des grands comptes ?",
+        "a": "Oui. On a accompagné La Poste et le Ministère des Armées sur des projets SI, automatisation et chatbot. La méthode est la même, adaptée à l'échelle."
+      }
+    }
+  },
+  "cta": {
+    "title": "On parle de votre contexte ?",
+    "description": "Audit rapide de 15 min, gratuit, sans engagement. On analyse votre situation et on propose un plan concret.",
+    "ctaPrimary": "Réserver l'audit",
+    "ctaSecondary": "Explorer les services"
+  }
+}

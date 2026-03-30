@@ -14,144 +14,251 @@ import {
   ChevronDown,
   CreditCard,
   CalendarCheck,
+  Gauge,
 } from "lucide-react";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import CountUp from "@/components/ui/count-up";
-import { useTranslations } from "next-intl";
 
 /* ── Données ──────────────────────────────────────────────────────────────── */
 
-const SAAS_IDS = [
-  "digital-workplace",
-  "prospection-ia",
-  "site-web",
-  "automatisation",
-  "integration-ia",
-  "q2c-facturation",
-] as const;
-
-const SAAS_META: Record<
-  (typeof SAAS_IDS)[number],
+const SAAS = [
   {
-    icon: typeof Building2;
-    priceMonthly: number;
-    priceYearly: number;
-    yearlyTotal: number;
-    setup: number;
-    href: string;
-    accentHover: string;
-    hasBadge: boolean;
-    featureCount: number;
-  }
-> = {
-  "digital-workplace": {
+    id: "digital-workplace",
     icon: Building2,
+    name: "Digital Workplace",
+    badge: "Nouveau",
+    description:
+      "Bureau virtuel gamifié tout-en-un pour votre équipe.",
     priceMonthly: 199,
     priceYearly: 159,
     yearlyTotal: 1908,
     setup: 490,
     href: "/services/digital-workplace",
     accentHover: "hover:border-cyan-400/40",
-    hasBadge: true,
-    featureCount: 5,
+    features: [
+      "Bureau virtuel avec pièces thématiques (RH, Ventes, Support…)",
+      "Gamification intégrée (XP, badges, classements)",
+      "Messagerie temps réel + visio intégrée",
+      "Dashboard KPI par équipe",
+      "Intégration outils existants (Notion, Slack, Google…)",
+    ],
   },
-  "prospection-ia": {
+  {
+    id: "prospection-ia",
     icon: Crosshair,
+    name: "Prospection IA",
+    description:
+      "Trouvez vos futurs clients grâce à l\u2019IA. Ciblage, enrichissement, intégration CRM.",
     priceMonthly: 99,
     priceYearly: 79,
     yearlyTotal: 948,
     setup: 490,
     href: "/services/trouver-prospects",
     accentHover: "hover:border-emerald-400/40",
-    hasBadge: false,
-    featureCount: 5,
+    features: [
+      "Ciblage IA par secteur, zone géo et taille d\u2019entreprise",
+      "Enrichissement automatique (email, LinkedIn, téléphone)",
+      "Scoring des leads par IA (score 1-10)",
+      "Intégration CRM / tableur automatique",
+      "Base mise à jour en continu",
+    ],
   },
-  "site-web": {
+  {
+    id: "site-web",
     icon: Globe,
+    name: "Site Web Moderne",
+    description:
+      "Un site rapide, SEO + SEO IA, pensé pour convertir. Livré en 14 jours.",
     priceMonthly: 99,
     priceYearly: 79,
     yearlyTotal: 948,
     setup: 590,
     href: "/services/site-web-moderne",
     accentHover: "hover:border-sky-400/40",
-    hasBadge: false,
-    featureCount: 5,
+    features: [
+      "5 à 10 pages optimisées conversion",
+      "SEO classique + SEO IA (JSON-LD, llms.txt)",
+      "Mobile-first, performances A+",
+      "Maintenance & évolutions incluses",
+      "Hébergement premium inclus",
+    ],
   },
-  "automatisation": {
+  {
+    id: "automatisation",
     icon: Zap,
+    name: "Automatisation (RPA)",
+    description:
+      "Automatisez vos process : relances, CRM, reporting, sans coder.",
     priceMonthly: 149,
     priceYearly: 119,
     yearlyTotal: 1428,
     setup: 490,
     href: "/services/automatiser-relances",
     accentHover: "hover:border-amber-400/40",
-    hasBadge: false,
-    featureCount: 5,
+    features: [
+      "Workflows sur mesure (relances, CRM, facturation)",
+      "Intégration 200+ outils (Gmail, Notion, HubSpot\u2026)",
+      "Dashboard KPI en temps réel",
+      "Alertes et notifications automatiques",
+      "Support & maintenance inclus",
+    ],
   },
-  "integration-ia": {
+  {
+    id: "integration-ia",
     icon: Brain,
+    name: "Intégration IA",
+    description:
+      "Intégrez l\u2019IA dans votre quotidien : chatbot, agents, assistants sur mesure.",
     priceMonthly: 199,
     priceYearly: 159,
     yearlyTotal: 1908,
     setup: 490,
     href: "/services/integration-ia",
+    badge: "Populaire",
     accentHover: "hover:border-fuchsia-400/40",
-    hasBadge: true,
-    featureCount: 5,
+    features: [
+      "Chatbot IA pour votre site / WhatsApp",
+      "Agents IA métier (vente, support, RH)",
+      "Connexion à vos outils existants",
+      "Réponses basées sur vos données (RAG)",
+      "Formation équipe incluse (1h/mois)",
+    ],
   },
-  "q2c-facturation": {
+  {
+    id: "q2c-facturation",
     icon: Receipt,
+    name: "Q2C — Facturation SaaS",
+    description:
+      "Facturation électronique conforme 2026 pour SaaS B2B. Du devis au paiement, Factur-X natif.",
     priceMonthly: 149,
     priceYearly: 119,
     yearlyTotal: 1428,
     setup: 490,
     href: "/services/q2c-facturation",
+    badge: "Nouveau",
     accentHover: "hover:border-emerald-400/40",
-    hasBadge: true,
-    featureCount: 5,
+    features: [
+      "Factur-X EXTENDED + UBL + CII",
+      "Cycle complet devis → contrat → facture → paiement",
+      "TVA EU/OSS 30 pays + validation VIES",
+      "Connecteur universel Plateforme Agréée",
+      "Dashboard MRR/ARR/Churn + Revenue Recognition",
+    ],
   },
-};
-
-const PACK_IDS = ["starter", "business", "scale"] as const;
-
-const PACK_META: Record<
-  (typeof PACK_IDS)[number],
   {
-    priceMonthly: number;
-    priceYearly: number;
-    highlighted: boolean;
-    gradient: string;
-    hasExtraBadge: boolean;
-  }
-> = {
-  starter: {
+    id: "nixie-pulse",
+    icon: Gauge,
+    name: "Nixie Pulse",
+    description:
+      "Dashboard KPI physique connecté avec tubes Nixie soviétiques. Vos données affichées en temps réel.",
+    priceMonthly: 990,
+    priceYearly: 792,
+    yearlyTotal: 792,
+    setup: 0,
+    href: "/services/nixie-pulse",
+    badge: "Hardware",
+    accentHover: "hover:border-orange-400/40",
+    features: [
+      "Tubes Nixie IN-14 authentiques (NOS, URSS 1970-1990)",
+      "Données temps réel : Stripe, Bitcoin, GitHub, Analytics",
+      "WiFi intégré + interface web de configuration",
+      "4 gammes : Mini (4 tubes) à Double (16 tubes)",
+      "Assemblé à la main en France",
+    ],
+  },
+];
+
+const PACKS = [
+  {
+    id: "starter",
+    name: "Starter",
+    tagline: "Lancer l\u2019acquisition",
+    desc: "2 SaaS au choix parmi les 6",
     priceMonthly: 199,
     priceYearly: 159,
+    badge: "-10% vs à la carte",
+    cta: "Composer mon pack",
     highlighted: false,
     gradient: "from-slate-50/80 to-indigo-50/40 dark:from-slate-900/40 dark:to-indigo-950/20",
-    hasExtraBadge: false,
   },
-  business: {
+  {
+    id: "business",
+    name: "Business",
+    tagline: "Structurer et piloter",
+    desc: "3 SaaS au choix parmi les 6",
     priceMonthly: 349,
     priceYearly: 279,
+    badge: "-15% vs à la carte",
+    cta: "Composer mon pack",
     highlighted: true,
     gradient: "from-violet-50/80 to-indigo-50/60 dark:from-violet-950/40 dark:to-indigo-950/20",
-    hasExtraBadge: false,
   },
-  scale: {
+  {
+    id: "scale",
+    name: "Scale",
+    tagline: "Système complet",
+    desc: "Les 6 SaaS inclus",
     priceMonthly: 649,
     priceYearly: 519,
+    badge: "-25% vs à la carte",
+    extraBadge: "Account manager dédié",
+    cta: "Choisir Scale",
     highlighted: false,
     gradient: "from-indigo-50/60 to-violet-50/40 dark:from-indigo-950/30 dark:to-violet-950/20",
-    hasExtraBadge: true,
   },
-};
+];
+
+const FAQ = [
+  {
+    q: "C\u2019est quoi un SaaS ?",
+    a: "Un SaaS (Software as a Service) est un logiciel accessible en ligne, sans installation. Vous payez un abonnement mensuel ou annuel et on s\u2019occupe de tout : hébergement, mises à jour, support. Comme Netflix, mais pour votre entreprise.",
+  },
+  {
+    q: "Je peux prendre un seul service sans pack ?",
+    a: "Oui. Chaque SaaS est disponible individuellement. Les packs permettent d\u2019économiser 10 à 25 % par rapport aux services séparés.",
+  },
+  {
+    q: "Je peux tester avant de m\u2019engager ?",
+    a: "On propose un audit gratuit de 15 à 30 minutes pour comprendre votre situation, vous montrer une démo, et définir un plan concret. Pas d\u2019engagement avant d\u2019être convaincu.",
+  },
+  {
+    q: "Les prix vont-ils augmenter ?",
+    a: "Vos prix sont garantis 12 mois après souscription. Si nos tarifs évoluent, votre tarif reste inchangé pendant toute la durée de votre engagement.",
+  },
+  {
+    q: "Qu\u2019est-ce qui est inclus dans la mise en place ?",
+    a: "Configuration complète de vos outils, import de vos données existantes, formation de votre équipe (1h), et un accompagnement pendant les 30 premiers jours.",
+  },
+  {
+    q: "Il y a des frais de mise en place ?",
+    a: "Non. La mise en place est incluse dans tous les tarifs (sauf le setup unique pour le Site Web Moderne et le Digital Workplace). On configure tout pour vous.",
+  },
+  {
+    q: "Le paiement en 3x, comment ça marche ?",
+    a: "Pour tout engagement annuel ou setup, vous pouvez régler en 3 fois sans frais. Premier tiers à la commande, deuxième au 30e jour, troisième au 60e jour.",
+  },
+  {
+    q: "Y a-t-il un engagement de durée ?",
+    a: "Pas d\u2019engagement en mensuel \u2014 vous pouvez arrêter quand vous voulez. L\u2019engagement annuel est de 12 mois, avec -20% sur le tarif mensuel.",
+  },
+  {
+    q: "Je peux changer de formule en cours de route ?",
+    a: "Oui. Ajout de services ou passage à un pack à tout moment. La descente prend effet au prochain mois de facturation.",
+  },
+  {
+    q: "Et si mes besoins ne correspondent à rien ici ?",
+    a: "On fait un audit gratuit de 15 à 30 minutes pour comprendre votre situation. Si un sur-mesure est plus adapté, on propose un devis personnalisé.",
+  },
+  {
+    q: "Le Digital Workplace remplace mes outils actuels ?",
+    a: "Pas forcément. Il les centralise dans un bureau virtuel unifié. Vos outils existants (Notion, Slack, Google…) s\u2019intègrent directement dans les pièces du Workplace.",
+  },
+];
 
 /* ── Composant principal ──────────────────────────────────────────────────── */
 
 export default function PricingContent() {
   const [isYearly, setIsYearly] = useState(false);
-  const t = useTranslations("tarifs");
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20">
@@ -161,44 +268,44 @@ export default function PricingContent() {
           {/* Badge */}
           <div className="flex justify-center">
             <span className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-4 py-1.5 text-xs font-medium uppercase tracking-wide text-violet-700 dark:border-violet-800 dark:bg-violet-950/50 dark:text-violet-300">
-              {t("hero.badge")}
+              Tarifs transparents · Mise en place incluse
             </span>
           </div>
 
           <h1 className="font-display font-bold text-4xl tracking-tight sm:text-5xl md:text-6xl">
-            {t("hero.title")}
+            Choisissez votre plan.
             <span className="block bg-linear-to-r from-violet-600 via-indigo-500 to-slate-600 bg-clip-text text-transparent dark:from-violet-400 dark:via-indigo-400 dark:to-slate-400">
-              {t("hero.titleHighlight")}
+              Évoluez à votre rythme.
             </span>
           </h1>
 
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            {t("hero.subtitle")}
+            6 SaaS conçus pour les PME françaises. Mise en place incluse.
             <br className="hidden sm:block" />
-            {t("hero.subtitleLine2")}
+            Sans engagement mensuel, -20% en annuel.
           </p>
 
           {/* Stats rapides */}
           <div className="flex flex-wrap items-center justify-center gap-8 pt-2">
             <div className="text-center">
               <div className="font-display font-bold text-2xl text-violet-600 dark:text-violet-400">
-                <CountUp end={6} suffix={` ${t("hero.statSaas")}`} />
+                <CountUp end={6} suffix=" SaaS" />
               </div>
-              <div className="text-xs text-muted-foreground">{t("hero.statSaasLabel")}</div>
+              <div className="text-xs text-muted-foreground">à la carte ou en pack</div>
             </div>
             <div className="h-8 w-px bg-border" />
             <div className="text-center">
               <div className="font-display font-bold text-2xl text-indigo-600 dark:text-indigo-400">
                 <CountUp end={20} prefix="-" suffix="%" />
               </div>
-              <div className="text-xs text-muted-foreground">{t("hero.statDiscount")}</div>
+              <div className="text-xs text-muted-foreground">en engagement annuel</div>
             </div>
             <div className="h-8 w-px bg-border" />
             <div className="text-center">
               <div className="font-display font-bold text-2xl text-slate-700 dark:text-slate-300">
                 <CountUp end={0} suffix=" €" />
               </div>
-              <div className="text-xs text-muted-foreground">{t("hero.statSetup")}</div>
+              <div className="text-xs text-muted-foreground">frais de mise en place</div>
             </div>
           </div>
 
@@ -209,13 +316,13 @@ export default function PricingContent() {
                 !isYearly ? "text-foreground" : "text-muted-foreground"
               }`}
             >
-              {t("hero.toggleMonthly")}
+              Mensuel
             </span>
             <button
               type="button"
               role="switch"
               aria-checked={isYearly}
-              aria-label={t("hero.toggleMonthly") + " / " + t("hero.toggleYearly")}
+              aria-label="Basculer entre tarif mensuel et annuel"
               onClick={() => setIsYearly(!isYearly)}
               className="relative inline-flex h-7 w-14 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent bg-muted transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 data-checked:bg-violet-600"
               data-checked={isYearly ? "" : undefined}
@@ -231,7 +338,7 @@ export default function PricingContent() {
                 isYearly ? "text-foreground" : "text-muted-foreground"
               }`}
             >
-              {t("hero.toggleYearly")}
+              Annuel
               <span className="inline-flex items-center rounded-full bg-green-50 px-2.5 py-0.5 text-xs font-semibold text-green-700 dark:bg-green-950/40 dark:text-green-400">
                 -20%
               </span>
@@ -245,27 +352,24 @@ export default function PricingContent() {
         <section
           id="saas"
           className="mt-16 scroll-mt-24"
-          aria-label={t("saas.sectionLabel")}
+          aria-label="Nos 6 SaaS"
         >
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {SAAS_IDS.map((id) => {
-              const meta = SAAS_META[id];
-              const Icon = meta.icon;
-              const price = isYearly ? meta.priceYearly : meta.priceMonthly;
-              const name = t(`saas.items.${id}.name`);
-              const badge = meta.hasBadge ? t(`saas.items.${id}.badge`) : null;
+            {SAAS.map((s) => {
+              const Icon = s.icon;
+              const price = isYearly ? s.priceYearly : s.priceMonthly;
               return (
                 <article
-                  key={id}
+                  key={s.id}
                   className={`group relative flex flex-col rounded-3xl border p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
-                    badge
+                    s.badge
                       ? "border-violet-300 bg-linear-to-br from-violet-50/80 to-indigo-50/60 dark:border-violet-700 dark:from-violet-950/40 dark:to-indigo-950/20"
-                      : `border-border/60 bg-background/60 backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04] ${meta.accentHover} dark:hover:bg-white/[0.06] dark:hover:shadow-lg dark:hover:shadow-violet-500/5`
+                      : `border-border/60 bg-background/60 backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04] ${s.accentHover} dark:hover:bg-white/[0.06] dark:hover:shadow-lg dark:hover:shadow-violet-500/5`
                   }`}
                 >
-                  {badge && (
+                  {s.badge && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-violet-600 px-4 py-1 text-xs font-medium text-white shadow-sm">
-                      {badge}
+                      {s.badge}
                     </div>
                   )}
 
@@ -274,12 +378,12 @@ export default function PricingContent() {
                       <Icon className="h-5 w-5" />
                     </div>
                     <h3 className="font-display text-lg font-semibold tracking-tight">
-                      {name}
+                      {s.name}
                     </h3>
                   </div>
 
                   <p className="mt-3 text-sm text-muted-foreground">
-                    {t(`saas.items.${id}.description`)}
+                    {s.description}
                   </p>
 
                   <div className="mt-5 space-y-1">
@@ -288,47 +392,49 @@ export default function PricingContent() {
                         {price}&nbsp;&euro;
                       </span>
                       <span className="text-sm text-muted-foreground">
-                        {t("saas.priceUnit")}
+                        HT / mois
                       </span>
                     </div>
                     {isYearly && (
                       <p className="text-xs text-muted-foreground">
-                        {t("saas.billedYearly", { total: meta.yearlyTotal })}
+                        Facturé {s.yearlyTotal}&nbsp;&euro;/an
                       </p>
                     )}
-                    <p className="text-xs text-violet-600 dark:text-violet-400">
-                      {t("saas.setupUnique", { price: meta.setup })}
-                    </p>
+                    {"setup" in s && (
+                      <p className="text-xs text-violet-600 dark:text-violet-400">
+                        Setup unique : {s.setup}&nbsp;&euro; HT
+                      </p>
+                    )}
                     <p className="text-xs text-muted-foreground">
-                      {t("saas.setupIncluded")}
+                      Mise en place incluse
                     </p>
                   </div>
 
                   <ul className="mt-5 grow space-y-2.5">
-                    {Array.from({ length: meta.featureCount }, (_, fi) => (
-                      <li key={fi} className="flex items-start gap-2.5 text-sm">
+                    {s.features.map((f) => (
+                      <li key={f} className="flex items-start gap-2.5 text-sm">
                         <Check className="mt-0.5 h-4 w-4 shrink-0 text-violet-600 dark:text-violet-400" />
-                        <span>{t(`saas.items.${id}.features.${fi}`)}</span>
+                        <span>{f}</span>
                       </li>
                     ))}
                   </ul>
 
                   <div className="mt-6 flex flex-col gap-2">
                     <Link
-                      href={`/contact?service=${encodeURIComponent(id)}`}
+                      href={`/contact?service=${encodeURIComponent(s.id)}`}
                       className={`inline-flex items-center justify-center rounded-2xl px-4 py-2.5 text-sm font-medium transition ${
-                        badge
+                        s.badge
                           ? "bg-violet-600 text-white shadow-lg shadow-violet-500/20 hover:bg-violet-700"
                           : "border hover:bg-muted"
                       }`}
                     >
-                      {t("saas.ctaStart")}
+                      Démarrer
                     </Link>
                     <Link
-                      href={meta.href}
+                      href={s.href}
                       className="inline-flex items-center justify-center gap-1.5 rounded-2xl px-4 py-2 text-sm text-muted-foreground transition hover:text-foreground"
                     >
-                      {t("saas.ctaLearnMore")} <ArrowRight className="h-3.5 w-3.5" />
+                      En savoir plus <ArrowRight className="h-3.5 w-3.5" />
                     </Link>
                   </div>
                 </article>
@@ -343,7 +449,7 @@ export default function PricingContent() {
         <div className="mt-20 flex items-center gap-4">
           <div className="h-px grow bg-border" />
           <span className="shrink-0 rounded-full border border-violet-200 bg-violet-50 px-4 py-1.5 text-xs font-medium uppercase tracking-wide text-violet-700 dark:border-violet-800 dark:bg-violet-950/50 dark:text-violet-300">
-            {t("separator")}
+            Économisez avec les packs
           </span>
           <div className="h-px grow bg-border" />
         </div>
@@ -354,42 +460,41 @@ export default function PricingContent() {
         <section
           id="packs"
           className="mt-12 scroll-mt-24"
-          aria-label={t("packs.sectionLabel")}
+          aria-label="Packs combinés"
         >
           <div className="space-y-2 text-center">
             <h2 className="font-display font-bold text-3xl tracking-tight">
-              {t("packs.title")}
+              Packs combinés
             </h2>
             <p className="text-muted-foreground">
-              {t("packs.subtitle")}
+              Combinez plusieurs SaaS et bénéficiez de tarifs réduits.
             </p>
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {PACK_IDS.map((id) => {
-              const meta = PACK_META[id];
-              const price = isYearly ? meta.priceYearly : meta.priceMonthly;
+            {PACKS.map((pack) => {
+              const price = isYearly ? pack.priceYearly : pack.priceMonthly;
               return (
                 <article
-                  key={id}
-                  className={`relative flex flex-col rounded-3xl border p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-linear-to-br ${meta.gradient} ${
-                    meta.highlighted
+                  key={pack.id}
+                  className={`relative flex flex-col rounded-3xl border p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-linear-to-br ${pack.gradient} ${
+                    pack.highlighted
                       ? "border-violet-300 dark:border-violet-700"
                       : "border-border/60 dark:border-white/[0.08] hover:border-violet-200 dark:hover:border-violet-500/25"
                   }`}
                 >
-                  {meta.highlighted && (
+                  {pack.highlighted && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-violet-600 px-4 py-1 text-xs font-medium text-white shadow-sm">
-                      {t("packs.mostChosen")}
+                      Le plus choisi
                     </div>
                   )}
 
                   <header className="space-y-1">
                     <h3 className="font-display text-xl font-semibold tracking-tight">
-                      {t(`packs.items.${id}.name`)}
+                      {pack.name}
                     </h3>
                     <p className="text-sm text-muted-foreground">
-                      {t(`packs.items.${id}.tagline`)}
+                      {pack.tagline}
                     </p>
                   </header>
 
@@ -399,17 +504,17 @@ export default function PricingContent() {
                         {price}&nbsp;&euro;
                       </span>
                       <span className="text-sm text-muted-foreground">
-                        {t("saas.priceUnit")}
+                        HT / mois
                       </span>
                     </div>
-                    <p className="text-sm text-muted-foreground">{t(`packs.items.${id}.desc`)}</p>
+                    <p className="text-sm text-muted-foreground">{pack.desc}</p>
                     <div className="flex flex-wrap gap-2">
                       <span className="inline-flex rounded-full bg-green-50 px-2.5 py-0.5 text-xs font-medium text-green-700 dark:bg-green-950/40 dark:text-green-400">
-                        {t(`packs.items.${id}.badge`)}
+                        {pack.badge}
                       </span>
-                      {meta.hasExtraBadge && (
+                      {"extraBadge" in pack && (
                         <span className="inline-flex rounded-full bg-violet-50 px-2.5 py-0.5 text-xs font-medium text-violet-700 dark:bg-violet-950/40 dark:text-violet-400">
-                          {t(`packs.items.${id}.extraBadge`)}
+                          {pack.extraBadge}
                         </span>
                       )}
                     </div>
@@ -417,14 +522,14 @@ export default function PricingContent() {
 
                   <div className="mt-auto pt-6">
                     <Link
-                      href={`/contact?service=pack-${encodeURIComponent(id)}`}
+                      href={`/contact?service=pack-${encodeURIComponent(pack.id)}`}
                       className={`inline-flex w-full items-center justify-center rounded-2xl px-6 py-3 text-sm font-medium transition ${
-                        meta.highlighted
+                        pack.highlighted
                           ? "bg-violet-600 text-white shadow-lg shadow-violet-500/20 hover:bg-violet-700"
                           : "border hover:bg-muted"
                       }`}
                     >
-                      {t(`packs.items.${id}.cta`)}
+                      {pack.cta}
                     </Link>
                   </div>
                 </article>
@@ -438,13 +543,13 @@ export default function PricingContent() {
       <ScrollReveal direction="up" delay={60}>
         <section
           className="mt-20 scroll-mt-24"
-          aria-label={t("comparison.title")}
+          aria-label="Récapitulatif des tarifs"
         >
           <h2 className="font-display font-bold text-2xl tracking-tight">
-            {t("comparison.title")}
+            Tous les tarifs en un coup d&apos;&#339;il
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            {t("comparison.subtitle")}
+            Prix HT — mise en place incluse dans tous les tarifs.
           </p>
 
           <div className="mt-6 overflow-x-auto">
@@ -452,84 +557,80 @@ export default function PricingContent() {
               <thead>
                 <tr className="border-b">
                   <th className="pb-3 pr-4 font-medium text-muted-foreground">
-                    {t("comparison.thService")}
+                    Service
                   </th>
                   <th className="pb-3 px-4 text-right font-medium text-muted-foreground">
-                    {t("comparison.thMonthly")}
+                    Mensuel
                   </th>
                   <th className="pb-3 px-4 text-right font-medium text-muted-foreground">
-                    {t("comparison.thYearly")}
+                    Annuel
                   </th>
                   <th className="pb-3 pl-4 text-right font-medium text-muted-foreground">
-                    {t("comparison.thSaving")}
+                    Économie
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {SAAS_IDS.map((id) => {
-                  const meta = SAAS_META[id];
-                  return (
-                    <tr key={id} className="border-b">
-                      <td className="py-3 pr-4">
-                        <div className="font-medium">{t(`saas.items.${id}.name`)}</div>
+                {SAAS.map((s) => (
+                  <tr key={s.id} className="border-b">
+                    <td className="py-3 pr-4">
+                      <div className="font-medium">{s.name}</div>
+                      {"setup" in s && (
                         <div className="text-xs text-muted-foreground">
-                          {t("comparison.setup", { price: meta.setup })}
+                          + setup {s.setup}&nbsp;&euro;
                         </div>
-                      </td>
-                      <td className="py-3 px-4 text-right whitespace-nowrap font-medium">
-                        {meta.priceMonthly}&nbsp;&euro;{t("comparison.perMonth")}
-                      </td>
-                      <td className="py-3 px-4 text-right whitespace-nowrap font-medium">
-                        {meta.priceYearly}&nbsp;&euro;{t("comparison.perMonth")}
-                      </td>
-                      <td className="py-3 pl-4 text-right whitespace-nowrap">
-                        <span className="rounded-full bg-green-50 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-950/40 dark:text-green-400">
-                          -{Math.round(((meta.priceMonthly - meta.priceYearly) / meta.priceMonthly) * 100)}%
-                        </span>
-                      </td>
-                    </tr>
-                  );
-                })}
+                      )}
+                    </td>
+                    <td className="py-3 px-4 text-right whitespace-nowrap font-medium">
+                      {s.priceMonthly}&nbsp;&euro;/mois
+                    </td>
+                    <td className="py-3 px-4 text-right whitespace-nowrap font-medium">
+                      {s.priceYearly}&nbsp;&euro;/mois
+                    </td>
+                    <td className="py-3 pl-4 text-right whitespace-nowrap">
+                      <span className="rounded-full bg-green-50 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-950/40 dark:text-green-400">
+                        -{Math.round(((s.priceMonthly - s.priceYearly) / s.priceMonthly) * 100)}%
+                      </span>
+                    </td>
+                  </tr>
+                ))}
 
                 <tr>
                   <td colSpan={4} className="pt-6 pb-2">
                     <div className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-                      {t("comparison.packsLabel")}
+                      Packs combinés
                     </div>
                   </td>
                 </tr>
 
-                {PACK_IDS.map((id) => {
-                  const meta = PACK_META[id];
-                  return (
-                    <tr key={id} className="border-b last:border-0">
-                      <td className="py-3 pr-4">
-                        <div className="flex items-center gap-2">
-                          <span className="font-medium">{t("comparison.pack", { name: t(`packs.items.${id}.name`) })}</span>
-                          {meta.highlighted && (
-                            <span className="rounded-full bg-violet-50 px-2 py-0.5 text-xs text-violet-700 dark:bg-violet-950/40 dark:text-violet-400">
-                              {t("comparison.popular")}
-                            </span>
-                          )}
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          {t(`packs.items.${id}.desc`)}
-                        </div>
-                      </td>
-                      <td className="py-3 px-4 text-right whitespace-nowrap font-medium">
-                        {meta.priceMonthly}&nbsp;&euro;{t("comparison.perMonth")}
-                      </td>
-                      <td className="py-3 px-4 text-right whitespace-nowrap font-medium">
-                        {meta.priceYearly}&nbsp;&euro;{t("comparison.perMonth")}
-                      </td>
-                      <td className="py-3 pl-4 text-right whitespace-nowrap">
-                        <span className="rounded-full bg-green-50 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-950/40 dark:text-green-400">
-                          {t(`packs.items.${id}.badge`)}
-                        </span>
-                      </td>
-                    </tr>
-                  );
-                })}
+                {PACKS.map((p) => (
+                  <tr key={p.id} className="border-b last:border-0">
+                    <td className="py-3 pr-4">
+                      <div className="flex items-center gap-2">
+                        <span className="font-medium">Pack {p.name}</span>
+                        {p.highlighted && (
+                          <span className="rounded-full bg-violet-50 px-2 py-0.5 text-xs text-violet-700 dark:bg-violet-950/40 dark:text-violet-400">
+                            Populaire
+                          </span>
+                        )}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        {p.desc}
+                      </div>
+                    </td>
+                    <td className="py-3 px-4 text-right whitespace-nowrap font-medium">
+                      {p.priceMonthly}&nbsp;&euro;/mois
+                    </td>
+                    <td className="py-3 px-4 text-right whitespace-nowrap font-medium">
+                      {p.priceYearly}&nbsp;&euro;/mois
+                    </td>
+                    <td className="py-3 pl-4 text-right whitespace-nowrap">
+                      <span className="rounded-full bg-green-50 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-950/40 dark:text-green-400">
+                        {p.badge}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -541,13 +642,13 @@ export default function PricingContent() {
         <section
           id="paiement"
           className="mt-20 scroll-mt-24"
-          aria-label={t("payment.sectionLabel")}
+          aria-label="Options de paiement"
         >
           <h2 className="font-display font-bold text-2xl tracking-tight">
-            {t("payment.title")}
+            Options de paiement
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            {t("payment.subtitle")}
+            Deux options pour adapter le paiement à votre trésorerie.
           </p>
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
@@ -559,20 +660,26 @@ export default function PricingContent() {
                 </div>
                 <div>
                   <h3 className="font-display text-lg font-semibold tracking-tight">
-                    {t("payment.yearly.title")}
+                    Engagement annuel
                   </h3>
                   <span className="inline-flex rounded-full bg-green-50 px-2.5 py-0.5 text-xs font-semibold text-green-700 dark:bg-green-950/40 dark:text-green-400">
-                    {t("payment.yearly.badge")}
+                    -20% sur tous les tarifs
                   </span>
                 </div>
               </div>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                {[0, 1, 2].map((i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
-                    <span>{t(`payment.yearly.features.${i}`)}</span>
-                  </li>
-                ))}
+                <li className="flex items-start gap-2">
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
+                  <span>Facturation mensuelle</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
+                  <span>Engagement 12 mois</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
+                  <span>Prix garantis pendant toute la durée</span>
+                </li>
               </ul>
             </div>
 
@@ -584,25 +691,41 @@ export default function PricingContent() {
                 </div>
                 <div>
                   <h3 className="font-display text-lg font-semibold tracking-tight">
-                    {t("payment.threeX.title")}
+                    Paiement en 3 fois
                   </h3>
                   <span className="inline-flex rounded-full border border-violet-200 bg-violet-50 px-2.5 py-0.5 text-xs font-semibold text-violet-700 dark:border-violet-800 dark:bg-violet-950/50 dark:text-violet-300">
-                    {t("payment.threeX.badge")}
+                    Sans frais
                   </span>
                 </div>
               </div>
               <p className="mt-4 text-sm text-muted-foreground">
-                {t("payment.threeX.intro")}
+                Pour tout engagement annuel ou setup.
               </p>
               <ul className="mt-4 space-y-2.5 text-sm">
-                {[0, 1, 2].map((i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100 text-xs font-medium text-violet-700 dark:bg-violet-950/50 dark:text-violet-300">
-                      {i + 1}
-                    </span>
-                    <span dangerouslySetInnerHTML={{ __html: t.raw(`payment.threeX.steps.${i}`) as string }} />
-                  </li>
-                ))}
+                <li className="flex items-start gap-2.5">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100 text-xs font-medium text-violet-700 dark:bg-violet-950/50 dark:text-violet-300">
+                    1
+                  </span>
+                  <span>
+                    <strong>1er tiers</strong> à la commande
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100 text-xs font-medium text-violet-700 dark:bg-violet-950/50 dark:text-violet-300">
+                    2
+                  </span>
+                  <span>
+                    <strong>2e tiers</strong> au 30e jour
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100 text-xs font-medium text-violet-700 dark:bg-violet-950/50 dark:text-violet-300">
+                    3
+                  </span>
+                  <span>
+                    <strong>3e tiers</strong> au 60e jour
+                  </span>
+                </li>
               </ul>
             </div>
           </div>
@@ -613,22 +736,22 @@ export default function PricingContent() {
       <ScrollReveal direction="up" delay={60}>
         <section
           className="mt-20"
-          aria-label={t("faq.sectionLabel")}
+          aria-label="Questions fréquentes sur les tarifs"
         >
           <h2 className="font-display font-bold text-2xl tracking-tight">
-            {t("faq.title")}
+            Questions fréquentes
           </h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            {Array.from({ length: 11 }, (_, i) => (
+            {FAQ.map((f) => (
               <details
-                key={i}
+                key={f.q}
                 className="group rounded-3xl border bg-background p-6 transition open:shadow-md hover:bg-muted dark:border-white/[0.08] dark:bg-white/[0.03] dark:hover:bg-white/[0.06] open:border-violet-200/60 dark:open:border-violet-800/40"
               >
                 <summary className="flex cursor-pointer items-center justify-between font-medium">
-                  <span>{t(`faq.items.${i}.q`)}</span>
+                  <span>{f.q}</span>
                   <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 group-open:rotate-180" />
                 </summary>
-                <p className="mt-3 text-sm text-muted-foreground">{t(`faq.items.${i}.a`)}</p>
+                <p className="mt-3 text-sm text-muted-foreground">{f.a}</p>
               </details>
             ))}
           </div>
@@ -637,20 +760,22 @@ export default function PricingContent() {
 
       {/* ── CTA FINAL ─────────────────────────────────────────────────── */}
       <ScrollReveal direction="up" delay={80}>
-        <section className="mt-20" aria-label={t("cta.sectionLabel")}>
+        <section className="mt-20" aria-label="Appel à l'action">
           <div className="rounded-3xl border bg-linear-to-br from-violet-50 to-indigo-50/80 p-10 text-center shadow-sm dark:from-violet-950/40 dark:to-indigo-950/30 dark:border-violet-500/20 dark:shadow-lg dark:shadow-violet-500/10">
             <h2 className="font-display font-bold text-3xl tracking-tight">
-              {t("cta.title")}
+              Besoin d&apos;aide pour choisir ?
             </h2>
             <p className="mt-4 mx-auto max-w-xl text-sm text-muted-foreground">
-              {t("cta.subtitle")}
+              L&apos;audit est gratuit — 15 à 30 minutes pour comprendre votre
+              situation, identifier le bon service (ou pack), et voir un plan
+              concret avant de vous engager.
             </p>
             <div className="mt-8">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-2xl bg-violet-600 px-8 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/20 transition hover:scale-[1.02] hover:bg-violet-700"
               >
-                {t("cta.button")}
+                Réserver un audit gratuit
               </Link>
             </div>
           </div>

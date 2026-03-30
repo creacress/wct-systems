@@ -6,103 +6,116 @@ import GridPattern from "@/components/ui/grid-pattern";
 import { getAllPosts } from "@/lib/blog";
 import BlogCard from "@/components/blog/blog-card";
 import { TrackedLink } from "@/components/site/tracked-link";
-import { getTranslations, getLocale } from "next-intl/server";
+
+export const metadata: Metadata = {
+  title: "WCT Systems — IA, Automatisation & IoT pour PME françaises",
+  description:
+    "WCT Systems aide les PME françaises avec 7 solutions : Digital Workplace, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Q2C Facturation SaaS et Nixie Pulse (dashboard KPI physique). Audit gratuit en 15 min.",
+  keywords: ["IA PME France", "automatisation PME", "SaaS PME", "prospection B2B IA", "WCT Systems"],
+  alternates: { canonical: "/" },
+};
 
 const SITE = {
   name: "WCT Systems",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  tagline: "Digital Workplace & IA pour PME",
   sameAs: [] as string[],
 };
 
-const SERVICE_STYLES = [
+const FAQ = [
+  {
+    q: "Combien de temps pour livrer une première version ?",
+    a: "En général 7 à 14 jours pour une V1 : un système simple (prospects + suivi + relances) et un pilotage KPI minimal.",
+  },
+  {
+    q: "Est-ce adapté à une petite entreprise ?",
+    a: "Oui. On vise l'impact : moins de tâches répétitives et plus d'opportunités, sans complexifier votre organisation.",
+  },
+  {
+    q: "Qu'est-ce que l'audit gratuit ?",
+    a: "Un échange court (15–30 min) + une synthèse : 3 priorités, un plan d'exécution, et des KPI à suivre.",
+  },
+  {
+    q: "C'est quoi un Digital Workplace ?",
+    a: "Un bureau virtuel qui regroupe tous vos outils métier dans un seul espace. Chaque « pièce » correspond à une fonction (RH, Ventes, Support…). Votre équipe y travaille, communique et collabore sans jongler entre 10 onglets.",
+  },
+  {
+    q: "La gamification, c'est sérieux ?",
+    a: "Oui. Des études montrent que la gamification augmente l'engagement de 48% et la productivité de 36%. Les XP, badges et classements créent de la motivation concrète et mesurable.",
+  },
+] as const;
+
+const SERVICES = [
   {
     href: "/services/digital-workplace",
+    title: "Digital Workplace",
+    desc: "Bureau virtuel gamifié où chaque pièce est un outil métier. XP, badges, classements.",
     price: "199",
     color: "cyan",
     gradient: "from-cyan-500/10 to-teal-500/5",
     borderHover: "hover:border-cyan-400/40 dark:hover:border-cyan-500/30",
-    hasBadge: true,
-    badgeColor: "bg-cyan-600",
+    badge: "Nouveau",
   },
   {
     href: "/services/trouver-prospects",
+    title: "Prospection IA",
+    desc: "Ciblage IA, enrichissement automatique, scoring, intégration CRM.",
     price: "99",
     color: "emerald",
     gradient: "from-emerald-500/10 to-green-500/5",
     borderHover: "hover:border-emerald-400/40 dark:hover:border-emerald-500/30",
-    hasBadge: false,
   },
   {
     href: "/services/site-web-moderne",
+    title: "Site Web Moderne",
+    desc: "Site rapide, SEO + SEO IA, 4 templates. Livré en 14 jours.",
     price: "99",
     color: "sky",
     gradient: "from-sky-500/10 to-indigo-500/5",
     borderHover: "hover:border-sky-400/40 dark:hover:border-sky-500/30",
-    hasBadge: false,
   },
   {
     href: "/services/automatiser-relances",
+    title: "Automatisation (RPA)",
+    desc: "Workflows sur mesure : relances, CRM, reporting, dashboard KPI.",
     price: "149",
     color: "amber",
     gradient: "from-amber-500/10 to-orange-500/5",
     borderHover: "hover:border-amber-400/40 dark:hover:border-amber-500/30",
-    hasBadge: false,
   },
   {
     href: "/services/integration-ia",
+    title: "Intégration IA",
+    desc: "Chatbot, agents IA, assistants sur mesure connectés à vos données.",
     price: "199",
     color: "fuchsia",
     gradient: "from-fuchsia-500/10 to-purple-500/5",
     borderHover: "hover:border-fuchsia-400/40 dark:hover:border-fuchsia-500/30",
-    hasBadge: true,
-    badgeColor: "bg-fuchsia-600",
+    badge: "Populaire",
   },
   {
     href: "/services/q2c-facturation",
+    title: "Q2C — Facturation SaaS",
+    desc: "Facturation e-invoicing conforme 2026 : Factur-X, UBL, CII, TVA OSS, connecteur PA. À partir de 149 €/mois.",
     price: "149",
     color: "emerald",
     gradient: "from-emerald-500/10 to-teal-500/5",
     borderHover: "hover:border-emerald-400/40 dark:hover:border-emerald-500/30",
-    hasBadge: true,
-    badgeColor: "bg-cyan-600",
+    badge: "Nouveau",
+  },
+  {
+    href: "/services/nixie-pulse",
+    title: "Nixie Pulse",
+    desc: "Dashboard KPI physique connecté. Tubes Nixie IN-14 soviétiques affichant vos données en temps réel. Made in France.",
+    price: "990",
+    color: "orange",
+    gradient: "from-orange-500/10 to-amber-500/5",
+    borderHover: "hover:border-orange-400/40 dark:hover:border-orange-500/30",
+    badge: "Hardware",
   },
 ] as const;
 
-const STAT_ENDS = [6, 14, 200] as const;
-const WHY_ENDS = [73, 6, 40] as const;
-const PROCESS_STEP_NUMS = ["01", "02", "03", "04"] as const;
-const PROCESS_MAIN_NUMS = ["01", "02", "03"] as const;
-
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("home");
-  const locale = await getLocale();
-  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
-  return {
-    title: t("metadata.title"),
-    description: t("metadata.description"),
-    keywords: t("metadata.keywords").split(", "),
-    alternates: {
-      canonical: locale === "pt" ? `${siteUrl}/pt` : siteUrl,
-      languages: {
-        fr: siteUrl,
-        "pt-PT": `${siteUrl}/pt`,
-        "x-default": siteUrl,
-      },
-    },
-    openGraph: {
-      locale: locale === "pt" ? "pt_PT" : "fr_FR",
-    },
-  };
-}
-
-export default async function HomePage() {
-  const t = await getTranslations("home");
-
-  const faqItems = [0, 1, 2, 3, 4].map((i) => ({
-    q: t(`faq.items.${i}.q`),
-    a: t(`faq.items.${i}.a`),
-  }));
-
+export default function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -110,14 +123,14 @@ export default async function HomePage() {
         "@type": "Organization",
         name: SITE.name,
         url: SITE.url,
-        description: t("site.orgDescription"),
+        description: "Digital Workplace, IA & IoT pour PME françaises. 7 solutions, un écosystème.",
         sameAs: SITE.sameAs,
       },
       {
         "@type": "WebSite",
         name: SITE.name,
         url: SITE.url,
-        description: t("site.webDescription"),
+        description: "Digital Workplace gamifié + IA + automatisation + IoT pour PME. 7 solutions, un écosystème.",
         potentialAction: {
           "@type": "SearchAction",
           target: `${SITE.url}/blog?q={search_term_string}`,
@@ -126,7 +139,7 @@ export default async function HomePage() {
       },
       {
         "@type": "FAQPage",
-        mainEntity: faqItems.map((f) => ({
+        mainEntity: FAQ.map((f) => ({
           "@type": "Question",
           name: f.q,
           acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -157,24 +170,24 @@ export default async function HomePage() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-500 opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-violet-600" />
                 </span>
-                {t("hero.badge")}
+                7 Solutions &bull; SaaS &bull; IA &bull; Hardware
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={100}>
               <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                {t("hero.titleLine1")}
+                Votre bureau digital.
                 <span className="block bg-gradient-to-r from-violet-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent dark:from-violet-400 dark:via-indigo-400 dark:to-cyan-400">
-                  {t("hero.titleLine2")}
+                  Tout-en-un, gamifié, piloté par l&apos;IA.
                 </span>
               </h1>
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <p
-                className="max-w-xl text-lg leading-relaxed text-muted-foreground"
-                dangerouslySetInnerHTML={{ __html: t.raw("hero.description") }}
-              />
+              <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
+                <strong className="text-foreground">WCT Systems</strong> conçoit le Digital Workplace des PME françaises :
+                un bureau virtuel gamifié + 7 solutions (<strong className="text-foreground">Digital Workplace, Prospection IA, Site Web, Automatisation, Intégration IA, Facturation SaaS</strong> et <strong className="text-foreground">Nixie Pulse</strong>, le dashboard KPI physique connecté).
+              </p>
             </ScrollReveal>
 
             <ScrollReveal delay={300}>
@@ -183,14 +196,14 @@ export default async function HomePage() {
                   href="/services/digital-workplace"
                   className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-violet-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/25 transition-all duration-300 hover:bg-violet-700 hover:shadow-xl hover:shadow-violet-500/30"
                 >
-                  {t("hero.ctaPrimary")}
+                  Découvrir le Workplace
                   <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
                 </Link>
                 <Link
                   href="/services"
                   className="inline-flex items-center justify-center rounded-2xl border px-6 py-3 text-sm font-medium transition-colors hover:bg-muted dark:border-white/[0.12]"
                 >
-                  {t("hero.ctaSecondary")}
+                  Voir les 7 solutions
                 </Link>
               </div>
             </ScrollReveal>
@@ -201,31 +214,40 @@ export default async function HomePage() {
             <div className="space-y-4">
               {/* Stat counters row */}
               <div className="grid grid-cols-3 gap-3">
-                {STAT_ENDS.map((end, i) => (
+                {[
+                  { end: 7, suffix: " solutions", label: "Écosystème" },
+                  { end: 14, suffix: " jours", label: "Time to live" },
+                  { end: 200, suffix: "+", label: "Intégrations" },
+                ].map((s) => (
                   <div
-                    key={i}
+                    key={s.label}
                     className="rounded-2xl border bg-background/70 p-4 text-center shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]"
                   >
                     <p className="font-display text-2xl font-bold tracking-tight text-violet-600 dark:text-violet-400">
-                      <CountUp end={end} suffix={t(`stats.items.${i}.suffix`)} />
+                      <CountUp end={s.end} suffix={s.suffix} />
                     </p>
-                    <p className="mt-1 text-xs text-muted-foreground">{t(`stats.items.${i}.label`)}</p>
+                    <p className="mt-1 text-xs text-muted-foreground">{s.label}</p>
                   </div>
                 ))}
               </div>
 
               {/* Process steps */}
               <div className="rounded-3xl border bg-background/70 p-6 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
-                <p className="font-display text-sm font-semibold">{t("process_mini.title")}</p>
+                <p className="font-display text-sm font-semibold">Votre Workplace en 14 jours</p>
                 <div className="mt-4 grid gap-3">
-                  {PROCESS_STEP_NUMS.map((n, i) => (
-                    <div key={n} className="flex items-start gap-3 rounded-2xl border bg-background/60 p-3 transition-colors hover:bg-muted/50 dark:border-white/[0.06] dark:bg-white/[0.03]">
+                  {[
+                    { n: "01", t: "Audit", d: "Cartographie outils & process" },
+                    { n: "02", t: "Configuration", d: "Pièces métier + connexions" },
+                    { n: "03", t: "Gamification", d: "XP, badges + formation" },
+                    { n: "04", t: "Go live", d: "Déploiement + KPI temps réel" },
+                  ].map((step) => (
+                    <div key={step.n} className="flex items-start gap-3 rounded-2xl border bg-background/60 p-3 transition-colors hover:bg-muted/50 dark:border-white/[0.06] dark:bg-white/[0.03]">
                       <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-violet-100 font-display text-xs font-bold text-violet-600 dark:bg-violet-900/50 dark:text-violet-400">
-                        {n}
+                        {step.n}
                       </span>
                       <div>
-                        <p className="text-sm font-medium">{t(`process_mini.steps.${i}.title`)}</p>
-                        <p className="text-xs text-muted-foreground">{t(`process_mini.steps.${i}.desc`)}</p>
+                        <p className="text-sm font-medium">{step.t}</p>
+                        <p className="text-xs text-muted-foreground">{step.d}</p>
                       </div>
                     </div>
                   ))}
@@ -236,90 +258,93 @@ export default async function HomePage() {
         </section>
 
         {/* ── POURQUOI ── */}
-        <section className="mt-24" aria-label={t("why.title")}>
+        <section className="mt-24" aria-label="Pourquoi un Digital Workplace">
           <ScrollReveal>
-            <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">{t("why.title")}</h2>
-            <p className="mt-2 max-w-2xl text-muted-foreground">{t("why.subtitle")}</p>
+            <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">Pourquoi un Digital Workplace ?</h2>
+            <p className="mt-2 max-w-2xl text-muted-foreground">Les chiffres parlent d&apos;eux-mêmes.</p>
           </ScrollReveal>
 
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {WHY_ENDS.map((end, i) => (
-              <ScrollReveal key={i} delay={i * 100}>
+            {[
+              { end: 73, suffix: "%", sub: "des PME", v: "utilisent +5 outils non connectés", d: "Le Workplace les réunit dans un bureau virtuel unifié." },
+              { end: 6, suffix: "-9 mois", sub: "de salaire", v: "coût du turnover par départ", d: "La gamification engage les équipes et réduit le turnover." },
+              { end: 40, suffix: "%", sub: "du temps", v: "perdu en tâches admin", d: "L'automatisation intégrée libère du temps pour ce qui compte." },
+            ].map((x, i) => (
+              <ScrollReveal key={x.sub} delay={i * 100}>
                 <div className="group rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition-all duration-300 hover:shadow-lg hover:-translate-y-1 dark:border-white/[0.08] dark:bg-white/[0.04] dark:hover:border-violet-500/20">
                   <p className="font-display text-3xl font-bold tracking-tight text-violet-600 dark:text-violet-400">
-                    <CountUp end={end} suffix={t(`why.items.${i}.suffix`)} />
+                    <CountUp end={x.end} suffix={x.suffix} />
                   </p>
-                  <p className="text-sm font-medium text-foreground">{t(`why.items.${i}.sub`)} {t(`why.items.${i}.value`)}</p>
-                  <p className="mt-2 text-sm text-muted-foreground">{t(`why.items.${i}.desc`)}</p>
+                  <p className="text-sm font-medium text-foreground">{x.sub} {x.v}</p>
+                  <p className="mt-2 text-sm text-muted-foreground">{x.d}</p>
                 </div>
               </ScrollReveal>
             ))}
           </div>
         </section>
 
-        {/* ── ÉCOSYSTÈME 6 SAAS ── */}
-        <section className="mt-24" aria-label={t("ecosystem.title")}>
+        {/* ── ÉCOSYSTÈME 7 SOLUTIONS ── */}
+        <section className="mt-24" aria-label="Écosystème">
           <ScrollReveal>
             <div className="flex items-end justify-between gap-6">
               <div>
-                <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">{t("ecosystem.title")}</h2>
+                <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">L&apos;écosystème complet</h2>
                 <p className="mt-2 max-w-2xl text-muted-foreground">
-                  {t("ecosystem.subtitle")}
+                  7 solutions complémentaires : Digital Workplace, IA, automatisation, facturation et Nixie Pulse (hardware IoT). Chaque service a sa couleur.
                 </p>
               </div>
               <Link
                 href="/services"
                 className="hidden rounded-2xl border px-4 py-2 text-sm font-medium transition-colors hover:bg-muted sm:inline-flex dark:border-white/[0.12]"
               >
-                {t("ecosystem.viewAll")}
+                Tout voir
               </Link>
             </div>
           </ScrollReveal>
 
           <div className="mt-8 grid gap-5 md:grid-cols-2">
-            {SERVICE_STYLES.map((s, i) => {
-              const badge = t.has(`services.${i}.badge`) ? t(`services.${i}.badge`) : null;
-              return (
-                <ScrollReveal key={s.href} delay={i * 80}>
-                  <article
-                    className={`group relative rounded-3xl border p-6 shadow-sm backdrop-blur transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-gradient-to-br ${s.gradient} ${s.borderHover} dark:border-white/[0.08] ${
-                      i === 0 ? "md:col-span-2" : ""
-                    }`}
-                  >
-                    {s.hasBadge && badge && (
-                      <div className={`absolute -top-3 left-6 rounded-full px-3 py-0.5 text-xs font-medium text-white shadow-sm ${s.badgeColor}`}>
-                        {badge}
-                      </div>
-                    )}
-
-                    <div className="flex items-center justify-between">
-                      <h3 className="font-display text-lg font-semibold tracking-tight">{t(`services.${i}.title`)}</h3>
-                      <div className="text-right">
-                        <span className="font-display text-2xl font-bold tracking-tight">{s.price}&nbsp;&euro;</span>
-                        <span className="text-xs text-muted-foreground"> {t("ecosystem.priceUnit")}</span>
-                      </div>
+            {SERVICES.map((s, i) => (
+              <ScrollReveal key={s.href} delay={i * 80}>
+                <article
+                  className={`group relative rounded-3xl border p-6 shadow-sm backdrop-blur transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-gradient-to-br ${s.gradient} ${s.borderHover} dark:border-white/[0.08] ${
+                    i === 0 ? "md:col-span-2" : ""
+                  }`}
+                >
+                  {"badge" in s && s.badge && (
+                    <div className={`absolute -top-3 left-6 rounded-full px-3 py-0.5 text-xs font-medium text-white shadow-sm ${
+                      s.badge === "Nouveau" ? "bg-cyan-600" : s.badge === "Hardware" ? "bg-orange-600" : "bg-fuchsia-600"
+                    }`}>
+                      {s.badge}
                     </div>
-                    <p className="mt-2 text-sm text-muted-foreground">{t(`services.${i}.desc`)}</p>
+                  )}
 
-                    <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-                      <Link
-                        href={s.href}
-                        className="inline-flex items-center justify-center rounded-2xl border px-4 py-2 text-sm font-medium transition-colors hover:bg-muted dark:border-white/[0.12]"
-                      >
-                        {t("ecosystem.learnMore")}
-                      </Link>
-                      <TrackedLink
-                        href="/contact"
-                        trackAs="audit_service_card"
-                        className="inline-flex items-center justify-center rounded-2xl bg-violet-600 px-4 py-2 text-sm font-medium text-white shadow-sm shadow-violet-500/20 transition hover:bg-violet-700"
-                      >
-                        {t("ecosystem.requestAudit")}
-                      </TrackedLink>
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-display text-lg font-semibold tracking-tight">{s.title}</h3>
+                    <div className="text-right">
+                      <span className="font-display text-2xl font-bold tracking-tight">{s.price}&nbsp;&euro;</span>
+                      <span className="text-xs text-muted-foreground"> HT/mois</span>
                     </div>
-                  </article>
-                </ScrollReveal>
-              );
-            })}
+                  </div>
+                  <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+
+                  <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                    <Link
+                      href={s.href}
+                      className="inline-flex items-center justify-center rounded-2xl border px-4 py-2 text-sm font-medium transition-colors hover:bg-muted dark:border-white/[0.12]"
+                    >
+                      En savoir plus
+                    </Link>
+                    <TrackedLink
+                      href="/contact"
+                      trackAs="audit_service_card"
+                      className="inline-flex items-center justify-center rounded-2xl bg-violet-600 px-4 py-2 text-sm font-medium text-white shadow-sm shadow-violet-500/20 transition hover:bg-violet-700"
+                    >
+                      Demander un audit
+                    </TrackedLink>
+                  </div>
+                </article>
+              </ScrollReveal>
+            ))}
           </div>
 
           <div className="mt-6 sm:hidden">
@@ -327,7 +352,7 @@ export default async function HomePage() {
               href="/services"
               className="inline-flex w-full items-center justify-center rounded-2xl border px-4 py-3 text-sm font-medium transition-colors hover:bg-muted"
             >
-              {t("ecosystem.viewAllServices")}
+              Voir tous les services
             </Link>
           </div>
         </section>
@@ -336,46 +361,54 @@ export default async function HomePage() {
         <section className="mt-24" aria-label="ROI">
           <ScrollReveal>
             <div className="rounded-3xl border bg-gradient-to-br from-violet-50/60 to-indigo-50/40 p-8 dark:border-white/[0.06] dark:from-violet-500/[0.06] dark:to-indigo-500/[0.04]">
-              <h2 className="font-display text-2xl font-bold tracking-tight">{t("roi.title")}</h2>
+              <h2 className="font-display text-2xl font-bold tracking-tight">Exemple de ROI</h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                {t("roi.subtitle")}
+                Transformer du temps perdu en opportunités mesurables. Exemple indicatif pour une PME.
               </p>
 
               <div className="mt-6 grid gap-4 md:grid-cols-3">
-                {[0, 1, 2].map((i) => (
-                  <div key={i} className="rounded-2xl border bg-background/70 p-5 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
-                    <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{t(`roi.items.${i}.label`)}</p>
-                    <p className="mt-2 font-display text-xl font-bold tracking-tight">{t(`roi.items.${i}.value`)}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">{t(`roi.items.${i}.detail`)}</p>
+                {[
+                  { label: "Hypothèse", value: "2h/jour", detail: "de prospection manuelle automatisée" },
+                  { label: "Gain", value: "~40h/mois", detail: "récupérées (vendues ou réinvesties)" },
+                  { label: "Impact", value: "+volume", detail: "traité = plus de chances de signatures" },
+                ].map((x) => (
+                  <div key={x.label} className="rounded-2xl border bg-background/70 p-5 shadow-sm backdrop-blur dark:border-white/[0.08] dark:bg-white/[0.04]">
+                    <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{x.label}</p>
+                    <p className="mt-2 font-display text-xl font-bold tracking-tight">{x.value}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">{x.detail}</p>
                   </div>
                 ))}
               </div>
 
               <p className="mt-4 text-xs text-muted-foreground">
-                {t("roi.disclaimer")}
+                *Indication : le ROI dépend de votre offre, zone, saisonnalité et qualité du suivi.
               </p>
             </div>
           </ScrollReveal>
         </section>
 
         {/* ── PROCESS ── */}
-        <section className="mt-24" aria-label={t("process.title")}>
+        <section className="mt-24" aria-label="Process">
           <ScrollReveal>
-            <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">{t("process.title")}</h2>
+            <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">Process simple, résultats rapides</h2>
             <p className="mt-2 max-w-2xl text-muted-foreground">
-              {t("process.subtitle")}
+              Audit → V1 → optimisation. Chaque étape produit quelque chose d&apos;utilisable.
             </p>
           </ScrollReveal>
 
           <ol className="mt-8 grid gap-6 md:grid-cols-3">
-            {PROCESS_MAIN_NUMS.map((n, i) => (
-              <ScrollReveal key={n} delay={i * 100}>
+            {[
+              { s: "01", t: "Audit & plan", d: "3 priorités + KPI + plan d'exécution." },
+              { s: "02", t: "V1 en production", d: "Un système simple qui tourne (prospects + suivi + relances)." },
+              { s: "03", t: "Optimisation", d: "SEO, contenus, relances, dashboards : on scale." },
+            ].map((x, i) => (
+              <ScrollReveal key={x.s} delay={i * 100}>
                 <li className="group rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 dark:border-white/[0.08] dark:bg-white/[0.04]">
                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-violet-100 font-display text-sm font-bold text-violet-600 dark:bg-violet-900/50 dark:text-violet-400">
-                    {n}
+                    {x.s}
                   </span>
-                  <p className="mt-3 font-display font-semibold">{t(`process.steps.${i}.title`)}</p>
-                  <p className="mt-2 text-sm text-muted-foreground">{t(`process.steps.${i}.desc`)}</p>
+                  <p className="mt-3 font-display font-semibold">{x.t}</p>
+                  <p className="mt-2 text-sm text-muted-foreground">{x.d}</p>
                 </li>
               </ScrollReveal>
             ))}
@@ -388,36 +421,41 @@ export default async function HomePage() {
                 trackAs="audit_gratuit_llms"
                 className="inline-flex items-center justify-center rounded-2xl bg-violet-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/25 transition hover:bg-violet-700"
               >
-                {t("process.ctaPrimary")}
+                Démarrer avec un audit
               </TrackedLink>
               <Link
                 href="/llms.txt"
                 className="inline-flex items-center justify-center rounded-2xl border px-6 py-3 text-sm font-medium transition-colors hover:bg-muted dark:border-white/[0.12]"
               >
-                {t("process.ctaSecondary")}
+                Lire llms.txt
               </Link>
             </div>
           </ScrollReveal>
         </section>
 
         {/* ── RÉSULTATS PME ── */}
-        <section className="mt-24" aria-label={t("results.title")}>
+        <section className="mt-24" aria-label="Résultats PME">
           <ScrollReveal direction="up">
             <div className="rounded-3xl border bg-muted/60 p-6 sm:p-8 dark:border-white/[0.06] dark:bg-violet-500/[0.04]">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="font-display text-sm font-medium">{t("results.title")}</p>
-                  <p className="mt-1 text-sm text-muted-foreground">{t("results.subtitle")}</p>
+                  <p className="font-display text-sm font-medium">Résultats PME mesurés</p>
+                  <p className="mt-1 text-sm text-muted-foreground">Cas anonymisés, chiffres réels.</p>
                 </div>
                 <Link href="/cas-clients" className="inline-flex items-center justify-center rounded-2xl border px-4 py-2 text-sm font-medium transition hover:bg-muted">
-                  {t("results.viewCases")}
+                  Voir les cas &rarr;
                 </Link>
               </div>
               <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {[0, 1, 2, 3].map((i) => (
-                  <div key={i} className="rounded-2xl border bg-background p-4 dark:border-white/[0.06] dark:bg-white/[0.03]">
-                    <div className="text-2xl font-bold font-mono tracking-tight">{t(`results.items.${i}.value`)}</div>
-                    <div className="mt-1 text-xs text-muted-foreground">{t(`results.items.${i}.label`)}</div>
+                {[
+                  { value: "×6", label: "prospects/mois (cabinet RH)" },
+                  { value: "70%", label: "questions auto (chatbot e-commerce)" },
+                  { value: "28j", label: "système complet déployé (cabinet comptable)" },
+                  { value: "92%", label: "adoption Digital Workplace (ESN)" },
+                ].map((s) => (
+                  <div key={s.label} className="rounded-2xl border bg-background p-4 dark:border-white/[0.06] dark:bg-white/[0.03]">
+                    <div className="text-2xl font-bold font-mono tracking-tight">{s.value}</div>
+                    <div className="mt-1 text-xs text-muted-foreground">{s.label}</div>
                   </div>
                 ))}
               </div>
@@ -426,12 +464,12 @@ export default async function HomePage() {
         </section>
 
         {/* ── DERNIERS ARTICLES ── */}
-        <section className="mt-24" aria-label={t("blog.title")}>
+        <section className="mt-24" aria-label="Derniers articles">
           <ScrollReveal>
             <div className="flex items-baseline justify-between gap-4 mb-8">
-              <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">{t("blog.title")}</h2>
+              <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">Derniers articles</h2>
               <Link href="/blog" className="text-sm font-medium text-violet-600 hover:underline dark:text-violet-400">
-                {t("blog.viewAll")}
+                Tous les articles &rarr;
               </Link>
             </div>
           </ScrollReveal>
@@ -451,14 +489,55 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* ── FAQ ── */}
-        <section className="mt-24" aria-label={t("faq.title")}>
+        {/* ── NIXIE PULSE HIGHLIGHT ── */}
+        <section className="mt-24" aria-label="Nixie Pulse">
           <ScrollReveal>
-            <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">{t("faq.title")}</h2>
+            <div className="rounded-3xl border border-orange-200 bg-gradient-to-br from-orange-50/80 to-amber-50/60 p-8 sm:p-10 dark:border-orange-800/30 dark:from-orange-950/20 dark:to-amber-950/10">
+              <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                <div className="space-y-4 md:max-w-xl">
+                  <div className="inline-flex items-center rounded-full border border-orange-300 bg-orange-100 px-3 py-1 text-xs uppercase tracking-wide text-orange-700 dark:border-orange-700 dark:bg-orange-950/50 dark:text-orange-300">
+                    Hardware &bull; Dashboard KPI physique
+                  </div>
+                  <h2 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
+                    Nixie Pulse
+                    <span className="block text-lg font-normal text-muted-foreground mt-1">
+                      Vos KPI, gravés dans le verre.
+                    </span>
+                  </h2>
+                  <p className="text-sm text-muted-foreground">
+                    Le premier dashboard KPI physique connecté au monde.
+                    Tubes Nixie IN-14 soviétiques affichant vos données Stripe, Bitcoin, GitHub ou Analytics en temps réel.
+                    Assemblé à la main en France.
+                  </p>
+                  <div className="flex flex-wrap gap-3 text-sm">
+                    <span className="rounded-full bg-orange-100 px-3 py-1 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300">Données temps réel</span>
+                    <span className="rounded-full bg-orange-100 px-3 py-1 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300">8 sources de données</span>
+                    <span className="rounded-full bg-orange-100 px-3 py-1 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300">Made in France</span>
+                  </div>
+                </div>
+                <div className="flex flex-col items-start gap-3 md:items-end">
+                  <p className="text-3xl font-semibold tracking-tight">990 <span className="text-lg font-normal text-muted-foreground">&euro;</span></p>
+                  <p className="text-xs text-muted-foreground">Early Bird -20% &middot; Kickstarter oct. 2026</p>
+                  <Link
+                    href="/services/nixie-pulse"
+                    className="inline-flex items-center justify-center rounded-2xl bg-orange-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-orange-500/20 transition hover:scale-[1.02] hover:bg-orange-700"
+                  >
+                    Découvrir Nixie Pulse &rarr;
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </section>
+
+        {/* ── FAQ ── */}
+        <section className="mt-24" aria-label="FAQ">
+          <ScrollReveal>
+            <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">FAQ</h2>
           </ScrollReveal>
           <div className="mt-6 space-y-3">
-            {faqItems.map((f, i) => (
-              <ScrollReveal key={i} delay={i * 60}>
+            {FAQ.map((f, i) => (
+              <ScrollReveal key={f.q} delay={i * 60}>
                 <details className="group rounded-3xl border bg-background/60 p-6 shadow-sm backdrop-blur transition-all duration-200 open:shadow-md hover:bg-muted/50 dark:border-white/[0.08] dark:bg-white/[0.03] dark:hover:bg-white/[0.06]">
                   <summary className="cursor-pointer font-display font-medium">{f.q}</summary>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
@@ -469,13 +548,14 @@ export default async function HomePage() {
         </section>
 
         {/* ── ESPACE CLIENT ── */}
-        <section className="mt-24" aria-label={t("client.title")}>
+        <section className="mt-24" aria-label="Espace client">
           <ScrollReveal>
             <div className="rounded-3xl border bg-muted/50 p-8 sm:flex sm:items-center sm:justify-between sm:gap-8 dark:border-white/[0.06] dark:bg-white/[0.03]">
               <div>
-                <h2 className="font-display text-xl font-semibold tracking-tight">{t("client.title")}</h2>
+                <h2 className="font-display text-xl font-semibold tracking-tight">Déjà client ?</h2>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  {t("client.description")}
+                  Accédez à votre tableau de bord pour gérer vos prospects, suivre
+                  vos relances et piloter vos KPI.
                 </p>
               </div>
               <Link
@@ -486,14 +566,14 @@ export default async function HomePage() {
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
                   <circle cx="12" cy="7" r="4" />
                 </svg>
-                {t("client.cta")}
+                Espace client
               </Link>
             </div>
           </ScrollReveal>
         </section>
 
         {/* ── FINAL CTA ── */}
-        <section className="mt-24" aria-label={t("cta.title")}>
+        <section className="mt-24" aria-label="Appel à l'action">
           <ScrollReveal>
             <div className="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-violet-50 via-indigo-50/80 to-cyan-50/50 p-10 text-center shadow-sm dark:border-violet-500/20 dark:from-violet-950/40 dark:via-indigo-950/30 dark:to-cyan-950/20 dark:shadow-lg dark:shadow-violet-500/10">
               {/* Decorative orb */}
@@ -501,10 +581,10 @@ export default async function HomePage() {
               <div aria-hidden className="pointer-events-none absolute -bottom-20 -left-20 h-48 w-48 rounded-full bg-cyan-400/10 blur-3xl" />
 
               <h2 className="relative font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                {t("cta.title")}
+                Prêt à transformer votre façon de travailler ?
               </h2>
               <p className="relative mt-4 text-muted-foreground">
-                {t("cta.subtitle")}
+                Audit rapide → plan clair → Workplace qui tourne en 14 jours. Ensuite on optimise.
               </p>
               <div className="relative mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
                 <TrackedLink
@@ -512,13 +592,13 @@ export default async function HomePage() {
                   trackAs="audit_gratuit_cta_final"
                   className="inline-flex items-center justify-center rounded-2xl bg-violet-600 px-8 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/25 transition-all duration-300 hover:scale-[1.02] hover:bg-violet-700 hover:shadow-xl"
                 >
-                  {t("cta.ctaPrimary")}
+                  Réserver l&apos;audit
                 </TrackedLink>
                 <Link
                   href="/services"
                   className="inline-flex items-center justify-center rounded-2xl border px-8 py-3 text-sm font-medium transition-colors hover:bg-muted dark:border-white/[0.12]"
                 >
-                  {t("cta.ctaSecondary")}
+                  Explorer les services
                 </Link>
               </div>
             </div>

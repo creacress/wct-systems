@@ -17,6 +17,7 @@ const SAAS_KEYS = [
   { href: "/services/automatiser-relances", key: "saas_automatisation" },
   { href: "/services/integration-ia", key: "saas_integration_ia" },
   { href: "/services/q2c-facturation", key: "saas_q2c_facturation" },
+  { href: "/services/nixie-pulse", key: "saas_nixie_pulse" },
 ] as const;
 
 const LEGAL_KEYS = [
@@ -72,7 +73,7 @@ export async function Footer() {
             </div>
           </div>
 
-          {/* 6 SaaS */}
+          {/* Solutions */}
           <div className="space-y-3">
             <p className="font-display text-sm font-medium">{t("section_saas")}</p>
             <div className="grid gap-2 text-sm">

@@ -13,6 +13,7 @@ const SERVICE_VALUES = [
   "automatisation",
   "integration-ia",
   "q2c-facturation",
+  "nixie-pulse",
   "pack-starter",
   "pack-business",
   "pack-scale",

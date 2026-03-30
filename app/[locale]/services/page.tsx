@@ -2,56 +2,138 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import GridPattern from "@/components/ui/grid-pattern";
-import { getTranslations, getLocale } from "next-intl/server";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('services');
-  const locale = await getLocale();
-  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
-  return {
-    title: t('list.metadata_title'),
-    description: t('list.metadata_description'),
-    alternates: {
-      canonical: `${siteUrl}${locale === "pt" ? "/pt/servicos" : "/services"}`,
-      languages: {
-        fr: `${siteUrl}/services`,
-        "pt-PT": `${siteUrl}/pt/servicos`,
-        "x-default": `${siteUrl}/services`,
-      },
-    },
-    openGraph: {
-      locale: locale === "pt" ? "pt_PT" : "fr_FR",
-    },
-  };
-}
+export const metadata: Metadata = {
+  title: "Services — 7 Solutions Digital Workplace, IA & IoT pour PME | WCT Systems",
+  description:
+    "7 solutions pour PME : Digital Workplace gamifié, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Q2C Facturation SaaS et Nixie Pulse (dashboard KPI physique connecté). À partir de 79 € HT/mois. Audit gratuit.",
+  alternates: { canonical: "/services" },
+};
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
-const SERVICE_IDS = [
-  "digital_workplace",
-  "prospection_ia",
-  "site_web",
-  "automatisation",
-  "integration_ia",
-  "q2c_facturation",
+const SERVICES = [
+  {
+    id: "digital-workplace",
+    href: "/services/digital-workplace",
+    name: "Digital Workplace",
+    badge: "Nouveau",
+    short: "Un bureau virtuel gamifié où chaque pièce est un outil métier.",
+    price: "199",
+    bullets: [
+      "Bureau virtuel avec pièces thématiques",
+      "Gamification : XP, badges, classements",
+      "Messagerie temps réel + visio",
+      "Dashboard KPI par équipe",
+      "Intégration 200+ outils existants",
+    ],
+  },
+  {
+    id: "prospection-ia",
+    href: "/services/trouver-prospects",
+    name: "Prospection IA",
+    short: "Trouvez vos futurs clients grâce à l\u2019IA. Ciblage, enrichissement, intégration CRM.",
+    price: "99",
+    bullets: [
+      "Ciblage IA par secteur et zone géo",
+      "Enrichissement automatique (email, LinkedIn, téléphone)",
+      "Scoring des leads par IA",
+      "Intégration CRM / tableur automatique",
+      "Base mise à jour en continu",
+    ],
+  },
+  {
+    id: "site-web",
+    href: "/services/site-web-moderne",
+    name: "Site Web Moderne",
+    short: "Un site rapide, SEO + SEO IA, pensé pour convertir. 4 templates, livré en 14 jours.",
+    price: "99",
+    bullets: [
+      "5 à 10 pages optimisées conversion",
+      "SEO classique + SEO IA (JSON-LD, llms.txt)",
+      "Mobile-first, performances A+",
+      "4 templates personnalisables",
+      "Maintenance & hébergement inclus",
+    ],
+  },
+  {
+    id: "automatisation",
+    href: "/services/automatiser-relances",
+    name: "Automatisation (RPA)",
+    short: "Automatisez vos process : relances, CRM, reporting, facturation. Sans coder.",
+    price: "149",
+    bullets: [
+      "Workflows sur mesure (relances, CRM, facturation)",
+      "Intégration 200+ outils (Gmail, Notion, HubSpot\u2026)",
+      "Dashboard KPI en temps réel",
+      "Alertes et notifications automatiques",
+      "Support & maintenance inclus",
+    ],
+  },
+  {
+    id: "integration-ia",
+    href: "/services/integration-ia",
+    name: "Intégration IA",
+    badge: "Populaire",
+    short: "Intégrez l\u2019IA dans votre quotidien : chatbot, agents, assistants sur mesure.",
+    price: "199",
+    bullets: [
+      "Chatbot IA pour votre site / WhatsApp",
+      "Agents IA métier (vente, support, RH)",
+      "Connexion à vos outils existants",
+      "Réponses basées sur vos données (RAG)",
+      "Formation équipe incluse (1h/mois)",
+    ],
+  },
+  {
+    id: "q2c-facturation",
+    href: "/services/q2c-facturation",
+    name: "Q2C — Facturation SaaS",
+    badge: "Nouveau",
+    short: "Facturation électronique conforme 2026 pour SaaS B2B. Devis, contrats, abonnements, Factur-X, TVA OSS.",
+    price: "149",
+    bullets: [
+      "Factur-X + UBL + CII (3 formats réglementaires)",
+      "Cycle complet devis → paiement",
+      "TVA OSS 30 pays + validation VIES",
+      "Connecteur Plateforme Agréée",
+      "Dashboard MRR/ARR + IFRS 15",
+    ],
+  },
+  {
+    id: "nixie-pulse",
+    href: "/services/nixie-pulse",
+    name: "Nixie Pulse",
+    badge: "Hardware",
+    short: "Dashboard KPI physique connecté. Tubes Nixie IN-14 soviétiques affichant vos données Stripe, GitHub, Analytics en temps réel.",
+    price: "990",
+    bullets: [
+      "Tubes Nixie IN-14 authentiques (NOS, URSS 1970-1990)",
+      "Données temps réel : Stripe, Bitcoin, GitHub, Analytics…",
+      "WiFi intégré + interface web de configuration",
+      "4 gammes : Mini, Standard, Pro, Double",
+      "Assemblé à la main en France — Made in France",
+    ],
+  },
 ] as const;
 
-const SERVICE_HREFS = [
-  "/services/digital-workplace",
-  "/services/trouver-prospects",
-  "/services/site-web-moderne",
-  "/services/automatiser-relances",
-  "/services/integration-ia",
-  "/services/q2c-facturation",
-] as const;
-
-const SERVICE_CONTACT_IDS = [
-  "digital-workplace",
-  "prospection-ia",
-  "site-web",
-  "automatisation",
-  "integration-ia",
-  "q2c-facturation",
+const FAQ = [
+  {
+    q: "Par quoi commencer ?",
+    a: "On commence par un audit gratuit (15-30 min). Ensuite on identifie le SaaS le plus impactant pour votre situation et on lance une V1 rapidement.",
+  },
+  {
+    q: "Je peux prendre un seul service sans pack ?",
+    a: "Oui. Chaque SaaS est disponible individuellement. Les packs permettent d\u2019économiser 10 à 25 %.",
+  },
+  {
+    q: "Est-ce adapté à une petite entreprise ?",
+    a: "Oui. L\u2019objectif est de simplifier votre quotidien et d\u2019augmenter vos demandes sans ajouter de complexité.",
+  },
+  {
+    q: "Est-ce que je dois changer tous mes outils ?",
+    a: "Non. Le Digital Workplace centralise vos outils existants (Notion, Slack, Google…) dans un bureau virtuel unifié. On s\u2019adapte à votre existant.",
+  },
 ] as const;
 
 /* Per-service color schemes */
@@ -98,26 +180,16 @@ const SERVICE_COLORS = [
     check: "text-emerald-600 dark:text-emerald-400",
     badge: "bg-emerald-600",
   },
+  /* 6 — Nixie Pulse */
+  {
+    card: "bg-gradient-to-br from-orange-50/40 to-amber-50/20 dark:from-orange-500/[0.04] dark:to-amber-500/[0.02]",
+    border: "border-orange-200/60 hover:border-orange-400/50 dark:border-orange-700/30 dark:hover:border-orange-500/20",
+    check: "text-orange-600 dark:text-orange-400",
+    badge: "bg-orange-600",
+  },
 ] as const;
 
-export default async function ServicesPage() {
-  const t = await getTranslations('services');
-
-  const SERVICES = SERVICE_IDS.map((id, i) => ({
-    id: SERVICE_CONTACT_IDS[i],
-    href: SERVICE_HREFS[i],
-    name: t(`list.services.${id}.name`),
-    badge: t.has(`list.services.${id}.badge`) ? t(`list.services.${id}.badge`) : undefined,
-    short: t(`list.services.${id}.short`),
-    price: t(`list.services.${id}.price`),
-    bullets: t.raw(`list.services.${id}.bullets`) as string[],
-  }));
-
-  const FAQ = Array.from({ length: 4 }, (_, i) => ({
-    q: t(`list.faq.${i}.q`),
-    a: t(`list.faq.${i}.a`),
-  }));
-
+export default function ServicesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -127,20 +199,20 @@ export default async function ServicesPage() {
           {
             "@type": "ListItem",
             position: 1,
-            name: t('list.jsonld_breadcrumb_home'),
+            name: "Accueil",
             item: `${SITE_URL}/`,
           },
           {
             "@type": "ListItem",
             position: 2,
-            name: t('list.jsonld_breadcrumb_services'),
+            name: "Services",
             item: `${SITE_URL}/services`,
           },
         ],
       },
       {
         "@type": "ItemList",
-        name: t('list.jsonld_itemlist_name'),
+        name: "Services WCT Systems",
         itemListElement: SERVICES.map((s, idx) => ({
           "@type": "ListItem",
           position: idx + 1,
@@ -159,7 +231,7 @@ export default async function ServicesPage() {
         },
         areaServed: {
           "@type": "Country",
-          name: t('list.jsonld_area_served'),
+          name: "France",
         },
         url: `${SITE_URL}${s.href}`,
       })),
@@ -193,18 +265,19 @@ export default async function ServicesPage() {
         <ScrollReveal direction="up" delay={0}>
           <section className="space-y-8">
             <div className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-4 py-1 text-xs uppercase tracking-wide text-violet-700 dark:border-violet-800 dark:bg-violet-950/50 dark:text-violet-300">
-              {t('list.hero_badge')}
+              7 Solutions &bull; SaaS &bull; IA &bull; Hardware &bull; PME
             </div>
 
             <h1 className="font-display font-bold text-4xl tracking-tight sm:text-5xl md:text-6xl">
-              {t('list.hero_title_line1')}
+              7 solutions pour PME.
               <span className="block bg-gradient-to-r from-violet-600 via-cyan-500 to-indigo-500 bg-clip-text text-transparent dark:from-violet-400 dark:via-cyan-400 dark:to-indigo-400">
-                {t('list.hero_title_line2')}
+                Du digital au physique.
               </span>
             </h1>
 
             <p className="max-w-2xl text-lg text-muted-foreground">
-              {t('list.hero_description')}
+              Digital Workplace, prospection, site web, automatisation, IA et facturation SaaS — plus Nixie Pulse, le premier dashboard KPI physique connecté.
+              Prenez-les individuellement ou combinez-les en pack.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -212,13 +285,13 @@ export default async function ServicesPage() {
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-2xl bg-violet-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/20 transition hover:scale-[1.02] hover:bg-violet-700"
               >
-                {t('list.hero_cta_audit')}
+                Réserver un audit gratuit
               </Link>
               <Link
                 href="/tarifs"
                 className="inline-flex items-center justify-center rounded-2xl border px-6 py-3 text-sm font-medium transition hover:bg-muted dark:border-white/[0.12]"
               >
-                {t('list.hero_cta_pricing')}
+                Voir les tarifs
               </Link>
             </div>
           </section>
@@ -226,7 +299,7 @@ export default async function ServicesPage() {
 
         {/* GRID */}
         <ScrollReveal direction="up" delay={100}>
-          <section className="mt-14 grid gap-6 md:grid-cols-2" aria-label={t('list.grid_aria_label')}>
+          <section className="mt-14 grid gap-6 md:grid-cols-2" aria-label="Nos 7 solutions">
             {SERVICES.map((s, i) => {
               const colors = SERVICE_COLORS[i];
               return (
@@ -236,7 +309,7 @@ export default async function ServicesPage() {
                       i === 0 ? "md:col-span-2" : ""
                     }`}
                   >
-                    {s.badge && (
+                    {"badge" in s && s.badge && (
                       <div
                         className={`absolute -top-3 left-6 rounded-full px-3 py-0.5 text-xs font-medium text-white shadow-sm ${colors.badge}`}
                       >
@@ -249,7 +322,7 @@ export default async function ServicesPage() {
                         <h2 className="font-display font-bold text-xl tracking-tight">{s.name}</h2>
                         <div className="text-right">
                           <span className="text-2xl font-semibold tracking-tight">{s.price}&nbsp;&euro;</span>
-                          <span className="text-xs text-muted-foreground"> {t('list.price_suffix')}</span>
+                          <span className="text-xs text-muted-foreground"> HT/mois</span>
                         </div>
                       </div>
                       <p className="text-sm text-muted-foreground">{s.short}</p>
@@ -279,13 +352,13 @@ export default async function ServicesPage() {
                         href={s.href}
                         className="inline-flex items-center justify-center rounded-2xl border px-4 py-2 text-sm font-medium transition hover:bg-muted dark:border-white/[0.12]"
                       >
-                        {t('list.card_cta_learn_more')}
+                        En savoir plus
                       </Link>
                       <Link
                         href={`/contact?service=${encodeURIComponent(s.id)}`}
                         className="inline-flex items-center justify-center rounded-2xl bg-violet-600 px-4 py-2 text-sm font-medium text-white shadow-sm shadow-violet-500/20 transition hover:bg-violet-700"
                       >
-                        {t('list.card_cta_start')}
+                        Démarrer
                       </Link>
                     </div>
                   </article>
@@ -299,15 +372,15 @@ export default async function ServicesPage() {
         <ScrollReveal direction="up" delay={150}>
           <section className="mt-16" aria-label="Packs combinés">
             <div className="rounded-3xl border bg-gradient-to-br from-violet-50/60 via-indigo-50/30 to-background p-8 text-center dark:border-white/[0.06] dark:from-violet-500/[0.05] dark:via-indigo-500/[0.03] dark:to-transparent">
-              <h2 className="font-display font-bold text-2xl tracking-tight">{t('list.packs_title')}</h2>
+              <h2 className="font-display font-bold text-2xl tracking-tight">Combinez et économisez</h2>
               <p className="mt-3 text-sm text-muted-foreground">
-                {t('list.packs_description')}
+                Packs Starter, Business et Scale : de -10% à -25% vs à la carte.
               </p>
               <Link
                 href="/tarifs#packs"
                 className="mt-6 inline-flex items-center justify-center rounded-2xl border px-6 py-3 text-sm font-medium transition hover:bg-muted dark:border-white/[0.12]"
               >
-                {t('list.packs_cta')}
+                Voir les packs
               </Link>
             </div>
           </section>
@@ -316,7 +389,7 @@ export default async function ServicesPage() {
         {/* FAQ */}
         <ScrollReveal direction="up" delay={100}>
           <section className="mt-16" aria-label="FAQ">
-            <h2 className="font-display font-bold text-2xl tracking-tight">{t('list.faq_title')}</h2>
+            <h2 className="font-display font-bold text-2xl tracking-tight">Questions fréquentes</h2>
             <div className="mt-6 space-y-4">
               {FAQ.map((f, i) => (
                 <ScrollReveal key={f.q} direction="up" delay={i * 60}>
@@ -349,16 +422,16 @@ export default async function ServicesPage() {
               />
 
               <h2 className="relative font-display font-bold text-3xl tracking-tight">
-                {t('list.cta_title')}
+                On démarre par l&apos;audit
               </h2>
               <p className="relative mt-4 text-sm text-muted-foreground">
-                {t('list.cta_description')}
+                15–30 minutes, puis un plan clair : quel SaaS en premier, quels KPI suivre, et comment l&apos;exécuter.
               </p>
               <Link
                 href="/contact"
                 className="relative mt-8 inline-flex items-center justify-center rounded-2xl bg-violet-600 px-8 py-3 text-sm font-medium text-white shadow-lg shadow-violet-500/20 transition hover:scale-[1.02] hover:bg-violet-700"
               >
-                {t('list.cta_button')}
+                Réserver l&apos;audit
               </Link>
             </div>
           </section>

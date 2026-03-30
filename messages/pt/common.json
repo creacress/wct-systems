@@ -20,9 +20,9 @@
     "mobile_audit_desc": "15 minutos. 3 automatizações prioritárias. Um plano claro."
   },
   "footer": {
-    "brand_description": "Digital Workplace & IA para PME: 6 SaaS, um ecossistema completo.",
+    "brand_description": "Digital Workplace, IA & IoT para PME: 7 soluções, um ecossistema completo.",
     "section_navigation": "Navegação",
-    "section_saas": "6 SaaS",
+    "section_saas": "As nossas soluções",
     "section_contact": "Contacto",
     "contact_description": "Resposta rápida. Auditoria gratuita orientada para ações.",
     "cta_reserver_audit": "Reservar uma auditoria",
@@ -39,6 +39,7 @@
     "saas_automatisation": "Automatização",
     "saas_integration_ia": "Integração IA",
     "saas_q2c_facturation": "Q2C Faturação",
+    "saas_nixie_pulse": "Nixie Pulse",
     "legal_mentions": "Menções legais",
     "legal_confidentialite": "Confidencialidade",
     "legal_cgv": "CGV",

@@ -43,6 +43,13 @@ const ALL_SERVICES = [
     href: "/services/q2c-facturation",
     color: "emerald",
   },
+  {
+    id: "nixie-pulse",
+    title: "Nixie Pulse",
+    desc: "Dashboard KPI physique connecté. Tubes Nixie soviétiques, données temps réel.",
+    href: "/services/nixie-pulse",
+    color: "orange",
+  },
 ];
 
 const COLOR_CLASSES: Record<string, string> = {
@@ -51,6 +58,7 @@ const COLOR_CLASSES: Record<string, string> = {
   amber: "border-amber-200/60 hover:border-amber-300/80 dark:border-amber-900/30 dark:hover:border-amber-800/50",
   fuchsia: "border-fuchsia-200/60 hover:border-fuchsia-300/80 dark:border-fuchsia-900/30 dark:hover:border-fuchsia-800/50",
   cyan: "border-cyan-200/60 hover:border-cyan-300/80 dark:border-cyan-900/30 dark:hover:border-cyan-800/50",
+  orange: "border-orange-200/60 hover:border-orange-300/80 dark:border-orange-900/30 dark:hover:border-orange-800/50",
 };
 
 interface RelatedServicesProps {

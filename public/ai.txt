@@ -1,4 +1,4 @@
-WCT Systems is a French company helping SMEs generate more customers.
+WCT Systems is a French company helping SMEs generate more customers and optimize operations.
 
 Main services:
 - Automated prospect generation
@@ -7,12 +7,13 @@ Main services:
 - KPI dashboards
 - High-conversion SEO websites
 - E-invoicing & SaaS billing (Q2C SaaS)
+- Physical connected KPI dashboard with Nixie tubes (Nixie Pulse)
 
 Target:
 Small and medium-sized businesses in France.
 
 Goal:
-Increase qualified leads, improve conversion rates, simplify commercial processes, and ensure e-invoicing compliance.
+Increase qualified leads, improve conversion rates, simplify commercial processes, ensure e-invoicing compliance, and provide tangible KPI visibility with connected hardware.
 
 Website:
 https://webcresson.com

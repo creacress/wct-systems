@@ -40,6 +40,7 @@ const staticRoutes = [
   "/services/site-web-moderne",
   "/services/integration-ia",
   "/services/q2c-facturation",
+  "/services/nixie-pulse",
   "/tarifs",
   "/contact",
   "/cas-clients",

@@ -64,9 +64,36 @@ const DATA_SOURCES = [
 ];
 
 export default function NixiePulsePage() {
+  const pageUrl = `${SITE_URL}/services/nixie-pulse`;
+
+  const PRICES_CENTS: Record<string, number> = {
+    Mini: 99000,
+    Standard: 124500,
+    Pro: 190000,
+    Double: 291000,
+  };
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#organization`,
+        name: "WCT Systems",
+        url: SITE_URL,
+        logo: `${SITE_URL}/logo.png`,
+        description:
+          "Digital Workplace & IA pour PME — 6 SaaS, mise en place incluse. Dashboards physiques connectés à tubes Nixie soviétiques.",
+        sameAs: [],
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        name: "WCT Systems",
+        url: SITE_URL,
+        inLanguage: "fr",
+        publisher: { "@id": `${SITE_URL}/#organization` },
+      },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
@@ -76,7 +103,7 @@ export default function NixiePulsePage() {
             "@type": "ListItem",
             position: 3,
             name: "Nixie Pulse",
-            item: `${SITE_URL}/services/nixie-pulse`,
+            item: pageUrl,
           },
         ],
       },
@@ -87,17 +114,29 @@ export default function NixiePulsePage() {
           "Le premier dashboard KPI physique connecté au monde. Tubes Nixie IN-14 soviétiques authentiques affichant vos données en temps réel.",
         brand: { "@type": "Brand", name: "Nixie Pulse" },
         manufacturer: { "@type": "Organization", name: "WCT Systems" },
-        offers: {
+        url: pageUrl,
+        inLanguage: "fr",
+        category: "Consumer Electronics",
+        countryOfOrigin: { "@type": "Country", name: "FR" },
+        offers: PRODUCTS.map((p) => ({
           "@type": "Offer",
-          price: "990.00",
+          name: `Nixie Pulse ${p.name}`,
+          price: (PRICES_CENTS[p.name] / 100).toFixed(2),
           priceCurrency: "EUR",
           availability: "https://schema.org/PreOrder",
-          url: `${SITE_URL}/services/nixie-pulse`,
-        },
-        url: `${SITE_URL}/services/nixie-pulse`,
+          url: pageUrl,
+          seller: { "@type": "Organization", name: "WCT Systems" },
+          deliveryLeadTime: {
+            "@type": "QuantitativeValue",
+            minValue: 6,
+            maxValue: 8,
+            unitCode: "WK",
+          },
+        })),
       },
       {
         "@type": "FAQPage",
+        inLanguage: "fr",
         mainEntity: FAQ.map((f) => ({
           "@type": "Question",
           name: f.q,

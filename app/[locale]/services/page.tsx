@@ -2,13 +2,28 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import GridPattern from "@/components/ui/grid-pattern";
+import { getLocale } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Services — 7 Solutions Digital Workplace, IA & IoT pour PME | WCT Systems",
-  description:
-    "7 solutions pour PME : Digital Workplace gamifié, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Q2C Facturation SaaS et Nixie Pulse (dashboard KPI physique connecté). À partir de 79 € HT/mois. Audit gratuit.",
-  alternates: { canonical: "/services" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
+  return {
+    title: "Services — 7 Solutions Digital Workplace, IA & IoT pour PME | WCT Systems",
+    description:
+      "7 solutions pour PME : Digital Workplace gamifié, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Q2C Facturation SaaS et Nixie Pulse (dashboard KPI physique connecté). À partir de 79 € HT/mois. Audit gratuit.",
+    alternates: {
+      canonical: `${siteUrl}${locale === "pt" ? "/pt/servicos" : "/services"}`,
+      languages: {
+        fr: `${siteUrl}/services`,
+        "pt-PT": `${siteUrl}/pt/servicos`,
+        "x-default": `${siteUrl}/services`,
+      },
+    },
+    openGraph: {
+      locale: locale === "pt" ? "pt_PT" : "fr_FR",
+    },
+  };
+}
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 

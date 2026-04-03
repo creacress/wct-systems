@@ -6,21 +6,35 @@ import GridPattern from "@/components/ui/grid-pattern";
 import Breadcrumbs from "@/components/site/breadcrumbs";
 import RelatedServices from "@/components/site/related-services";
 import { TrackedLink } from "@/components/site/tracked-link";
+import { getLocale } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Nixie Pulse — Dashboard KPI physique connecté | Tubes Nixie IN-14 | WCT Systems",
-  description:
-    "Le premier dashboard KPI physique connecté au monde. Tubes Nixie IN-14 soviétiques affichant vos données Stripe, Bitcoin, GitHub, Analytics en temps réel. Made in France. À partir de 990 €.",
-  keywords: [
-    "Nixie Pulse",
-    "dashboard KPI physique",
-    "tubes Nixie",
-    "objet connecté",
-    "données temps réel",
-    "Made in France",
-  ],
-  alternates: { canonical: "/services/nixie-pulse" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
+  return {
+    title: "Nixie Pulse — Dashboard KPI physique connecté | Tubes Nixie IN-14 | WCT Systems",
+    description:
+      "Le premier dashboard KPI physique connecté au monde. Tubes Nixie IN-14 soviétiques affichant vos données Stripe, Bitcoin, GitHub, Analytics en temps réel. Made in France. À partir de 990 €.",
+    keywords: [
+      "Nixie Pulse",
+      "dashboard KPI physique",
+      "tubes Nixie",
+      "objet connecté",
+      "données temps réel",
+      "Made in France",
+    ],
+    alternates: {
+      canonical: `${siteUrl}/services/nixie-pulse`,
+      languages: {
+        fr: `${siteUrl}/services/nixie-pulse`,
+        "x-default": `${siteUrl}/services/nixie-pulse`,
+      },
+    },
+    openGraph: {
+      locale: locale === "pt" ? "pt_PT" : "fr_FR",
+    },
+  };
+}
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 

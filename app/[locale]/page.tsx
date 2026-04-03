@@ -6,14 +6,29 @@ import GridPattern from "@/components/ui/grid-pattern";
 import { getAllPosts } from "@/lib/blog";
 import BlogCard from "@/components/blog/blog-card";
 import { TrackedLink } from "@/components/site/tracked-link";
+import { getLocale } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "WCT Systems — IA, Automatisation & IoT pour PME françaises",
-  description:
-    "WCT Systems aide les PME françaises avec 7 solutions : Digital Workplace, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Q2C Facturation SaaS et Nixie Pulse (dashboard KPI physique). Audit gratuit en 15 min.",
-  keywords: ["IA PME France", "automatisation PME", "SaaS PME", "prospection B2B IA", "WCT Systems"],
-  alternates: { canonical: "/" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
+  return {
+    title: "WCT Systems — IA, Automatisation & IoT pour PME françaises",
+    description:
+      "WCT Systems aide les PME françaises avec 7 solutions : Digital Workplace, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Q2C Facturation SaaS et Nixie Pulse (dashboard KPI physique). Audit gratuit en 15 min.",
+    keywords: ["IA PME France", "automatisation PME", "SaaS PME", "prospection B2B IA", "WCT Systems"],
+    alternates: {
+      canonical: `${siteUrl}${locale === "pt" ? "/pt" : ""}`,
+      languages: {
+        fr: siteUrl,
+        "pt-PT": `${siteUrl}/pt`,
+        "x-default": siteUrl,
+      },
+    },
+    openGraph: {
+      locale: locale === "pt" ? "pt_PT" : "fr_FR",
+    },
+  };
+}
 
 const SITE = {
   name: "WCT Systems",

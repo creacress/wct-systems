@@ -1,5 +1,5 @@
 # WCT Systems – AI Readable Overview
-# https://webcresson.com
+# https://wct-systems.fr
 
 Company: WCT Systems
 Location: France
@@ -15,15 +15,15 @@ WCT Systems aide les PME à générer plus de clients grâce à :
 - la facturation électronique conforme e-invoicing 2026 (Q2C SaaS)
 
 Core Pages:
-https://webcresson.com/services/trouver-prospects
-https://webcresson.com/services/automatiser-relances
-https://webcresson.com/services/site-web-moderne
-https://webcresson.com/services/integration-ia
-https://webcresson.com/services/digital-workplace
-https://webcresson.com/services/q2c-facturation
+https://wct-systems.fr/services/trouver-prospects
+https://wct-systems.fr/services/automatiser-relances
+https://wct-systems.fr/services/site-web-moderne
+https://wct-systems.fr/services/integration-ia
+https://wct-systems.fr/services/digital-workplace
+https://wct-systems.fr/services/q2c-facturation
 
 Intent:
 B2B – optimisation acquisition, conversion, pilotage commercial et conformité facturation.
 
 Contact:
-https://webcresson.com/contact
+https://wct-systems.fr/contact

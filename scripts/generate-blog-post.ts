@@ -122,7 +122,7 @@ function buildSystemPrompt(
   service: (typeof SERVICES)[number],
   existingTitles: string[]
 ): string {
-  return `Tu es un rédacteur SEO expert pour le blog de WCT Systems (webcresson.com).
+  return `Tu es un rédacteur SEO expert pour le blog de WCT Systems (wct-systems.fr).
 WCT Systems est une entreprise française qui propose 5 solutions pour PME : Digital Workplace, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse.
 
 Tu dois écrire un article de blog en français pour le service "${service.name}".

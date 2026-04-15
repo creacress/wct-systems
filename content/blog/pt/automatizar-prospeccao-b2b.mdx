@@ -1,0 +1,81 @@
+---
+title: "Automatizar a prospeção B2B sem pagar 250 €/mês de SaaS"
+description: "Como automatizar a prospeção B2B (sourcing, enriquecimento, follow-ups) com workflows RPA à medida, sem depender do Lemlist, Lusha ou Apollo a 200 €/mês. Guia prático para PMEs."
+date: "2026-02-18"
+tags: ["Prospeção B2B", "Automatização", "RPA"]
+author: "WCT Systems"
+---
+
+## O verdadeiro custo da prospeção B2B "SaaS" em 2026
+
+Um SDR equipado com uma stack moderna utiliza em média 4 ferramentas: uma de sourcing (Apollo, Cognism), um enriquecedor (Lusha, Kaspr), uma ferramenta de sequência (Lemlist, La Growth Machine) e um CRM (HubSpot, Pipedrive). Total: **200 a 400 €/mês por utilizador**.
+
+Para uma PME com 2 comerciais, são **6 a 10 k€/ano** — e as licenças são faturadas mesmo nos meses fracos.
+
+Existe uma alternativa: montar a sua própria pipeline de automatização com RPA sem código (n8n, Make) e blocos open-source. O investimento inicial é maior, mas o custo recorrente cai para 20–50 €/mês fora de licenças de terceiros.
+
+## As 3 etapas da prospeção B2B a automatizar
+
+### 1. Sourcing — onde encontrar os bons prospects
+
+Em vez de pagar uma base de dados proprietária, ligue fontes públicas:
+
+- **INSEE SIRENE / portugaltelecom / dados.gov.pt** (APIs gratuitas): milhões de empresas com código CAE, efetivos, data de criação.
+- **LinkedIn Sales Navigator** (60 €/mês, a única despesa necessária) para os decisores.
+
+Um workflow n8n que consulta estas fontes todas as manhãs e gera uma lista de novas empresas criadas na sua zona + setor custa 1 dia de implementação e 0 € recorrente.
+
+### 2. Enriquecimento — encontrar o email do decisor certo
+
+É aqui que os SaaS cobram mais caro. As alternativas:
+
+- **Hunter.io** no plano gratuito (25 pesquisas/mês) para volumes baixos.
+- **Pattern matching** a partir do domínio: `nome.apelido@empresa.com` funciona em 60% dos casos.
+- **Validação SMTP** via script n8n que testa o MX record sem enviar email.
+
+Uma PME que prospeta 200 contactos/mês não precisa do Lusha a 99 €/mês — precisa de um workflow que combine estas 3 técnicas.
+
+### 3. Sequências de follow-up — o verdadeiro trabalho comercial
+
+É aqui que a automatização tem o maior ROI. Uma sequência bem feita:
+
+- 3 a 4 emails espaçados de 3 a 7 dias
+- Uma mudança de ângulo em cada mensagem
+- Paragem automática assim que chega resposta ou é marcada reunião
+- Transferência para o CRM com scoring
+
+Tudo isto faz-se em n8n ou Make com um SMTP básico (SendGrid, Mailjet a 20 €/mês para 50 000 envios).
+
+## Quando pagar um SaaS e quando automatizar?
+
+| Contexto | Recomendação |
+|---|---|
+| Menos de 50 prospects/mês | SaaS all-in-one, não vale a pena automatizar |
+| 50 a 500 prospects/mês | Stack RPA à medida, ROI <6 meses |
+| 500+ prospects/mês | RPA indispensável + 1 ou 2 SaaS direcionados |
+| Equipa comercial de 5+ | Mix: automatização do fundo do funil + SaaS para o SDR |
+
+O ponto de viragem está por volta dos 150 € de SaaS acumulados. Acima disso, a automatização RPA torna-se rentável no 4.º mês.
+
+## Erros a evitar
+
+**Sobre-automatizar a criatividade.** Os primeiros emails da sequência são escrita comercial. A IA pode personalizar variáveis, mas um email 100% ChatGPT vê-se à distância.
+
+**Esquecer a entregabilidade.** Um SMTP mal configurado, sem SPF/DKIM/DMARC, e os seus emails vão para spam. Antes de automatizar o volume, configure o domínio corretamente.
+
+**Multiplicar ferramentas.** A armadilha clássica do "bricolage n8n": 15 workflows que se sobrepõem, ninguém sabe quem faz o quê. Documente, centralize, mantenha.
+
+## Por onde começar
+
+Se parte do zero e tem 2–5 dias para investir:
+
+1. **Dia 1**: configure o SMTP transacional + SPF/DKIM/DMARC no seu domínio.
+2. **Dia 2**: implemente um workflow n8n que ingere uma lista CSV e dispara uma sequência de 3 emails.
+3. **Dia 3**: adicione deteção automática de respostas e paragem de sequência.
+4. **Dia 4–5**: ligue o enriquecimento e conecte o CRM.
+
+No final da semana tem uma pipeline que corre sozinha, custa 20 €/mês em SMTP, e substitui 2–3 licenças SaaS.
+
+---
+
+**Quer acelerar?** Na WCT Systems implementamos este tipo de pipeline para PMEs em 2 semanas, chave na mão, a partir de 149 €/mês — ver o nosso serviço [Automatização RPA & follow-ups](/pt/servicos/automatizacao-rpa). Auditoria gratuita do seu processo atual em 15 minutos.

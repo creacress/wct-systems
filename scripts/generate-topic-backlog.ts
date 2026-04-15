@@ -45,7 +45,7 @@ async function main() {
     messages: [
       {
         role: "user",
-        content: `Génère 30 sujets d'articles de blog pour WCT Systems (webcresson.com), une entreprise française qui propose 5 solutions pour PME :
+        content: `Génère 30 sujets d'articles de blog pour WCT Systems (wct-systems.fr), une entreprise française qui propose 5 solutions pour PME :
 1. Digital Workplace
 2. Site Web Moderne
 3. Automatisation RPA

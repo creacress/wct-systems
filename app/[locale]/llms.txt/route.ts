@@ -21,7 +21,7 @@ function generateFrench(): string {
   ).join("\n");
 
   return `# llms.txt
-site: https://webcresson.com
+site: https://wct-systems.fr
 brand: WCT Systems
 purpose: Présenter clairement l'offre, les preuves et les contenus.
 
@@ -66,7 +66,7 @@ Q: Y a-t-il un engagement de durée ?
 A: Pas d'engagement en mensuel. -20% avec un engagement annuel de 12 mois.
 
 Q: Comment contacter WCT Systems ?
-A: Via le formulaire sur https://webcresson.com/contact. Audit gratuit de 15 min, réponse sous 24-48h ouvrées.
+A: Via le formulaire sur https://wct-systems.fr/contact. Audit gratuit de 15 min, réponse sous 24-48h ouvrées.
 
 ## Articles de blog
 ${blogSection}
@@ -103,7 +103,7 @@ function generatePortuguese(): string {
   ).join("\n");
 
   return `# llms.txt
-site: https://webcresson.com/pt
+site: https://wct-systems.fr/pt
 brand: WCT Systems
 purpose: Apresentar claramente a oferta, as provas e os conteúdos.
 
@@ -147,7 +147,7 @@ P: Existe compromisso de duração?
 R: Sem compromisso em mensal. -20% com compromisso anual de 12 meses.
 
 P: Como contactar a WCT Systems?
-R: Através do formulário em https://webcresson.com/pt/contacto. Auditoria gratuita de 15 min, resposta em 24-48h úteis.
+R: Através do formulário em https://wct-systems.fr/pt/contacto. Auditoria gratuita de 15 min, resposta em 24-48h úteis.
 
 ## Artigos de blog
 ${blogSection}

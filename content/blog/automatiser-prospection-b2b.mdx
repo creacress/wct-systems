@@ -1,0 +1,82 @@
+---
+title: "Automatiser sa prospection B2B sans payer 250 €/mois de SaaS"
+description: "Comment automatiser la prospection B2B (sourcing, enrichissement, relances) avec des workflows RPA sur mesure, sans dépendre de Lemlist, Lusha ou Apollo à 200 €/mois. Guide pratique pour PME françaises."
+date: "2026-02-18"
+tags: ["Prospection B2B", "Automatisation", "RPA"]
+author: "WCT Systems"
+---
+
+## Le vrai coût de la prospection B2B "SaaS" en 2026
+
+Un SDR équipé d'une stack moderne utilise en moyenne 4 outils : un outil de sourcing (Apollo, Cognism), un enrichisseur (Lusha, Kaspr), un outil de séquence (Lemlist, La Growth Machine) et un CRM (HubSpot, Pipedrive). Total : **200 à 400 €/mois par utilisateur**.
+
+Pour une PME avec 2 commerciaux, c'est **6 à 10 k€/an** — et les licences sont facturées même les mois creux.
+
+Il existe une alternative : assembler votre propre pipeline d'automatisation avec du RPA sans code (n8n, Make) et des briques open-source. L'investissement initial est plus élevé, mais le coût récurrent tombe à 20–50 €/mois hors licences tierces.
+
+## Les 3 étapes de la prospection B2B à automatiser
+
+### 1. Le sourcing — où trouver les bons prospects
+
+Plutôt que payer une base de données propriétaire, branchez des sources publiques :
+
+- **INSEE SIRENE** (API gratuite) : 30 millions d'entreprises françaises avec code NAF, effectif, date de création.
+- **data.gouv.fr** : appels d'offres publics, annuaires sectoriels.
+- **LinkedIn Sales Navigator** (60 €/mois, seule dépense nécessaire) pour les décideurs.
+
+Un workflow n8n qui interroge SIRENE tous les matins et sort une liste de nouvelles entreprises créées dans votre zone + votre secteur vous coûte 1 jour de mise en place et 0 € récurrent.
+
+### 2. L'enrichissement — trouver l'email du bon décideur
+
+C'est là que les SaaS vous font payer le plus cher. Les alternatives :
+
+- **Hunter.io** en plan gratuit (25 recherches/mois) pour les volumes faibles.
+- **Pattern matching** à partir du domaine : `prenom.nom@entreprise.com` fonctionne dans 60% des cas en France.
+- **Validation SMTP** via un script n8n qui teste le MX record sans envoyer de mail.
+
+Une PME qui prospecte 200 contacts/mois n'a pas besoin de Lusha à 99 €/mois — elle a besoin d'un workflow qui combine ces 3 techniques et stocke le résultat dans sa base.
+
+### 3. Les séquences de relance — le vrai travail commercial
+
+C'est ici que l'automatisation a le plus de ROI. Une séquence bien faite :
+
+- 3 à 4 emails espacés de 3 à 7 jours
+- Un changement d'angle à chaque message (pas le même pitch paraphrasé)
+- Un arrêt automatique dès qu'une réponse arrive ou qu'un rendez-vous est pris
+- Un transfert au CRM avec scoring
+
+Tout ça se fait en n8n ou Make avec un SMTP basique (SendGrid, Mailjet à 20 €/mois pour 50 000 envois). Vous gardez le contrôle des templates, des tags de personnalisation et de la logique d'opt-out.
+
+## Quand faut-il payer un SaaS et quand faut-il automatiser ?
+
+| Contexte | Reco |
+|---|---|
+| Moins de 50 prospects/mois | SaaS all-in-one, pas le temps d'automatiser |
+| 50 à 500 prospects/mois | Stack RPA sur mesure, ROI <6 mois |
+| 500+ prospects/mois | RPA indispensable + 1 ou 2 SaaS ciblés sur la partie data |
+| Équipe commerciale de 5+ | Mix : automatisation du bas du funnel + SaaS pour le SDR |
+
+Le point de bascule est autour de 150 € de SaaS cumulés. Au-delà, l'automatisation RPA devient rentable dès le 4e mois.
+
+## Les erreurs à éviter
+
+**Sur-automatiser la créativité.** Les premiers emails de séquence, c'est de l'écriture commerciale. L'IA peut personnaliser des variables, mais un mail écrit à 100% par ChatGPT se voit à 3 km.
+
+**Oublier la délivrabilité.** Un SMTP mal configuré, pas de SPF/DKIM/DMARC, et vos emails atterrissent en spam. Avant d'automatiser le volume, configurez votre domaine correctement — c'est 2h de boulot qui change tout.
+
+**Multiplier les outils.** Le piège classique du "bricolage n8n" : 15 workflows qui se chevauchent, personne ne sait qui fait quoi. Documentez, centralisez, maintenez.
+
+## Par quoi commencer
+
+Si vous partez de zéro et que vous avez 2–5 jours à investir :
+
+1. **Jour 1** : configurez votre SMTP transactionnel (SendGrid/Mailjet) + SPF/DKIM/DMARC sur votre domaine.
+2. **Jour 2** : mettez en place un workflow n8n qui ingère une liste CSV de prospects et déclenche une séquence de 3 emails.
+3. **Jour 3** : ajoutez la détection automatique des réponses et l'arrêt de séquence.
+4. **Jour 4–5** : branchez l'enrichissement (Hunter gratuit + pattern matching) et connectez le CRM.
+
+À la fin de la semaine vous avez un pipeline qui tourne seul, coûte 20 €/mois en SMTP, et remplace 2–3 licences SaaS.
+
+---
+
+**Envie d'aller plus vite ?** Chez WCT Systems, on déploie ce type de pipeline pour des PME françaises en 2 semaines, clé en main, à partir de 149 €/mois — voir notre service [Automatisation RPA & relances](/services/automatiser-relances). Audit gratuit de votre process actuel en 15 minutes.

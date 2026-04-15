@@ -141,12 +141,7 @@
       "cookiesDonnees": "Páginas visitadas, duração de sessão, tipo de dispositivo, navegador (dados anonimizados)",
       "cookiesFinalite": "Melhoria da experiência do utilizador e medição de audiência",
       "cookiesBase": "Consentimento via banner de cookies (artigo 6.1.a do RGPD)",
-      "cookiesDuree": "14 meses no máximo",
-      "linkedinTitle": "e) Ligação via LinkedIn ou redes sociais",
-      "linkedinDonnees": "Nome, apelido, endereço de email, foto de perfil (segundo as autorizações concedidas)",
-      "linkedinFinalite": "Simplificar a criação de conta e a autenticação",
-      "linkedinBase": "Consentimento (artigo 6.1.a do RGPD)",
-      "linkedinDuree": "Duração da relação contratual + 3 anos"
+      "cookiesDuree": "14 meses no máximo"
     },
     "section2Labels": {
       "donnees": "Dados",

@@ -139,15 +139,6 @@ export default async function PolitiqueDeConfidentialitePage() {
               <DataRow label={t("privacy.section2Labels.duree")} value={t("privacy.section2.cookiesDuree")} />
             </div>
 
-            <h3 className="mt-4 text-sm font-medium text-foreground">
-              {t("privacy.section2.linkedinTitle")}
-            </h3>
-            <div className="grid gap-2">
-              <DataRow label={t("privacy.section2Labels.donnees")} value={t("privacy.section2.linkedinDonnees")} />
-              <DataRow label={t("privacy.section2Labels.finalite")} value={t("privacy.section2.linkedinFinalite")} />
-              <DataRow label={t("privacy.section2Labels.baseLegale")} value={t("privacy.section2.linkedinBase")} />
-              <DataRow label={t("privacy.section2Labels.duree")} value={t("privacy.section2.linkedinDuree")} />
-            </div>
           </Section>
 
           {/* 3. Utilisation des données */}

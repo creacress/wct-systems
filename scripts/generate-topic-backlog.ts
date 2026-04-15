@@ -45,13 +45,12 @@ async function main() {
     messages: [
       {
         role: "user",
-        content: `Génère 30 sujets d'articles de blog pour WCT Systems (webcresson.com), une entreprise française qui propose 6 SaaS pour PME :
-1. Prospection IA
+        content: `Génère 30 sujets d'articles de blog pour WCT Systems (webcresson.com), une entreprise française qui propose 5 solutions pour PME :
+1. Digital Workplace
 2. Site Web Moderne
 3. Automatisation RPA
 4. Intégration IA
-5. Digital Workplace
-6. Q2C Facturation SaaS
+5. Nixie Pulse (dashboard KPI physique)
 
 Chaque sujet doit :
 - Cibler une requête longue traîne spécifique (pas des requêtes génériques)

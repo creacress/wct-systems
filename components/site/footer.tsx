@@ -12,11 +12,9 @@ const NAV_KEYS = [
 
 const SAAS_KEYS = [
   { href: "/services/digital-workplace", key: "saas_digital_workplace" },
-  { href: "/services/trouver-prospects", key: "saas_prospection_ia" },
   { href: "/services/site-web-moderne", key: "saas_site_web_moderne" },
   { href: "/services/automatiser-relances", key: "saas_automatisation" },
   { href: "/services/integration-ia", key: "saas_integration_ia" },
-  { href: "/services/q2c-facturation", key: "saas_q2c_facturation" },
   { href: "/services/nixie-pulse", key: "saas_nixie_pulse" },
 ] as const;
 

@@ -8,11 +8,9 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 const SERVICE_VALUES = [
   "digital-workplace",
-  "prospection-ia",
   "site-web",
   "automatisation",
   "integration-ia",
-  "q2c-facturation",
   "nixie-pulse",
   "pack-starter",
   "pack-business",

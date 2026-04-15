@@ -28,7 +28,7 @@ export function PageBackground({ variant = "default" }: { variant?: BackgroundVa
   );
 }
 
-/* ── Radar: concentric pulsing circles (Prospection IA / emerald) ── */
+/* ── Radar: concentric pulsing circles (emerald accent) ── */
 function RadarBg() {
   return (
     <div className="absolute inset-0 flex items-center justify-center">

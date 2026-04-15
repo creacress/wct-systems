@@ -1,8 +1,8 @@
 {
   "metadata": {
     "title": "Casos de clientes PME — Resultados concretos IA & Automatização | WCT Systems",
-    "description": "Exemplos concretos de PME acompanhadas pela WCT Systems: prospeção IA, site web, automatização, chatbot IA, digital workplace. Resultados mensuráveis.",
-    "keywords": "casos de clientes PME, resultados automatização PME, testemunhos IA empresa, exemplos prospeção B2B"
+    "description": "Exemplos concretos de PME acompanhadas pela WCT Systems: site web, automatização, chatbot IA, digital workplace. Resultados mensuráveis.",
+    "keywords": "casos de clientes PME, resultados automatização PME, testemunhos IA empresa, exemplos automatização PME"
   },
   "breadcrumbs": {
     "home": "Início",
@@ -16,42 +16,15 @@
     "itemListName": "Casos de clientes"
   },
   "hero": {
-    "badge": "Casos de clientes \u2022 PME \u2022 Grandes empresas",
+    "badge": "Casos de clientes • PME • Grandes empresas",
     "titleLine1": "Casos de clientes",
     "titleLine2": "de PME a grandes empresas",
-    "description": "Sem promessas mágicas. Resultados mensuráveis para PME: prospeção IA, sites web que convertem, automatizações que poupam tempo, chatbots IA e digital workplace. + Grandes empresas e instituições.",
+    "description": "Sem promessas mágicas. Resultados mensuráveis para PME: sites web que convertem, automatizações que poupam tempo, chatbots IA e digital workplace. + Grandes empresas e instituições.",
     "ctaPrimary": "Falar sobre o seu projeto",
     "ctaSecondary": "Ver os serviços"
   },
   "cases": {
     "0": {
-      "slug": "cabinet-conseil-rh",
-      "org": "Consultora de Recursos Humanos",
-      "sector": "Consultoria / RH",
-      "size": "12 colaboradores",
-      "location": "Região de Lisboa",
-      "serviceLabel": "Prospeção IA",
-      "title": "De 30 a 180 prospects qualificados por mês graças à segmentação IA",
-      "context": "Esta consultora de RH fazia prospeção manual via LinkedIn e boca-a-boca. 2h/dia para 30 contactos pouco qualificados por mês. Sem CRM, acompanhamento em Excel.",
-      "delivered": {
-        "0": "Segmentação IA por setor, dimensão de empresa e zona geográfica",
-        "1": "Enriquecimento automático (email profissional, LinkedIn, telefone)",
-        "2": "Scoring de leads por IA (score 1-10)",
-        "3": "Integração direta num pipeline CRM estruturado"
-      },
-      "results": {
-        "0": "180 prospects qualificados/mês (×6) em vez de 30",
-        "1": "Taxa de resposta de 4% para 12% graças a melhor segmentação",
-        "2": "40h/mês recuperadas (reinvestidas em reuniões com clientes)",
-        "3": "3 contratos adicionais no primeiro trimestre"
-      },
-      "metrics": {
-        "0": { "label": "Prospects/mês", "value": "×6" },
-        "1": { "label": "Taxa de resposta", "value": "12%" },
-        "2": { "label": "Tempo recuperado", "value": "40h/mês" }
-      }
-    },
-    "1": {
       "slug": "artisan-plombier-lyon",
       "org": "Empresa de canalização",
       "sector": "Serviços / Construção",
@@ -73,12 +46,21 @@
         "3": "Citado nas respostas do ChatGPT em pesquisas locais"
       },
       "metrics": {
-        "0": { "label": "Orçamentos/mês", "value": "15" },
-        "1": { "label": "PageSpeed", "value": "98/100" },
-        "2": { "label": "Prazo de entrega", "value": "10 dias" }
+        "0": {
+          "label": "Orçamentos/mês",
+          "value": "15"
+        },
+        "1": {
+          "label": "PageSpeed",
+          "value": "98/100"
+        },
+        "2": {
+          "label": "Prazo de entrega",
+          "value": "10 dias"
+        }
       }
     },
-    "2": {
+    "1": {
       "slug": "agence-immobiliere-bordeaux",
       "org": "Agência imobiliária independente",
       "sector": "Imobiliário",
@@ -100,12 +82,21 @@
         "3": "2 mandatos exclusivos adicionais por mês"
       },
       "metrics": {
-        "0": { "label": "Taxa resposta", "value": "×2" },
-        "1": { "label": "Tempo ganho", "value": "15h/sem" },
-        "2": { "label": "Mandatos/mês", "value": "+2" }
+        "0": {
+          "label": "Taxa resposta",
+          "value": "×2"
+        },
+        "1": {
+          "label": "Tempo ganho",
+          "value": "15h/sem"
+        },
+        "2": {
+          "label": "Mandatos/mês",
+          "value": "+2"
+        }
       }
     },
-    "3": {
+    "2": {
       "slug": "e-commerce-cosmetiques",
       "org": "Loja e-commerce de cosmética",
       "sector": "E-commerce / Beleza",
@@ -127,12 +118,21 @@
         "3": "Satisfação do cliente melhorada (menos espera, respostas precisas)"
       },
       "metrics": {
-        "0": { "label": "Perguntas auto", "value": "70%" },
-        "1": { "label": "Tempo resposta", "value": "12s" },
-        "2": { "label": "Suporte reduzido", "value": "÷4" }
+        "0": {
+          "label": "Perguntas auto",
+          "value": "70%"
+        },
+        "1": {
+          "label": "Tempo resposta",
+          "value": "12s"
+        },
+        "2": {
+          "label": "Suporte reduzido",
+          "value": "÷4"
+        }
       }
     },
-    "4": {
+    "3": {
       "slug": "esn-teletravail",
       "org": "Empresa de serviços digitais em full remote",
       "sector": "Tecnologia / Serviços digitais",
@@ -154,22 +154,31 @@
         "3": "Engagement da equipa +35% (medido por atividade no espaço)"
       },
       "metrics": {
-        "0": { "label": "Ferramentas substituídas", "value": "5→1" },
-        "1": { "label": "Adoção", "value": "92%" },
-        "2": { "label": "Onboarding", "value": "÷5" }
+        "0": {
+          "label": "Ferramentas substituídas",
+          "value": "5→1"
+        },
+        "1": {
+          "label": "Adoção",
+          "value": "92%"
+        },
+        "2": {
+          "label": "Onboarding",
+          "value": "÷5"
+        }
       }
     },
-    "5": {
+    "4": {
       "slug": "cabinet-comptable-pack",
       "org": "Gabinete de contabilidade",
       "sector": "Contabilidade / Finanças",
       "size": "18 colaboradores",
       "location": "Coimbra",
-      "serviceLabel": "Pack Scale (6 SaaS)",
+      "serviceLabel": "Pack Scale (5 soluções)",
       "title": "Sistema completo: prospeção + site + automatização + IA em 30 dias",
       "context": "Este gabinete queria modernizar a sua aquisição de clientes de uma só vez. Prospeção manual, site WordPress lento, nenhum follow-up estruturado e nenhuma ferramenta IA. Objetivo: um sistema completo, operacional em 1 mês.",
       "delivered": {
-        "0": "Prospeção IA: segmentação de PME por CAE + zona geográfica",
+        "0": "Segmentação & enriquecimento: segmentação de PME por CAE + zona geográfica",
         "1": "Site Next.js (template de gabinete de contabilidade) com SEO + SEO IA",
         "2": "Automatização: follow-ups de prospects + envio de documentos + lembretes de prazos",
         "3": "Chatbot IA para as perguntas frequentes dos clientes do gabinete",
@@ -183,12 +192,21 @@
         "4": "Tempo administrativo recuperado: ~25h/mês"
       },
       "metrics": {
-        "0": { "label": "Implementação", "value": "28 dias" },
-        "1": { "label": "Prospects M1", "value": "45" },
-        "2": { "label": "Tempo ganho", "value": "25h/mês" }
+        "0": {
+          "label": "Implementação",
+          "value": "28 dias"
+        },
+        "1": {
+          "label": "Prospects M1",
+          "value": "45"
+        },
+        "2": {
+          "label": "Tempo ganho",
+          "value": "25h/mês"
+        }
       }
     },
-    "6": {
+    "5": {
       "slug": "la-poste",
       "org": "La Poste",
       "sector": "Serviços / Intranet",
@@ -209,12 +227,21 @@
         "2": "Redução das fricções operacionais graças à automatização"
       },
       "metrics": {
-        "0": { "label": "Migração SI", "value": "Concluída" },
-        "1": { "label": "Intranet", "value": "Modernizada" },
-        "2": { "label": "RPA", "value": "Implementado" }
+        "0": {
+          "label": "Migração SI",
+          "value": "Concluída"
+        },
+        "1": {
+          "label": "Intranet",
+          "value": "Modernizada"
+        },
+        "2": {
+          "label": "RPA",
+          "value": "Implementado"
+        }
       }
     },
-    "7": {
+    "6": {
       "slug": "ministere-des-armees",
       "org": "Ministério da Defesa (França)",
       "sector": "SI / Web",
@@ -235,9 +262,18 @@
         "2": "Run API racionalizado (menos ações manuais)"
       },
       "metrics": {
-        "0": { "label": "SI ROC", "value": "Estabilizado" },
-        "1": { "label": "Run API", "value": "Automatizado" },
-        "2": { "label": "Site web", "value": "Otimizado" }
+        "0": {
+          "label": "SI ROC",
+          "value": "Estabilizado"
+        },
+        "1": {
+          "label": "Run API",
+          "value": "Automatizado"
+        },
+        "2": {
+          "label": "Site web",
+          "value": "Otimizado"
+        }
       }
     }
   },

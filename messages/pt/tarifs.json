@@ -1,189 +1,222 @@
 {
   "metadata": {
-    "title": "Pre\u00e7os IA & Automatiza\u00e7\u00e3o PME \u2014 A partir de 79\u20ac/m\u00eas | WCT Systems",
-    "description": "6 SaaS para PMEs: Digital Workplace, prospe\u00e7\u00e3o IA, site web moderno, automatiza\u00e7\u00e3o RPA, integra\u00e7\u00e3o IA, Q2C fatura\u00e7\u00e3o SaaS. Implementa\u00e7\u00e3o inclu\u00edda. -20% no plano anual. Pagamento em 3x.",
-    "keywords": "pre\u00e7os automatiza\u00e7\u00e3o PME, pre\u00e7o SaaS PME, assinatura IA empresa"
+    "title": "Preços IA & Automatização PME — A partir de 79€/mês | WCT Systems",
+    "description": "5 soluções para PMEs: Digital Workplace, Site Web Moderno, Automatização RPA, Integração IA, Nixie Pulse. Implementação incluída. -20% no plano anual. Pagamento em 3x.",
+    "keywords": "preços automatização PME, preço SaaS PME, assinatura IA empresa"
   },
   "breadcrumb": {
-    "home": "In\u00edcio",
-    "tarifs": "Pre\u00e7os"
+    "home": "Início",
+    "tarifs": "Preços"
   },
   "jsonLd": {
     "saas": {
-      "0": { "name": "Digital Workplace", "description": "Escrit\u00f3rio virtual gamificado tudo-em-um para PMEs." },
-      "1": { "name": "Prospe\u00e7\u00e3o IA", "description": "Segmenta\u00e7\u00e3o, enriquecimento, integra\u00e7\u00e3o CRM por IA." },
-      "2": { "name": "Site Web Moderno", "description": "Site r\u00e1pido, SEO + SEO IA, convers\u00e3o, mobile-first." },
-      "3": { "name": "Automatiza\u00e7\u00e3o (RPA)", "description": "Workflows \u00e0 medida: follow-ups, CRM, relat\u00f3rios." },
-      "4": { "name": "Integra\u00e7\u00e3o IA", "description": "Chatbot, agentes, assistentes IA \u00e0 medida." },
-      "5": { "name": "Q2C \u2014 Fatura\u00e7\u00e3o SaaS", "description": "Fatura\u00e7\u00e3o eletr\u00f3nica conforme e-fatura\u00e7\u00e3o 2026 para SaaS B2B." }
+      "0": {
+        "name": "Digital Workplace",
+        "description": "Escritório virtual gamificado tudo-em-um para PMEs."
+      },
+      "1": {
+        "name": "Site Web Moderno",
+        "description": "Site rápido, SEO + SEO IA, conversão, mobile-first."
+      },
+      "2": {
+        "name": "Automatização (RPA)",
+        "description": "Workflows à medida: follow-ups, CRM, relatórios."
+      },
+      "3": {
+        "name": "Integração IA",
+        "description": "Chatbot, agentes, assistentes IA à medida."
+      },
+      "4": {
+        "name": "Nixie Pulse",
+        "description": "Faturação eletrónica conforme e-faturação 2026 para SaaS B2B."
+      }
     },
     "packs": {
-      "0": { "name": "Pack Starter", "description": "2 SaaS \u00e0 escolha entre os 6" },
-      "1": { "name": "Pack Business", "description": "3 SaaS \u00e0 escolha entre os 6" },
-      "2": { "name": "Pack Scale", "description": "6 SaaS inclu\u00eddos" }
+      "0": {
+        "name": "Pack Starter",
+        "description": "2 soluções à escolha entre as 5"
+      },
+      "1": {
+        "name": "Pack Business",
+        "description": "3 soluções à escolha entre as 5"
+      },
+      "2": {
+        "name": "Pack Scale",
+        "description": "5 soluções incluídas"
+      }
     },
     "faq": {
-      "0": { "q": "O que \u00e9 um SaaS?", "a": "Um SaaS \u00e9 um software acess\u00edvel online, sem instala\u00e7\u00e3o. Paga uma assinatura mensal ou anual." },
-      "1": { "q": "Posso contratar um \u00fanico servi\u00e7o sem pack?", "a": "Sim. Cada SaaS est\u00e1 dispon\u00edvel individualmente. Os packs permitem poupar 10 a 25%." },
-      "2": { "q": "Posso testar antes de me comprometer?", "a": "Propomos uma auditoria gratuita de 15 a 30 minutos para compreender a sua situa\u00e7\u00e3o." },
-      "3": { "q": "Os pre\u00e7os v\u00e3o aumentar?", "a": "Os seus pre\u00e7os est\u00e3o garantidos durante 12 meses ap\u00f3s a subscri\u00e7\u00e3o." },
-      "4": { "q": "O que est\u00e1 inclu\u00eddo na implementa\u00e7\u00e3o?", "a": "Configura\u00e7\u00e3o, importa\u00e7\u00e3o de dados, forma\u00e7\u00e3o da equipa (1h), acompanhamento 30 dias." },
-      "5": { "q": "Existem custos de implementa\u00e7\u00e3o?", "a": "N\u00e3o. A implementa\u00e7\u00e3o est\u00e1 inclu\u00edda em todos os planos." },
-      "6": { "q": "O pagamento em 3x, como funciona?", "a": "Para qualquer compromisso anual ou setup, pague em 3 vezes sem juros." },
-      "7": { "q": "Existe um per\u00edodo m\u00ednimo de compromisso?", "a": "Sem compromisso no plano mensal. O compromisso anual \u00e9 de 12 meses com -20%." },
-      "8": { "q": "Posso mudar de plano a meio?", "a": "Sim, a qualquer momento." },
-      "9": { "q": "E se as minhas necessidades n\u00e3o correspondem a nada aqui?", "a": "Fazemos uma auditoria gratuita de 15 a 30 minutos." },
-      "10": { "q": "O Digital Workplace substitui as minhas ferramentas atuais?", "a": "N\u00e3o necessariamente. Centraliza-as num escrit\u00f3rio virtual unificado. As suas ferramentas existentes integram-se diretamente." }
+      "0": {
+        "q": "O que é um SaaS?",
+        "a": "Um SaaS é um software acessível online, sem instalação. Paga uma assinatura mensal ou anual."
+      },
+      "1": {
+        "q": "Posso contratar um único serviço sem pack?",
+        "a": "Sim. Cada SaaS está disponível individualmente. Os packs permitem poupar 10 a 25%."
+      },
+      "2": {
+        "q": "Posso testar antes de me comprometer?",
+        "a": "Propomos uma auditoria gratuita de 15 a 30 minutos para compreender a sua situação."
+      },
+      "3": {
+        "q": "Os preços vão aumentar?",
+        "a": "Os seus preços estão garantidos durante 12 meses após a subscrição."
+      },
+      "4": {
+        "q": "O que está incluído na implementação?",
+        "a": "Configuração, importação de dados, formação da equipa (1h), acompanhamento 30 dias."
+      },
+      "5": {
+        "q": "Existem custos de implementação?",
+        "a": "Não. A implementação está incluída em todos os planos."
+      },
+      "6": {
+        "q": "O pagamento em 3x, como funciona?",
+        "a": "Para qualquer compromisso anual ou setup, pague em 3 vezes sem juros."
+      },
+      "7": {
+        "q": "Existe um período mínimo de compromisso?",
+        "a": "Sem compromisso no plano mensal. O compromisso anual é de 12 meses com -20%."
+      },
+      "8": {
+        "q": "Posso mudar de plano a meio?",
+        "a": "Sim, a qualquer momento."
+      },
+      "9": {
+        "q": "E se as minhas necessidades não correspondem a nada aqui?",
+        "a": "Fazemos uma auditoria gratuita de 15 a 30 minutos."
+      },
+      "10": {
+        "q": "O Digital Workplace substitui as minhas ferramentas atuais?",
+        "a": "Não necessariamente. Centraliza-as num escritório virtual unificado. As suas ferramentas existentes integram-se diretamente."
+      }
     }
   },
   "hero": {
-    "badge": "Pre\u00e7os transparentes \u00b7 Implementa\u00e7\u00e3o inclu\u00edda",
+    "badge": "Preços transparentes · Implementação incluída",
     "title": "Escolha o seu plano.",
     "titleHighlight": "Evolua ao seu ritmo.",
-    "subtitle": "6 SaaS concebidos para PMEs portuguesas. Implementa\u00e7\u00e3o inclu\u00edda.",
+    "subtitle": "5 soluções concebidas para PMEs portuguesas. Implementação incluída.",
     "subtitleLine2": "Sem compromisso mensal, -20% no plano anual.",
     "statSaas": "SaaS",
-    "statSaasLabel": "\u00e0 la carte ou em pack",
+    "statSaasLabel": "à la carte ou em pack",
     "statDiscount": "no compromisso anual",
-    "statSetup": "custos de implementa\u00e7\u00e3o",
+    "statSetup": "custos de implementação",
     "toggleMonthly": "Mensal",
     "toggleYearly": "Anual"
   },
   "saas": {
-    "sectionLabel": "Os nossos 6 SaaS",
+    "sectionLabel": "As nossas 5 soluções",
     "items": {
       "digital-workplace": {
         "name": "Digital Workplace",
         "badge": "Novo",
-        "description": "Escrit\u00f3rio virtual gamificado tudo-em-um para a sua equipa.",
+        "description": "Escritório virtual gamificado tudo-em-um para a sua equipa.",
         "features": {
-          "0": "Escrit\u00f3rio virtual com salas tem\u00e1ticas (RH, Vendas, Suporte\u2026)",
-          "1": "Gamifica\u00e7\u00e3o integrada (XP, badges, classifica\u00e7\u00f5es)",
-          "2": "Mensagens em tempo real + videoconfer\u00eancia integrada",
+          "0": "Escritório virtual com salas temáticas (RH, Vendas, Suporte…)",
+          "1": "Gamificação integrada (XP, badges, classificações)",
+          "2": "Mensagens em tempo real + videoconferência integrada",
           "3": "Dashboard KPI por equipa",
-          "4": "Integra\u00e7\u00e3o com ferramentas existentes (Notion, Slack, Google\u2026)"
-        }
-      },
-      "prospection-ia": {
-        "name": "Prospe\u00e7\u00e3o IA",
-        "description": "Encontre os seus futuros clientes com IA. Segmenta\u00e7\u00e3o, enriquecimento, integra\u00e7\u00e3o CRM.",
-        "features": {
-          "0": "Segmenta\u00e7\u00e3o IA por setor, zona geogr\u00e1fica e dimens\u00e3o da empresa",
-          "1": "Enriquecimento autom\u00e1tico (email, LinkedIn, telefone)",
-          "2": "Scoring dos leads por IA (score 1-10)",
-          "3": "Integra\u00e7\u00e3o CRM / folha de c\u00e1lculo autom\u00e1tica",
-          "4": "Base atualizada continuamente"
+          "4": "Integração com ferramentas existentes (Notion, Slack, Google…)"
         }
       },
       "site-web": {
         "name": "Site Web Moderno",
-        "description": "Um site r\u00e1pido, SEO + SEO IA, pensado para converter. Entregue em 14 dias.",
+        "description": "Um site rápido, SEO + SEO IA, pensado para converter. Entregue em 14 dias.",
         "features": {
-          "0": "5 a 10 p\u00e1ginas otimizadas para convers\u00e3o",
-          "1": "SEO cl\u00e1ssico + SEO IA (JSON-LD, llms.txt)",
+          "0": "5 a 10 páginas otimizadas para conversão",
+          "1": "SEO clássico + SEO IA (JSON-LD, llms.txt)",
           "2": "Mobile-first, desempenho A+",
-          "3": "Manuten\u00e7\u00e3o e evolu\u00e7\u00f5es inclu\u00eddas",
-          "4": "Alojamento premium inclu\u00eddo"
+          "3": "Manutenção e evoluções incluídas",
+          "4": "Alojamento premium incluído"
         }
       },
       "automatisation": {
-        "name": "Automatiza\u00e7\u00e3o (RPA)",
-        "description": "Automatize os seus processos: follow-ups, CRM, relat\u00f3rios, sem programar.",
+        "name": "Automatização (RPA)",
+        "description": "Automatize os seus processos: follow-ups, CRM, relatórios, sem programar.",
         "features": {
-          "0": "Workflows \u00e0 medida (follow-ups, CRM, fatura\u00e7\u00e3o)",
-          "1": "Integra\u00e7\u00e3o com 200+ ferramentas (Gmail, Notion, HubSpot\u2026)",
+          "0": "Workflows à medida (follow-ups, CRM, faturação)",
+          "1": "Integração com 200+ ferramentas (Gmail, Notion, HubSpot…)",
           "2": "Dashboard KPI em tempo real",
-          "3": "Alertas e notifica\u00e7\u00f5es autom\u00e1ticas",
-          "4": "Suporte e manuten\u00e7\u00e3o inclu\u00eddos"
+          "3": "Alertas e notificações automáticas",
+          "4": "Suporte e manutenção incluídos"
         }
       },
       "integration-ia": {
-        "name": "Integra\u00e7\u00e3o IA",
+        "name": "Integração IA",
         "badge": "Popular",
-        "description": "Integre a IA no seu dia a dia: chatbot, agentes, assistentes \u00e0 medida.",
+        "description": "Integre a IA no seu dia a dia: chatbot, agentes, assistentes à medida.",
         "features": {
           "0": "Chatbot IA para o seu site / WhatsApp",
           "1": "Agentes IA especializados (vendas, suporte, RH)",
-          "2": "Liga\u00e7\u00e3o \u00e0s suas ferramentas existentes",
+          "2": "Ligação às suas ferramentas existentes",
           "3": "Respostas baseadas nos seus dados (RAG)",
-          "4": "Forma\u00e7\u00e3o da equipa inclu\u00edda (1h/m\u00eas)"
-        }
-      },
-      "q2c-facturation": {
-        "name": "Q2C \u2014 Fatura\u00e7\u00e3o SaaS",
-        "badge": "Novo",
-        "description": "Fatura\u00e7\u00e3o eletr\u00f3nica conforme 2026 para SaaS B2B. Do or\u00e7amento ao pagamento, Factur-X nativo.",
-        "features": {
-          "0": "Factur-X EXTENDED + UBL + CII",
-          "1": "Ciclo completo or\u00e7amento \u2192 contrato \u2192 fatura \u2192 pagamento",
-          "2": "IVA EU/OSS 30 pa\u00edses + valida\u00e7\u00e3o VIES",
-          "3": "Conector universal Plataforma Certificada",
-          "4": "Dashboard MRR/ARR/Churn + Revenue Recognition"
+          "4": "Formação da equipa incluída (1h/mês)"
         }
       }
     },
-    "priceUnit": "s/IVA / m\u00eas",
-    "billedYearly": "Faturado {total}\u00a0\u20ac/ano",
-    "setupUnique": "Setup \u00fanico: {price}\u00a0\u20ac s/IVA",
-    "setupIncluded": "Implementa\u00e7\u00e3o inclu\u00edda",
-    "ctaStart": "Come\u00e7ar",
+    "priceUnit": "s/IVA / mês",
+    "billedYearly": "Faturado {total} €/ano",
+    "setupUnique": "Setup único: {price} € s/IVA",
+    "setupIncluded": "Implementação incluída",
+    "ctaStart": "Começar",
     "ctaLearnMore": "Saber mais"
   },
   "separator": "Poupe com os packs",
   "packs": {
     "sectionLabel": "Packs combinados",
     "title": "Packs combinados",
-    "subtitle": "Combine v\u00e1rios SaaS e beneficie de pre\u00e7os reduzidos.",
+    "subtitle": "Combine vários SaaS e beneficie de preços reduzidos.",
     "mostChosen": "O mais escolhido",
     "items": {
       "starter": {
         "name": "Starter",
-        "tagline": "Lan\u00e7ar a aquisi\u00e7\u00e3o",
-        "desc": "2 SaaS \u00e0 escolha entre os 6",
-        "badge": "-10% vs \u00e0 la carte",
+        "tagline": "Lançar a aquisição",
+        "desc": "2 SaaS à escolha entre os 6",
+        "badge": "-10% vs à la carte",
         "cta": "Compor o meu pack"
       },
       "business": {
         "name": "Business",
         "tagline": "Estruturar e pilotar",
-        "desc": "3 SaaS \u00e0 escolha entre os 6",
-        "badge": "-15% vs \u00e0 la carte",
+        "desc": "3 SaaS à escolha entre os 6",
+        "badge": "-15% vs à la carte",
         "cta": "Compor o meu pack"
       },
       "scale": {
         "name": "Scale",
         "tagline": "Sistema completo",
-        "desc": "Os 6 SaaS inclu\u00eddos",
-        "badge": "-25% vs \u00e0 la carte",
+        "desc": "Os 5 soluções incluídas",
+        "badge": "-25% vs à la carte",
         "extraBadge": "Account manager dedicado",
         "cta": "Escolher Scale"
       }
     }
   },
   "comparison": {
-    "title": "Todos os pre\u00e7os num relance",
-    "subtitle": "Pre\u00e7os s/IVA \u2014 implementa\u00e7\u00e3o inclu\u00edda em todos os planos.",
-    "thService": "Servi\u00e7o",
+    "title": "Todos os preços num relance",
+    "subtitle": "Preços s/IVA — implementação incluída em todos os planos.",
+    "thService": "Serviço",
     "thMonthly": "Mensal",
     "thYearly": "Anual",
-    "thSaving": "Poupan\u00e7a",
-    "setup": "+ setup {price}\u00a0\u20ac",
-    "perMonth": "/m\u00eas",
+    "thSaving": "Poupança",
+    "setup": "+ setup {price} €",
+    "perMonth": "/mês",
     "packsLabel": "Packs combinados",
     "pack": "Pack {name}",
     "popular": "Popular"
   },
   "payment": {
-    "sectionLabel": "Op\u00e7\u00f5es de pagamento",
-    "title": "Op\u00e7\u00f5es de pagamento",
-    "subtitle": "Duas op\u00e7\u00f5es para adaptar o pagamento \u00e0 sua tesouraria.",
+    "sectionLabel": "Opções de pagamento",
+    "title": "Opções de pagamento",
+    "subtitle": "Duas opções para adaptar o pagamento à sua tesouraria.",
     "yearly": {
       "title": "Compromisso anual",
       "badge": "-20% em todos os planos",
       "features": {
-        "0": "Fatura\u00e7\u00e3o mensal",
+        "0": "Faturação mensal",
         "1": "Compromisso 12 meses",
-        "2": "Pre\u00e7os garantidos durante todo o per\u00edodo"
+        "2": "Preços garantidos durante todo o período"
       }
     },
     "threeX": {
@@ -191,66 +224,67 @@
       "badge": "Sem juros",
       "intro": "Para qualquer compromisso anual ou setup.",
       "steps": {
-        "0": "<strong>1.\u00ba ter\u00e7o</strong> na encomenda",
-        "1": "<strong>2.\u00ba ter\u00e7o</strong> ao 30.\u00ba dia",
-        "2": "<strong>3.\u00ba ter\u00e7o</strong> ao 60.\u00ba dia"
+        "0": "<strong>1.º terço</strong> na encomenda",
+        "1": "<strong>2.º terço</strong> ao 30.º dia",
+        "2": "<strong>3.º terço</strong> ao 60.º dia"
       }
     }
   },
   "faq": {
-    "sectionLabel": "Perguntas frequentes sobre pre\u00e7os",
+    "sectionLabel": "Perguntas frequentes sobre preços",
     "title": "Perguntas frequentes",
     "items": {
       "0": {
-        "q": "O que \u00e9 um SaaS?",
-        "a": "Um SaaS (Software as a Service) \u00e9 um software acess\u00edvel online, sem instala\u00e7\u00e3o. Paga uma assinatura mensal ou anual e n\u00f3s tratamos de tudo: alojamento, atualiza\u00e7\u00f5es, suporte. Como a Netflix, mas para a sua empresa."
+        "q": "O que é um SaaS?",
+        "a": "Um SaaS (Software as a Service) é um software acessível online, sem instalação. Paga uma assinatura mensal ou anual e nós tratamos de tudo: alojamento, atualizações, suporte. Como a Netflix, mas para a sua empresa."
       },
       "1": {
-        "q": "Posso contratar um \u00fanico servi\u00e7o sem pack?",
-        "a": "Sim. Cada SaaS est\u00e1 dispon\u00edvel individualmente. Os packs permitem poupar 10 a 25% em compara\u00e7\u00e3o com os servi\u00e7os separados."
+        "q": "Posso contratar um único serviço sem pack?",
+        "a": "Sim. Cada SaaS está disponível individualmente. Os packs permitem poupar 10 a 25% em comparação com os serviços separados."
       },
       "2": {
         "q": "Posso testar antes de me comprometer?",
-        "a": "Propomos uma auditoria gratuita de 15 a 30 minutos para compreender a sua situa\u00e7\u00e3o, mostrar-lhe uma demonstra\u00e7\u00e3o e definir um plano concreto. Sem compromisso antes de estar convencido."
+        "a": "Propomos uma auditoria gratuita de 15 a 30 minutos para compreender a sua situação, mostrar-lhe uma demonstração e definir um plano concreto. Sem compromisso antes de estar convencido."
       },
       "3": {
-        "q": "Os pre\u00e7os v\u00e3o aumentar?",
-        "a": "Os seus pre\u00e7os est\u00e3o garantidos 12 meses ap\u00f3s a subscri\u00e7\u00e3o. Se os nossos pre\u00e7os mudarem, o seu plano mant\u00e9m-se inalterado durante todo o per\u00edodo do seu compromisso."
+        "q": "Os preços vão aumentar?",
+        "a": "Os seus preços estão garantidos 12 meses após a subscrição. Se os nossos preços mudarem, o seu plano mantém-se inalterado durante todo o período do seu compromisso."
       },
       "4": {
-        "q": "O que est\u00e1 inclu\u00eddo na implementa\u00e7\u00e3o?",
-        "a": "Configura\u00e7\u00e3o completa das suas ferramentas, importa\u00e7\u00e3o dos seus dados existentes, forma\u00e7\u00e3o da sua equipa (1h) e acompanhamento durante os primeiros 30 dias."
+        "q": "O que está incluído na implementação?",
+        "a": "Configuração completa das suas ferramentas, importação dos seus dados existentes, formação da sua equipa (1h) e acompanhamento durante os primeiros 30 dias."
       },
       "5": {
-        "q": "Existem custos de implementa\u00e7\u00e3o?",
-        "a": "N\u00e3o. A implementa\u00e7\u00e3o est\u00e1 inclu\u00edda em todos os planos (exceto o setup \u00fanico para o Site Web Moderno e o Digital Workplace). Configuramos tudo por si."
+        "q": "Existem custos de implementação?",
+        "a": "Não. A implementação está incluída em todos os planos (exceto o setup único para o Site Web Moderno e o Digital Workplace). Configuramos tudo por si."
       },
       "6": {
         "q": "O pagamento em 3x, como funciona?",
-        "a": "Para qualquer compromisso anual ou setup, pode pagar em 3 vezes sem juros. Primeiro ter\u00e7o na encomenda, segundo ao 30.\u00ba dia, terceiro ao 60.\u00ba dia."
+        "a": "Para qualquer compromisso anual ou setup, pode pagar em 3 vezes sem juros. Primeiro terço na encomenda, segundo ao 30.º dia, terceiro ao 60.º dia."
       },
       "7": {
-        "q": "Existe um per\u00edodo m\u00ednimo de compromisso?",
-        "a": "Sem compromisso no plano mensal \u2014 pode cancelar quando quiser. O compromisso anual \u00e9 de 12 meses, com -20% no pre\u00e7o mensal."
+        "q": "Existe um período mínimo de compromisso?",
+        "a": "Sem compromisso no plano mensal — pode cancelar quando quiser. O compromisso anual é de 12 meses, com -20% no preço mensal."
       },
       "8": {
         "q": "Posso mudar de plano a meio?",
-        "a": "Sim. Adi\u00e7\u00e3o de servi\u00e7os ou passagem a um pack a qualquer momento. O downgrade entra em vigor no pr\u00f3ximo m\u00eas de fatura\u00e7\u00e3o."
+        "a": "Sim. Adição de serviços ou passagem a um pack a qualquer momento. O downgrade entra em vigor no próximo mês de faturação."
       },
       "9": {
-        "q": "E se as minhas necessidades n\u00e3o correspondem a nada aqui?",
-        "a": "Fazemos uma auditoria gratuita de 15 a 30 minutos para compreender a sua situa\u00e7\u00e3o. Se uma solu\u00e7\u00e3o \u00e0 medida for mais adequada, propomos um or\u00e7amento personalizado."
+        "q": "E se as minhas necessidades não correspondem a nada aqui?",
+        "a": "Fazemos uma auditoria gratuita de 15 a 30 minutos para compreender a sua situação. Se uma solução à medida for mais adequada, propomos um orçamento personalizado."
       },
       "10": {
         "q": "O Digital Workplace substitui as minhas ferramentas atuais?",
-        "a": "N\u00e3o necessariamente. Centraliza-as num escrit\u00f3rio virtual unificado. As suas ferramentas existentes (Notion, Slack, Google\u2026) integram-se diretamente nas salas do Workplace."
+        "a": "Não necessariamente. Centraliza-as num escritório virtual unificado. As suas ferramentas existentes (Notion, Slack, Google…) integram-se diretamente nas salas do Workplace."
       }
     }
   },
   "cta": {
-    "sectionLabel": "Apelo \u00e0 a\u00e7\u00e3o",
+    "sectionLabel": "Apelo à ação",
     "title": "Precisa de ajuda para escolher?",
-    "subtitle": "A auditoria \u00e9 gratuita \u2014 15 a 30 minutos para compreender a sua situa\u00e7\u00e3o, identificar o servi\u00e7o (ou pack) certo e ver um plano concreto antes de se comprometer.",
+    "subtitle": "A auditoria é gratuita — 15 a 30 minutos para compreender a sua situação, identificar o serviço (ou pack) certo e ver um plano concreto antes de se comprometer.",
     "button": "Reservar uma auditoria gratuita"
-  }
+  },
+  "description": "5 soluções para PMEs: Digital Workplace, Site Web Moderno, Automatização RPA, Integração IA, Nixie Pulse. Implementação incluída. -20% no plano anual. Pagamento em 3x."
 }

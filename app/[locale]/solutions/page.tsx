@@ -51,7 +51,7 @@ export default async function SolutionsIndexPage() {
           "@type": "ListItem",
           position: i + 1,
           name: t(`secteurs.${s.slug}.name`),
-          url: `${SITE_URL}/solutions/prospection-ia/pour/${s.slug}`,
+          url: `${SITE_URL}/solutions/automatiser-relances/pour/${s.slug}`,
         })),
       },
     ],

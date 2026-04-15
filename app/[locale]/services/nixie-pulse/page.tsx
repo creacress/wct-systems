@@ -97,7 +97,7 @@ export default function NixiePulsePage() {
         url: SITE_URL,
         logo: `${SITE_URL}/logo.png`,
         description:
-          "Digital Workplace & IA pour PME — 6 SaaS, mise en place incluse. Dashboards physiques connectés à tubes Nixie soviétiques.",
+          "Digital Workplace & IA pour PME — 5 solutions, mise en place incluse. Faturação eletrónica com suporte a tubes Nixie.",
         sameAs: [],
       },
       {

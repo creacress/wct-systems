@@ -12,10 +12,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
   return {
-    title: "WCT Systems — IA, Automatisation & IoT pour PME françaises",
+    title: "WCT Systems — IA, Automatisation & Digital Workplace pour PME françaises",
     description:
-      "WCT Systems aide les PME françaises avec 7 solutions : Digital Workplace, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Q2C Facturation SaaS et Nixie Pulse (dashboard KPI physique). Audit gratuit en 15 min.",
-    keywords: ["IA PME France", "automatisation PME", "SaaS PME", "prospection B2B IA", "WCT Systems"],
+      "WCT Systems aide les PME françaises avec 5 solutions : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA et Nixie Pulse (dashboard KPI physique connecté). Audit gratuit en 15 min.",
+    keywords: ["IA PME France", "automatisation PME", "SaaS PME", "Digital Workplace PME", "WCT Systems"],
     alternates: {
       canonical: `${siteUrl}${locale === "pt" ? "/pt" : ""}`,
       languages: {
@@ -72,15 +72,6 @@ const SERVICES = [
     badge: "Nouveau",
   },
   {
-    href: "/services/trouver-prospects",
-    title: "Prospection IA",
-    desc: "Ciblage IA, enrichissement automatique, scoring, intégration CRM.",
-    price: "99",
-    color: "emerald",
-    gradient: "from-emerald-500/10 to-green-500/5",
-    borderHover: "hover:border-emerald-400/40 dark:hover:border-emerald-500/30",
-  },
-  {
     href: "/services/site-web-moderne",
     title: "Site Web Moderne",
     desc: "Site rapide, SEO + SEO IA, 4 templates. Livré en 14 jours.",
@@ -109,16 +100,6 @@ const SERVICES = [
     badge: "Populaire",
   },
   {
-    href: "/services/q2c-facturation",
-    title: "Q2C — Facturation SaaS",
-    desc: "Facturation e-invoicing conforme 2026 : Factur-X, UBL, CII, TVA OSS, connecteur PA. À partir de 149 €/mois.",
-    price: "149",
-    color: "emerald",
-    gradient: "from-emerald-500/10 to-teal-500/5",
-    borderHover: "hover:border-emerald-400/40 dark:hover:border-emerald-500/30",
-    badge: "Nouveau",
-  },
-  {
     href: "/services/nixie-pulse",
     title: "Nixie Pulse",
     desc: "Dashboard KPI physique connecté. Tubes Nixie IN-14 soviétiques affichant vos données en temps réel. Made in France.",
@@ -138,14 +119,14 @@ export default function HomePage() {
         "@type": "Organization",
         name: SITE.name,
         url: SITE.url,
-        description: "Digital Workplace, IA & IoT pour PME françaises. 7 solutions, un écosystème.",
+        description: "Digital Workplace, IA & Automatisation pour PME françaises. 5 solutions intégrées.",
         sameAs: SITE.sameAs,
       },
       {
         "@type": "WebSite",
         name: SITE.name,
         url: SITE.url,
-        description: "Digital Workplace gamifié + IA + automatisation + IoT pour PME. 7 solutions, un écosystème.",
+        description: "Digital Workplace gamifié + IA + automatisation pour PME. 5 solutions intégrées.",
         potentialAction: {
           "@type": "SearchAction",
           target: `${SITE.url}/blog?q={search_term_string}`,
@@ -185,7 +166,7 @@ export default function HomePage() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-500 opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-violet-600" />
                 </span>
-                7 Solutions &bull; SaaS &bull; IA &bull; Hardware
+                5 Solutions &bull; SaaS &bull; IA &bull; Hardware
               </div>
             </ScrollReveal>
 
@@ -201,7 +182,7 @@ export default function HomePage() {
             <ScrollReveal delay={200}>
               <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
                 <strong className="text-foreground">WCT Systems</strong> conçoit le Digital Workplace des PME françaises :
-                un bureau virtuel gamifié + 7 solutions (<strong className="text-foreground">Digital Workplace, Prospection IA, Site Web, Automatisation, Intégration IA, Facturation SaaS</strong> et <strong className="text-foreground">Nixie Pulse</strong>, le dashboard KPI physique connecté).
+                un bureau virtuel gamifié + 5 solutions (<strong className="text-foreground">Digital Workplace, Site Web, Automatisation, Intégration IA</strong> et <strong className="text-foreground">Nixie Pulse</strong>, le dashboard KPI physique connecté).
               </p>
             </ScrollReveal>
 
@@ -218,7 +199,7 @@ export default function HomePage() {
                   href="/services"
                   className="inline-flex items-center justify-center rounded-2xl border px-6 py-3 text-sm font-medium transition-colors hover:bg-muted dark:border-white/[0.12]"
                 >
-                  Voir les 7 solutions
+                  Voir les 5 solutions
                 </Link>
               </div>
             </ScrollReveal>
@@ -305,7 +286,7 @@ export default function HomePage() {
               <div>
                 <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">L&apos;écosystème complet</h2>
                 <p className="mt-2 max-w-2xl text-muted-foreground">
-                  7 solutions complémentaires : Digital Workplace, IA, automatisation, facturation et Nixie Pulse (hardware IoT). Chaque service a sa couleur.
+                  5 solutions complémentaires : Digital Workplace, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse. Chaque service a sa couleur.
                 </p>
               </div>
               <Link

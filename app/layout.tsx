@@ -27,16 +27,16 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: {
-    default: "WCT Systems — Digital Workplace & IA pour PME",
+    default: "WCT Systems — IA, Automatisation & Digital Workplace pour PME",
     template: "%s | WCT Systems",
   },
   description:
-    "6 SaaS pour PME : Digital Workplace gamifié, Prospection IA, Site Web Moderne, Automatisation, Intégration IA, Q2C Facturation SaaS. Mise en place incluse.",
+    "5 solutions pour PME françaises : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA et Nixie Pulse. Audit gratuit en 15 minutes.",
   applicationName: "WCT Systems",
   openGraph: {
-    title: "WCT Systems — Digital Workplace & IA pour PME",
+    title: "WCT Systems — IA, Automatisation & Digital Workplace pour PME",
     description:
-      "6 SaaS pour PME : Digital Workplace, Prospection IA, Site Web, Automatisation, Intégration IA, Q2C Facturation.",
+      "5 solutions pour PME : Digital Workplace, Site Web Moderne, Automatisation RPA, Intégration IA et Nixie Pulse.",
     url: "/",
     siteName: "WCT Systems",
     locale: "fr_FR",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "WCT Systems — Digital Workplace & IA pour PME",
+    title: "WCT Systems — IA, Automatisation & Digital Workplace pour PME",
     description:
-      "6 SaaS pour PME — Digital Workplace, IA, automatisation, facturation, résultats mesurables.",
+      "5 solutions pour PME — Digital Workplace, IA, automatisation, dashboard KPI physique, résultats mesurables.",
   },
   robots: {
     index: true,

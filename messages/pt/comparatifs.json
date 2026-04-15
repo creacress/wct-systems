@@ -54,56 +54,100 @@
       "optionBName": "n8n",
       "intro": "Zapier e n8n são as duas ferramentas de automatização mais populares. Zapier aposta na simplicidade (no-code, 5000+ integrações), n8n na flexibilidade (open-source, auto-alojável). Mas para uma PME que quer resultados sem gerir a parte técnica, existe uma terceira via.",
       "features": {
-        "0": { "feature": "Preço mensal", "optionA": "A partir de 19$/mês (limitado)", "optionB": "Gratuito (self-hosted) ou 20€/mês (cloud)", "wct": "149€/mês tudo incluído (workflows + suporte)" },
-        "1": { "feature": "Número de integrações", "optionA": "5000+", "optionB": "400+ (+ nodes custom)", "wct": "200+ (as mais usadas por PMEs)" },
-        "2": { "feature": "Facilidade de utilização", "optionA": "Muito simples (no-code)", "optionB": "Média (interface técnica)", "wct": "Não precisa de a usar — configuramos por si" },
-        "3": { "feature": "Alojamento", "optionA": "Cloud apenas", "optionB": "Cloud ou self-hosted", "wct": "Gerido pela WCT (nada a instalar)" },
-        "4": { "feature": "Suporte", "optionA": "Email / docs", "optionB": "Comunidade / docs", "wct": "Suporte dedicado + manutenção contínua" },
-        "5": { "feature": "Implementação", "optionA": "Faça você mesmo", "optionB": "Faça você mesmo (técnico)", "wct": "Configuramos tudo, formação incluída" },
-        "6": { "feature": "Dashboard KPI", "optionA": "Não incluído", "optionB": "Não incluído", "wct": "Incluído (leads, respostas, orçamentos, assinaturas)" },
-        "7": { "feature": "Workflows personalizados", "optionA": "Templates + personalização", "optionB": "100% personalizável", "wct": "Concebidos para o seu processo exato" }
+        "0": {
+          "feature": "Preço mensal",
+          "optionA": "A partir de 19$/mês (limitado)",
+          "optionB": "Gratuito (self-hosted) ou 20€/mês (cloud)",
+          "wct": "149€/mês tudo incluído (workflows + suporte)"
+        },
+        "1": {
+          "feature": "Número de integrações",
+          "optionA": "5000+",
+          "optionB": "400+ (+ nodes custom)",
+          "wct": "200+ (as mais usadas por PMEs)"
+        },
+        "2": {
+          "feature": "Facilidade de utilização",
+          "optionA": "Muito simples (no-code)",
+          "optionB": "Média (interface técnica)",
+          "wct": "Não precisa de a usar — configuramos por si"
+        },
+        "3": {
+          "feature": "Alojamento",
+          "optionA": "Cloud apenas",
+          "optionB": "Cloud ou self-hosted",
+          "wct": "Gerido pela WCT (nada a instalar)"
+        },
+        "4": {
+          "feature": "Suporte",
+          "optionA": "Email / docs",
+          "optionB": "Comunidade / docs",
+          "wct": "Suporte dedicado + manutenção contínua"
+        },
+        "5": {
+          "feature": "Implementação",
+          "optionA": "Faça você mesmo",
+          "optionB": "Faça você mesmo (técnico)",
+          "wct": "Configuramos tudo, formação incluída"
+        },
+        "6": {
+          "feature": "Dashboard KPI",
+          "optionA": "Não incluído",
+          "optionB": "Não incluído",
+          "wct": "Incluído (leads, respostas, orçamentos, assinaturas)"
+        },
+        "7": {
+          "feature": "Workflows personalizados",
+          "optionA": "Templates + personalização",
+          "optionB": "100% personalizável",
+          "wct": "Concebidos para o seu processo exato"
+        }
       },
-      "prosA": ["Interface muito simples", "5000+ integrações", "Comunidade e templates ricos", "Fiável, zero manutenção"],
-      "consA": ["Caro em escala (preço por tarefa)", "Limitado sem plano premium", "Sem dashboard profissional", "Workflows complexos = difícil"],
-      "prosB": ["Open-source, gratuito self-hosted", "Muito flexível, workflows complexos", "Alojamento à escolha", "Sem limite de tarefas (self-hosted)"],
-      "consB": ["Interface técnica (curva de aprendizagem)", "Manutenção de servidor se self-hosted", "Menos integrações nativas", "Sem suporte dedicado (comunidade)"],
-      "prosWCT": ["Nenhuma configuração a fazer", "Workflows concebidos para os seus processos PME", "Dashboard KPI incluído", "Suporte e manutenção contínuos", "Resultados em 7-14 dias"],
+      "prosA": [
+        "Interface muito simples",
+        "5000+ integrações",
+        "Comunidade e templates ricos",
+        "Fiável, zero manutenção"
+      ],
+      "consA": [
+        "Caro em escala (preço por tarefa)",
+        "Limitado sem plano premium",
+        "Sem dashboard profissional",
+        "Workflows complexos = difícil"
+      ],
+      "prosB": [
+        "Open-source, gratuito self-hosted",
+        "Muito flexível, workflows complexos",
+        "Alojamento à escolha",
+        "Sem limite de tarefas (self-hosted)"
+      ],
+      "consB": [
+        "Interface técnica (curva de aprendizagem)",
+        "Manutenção de servidor se self-hosted",
+        "Menos integrações nativas",
+        "Sem suporte dedicado (comunidade)"
+      ],
+      "prosWCT": [
+        "Nenhuma configuração a fazer",
+        "Workflows concebidos para os seus processos PME",
+        "Dashboard KPI incluído",
+        "Suporte e manutenção contínuos",
+        "Resultados em 7-14 dias"
+      ],
       "verdict": "Zapier é ideal se quiser automatizar tarefas simples rapidamente e estiver à vontade com no-code. n8n é a escolha técnica: poderoso, flexível, mas exige tempo e competências. Se é uma PME que quer workflows que funcionam sem se preocupar, com um dashboard KPI e suporte dedicado, WCT Systems é a abordagem chave-na-mão.",
       "faq": {
-        "0": { "q": "Zapier ou n8n para uma PME sem programador?", "a": "Zapier será mais acessível, mas ambos exigem tempo de configuração e manutenção. A abordagem WCT elimina esta carga: configuramos, mantemos, você utiliza." },
-        "1": { "q": "É possível migrar de Zapier para n8n (ou o inverso)?", "a": "Sim, mas é um trabalho de reconstrução. Os workflows não são diretamente transferíveis. Com a WCT, adaptamo-nos às suas ferramentas existentes." },
-        "2": { "q": "Qual é o ROI da automatização dos follow-ups?", "a": "Em média, as PMEs que automatizam os seus follow-ups veem a sua taxa de resposta passar de 10% para 18%, e recuperam ~40h/mês. O ROI depende do seu valor médio de encomenda e da sua taxa de conversão." }
-      }
-    },
-    "prospection-manuelle-vs-ia": {
-      "title": "Prospeção manual vs IA: comparativo para PMEs",
-      "metaTitle": "Prospeção manual vs IA — Comparativo PME 2026 | WCT Systems",
-      "metaDescription": "Prospeção manual ou automatizada por IA? Comparativo tempo, custo, qualidade dos leads e ROI para PMEs. Descubra a abordagem WCT Systems.",
-      "keywords": "prospeção manual vs ia, automatizar prospeção, ferramenta prospeção B2B, prospeção PME",
-      "serviceLabel": "Prospeção IA",
-      "optionAName": "Prospeção manual",
-      "optionBName": "Prospeção IA (ferramentas SaaS)",
-      "intro": "A prospeção manual (LinkedIn, diretórios, boca-a-boca) continua a ser o reflexo de muitas PMEs. As ferramentas IA (Lemlist, Apollo, Waalaxy) automatizam a segmentação e o enriquecimento. Mas nenhuma das duas resolve o problema completo: segmentação + enriquecimento + CRM + acompanhamento.",
-      "features": {
-        "0": { "feature": "Tempo por semana", "optionA": "8-15h (pesquisa + registo)", "optionB": "2-4h (configuração + supervisão)", "wct": "0h — gerimos tudo por si" },
-        "1": { "feature": "Custo mensal", "optionA": "Gratuito (mas custo em tempo)", "optionB": "50-300€/mês conforme a ferramenta", "wct": "99€/mês tudo incluído" },
-        "2": { "feature": "Volume de potenciais clientes", "optionA": "20-50 / semana", "optionB": "100-500 / semana", "wct": "Adaptado à sua capacidade de tratamento" },
-        "3": { "feature": "Qualidade da segmentação", "optionA": "Variável (intuição)", "optionB": "Boa (filtros avançados)", "wct": "IA + filtros setor/zona/dimensão" },
-        "4": { "feature": "Enriquecimento de email", "optionA": "Manual (pesquisa Google)", "optionB": "Automático (bases de dados)", "wct": "Automático + scoring de confiança" },
-        "5": { "feature": "Integração CRM", "optionA": "Copiar-colar Excel", "optionB": "Exportação CSV ou API", "wct": "Integração direta automática" },
-        "6": { "feature": "Scoring de leads", "optionA": "Não", "optionB": "Básico", "wct": "Scoring IA (1-10) com critérios personalizados" },
-        "7": { "feature": "Acompanhamento / follow-ups", "optionA": "Memória + post-it", "optionB": "Sequências de email automáticas", "wct": "Pipeline completo + follow-ups automáticos" }
-      },
-      "prosA": ["Gratuito", "Controlo total sobre a seleção", "Contacto humano direto", "Sem curva de aprendizagem"],
-      "consA": ["Muito moroso", "Volume limitado", "Dados não estruturados", "Esquecimentos e follow-ups falhados"],
-      "prosB": ["Volume elevado", "Enriquecimento automático", "Sequências de follow-up", "Dados estruturados"],
-      "consB": ["Custo que sobe rapidamente", "Curva de aprendizagem", "Qualidade variável dos dados", "Várias ferramentas para gerir"],
-      "prosWCT": ["Nenhuma ferramenta a aprender", "Segmentação IA personalizada (setor, zona, dimensão)", "Scoring e enriquecimento incluídos", "Integração CRM direta", "Suporte humano dedicado"],
-      "verdict": "A prospeção manual é adequada se tiver tempo e pouco volume. As ferramentas SaaS (Apollo, Lemlist, Waalaxy) são adequadas se estiver à vontade com a tecnologia e disposto a gerir 2-3 ferramentas. WCT Systems é a opção para as PMEs que querem um pipeline organizado, sem gerir a parte técnica, com scoring IA e integração CRM direta.",
-      "faq": {
-        "0": { "q": "Quantos potenciais clientes se podem tratar por mês com IA?", "a": "Depende da sua capacidade de acompanhamento. Adaptamos o volume ao que pode realmente tratar — mais vale 50 potenciais clientes bem acompanhados do que 500 ignorados." },
-        "1": { "q": "A IA substitui o comercial?", "a": "Não. A IA automatiza a segmentação, o enriquecimento e o scoring. O contacto humano continua essencial para converter. A IA faz-lhe ganhar tempo nas tarefas de baixo valor." },
-        "2": { "q": "Os dados são conformes com o RGPD?", "a": "Sim. Utilizamos fontes públicas (diretórios, registos) e respeitamos as obrigações RGPD para a prospeção B2B." }
+        "0": {
+          "q": "Zapier ou n8n para uma PME sem programador?",
+          "a": "Zapier será mais acessível, mas ambos exigem tempo de configuração e manutenção. A abordagem WCT elimina esta carga: configuramos, mantemos, você utiliza."
+        },
+        "1": {
+          "q": "É possível migrar de Zapier para n8n (ou o inverso)?",
+          "a": "Sim, mas é um trabalho de reconstrução. Os workflows não são diretamente transferíveis. Com a WCT, adaptamo-nos às suas ferramentas existentes."
+        },
+        "2": {
+          "q": "Qual é o ROI da automatização dos follow-ups?",
+          "a": "Em média, as PMEs que automatizam os seus follow-ups veem a sua taxa de resposta passar de 10% para 18%, e recuperam ~40h/mês. O ROI depende do seu valor médio de encomenda e da sua taxa de conversão."
+        }
       }
     },
     "wordpress-vs-nextjs-site-pme": {
@@ -116,25 +160,100 @@
       "optionBName": "Next.js",
       "intro": "WordPress alimenta 40% da web. É o reflexo para criar um site. Mas os sites WordPress são frequentemente lentos, vulneráveis a falhas de segurança, e exigem manutenção constante. Next.js é um framework moderno usado pela Nike, TikTok e Notion. Mais rápido, mais seguro, mas mais técnico.",
       "features": {
-        "0": { "feature": "Desempenho (PageSpeed)", "optionA": "40-70/100 (frequentemente)", "optionB": "90-100/100", "wct": "95-100/100 (otimizado por nós)" },
-        "1": { "feature": "SEO", "optionA": "Plugins (Yoast, Rank Math)", "optionB": "Nativo (metadata, sitemap, JSON-LD)", "wct": "SEO clássico + SEO IA (llms.txt, JSON-LD)" },
-        "2": { "feature": "Segurança", "optionA": "Falhas frequentes (plugins)", "optionB": "Muito seguro (sem base exposta)", "wct": "Alojado na Vercel, nenhuma falha de plugin" },
-        "3": { "feature": "Manutenção", "optionA": "Atualizações regulares obrigatórias", "optionB": "Mínima (sem plugins)", "wct": "Incluída na assinatura" },
-        "4": { "feature": "Custo inicial", "optionA": "500-3000€ (tema + setup)", "optionB": "3000-10000€ (desenvolvimento)", "wct": "590€ de setup + 99€/mês" },
-        "5": { "feature": "Editor de conteúdo", "optionA": "Gutenberg / Elementor", "optionB": "Código ou CMS headless", "wct": "Gerimos as modificações por si" },
-        "6": { "feature": "Tempo de entrega", "optionA": "1-4 semanas", "optionB": "2-8 semanas", "wct": "7-14 dias (templates otimizados)" },
-        "7": { "feature": "Alojamento", "optionA": "Hosting clássico (OVH, etc.)", "optionB": "Vercel, Netlify (edge)", "wct": "Vercel premium incluído" }
+        "0": {
+          "feature": "Desempenho (PageSpeed)",
+          "optionA": "40-70/100 (frequentemente)",
+          "optionB": "90-100/100",
+          "wct": "95-100/100 (otimizado por nós)"
+        },
+        "1": {
+          "feature": "SEO",
+          "optionA": "Plugins (Yoast, Rank Math)",
+          "optionB": "Nativo (metadata, sitemap, JSON-LD)",
+          "wct": "SEO clássico + SEO IA (llms.txt, JSON-LD)"
+        },
+        "2": {
+          "feature": "Segurança",
+          "optionA": "Falhas frequentes (plugins)",
+          "optionB": "Muito seguro (sem base exposta)",
+          "wct": "Alojado na Vercel, nenhuma falha de plugin"
+        },
+        "3": {
+          "feature": "Manutenção",
+          "optionA": "Atualizações regulares obrigatórias",
+          "optionB": "Mínima (sem plugins)",
+          "wct": "Incluída na assinatura"
+        },
+        "4": {
+          "feature": "Custo inicial",
+          "optionA": "500-3000€ (tema + setup)",
+          "optionB": "3000-10000€ (desenvolvimento)",
+          "wct": "590€ de setup + 99€/mês"
+        },
+        "5": {
+          "feature": "Editor de conteúdo",
+          "optionA": "Gutenberg / Elementor",
+          "optionB": "Código ou CMS headless",
+          "wct": "Gerimos as modificações por si"
+        },
+        "6": {
+          "feature": "Tempo de entrega",
+          "optionA": "1-4 semanas",
+          "optionB": "2-8 semanas",
+          "wct": "7-14 dias (templates otimizados)"
+        },
+        "7": {
+          "feature": "Alojamento",
+          "optionA": "Hosting clássico (OVH, etc.)",
+          "optionB": "Vercel, Netlify (edge)",
+          "wct": "Vercel premium incluído"
+        }
       },
-      "prosA": ["Ecossistema imenso", "Fácil de modificar por si", "Custo inicial baixo", "Milhares de temas"],
-      "consA": ["Lento sem otimização", "Falhas de segurança frequentes", "Manutenção constante (updates plugins)", "SEO IA = inexistente"],
-      "prosB": ["Ultra rápido (SSG/SSR)", "Muito seguro", "SEO ótimo nativo", "Escalável"],
-      "consB": ["Necessita de um programador", "Custo inicial mais elevado", "Modificações = código", "Sem WYSIWYG simples"],
-      "prosWCT": ["Desempenho Next.js sem a complexidade técnica", "SEO clássico + SEO IA incluídos", "Templates profissionais personalizáveis", "Entrega em 7-14 dias", "Manutenção e alojamento incluídos"],
+      "prosA": [
+        "Ecossistema imenso",
+        "Fácil de modificar por si",
+        "Custo inicial baixo",
+        "Milhares de temas"
+      ],
+      "consA": [
+        "Lento sem otimização",
+        "Falhas de segurança frequentes",
+        "Manutenção constante (updates plugins)",
+        "SEO IA = inexistente"
+      ],
+      "prosB": [
+        "Ultra rápido (SSG/SSR)",
+        "Muito seguro",
+        "SEO ótimo nativo",
+        "Escalável"
+      ],
+      "consB": [
+        "Necessita de um programador",
+        "Custo inicial mais elevado",
+        "Modificações = código",
+        "Sem WYSIWYG simples"
+      ],
+      "prosWCT": [
+        "Desempenho Next.js sem a complexidade técnica",
+        "SEO clássico + SEO IA incluídos",
+        "Templates profissionais personalizáveis",
+        "Entrega em 7-14 dias",
+        "Manutenção e alojamento incluídos"
+      ],
       "verdict": "WordPress continua adequado se quiser modificar o seu site por si e aceitar a manutenção. Next.js é superior em desempenho e SEO mas exige um programador. WCT Systems dá-lhe o melhor do Next.js (velocidade, SEO, segurança) sem a complexidade: entregamos um site rápido em 14 dias, com manutenção incluída.",
       "faq": {
-        "0": { "q": "Posso modificar o site eu próprio com a WCT?", "a": "As modificações são geridas pela nossa equipa no âmbito da assinatura. Diz-nos o que quer alterar, nós fazemos." },
-        "1": { "q": "WordPress é mau para o SEO?", "a": "Não, WordPress pode ter um bom SEO. Mas necessita de plugins, otimização técnica e uma manutenção que muitas PMEs negligenciam. Com Next.js, o SEO é nativo e eficaz por defeito." },
-        "2": { "q": "Quanto tempo para migrar de WordPress para Next.js?", "a": "Em geral 7-14 dias. Recuperamos o seu conteúdo e estruturamo-lo num site Next.js otimizado." }
+        "0": {
+          "q": "Posso modificar o site eu próprio com a WCT?",
+          "a": "As modificações são geridas pela nossa equipa no âmbito da assinatura. Diz-nos o que quer alterar, nós fazemos."
+        },
+        "1": {
+          "q": "WordPress é mau para o SEO?",
+          "a": "Não, WordPress pode ter um bom SEO. Mas necessita de plugins, otimização técnica e uma manutenção que muitas PMEs negligenciam. Com Next.js, o SEO é nativo e eficaz por defeito."
+        },
+        "2": {
+          "q": "Quanto tempo para migrar de WordPress para Next.js?",
+          "a": "Em geral 7-14 dias. Recuperamos o seu conteúdo e estruturamo-lo num site Next.js otimizado."
+        }
       }
     },
     "chatbot-ia-vs-faq-statique": {
@@ -147,25 +266,100 @@
       "optionBName": "Chatbot IA",
       "intro": "Uma página FAQ responde às perguntas frequentes. Um chatbot IA responde a qualquer pergunta, 24h/24, baseando-se nos seus dados. Mas um chatbot mal configurado pode frustrar mais do que ajudar. Veja como escolher.",
       "features": {
-        "0": { "feature": "Custo", "optionA": "Gratuito (página HTML)", "optionB": "20-500€/mês conforme a solução", "wct": "Incluído na Integração IA (199€/mês)" },
-        "1": { "feature": "Perguntas cobertas", "optionA": "Apenas as perguntas previstas", "optionB": "Qualquer pergunta formulada livremente", "wct": "Perguntas livres + dados internos (RAG)" },
-        "2": { "feature": "Atualização", "optionA": "Manual (editar a página)", "optionB": "Automática se ligado aos dados", "wct": "Automática (RAG nos seus docs)" },
-        "3": { "feature": "Disponibilidade", "optionA": "24/7 (página estática)", "optionB": "24/7 (robot)", "wct": "24/7 + escalamento humano se necessário" },
-        "4": { "feature": "Personalização", "optionA": "Nenhuma", "optionB": "Respostas adaptadas ao contexto", "wct": "Respostas baseadas nos seus dados profissionais" },
-        "5": { "feature": "SEO", "optionA": "Bom (indexável pelo Google)", "optionB": "Nulo (conteúdo dinâmico não indexado)", "wct": "FAQ indexada + chatbot complementar" },
-        "6": { "feature": "Qualificação de leads", "optionA": "Não", "optionB": "Possível (recolha email/necessidade)", "wct": "Integrado (scoring + CRM)" },
-        "7": { "feature": "Confiança do utilizador", "optionA": "Alta (respostas verificadas)", "optionB": "Variável (alucinações possíveis)", "wct": "RAG = respostas baseadas nos seus dados" }
+        "0": {
+          "feature": "Custo",
+          "optionA": "Gratuito (página HTML)",
+          "optionB": "20-500€/mês conforme a solução",
+          "wct": "Incluído na Integração IA (199€/mês)"
+        },
+        "1": {
+          "feature": "Perguntas cobertas",
+          "optionA": "Apenas as perguntas previstas",
+          "optionB": "Qualquer pergunta formulada livremente",
+          "wct": "Perguntas livres + dados internos (RAG)"
+        },
+        "2": {
+          "feature": "Atualização",
+          "optionA": "Manual (editar a página)",
+          "optionB": "Automática se ligado aos dados",
+          "wct": "Automática (RAG nos seus docs)"
+        },
+        "3": {
+          "feature": "Disponibilidade",
+          "optionA": "24/7 (página estática)",
+          "optionB": "24/7 (robot)",
+          "wct": "24/7 + escalamento humano se necessário"
+        },
+        "4": {
+          "feature": "Personalização",
+          "optionA": "Nenhuma",
+          "optionB": "Respostas adaptadas ao contexto",
+          "wct": "Respostas baseadas nos seus dados profissionais"
+        },
+        "5": {
+          "feature": "SEO",
+          "optionA": "Bom (indexável pelo Google)",
+          "optionB": "Nulo (conteúdo dinâmico não indexado)",
+          "wct": "FAQ indexada + chatbot complementar"
+        },
+        "6": {
+          "feature": "Qualificação de leads",
+          "optionA": "Não",
+          "optionB": "Possível (recolha email/necessidade)",
+          "wct": "Integrado (scoring + CRM)"
+        },
+        "7": {
+          "feature": "Confiança do utilizador",
+          "optionA": "Alta (respostas verificadas)",
+          "optionB": "Variável (alucinações possíveis)",
+          "wct": "RAG = respostas baseadas nos seus dados"
+        }
       },
-      "prosA": ["Gratuito", "Indexável pelo Google (bom para SEO)", "Respostas verificadas", "Sem manutenção técnica"],
-      "consA": ["Rígido (apenas as perguntas previstas)", "Sem personalização", "Sem qualificação de leads", "Atualização manual"],
-      "prosB": ["Responde a todo o tipo de perguntas", "24/7, sem intervenção humana", "Pode qualificar leads", "Experiência de utilizador moderna"],
-      "consB": ["Custo mensal", "Alucinações possíveis", "Configuração necessária", "Não indexável pelo Google"],
-      "prosWCT": ["Chatbot RAG baseado nos seus dados (sem alucinações)", "FAQ indexada + chatbot complementar", "Qualificação de leads integrada", "Ligação ao seu CRM e ferramentas existentes", "Formação da equipa incluída"],
+      "prosA": [
+        "Gratuito",
+        "Indexável pelo Google (bom para SEO)",
+        "Respostas verificadas",
+        "Sem manutenção técnica"
+      ],
+      "consA": [
+        "Rígido (apenas as perguntas previstas)",
+        "Sem personalização",
+        "Sem qualificação de leads",
+        "Atualização manual"
+      ],
+      "prosB": [
+        "Responde a todo o tipo de perguntas",
+        "24/7, sem intervenção humana",
+        "Pode qualificar leads",
+        "Experiência de utilizador moderna"
+      ],
+      "consB": [
+        "Custo mensal",
+        "Alucinações possíveis",
+        "Configuração necessária",
+        "Não indexável pelo Google"
+      ],
+      "prosWCT": [
+        "Chatbot RAG baseado nos seus dados (sem alucinações)",
+        "FAQ indexada + chatbot complementar",
+        "Qualificação de leads integrada",
+        "Ligação ao seu CRM e ferramentas existentes",
+        "Formação da equipa incluída"
+      ],
       "verdict": "A FAQ estática é suficiente para um site com pouco tráfego e perguntas previsíveis. O chatbot IA torna-se rentável quando tem volume ou perguntas complexas. O ideal é combinar os dois: FAQ para o SEO, chatbot para a experiência. É exatamente o que a WCT Systems propõe com a Integração IA.",
       "faq": {
-        "0": { "q": "Um chatbot IA pode dar respostas erradas?", "a": "Sim, é o risco dos modelos generativos (alucinações). O RAG (Retrieval Augmented Generation) reduz este risco forçando o chatbot a responder apenas a partir dos seus dados verificados." },
-        "1": { "q": "São precisos muitos dados para um chatbot RAG?", "a": "Não. Uma dezena de páginas (FAQ, fichas de produtos, condições) são suficientes para começar. Enriquecemos ao longo do tempo." },
-        "2": { "q": "O chatbot pode marcar reuniões?", "a": "Sim. Podemos ligá-lo à sua agenda (Google Calendar, Calendly) para qualificar e planear reuniões automaticamente." }
+        "0": {
+          "q": "Um chatbot IA pode dar respostas erradas?",
+          "a": "Sim, é o risco dos modelos generativos (alucinações). O RAG (Retrieval Augmented Generation) reduz este risco forçando o chatbot a responder apenas a partir dos seus dados verificados."
+        },
+        "1": {
+          "q": "São precisos muitos dados para um chatbot RAG?",
+          "a": "Não. Uma dezena de páginas (FAQ, fichas de produtos, condições) são suficientes para começar. Enriquecemos ao longo do tempo."
+        },
+        "2": {
+          "q": "O chatbot pode marcar reuniões?",
+          "a": "Sim. Podemos ligá-lo à sua agenda (Google Calendar, Calendly) para qualificar e planear reuniões automaticamente."
+        }
       }
     },
     "make-vs-n8n": {
@@ -178,25 +372,100 @@
       "optionBName": "n8n",
       "intro": "Make (anteriormente Integromat) e n8n são duas alternativas sérias ao Zapier. Make é visual e intuitivo, n8n é open-source e flexível. Os dois têm os seus pontos fortes — mas a verdadeira questão para uma PME é: tem tempo para configurar e manter os seus workflows?",
       "features": {
-        "0": { "feature": "Preço", "optionA": "A partir de 9€/mês", "optionB": "Gratuito (self-hosted) ou 20€/mês", "wct": "149€/mês (tudo incluído, gerimos tudo)" },
-        "1": { "feature": "Interface", "optionA": "Visual, intuitiva", "optionB": "Técnica, poderosa", "wct": "Sem interface a aprender" },
-        "2": { "feature": "Integrações", "optionA": "1500+", "optionB": "400+ nodes", "wct": "200+ (seleção PME)" },
-        "3": { "feature": "Complexidade de workflows", "optionA": "Boa para workflows médios", "optionB": "Excelente para workflows complexos", "wct": "Adaptada às suas necessidades exatas" },
-        "4": { "feature": "Auto-alojamento", "optionA": "Não (cloud only)", "optionB": "Sim", "wct": "Gerido pela WCT" },
-        "5": { "feature": "Suporte", "optionA": "Email + comunidade", "optionB": "Comunidade", "wct": "Suporte dedicado contínuo" },
-        "6": { "feature": "Tempo de implementação", "optionA": "Algumas horas a dias", "optionB": "Dias a semanas", "wct": "7-14 dias, chave-na-mão" },
-        "7": { "feature": "Dashboard KPI", "optionA": "Não", "optionB": "Não", "wct": "Incluído" }
+        "0": {
+          "feature": "Preço",
+          "optionA": "A partir de 9€/mês",
+          "optionB": "Gratuito (self-hosted) ou 20€/mês",
+          "wct": "149€/mês (tudo incluído, gerimos tudo)"
+        },
+        "1": {
+          "feature": "Interface",
+          "optionA": "Visual, intuitiva",
+          "optionB": "Técnica, poderosa",
+          "wct": "Sem interface a aprender"
+        },
+        "2": {
+          "feature": "Integrações",
+          "optionA": "1500+",
+          "optionB": "400+ nodes",
+          "wct": "200+ (seleção PME)"
+        },
+        "3": {
+          "feature": "Complexidade de workflows",
+          "optionA": "Boa para workflows médios",
+          "optionB": "Excelente para workflows complexos",
+          "wct": "Adaptada às suas necessidades exatas"
+        },
+        "4": {
+          "feature": "Auto-alojamento",
+          "optionA": "Não (cloud only)",
+          "optionB": "Sim",
+          "wct": "Gerido pela WCT"
+        },
+        "5": {
+          "feature": "Suporte",
+          "optionA": "Email + comunidade",
+          "optionB": "Comunidade",
+          "wct": "Suporte dedicado contínuo"
+        },
+        "6": {
+          "feature": "Tempo de implementação",
+          "optionA": "Algumas horas a dias",
+          "optionB": "Dias a semanas",
+          "wct": "7-14 dias, chave-na-mão"
+        },
+        "7": {
+          "feature": "Dashboard KPI",
+          "optionA": "Não",
+          "optionB": "Não",
+          "wct": "Incluído"
+        }
       },
-      "prosA": ["Interface visual elegante", "Boa relação qualidade/preço", "Workflows complexos bem geridos", "1500+ integrações"],
-      "consA": ["Limitado pelo plano (operações/mês)", "Sem auto-alojamento", "Suporte básico", "Sem dashboard profissional"],
-      "prosB": ["Open-source, gratuito self-hosted", "Muito poderoso para workflows complexos", "Dados ficam consigo", "Comunidade ativa"],
-      "consB": ["Curva de aprendizagem íngreme", "Manutenção de servidor (self-hosted)", "Menos integrações que Make", "Interface menos intuitiva"],
-      "prosWCT": ["Utilizamos n8n internamente — tem a potência sem a complexidade", "Workflows configurados e mantidos por si", "Dashboard KPI incluído", "Suporte humano dedicado", "Resultados em 7-14 dias"],
+      "prosA": [
+        "Interface visual elegante",
+        "Boa relação qualidade/preço",
+        "Workflows complexos bem geridos",
+        "1500+ integrações"
+      ],
+      "consA": [
+        "Limitado pelo plano (operações/mês)",
+        "Sem auto-alojamento",
+        "Suporte básico",
+        "Sem dashboard profissional"
+      ],
+      "prosB": [
+        "Open-source, gratuito self-hosted",
+        "Muito poderoso para workflows complexos",
+        "Dados ficam consigo",
+        "Comunidade ativa"
+      ],
+      "consB": [
+        "Curva de aprendizagem íngreme",
+        "Manutenção de servidor (self-hosted)",
+        "Menos integrações que Make",
+        "Interface menos intuitiva"
+      ],
+      "prosWCT": [
+        "Utilizamos n8n internamente — tem a potência sem a complexidade",
+        "Workflows configurados e mantidos por si",
+        "Dashboard KPI incluído",
+        "Suporte humano dedicado",
+        "Resultados em 7-14 dias"
+      ],
       "verdict": "Make é a melhor escolha DIY para uma PME que quer uma ferramenta visual e acessível. n8n é ideal para perfis técnicos que querem manter o controlo total. WCT Systems utiliza n8n internamente e oferece-lhe a sua potência sem a complexidade técnica: configuramos, mantemos, você pilota com um dashboard.",
       "faq": {
-        "0": { "q": "Que ferramenta a WCT utiliza internamente?", "a": "Utilizamos principalmente n8n pela sua potência e flexibilidade. Mas também nos adaptamos a Zapier ou Make se já tiver workflows implementados." },
-        "1": { "q": "É possível ver os workflows configurados?", "a": "Sim. Damos-lhe acesso e formamo-lo se quiser compreender ou modificar as automatizações." },
-        "2": { "q": "O que acontece se um workflow falhar?", "a": "A nossa monitorização deteta os erros automaticamente. Intervimos e corrigimos, frequentemente antes de dar conta." }
+        "0": {
+          "q": "Que ferramenta a WCT utiliza internamente?",
+          "a": "Utilizamos principalmente n8n pela sua potência e flexibilidade. Mas também nos adaptamos a Zapier ou Make se já tiver workflows implementados."
+        },
+        "1": {
+          "q": "É possível ver os workflows configurados?",
+          "a": "Sim. Damos-lhe acesso e formamo-lo se quiser compreender ou modificar as automatizações."
+        },
+        "2": {
+          "q": "O que acontece se um workflow falhar?",
+          "a": "A nossa monitorização deteta os erros automaticamente. Intervimos e corrigimos, frequentemente antes de dar conta."
+        }
       }
     }
   }

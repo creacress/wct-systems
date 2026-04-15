@@ -19,13 +19,6 @@ const MODEL = "claude-sonnet-4-20250514";
 
 const SERVICES = [
   {
-    slug: "prospection-ia",
-    name: "Prospection IA",
-    href: "/services/trouver-prospects",
-    contactParam: "prospection-ia",
-    tags: ["Prospection", "B2B", "Leads"],
-  },
-  {
     slug: "site-web",
     name: "Site Web Moderne",
     href: "/services/site-web-moderne",
@@ -57,7 +50,6 @@ const SERVICES = [
 
 const INTERNAL_PAGES = [
   "/comparatifs/zapier-vs-n8n",
-  "/comparatifs/prospection-manuelle-vs-ia",
   "/comparatifs/wordpress-vs-nextjs-site-pme",
   "/comparatifs/chatbot-ia-vs-faq-statique",
   "/comparatifs/make-vs-n8n",
@@ -131,7 +123,7 @@ function buildSystemPrompt(
   existingTitles: string[]
 ): string {
   return `Tu es un rédacteur SEO expert pour le blog de WCT Systems (webcresson.com).
-WCT Systems est une entreprise française qui propose 6 SaaS pour PME : Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Digital Workplace, Q2C Facturation SaaS.
+WCT Systems est une entreprise française qui propose 5 solutions pour PME : Digital Workplace, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse.
 
 Tu dois écrire un article de blog en français pour le service "${service.name}".
 

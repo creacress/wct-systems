@@ -14,10 +14,6 @@ export const routing = defineRouting({
       fr: "/services/digital-workplace",
       pt: "/servicos/digital-workplace",
     },
-    "/services/trouver-prospects": {
-      fr: "/services/trouver-prospects",
-      pt: "/servicos/prospeccao-ia",
-    },
     "/services/site-web-moderne": {
       fr: "/services/site-web-moderne",
       pt: "/servicos/website-moderno",
@@ -29,10 +25,6 @@ export const routing = defineRouting({
     "/services/integration-ia": {
       fr: "/services/integration-ia",
       pt: "/servicos/integracao-ia",
-    },
-    "/services/q2c-facturation": {
-      fr: "/services/q2c-facturation",
-      pt: "/servicos/q2c-faturacao",
     },
     "/tarifs": {
       fr: "/tarifs",

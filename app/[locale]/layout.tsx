@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | WCT Systems",
   },
   description:
-    "Digital Workplace gamifié + IA + automatisation pour PME. 6 SaaS, un écosystème.",
+    "Digital Workplace gamifié + IA + automatisation pour PME. 5 solutions, un écosystème.",
 };
 
 export default async function LocaleLayout({

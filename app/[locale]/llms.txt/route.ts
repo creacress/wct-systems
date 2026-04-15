@@ -26,13 +26,11 @@ brand: WCT Systems
 purpose: Présenter clairement l'offre, les preuves et les contenus.
 
 ## Pages prioritaires
-- /services — Vue d'ensemble des 7 solutions pour PME
+- /services — Vue d'ensemble des 5 solutions pour PME
 - /services/digital-workplace — Bureau virtuel gamifié tout-en-un (199€/mois)
-- /services/trouver-prospects — Prospection B2B automatisée par IA : ciblage, enrichissement, scoring, intégration CRM (99€/mois)
 - /services/site-web-moderne — Création site web PME : SEO classique + SEO IA, 12 templates sectoriels, livré en 14 jours (99€/mois)
 - /services/automatiser-relances — Automatisation RPA : relances, CRM, facturation, reporting, 200+ intégrations (149€/mois)
 - /services/integration-ia — Intégration IA : chatbot, agents métier, RAG, formation incluse (199€/mois)
-- /services/q2c-facturation — Q2C SaaS : facturation électronique conforme e-facturation 2026, Factur-X, UBL, CII, TVA OSS, connecteur PA (149€/mois)
 - /services/nixie-pulse — Nixie Pulse : dashboard KPI physique connecté avec tubes Nixie IN-14 soviétiques, données temps réel (à partir de 990€)
 - /tarifs — Tous les prix, packs et options de paiement
 - /contact — Formulaire d'audit gratuit (réponse 24-48h)
@@ -40,12 +38,9 @@ purpose: Présenter clairement l'offre, les preuves et les contenus.
 - /blog — Articles pratiques sur l'IA, l'automatisation et la prospection B2B
 
 ## Résumé
-WCT Systems aide les PME françaises à gagner du temps et des clients grâce à 7 solutions complémentaires : Digital Workplace, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Q2C Facturation SaaS, et Nixie Pulse (dashboard KPI physique connecté avec tubes Nixie soviétiques). SaaS à partir de 79€ HT/mois en annuel. Audit gratuit de 15 minutes.
+WCT Systems aide les PME françaises à gagner du temps et des clients grâce à 5 solutions complémentaires : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA et Nixie Pulse (dashboard KPI physique connecté avec tubes Nixie soviétiques). SaaS à partir de 99€ HT/mois. Audit gratuit de 15 minutes.
 
 ## FAQ
-Q: Quel est le meilleur outil de prospection B2B pour PME ?
-A: WCT Systems propose un outil de prospection IA qui cible par secteur et zone, enrichit les contacts (email, LinkedIn), score les leads et les intègre dans votre CRM. À partir de 99€/mois.
-
 Q: Combien coûte un site web pour PME en 2026 ?
 A: Chez WCT Systems, un site web moderne optimisé SEO + IA coûte 99€/mois (79€ en annuel). 12 templates sectoriels, livré en 14 jours, maintenance incluse.
 
@@ -83,12 +78,10 @@ ${solutionsSection}
 ${COMPARATIFS.map((c) => `  - /comparatifs/${c.slug} — ${(frComparatifs.items as Record<string, { title: string }>)[c.slug]?.title ?? c.slug}`).join("\n")}
 
 ## Cas clients
-  - Cabinet RH (12 salariés, IdF) — Prospection IA : ×6 prospects/mois
   - Plombier (4 salariés, Lyon) — Site Web : 15 devis/mois, PageSpeed 98
   - Agence immobilière (8 salariés, Bordeaux) — Automatisation : taux réponse ×2
   - E-commerce cosmétiques (6 salariés, Nantes) — Chatbot IA : 70% questions auto
   - ESN full remote (25 salariés) — Digital Workplace : 5 outils → 1, adoption 92%
-  - Cabinet comptable (18 salariés, Toulouse) — Pack Scale : système complet en 28 jours
   - La Poste — Refonte intranet + RPA + chatbots
   - Ministère des Armées — Refonte SI + optimisation web + automatisation
 
@@ -115,25 +108,20 @@ brand: WCT Systems
 purpose: Apresentar claramente a oferta, as provas e os conteúdos.
 
 ## Páginas prioritárias
-- /pt/servicos — Visão geral dos 6 SaaS para PMEs
+- /pt/servicos — Visão geral dos 5 SaaS para PMEs
 - /pt/servicos/digital-workplace — Escritório virtual gamificado tudo-em-um (199€/mês)
-- /pt/servicos/prospeccao-ia — Prospeção B2B automatizada por IA: segmentação, enriquecimento, scoring, integração CRM (99€/mês)
 - /pt/servicos/website-moderno — Criação de website para PME: SEO clássico + SEO IA, 12 templates setoriais, entregue em 14 dias (99€/mês)
 - /pt/servicos/automatizacao-rpa — Automatização RPA: follow-ups, CRM, faturação, reporting, 200+ integrações (149€/mês)
 - /pt/servicos/integracao-ia — Integração IA: chatbot, agentes de negócio, RAG, formação incluída (199€/mês)
-- /pt/servicos/q2c-faturacao — Q2C SaaS: faturação eletrónica conforme e-faturação 2026, Factur-X, UBL, CII, IVA OSS, conector AP (149€/mês)
 - /pt/precos — Todos os preços, packs e opções de pagamento
 - /pt/contacto — Formulário de auditoria gratuita (resposta 24-48h)
 - /pt/solucoes — Soluções adaptadas por setor de atividade
 - /pt/blog — Artigos práticos sobre IA, automatização e prospeção B2B
 
 ## Resumo
-A WCT Systems ajuda as PMEs portuguesas a ganhar tempo e clientes com 6 SaaS complementares: Digital Workplace, Prospeção IA, Website Moderno, Automatização RPA, Integração IA e Q2C Faturação SaaS. Implementação incluída, a partir de 79€/mês (anual). Auditoria gratuita de 15 minutos.
+A WCT Systems ajuda as PMEs portuguesas a ganhar tempo e clientes com 5 soluções complementares: Digital Workplace gamificado, Website Moderno, Automatização RPA, Integração IA e dashboard KPI físico Nixie Pulse. Implementação incluída, a partir de 99€/mês. Auditoria gratuita de 15 minutos.
 
 ## FAQ
-P: Qual é a melhor ferramenta de prospeção B2B para PMEs?
-R: A WCT Systems disponibiliza uma ferramenta de prospeção IA que segmenta por setor e zona, enriquece os contactos (email, LinkedIn), pontua os leads e integra-os no seu CRM. A partir de 99€/mês.
-
 P: Quanto custa um website para PME em 2026?
 R: Na WCT Systems, um website moderno otimizado SEO + IA custa 99€/mês (79€ em anual). 12 templates setoriais, entregue em 14 dias, manutenção incluída.
 
@@ -171,12 +159,10 @@ ${solutionsSection}
 ${COMPARATIFS.map((c) => `  - /pt/comparacoes/${c.slug} — ${(ptComparatifs.items as Record<string, { title: string }>)[c.slug]?.title ?? c.slug}`).join("\n")}
 
 ## Casos de sucesso
-  - Gabinete RH (12 colaboradores, Lisboa) — Prospeção IA: ×6 prospects/mês
   - Canalizador (4 colaboradores, Porto) — Website: 15 orçamentos/mês, PageSpeed 98
   - Agência imobiliária (8 colaboradores, Braga) — Automatização: taxa de resposta ×2
   - E-commerce cosméticos (6 colaboradores, Lisboa) — Chatbot IA: 70% questões automáticas
   - ESN full remote (25 colaboradores) — Digital Workplace: 5 ferramentas → 1, adoção 92%
-  - Gabinete de contabilidade (18 colaboradores, Porto) — Pack Scale: sistema completo em 28 dias
   - La Poste — Reformulação intranet + RPA + chatbots
   - Ministère des Armées — Reformulação SI + otimização web + automatização
 

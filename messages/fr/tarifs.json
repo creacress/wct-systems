@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Tarifs IA & Automatisation PME — À partir de 79€/mois | WCT Systems",
-    "description": "6 SaaS pour PME : Digital Workplace, prospection IA, site web moderne, automatisation RPA, intégration IA, Q2C facturation SaaS. Mise en place incluse. -20% en annuel. Paiement en 3x.",
+    "description": "5 solutions pour PME : Digital Workplace, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse. Mise en place incluse. -20% en annuel. Paiement en 3x.",
     "keywords": "tarifs automatisation PME, prix SaaS PME, abonnement IA entreprise"
   },
   "breadcrumb": {
@@ -10,80 +10,125 @@
   },
   "jsonLd": {
     "saas": {
-      "0": { "name": "Digital Workplace", "description": "Bureau virtuel gamifie tout-en-un pour PME." },
-      "1": { "name": "Prospection IA", "description": "Ciblage, enrichissement, integration CRM par IA." },
-      "2": { "name": "Site Web Moderne", "description": "Site rapide, SEO + SEO IA, conversion, mobile-first." },
-      "3": { "name": "Automatisation (RPA)", "description": "Workflows sur mesure : relances, CRM, reporting." },
-      "4": { "name": "Integration IA", "description": "Chatbot, agents, assistants IA sur mesure." },
-      "5": { "name": "Q2C — Facturation SaaS", "description": "Facturation électronique conforme e-facturation 2026 pour SaaS B2B." }
+      "0": {
+        "name": "Digital Workplace",
+        "description": "Bureau virtuel gamifie tout-en-un pour PME."
+      },
+      "1": {
+        "name": "Site Web Moderne",
+        "description": "Site rapide, SEO + SEO IA, conversion, mobile-first."
+      },
+      "2": {
+        "name": "Automatisation (RPA)",
+        "description": "Workflows sur mesure : relances, CRM, reporting."
+      },
+      "3": {
+        "name": "Integration IA",
+        "description": "Chatbot, agents, assistants IA sur mesure."
+      },
+      "4": {
+        "name": "Nixie Pulse",
+        "description": "Facturation électronique conforme e-facturation 2026 pour SaaS B2B."
+      }
     },
     "packs": {
-      "0": { "name": "Pack Starter", "description": "2 SaaS au choix parmi les 6" },
-      "1": { "name": "Pack Business", "description": "3 SaaS au choix parmi les 6" },
-      "2": { "name": "Pack Scale", "description": "6 SaaS inclus" }
+      "0": {
+        "name": "Pack Starter",
+        "description": "2 solutions au choix parmi les 5"
+      },
+      "1": {
+        "name": "Pack Business",
+        "description": "3 solutions au choix parmi les 5"
+      },
+      "2": {
+        "name": "Pack Scale",
+        "description": "5 solutions incluses"
+      }
     },
     "faq": {
-      "0": { "q": "C'est quoi un SaaS ?", "a": "Un SaaS est un logiciel accessible en ligne, sans installation. Vous payez un abonnement mensuel ou annuel." },
-      "1": { "q": "Je peux prendre un seul service sans pack ?", "a": "Oui. Chaque SaaS est disponible individuellement. Les packs permettent d'economiser 10 a 25 %." },
-      "2": { "q": "Je peux tester avant de m'engager ?", "a": "On propose un audit gratuit de 15 a 30 minutes pour comprendre votre situation." },
-      "3": { "q": "Les prix vont-ils augmenter ?", "a": "Vos prix sont garantis 12 mois apres souscription." },
-      "4": { "q": "Qu'est-ce qui est inclus dans la mise en place ?", "a": "Configuration, import de donnees, formation equipe (1h), accompagnement 30 jours." },
-      "5": { "q": "Il y a des frais de mise en place ?", "a": "Non. La mise en place est incluse dans tous les tarifs." },
-      "6": { "q": "Le paiement en 3x, comment ca marche ?", "a": "Pour tout engagement annuel ou setup, reglez en 3 fois sans frais." },
-      "7": { "q": "Y a-t-il un engagement de duree ?", "a": "Pas d'engagement en mensuel. L'engagement annuel est de 12 mois avec -20%." },
-      "8": { "q": "Je peux changer de formule en cours de route ?", "a": "Oui, a tout moment." },
-      "9": { "q": "Et si mes besoins ne correspondent a rien ici ?", "a": "On fait un audit gratuit de 15 a 30 minutes." },
-      "10": { "q": "Le Digital Workplace remplace mes outils actuels ?", "a": "Pas forcement. Il les centralise dans un bureau virtuel unifie. Vos outils existants s'integrent directement." }
+      "0": {
+        "q": "C'est quoi un SaaS ?",
+        "a": "Un SaaS est un logiciel accessible en ligne, sans installation. Vous payez un abonnement mensuel ou annuel."
+      },
+      "1": {
+        "q": "Je peux prendre un seul service sans pack ?",
+        "a": "Oui. Chaque SaaS est disponible individuellement. Les packs permettent d'economiser 10 a 25 %."
+      },
+      "2": {
+        "q": "Je peux tester avant de m'engager ?",
+        "a": "On propose un audit gratuit de 15 a 30 minutes pour comprendre votre situation."
+      },
+      "3": {
+        "q": "Les prix vont-ils augmenter ?",
+        "a": "Vos prix sont garantis 12 mois apres souscription."
+      },
+      "4": {
+        "q": "Qu'est-ce qui est inclus dans la mise en place ?",
+        "a": "Configuration, import de donnees, formation equipe (1h), accompagnement 30 jours."
+      },
+      "5": {
+        "q": "Il y a des frais de mise en place ?",
+        "a": "Non. La mise en place est incluse dans tous les tarifs."
+      },
+      "6": {
+        "q": "Le paiement en 3x, comment ca marche ?",
+        "a": "Pour tout engagement annuel ou setup, reglez en 3 fois sans frais."
+      },
+      "7": {
+        "q": "Y a-t-il un engagement de duree ?",
+        "a": "Pas d'engagement en mensuel. L'engagement annuel est de 12 mois avec -20%."
+      },
+      "8": {
+        "q": "Je peux changer de formule en cours de route ?",
+        "a": "Oui, a tout moment."
+      },
+      "9": {
+        "q": "Et si mes besoins ne correspondent a rien ici ?",
+        "a": "On fait un audit gratuit de 15 a 30 minutes."
+      },
+      "10": {
+        "q": "Le Digital Workplace remplace mes outils actuels ?",
+        "a": "Pas forcement. Il les centralise dans un bureau virtuel unifie. Vos outils existants s'integrent directement."
+      }
     }
   },
   "hero": {
-    "badge": "Tarifs transparents \u00b7 Mise en place incluse",
+    "badge": "Tarifs transparents · Mise en place incluse",
     "title": "Choisissez votre plan.",
-    "titleHighlight": "\u00c9voluez \u00e0 votre rythme.",
-    "subtitle": "6 SaaS con\u00e7us pour les PME fran\u00e7aises. Mise en place incluse.",
+    "titleHighlight": "Évoluez à votre rythme.",
+    "subtitle": "5 solutions conçues pour les PME françaises. Mise en place incluse.",
     "subtitleLine2": "Sans engagement mensuel, -20% en annuel.",
     "statSaas": "SaaS",
-    "statSaasLabel": "\u00e0 la carte ou en pack",
+    "statSaasLabel": "à la carte ou en pack",
     "statDiscount": "en engagement annuel",
     "statSetup": "frais de mise en place",
     "toggleMonthly": "Mensuel",
     "toggleYearly": "Annuel"
   },
   "saas": {
-    "sectionLabel": "Nos 6 SaaS",
+    "sectionLabel": "Nos 5 solutions",
     "items": {
       "digital-workplace": {
         "name": "Digital Workplace",
         "badge": "Nouveau",
-        "description": "Bureau virtuel gamifi\u00e9 tout-en-un pour votre \u00e9quipe.",
+        "description": "Bureau virtuel gamifié tout-en-un pour votre équipe.",
         "features": {
-          "0": "Bureau virtuel avec pi\u00e8ces th\u00e9matiques (RH, Ventes, Support\u2026)",
-          "1": "Gamification int\u00e9gr\u00e9e (XP, badges, classements)",
-          "2": "Messagerie temps r\u00e9el + visio int\u00e9gr\u00e9e",
-          "3": "Dashboard KPI par \u00e9quipe",
-          "4": "Int\u00e9gration outils existants (Notion, Slack, Google\u2026)"
-        }
-      },
-      "prospection-ia": {
-        "name": "Prospection IA",
-        "description": "Trouvez vos futurs clients gr\u00e2ce \u00e0 l\u2019IA. Ciblage, enrichissement, int\u00e9gration CRM.",
-        "features": {
-          "0": "Ciblage IA par secteur, zone g\u00e9o et taille d\u2019entreprise",
-          "1": "Enrichissement automatique (email, LinkedIn, t\u00e9l\u00e9phone)",
-          "2": "Scoring des leads par IA (score 1-10)",
-          "3": "Int\u00e9gration CRM / tableur automatique",
-          "4": "Base mise \u00e0 jour en continu"
+          "0": "Bureau virtuel avec pièces thématiques (RH, Ventes, Support…)",
+          "1": "Gamification intégrée (XP, badges, classements)",
+          "2": "Messagerie temps réel + visio intégrée",
+          "3": "Dashboard KPI par équipe",
+          "4": "Intégration outils existants (Notion, Slack, Google…)"
         }
       },
       "site-web": {
         "name": "Site Web Moderne",
-        "description": "Un site rapide, SEO + SEO IA, pens\u00e9 pour convertir. Livr\u00e9 en 14 jours.",
+        "description": "Un site rapide, SEO + SEO IA, pensé pour convertir. Livré en 14 jours.",
         "features": {
-          "0": "5 \u00e0 10 pages optimis\u00e9es conversion",
+          "0": "5 à 10 pages optimisées conversion",
           "1": "SEO classique + SEO IA (JSON-LD, llms.txt)",
           "2": "Mobile-first, performances A+",
-          "3": "Maintenance & \u00e9volutions incluses",
-          "4": "H\u00e9bergement premium inclus"
+          "3": "Maintenance & évolutions incluses",
+          "4": "Hébergement premium inclus"
         }
       },
       "automatisation": {
@@ -91,99 +136,87 @@
         "description": "Automatisez vos process : relances, CRM, reporting, sans coder.",
         "features": {
           "0": "Workflows sur mesure (relances, CRM, facturation)",
-          "1": "Int\u00e9gration 200+ outils (Gmail, Notion, HubSpot\u2026)",
-          "2": "Dashboard KPI en temps r\u00e9el",
+          "1": "Intégration 200+ outils (Gmail, Notion, HubSpot…)",
+          "2": "Dashboard KPI en temps réel",
           "3": "Alertes et notifications automatiques",
           "4": "Support & maintenance inclus"
         }
       },
       "integration-ia": {
-        "name": "Int\u00e9gration IA",
+        "name": "Intégration IA",
         "badge": "Populaire",
-        "description": "Int\u00e9grez l\u2019IA dans votre quotidien : chatbot, agents, assistants sur mesure.",
+        "description": "Intégrez l’IA dans votre quotidien : chatbot, agents, assistants sur mesure.",
         "features": {
           "0": "Chatbot IA pour votre site / WhatsApp",
-          "1": "Agents IA m\u00e9tier (vente, support, RH)",
-          "2": "Connexion \u00e0 vos outils existants",
-          "3": "R\u00e9ponses bas\u00e9es sur vos donn\u00e9es (RAG)",
-          "4": "Formation \u00e9quipe incluse (1h/mois)"
-        }
-      },
-      "q2c-facturation": {
-        "name": "Q2C \u2014 Facturation SaaS",
-        "badge": "Nouveau",
-        "description": "Facturation \u00e9lectronique conforme 2026 pour SaaS B2B. Du devis au paiement, Factur-X natif.",
-        "features": {
-          "0": "Factur-X EXTENDED + UBL + CII",
-          "1": "Cycle complet devis \u2192 contrat \u2192 facture \u2192 paiement",
-          "2": "TVA EU/OSS 30 pays + validation VIES",
-          "3": "Connecteur universel Plateforme Agr\u00e9\u00e9e",
-          "4": "Dashboard MRR/ARR/Churn + Revenue Recognition"
+          "1": "Agents IA métier (vente, support, RH)",
+          "2": "Connexion à vos outils existants",
+          "3": "Réponses basées sur vos données (RAG)",
+          "4": "Formation équipe incluse (1h/mois)"
         }
       }
     },
     "priceUnit": "HT / mois",
-    "billedYearly": "Factur\u00e9 {total}\u00a0\u20ac/an",
-    "setupUnique": "Setup unique : {price}\u00a0\u20ac HT",
+    "billedYearly": "Facturé {total} €/an",
+    "setupUnique": "Setup unique : {price} € HT",
     "setupIncluded": "Mise en place incluse",
-    "ctaStart": "D\u00e9marrer",
+    "ctaStart": "Démarrer",
     "ctaLearnMore": "En savoir plus"
   },
-  "separator": "\u00c9conomisez avec les packs",
+  "separator": "Économisez avec les packs",
   "packs": {
-    "sectionLabel": "Packs combin\u00e9s",
-    "title": "Packs combin\u00e9s",
-    "subtitle": "Combinez plusieurs SaaS et b\u00e9n\u00e9ficiez de tarifs r\u00e9duits.",
+    "sectionLabel": "Packs combinés",
+    "title": "Packs combinés",
+    "subtitle": "Combinez plusieurs SaaS et bénéficiez de tarifs réduits.",
     "mostChosen": "Le plus choisi",
     "items": {
       "starter": {
         "name": "Starter",
-        "tagline": "Lancer l\u2019acquisition",
+        "tagline": "Lancer l’acquisition",
         "desc": "2 SaaS au choix parmi les 6",
-        "badge": "-10% vs \u00e0 la carte",
+        "badge": "-10% vs à la carte",
         "cta": "Composer mon pack"
       },
       "business": {
         "name": "Business",
         "tagline": "Structurer et piloter",
         "desc": "3 SaaS au choix parmi les 6",
-        "badge": "-15% vs \u00e0 la carte",
+        "badge": "-15% vs à la carte",
         "cta": "Composer mon pack"
       },
       "scale": {
         "name": "Scale",
-        "tagline": "Syst\u00e8me complet",
-        "desc": "Les 6 SaaS inclus",
-        "badge": "-25% vs \u00e0 la carte",
-        "extraBadge": "Account manager d\u00e9di\u00e9",
+        "tagline": "Système complet",
+        "desc": "Les 5 solutions incluses",
+        "badge": "-25% vs à la carte",
+        "extraBadge": "Account manager dédié",
         "cta": "Choisir Scale"
       }
     }
   },
   "comparison": {
-    "title": "Tous les tarifs en un coup d\u2019\u0153il",
-    "subtitle": "Prix HT \u2014 mise en place incluse dans tous les tarifs.",
+    "title": "Tous les tarifs en un coup d’œil",
+    "subtitle": "Prix HT — mise en place incluse dans tous les tarifs.",
     "thService": "Service",
     "thMonthly": "Mensuel",
     "thYearly": "Annuel",
-    "thSaving": "\u00c9conomie",
-    "setup": "+ setup {price}\u00a0\u20ac",
+    "thSaving": "Économie",
+    "setup": "+ setup {price} €",
     "perMonth": "/mois",
-    "packsLabel": "Packs combin\u00e9s",
+    "packsLabel": "Packs combinés",
     "pack": "Pack {name}",
     "popular": "Populaire"
   },
   "payment": {
     "sectionLabel": "Options de paiement",
     "title": "Options de paiement",
-    "subtitle": "Deux options pour adapter le paiement \u00e0 votre tr\u00e9sorerie.",
+    "subtitle": "Deux options pour adapter le paiement à votre trésorerie.",
     "yearly": {
       "title": "Engagement annuel",
       "badge": "-20% sur tous les tarifs",
       "features": {
         "0": "Facturation mensuelle",
         "1": "Engagement 12 mois",
-        "2": "Prix garantis pendant toute la dur\u00e9e"
+        "2": "Prix garantis pendant toute la durée"
       }
     },
     "threeX": {
@@ -191,66 +224,67 @@
       "badge": "Sans frais",
       "intro": "Pour tout engagement annuel ou setup.",
       "steps": {
-        "0": "<strong>1er tiers</strong> \u00e0 la commande",
+        "0": "<strong>1er tiers</strong> à la commande",
         "1": "<strong>2e tiers</strong> au 30e jour",
         "2": "<strong>3e tiers</strong> au 60e jour"
       }
     }
   },
   "faq": {
-    "sectionLabel": "Questions fr\u00e9quentes sur les tarifs",
-    "title": "Questions fr\u00e9quentes",
+    "sectionLabel": "Questions fréquentes sur les tarifs",
+    "title": "Questions fréquentes",
     "items": {
       "0": {
-        "q": "C\u2019est quoi un SaaS ?",
-        "a": "Un SaaS (Software as a Service) est un logiciel accessible en ligne, sans installation. Vous payez un abonnement mensuel ou annuel et on s\u2019occupe de tout : h\u00e9bergement, mises \u00e0 jour, support. Comme Netflix, mais pour votre entreprise."
+        "q": "C’est quoi un SaaS ?",
+        "a": "Un SaaS (Software as a Service) est un logiciel accessible en ligne, sans installation. Vous payez un abonnement mensuel ou annuel et on s’occupe de tout : hébergement, mises à jour, support. Comme Netflix, mais pour votre entreprise."
       },
       "1": {
         "q": "Je peux prendre un seul service sans pack ?",
-        "a": "Oui. Chaque SaaS est disponible individuellement. Les packs permettent d\u2019\u00e9conomiser 10 \u00e0 25 % par rapport aux services s\u00e9par\u00e9s."
+        "a": "Oui. Chaque SaaS est disponible individuellement. Les packs permettent d’économiser 10 à 25 % par rapport aux services séparés."
       },
       "2": {
-        "q": "Je peux tester avant de m\u2019engager ?",
-        "a": "On propose un audit gratuit de 15 \u00e0 30 minutes pour comprendre votre situation, vous montrer une d\u00e9mo, et d\u00e9finir un plan concret. Pas d\u2019engagement avant d\u2019\u00eatre convaincu."
+        "q": "Je peux tester avant de m’engager ?",
+        "a": "On propose un audit gratuit de 15 à 30 minutes pour comprendre votre situation, vous montrer une démo, et définir un plan concret. Pas d’engagement avant d’être convaincu."
       },
       "3": {
         "q": "Les prix vont-ils augmenter ?",
-        "a": "Vos prix sont garantis 12 mois apr\u00e8s souscription. Si nos tarifs \u00e9voluent, votre tarif reste inchang\u00e9 pendant toute la dur\u00e9e de votre engagement."
+        "a": "Vos prix sont garantis 12 mois après souscription. Si nos tarifs évoluent, votre tarif reste inchangé pendant toute la durée de votre engagement."
       },
       "4": {
-        "q": "Qu\u2019est-ce qui est inclus dans la mise en place ?",
-        "a": "Configuration compl\u00e8te de vos outils, import de vos donn\u00e9es existantes, formation de votre \u00e9quipe (1h), et un accompagnement pendant les 30 premiers jours."
+        "q": "Qu’est-ce qui est inclus dans la mise en place ?",
+        "a": "Configuration complète de vos outils, import de vos données existantes, formation de votre équipe (1h), et un accompagnement pendant les 30 premiers jours."
       },
       "5": {
         "q": "Il y a des frais de mise en place ?",
         "a": "Non. La mise en place est incluse dans tous les tarifs (sauf le setup unique pour le Site Web Moderne et le Digital Workplace). On configure tout pour vous."
       },
       "6": {
-        "q": "Le paiement en 3x, comment \u00e7a marche ?",
-        "a": "Pour tout engagement annuel ou setup, vous pouvez r\u00e9gler en 3 fois sans frais. Premier tiers \u00e0 la commande, deuxi\u00e8me au 30e jour, troisi\u00e8me au 60e jour."
+        "q": "Le paiement en 3x, comment ça marche ?",
+        "a": "Pour tout engagement annuel ou setup, vous pouvez régler en 3 fois sans frais. Premier tiers à la commande, deuxième au 30e jour, troisième au 60e jour."
       },
       "7": {
-        "q": "Y a-t-il un engagement de dur\u00e9e ?",
-        "a": "Pas d\u2019engagement en mensuel \u2014 vous pouvez arr\u00eater quand vous voulez. L\u2019engagement annuel est de 12 mois, avec -20% sur le tarif mensuel."
+        "q": "Y a-t-il un engagement de durée ?",
+        "a": "Pas d’engagement en mensuel — vous pouvez arrêter quand vous voulez. L’engagement annuel est de 12 mois, avec -20% sur le tarif mensuel."
       },
       "8": {
         "q": "Je peux changer de formule en cours de route ?",
-        "a": "Oui. Ajout de services ou passage \u00e0 un pack \u00e0 tout moment. La descente prend effet au prochain mois de facturation."
+        "a": "Oui. Ajout de services ou passage à un pack à tout moment. La descente prend effet au prochain mois de facturation."
       },
       "9": {
-        "q": "Et si mes besoins ne correspondent \u00e0 rien ici ?",
-        "a": "On fait un audit gratuit de 15 \u00e0 30 minutes pour comprendre votre situation. Si un sur-mesure est plus adapt\u00e9, on propose un devis personnalis\u00e9."
+        "q": "Et si mes besoins ne correspondent à rien ici ?",
+        "a": "On fait un audit gratuit de 15 à 30 minutes pour comprendre votre situation. Si un sur-mesure est plus adapté, on propose un devis personnalisé."
       },
       "10": {
         "q": "Le Digital Workplace remplace mes outils actuels ?",
-        "a": "Pas forc\u00e9ment. Il les centralise dans un bureau virtuel unifi\u00e9. Vos outils existants (Notion, Slack, Google\u2026) s\u2019int\u00e8grent directement dans les pi\u00e8ces du Workplace."
+        "a": "Pas forcément. Il les centralise dans un bureau virtuel unifié. Vos outils existants (Notion, Slack, Google…) s’intègrent directement dans les pièces du Workplace."
       }
     }
   },
   "cta": {
-    "sectionLabel": "Appel \u00e0 l\u2019action",
-    "title": "Besoin d\u2019aide pour choisir ?",
-    "subtitle": "L\u2019audit est gratuit \u2014 15 \u00e0 30 minutes pour comprendre votre situation, identifier le bon service (ou pack), et voir un plan concret avant de vous engager.",
-    "button": "R\u00e9server un audit gratuit"
-  }
+    "sectionLabel": "Appel à l’action",
+    "title": "Besoin d’aide pour choisir ?",
+    "subtitle": "L’audit est gratuit — 15 à 30 minutes pour comprendre votre situation, identifier le bon service (ou pack), et voir un plan concret avant de vous engager.",
+    "button": "Réserver un audit gratuit"
+  },
+  "description": "5 solutions pour PME : Digital Workplace, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse. Mise en place incluse. -20% en annuel. Paiement en 3x."
 }

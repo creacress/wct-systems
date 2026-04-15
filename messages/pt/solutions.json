@@ -10,7 +10,7 @@
     "breadcrumb_solutions": "Soluções por setor",
     "heading_line1": "Soluções adaptadas",
     "heading_line2": "ao seu setor",
-    "subtitle": "Cada profissão tem os seus desafios. Descubra como os nossos 6 SaaS se adaptam à sua realidade.",
+    "subtitle": "Cada profissão tem os seus desafios. Descubra como as nossas 5 soluções se adaptam à sua realidade.",
     "price_from": "Desde {price}€/mês",
     "cta_heading": "O seu setor não está listado?",
     "cta_text": "As nossas soluções adaptam-se a todas as profissões. Falemos do seu caso em 15 min.",
@@ -53,10 +53,6 @@
     "jsonld_country": "Portugal"
   },
   "services": {
-    "prospection-ia": {
-      "name": "Prospeção IA",
-      "description": "Segmentação IA por setor e zona, enriquecimento automático, scoring de leads, integração CRM."
-    },
     "site-web": {
       "name": "Site Web Moderno",
       "description": "Site rápido, SEO clássico + SEO IA, mobile-first, templates setoriais, entregue em 14 dias."
@@ -79,7 +75,6 @@
       "name": "Consultoria",
       "problemType": "Prospeção morosa, dependência do boca-a-boca, acompanhamento de clientes manual",
       "solutions": {
-        "prospection-ia": "Identifique automaticamente as empresas que correspondem à sua especialidade. Segmentação por setor, dimensão e zona geográfica. Enriquecimento dos contactos decisores.",
         "site-web": "Um site que posiciona a sua especialidade e gera leads qualificados. Páginas por área de competência, casos de clientes, marcação de reuniões integrada.",
         "automatisation": "Automatize o acompanhamento das suas missões, os follow-ups de prospeção, o reporting de clientes e a faturação recorrente.",
         "integration-ia": "Um assistente IA que qualifica os seus leads recebidos, responde às perguntas frequentes e prepara as suas reuniões com o contexto do cliente.",
@@ -88,7 +83,7 @@
       "faq": {
         "0": {
           "q": "Como encontrar novos clientes para uma empresa de consultoria?",
-          "a": "Combine prospeção IA direcionada (por setor e dimensão da empresa) com um site otimizado para SEO que posiciona a sua especialidade. Os dois canais alimentam um pipeline qualificado."
+          "a": "Um site otimizado para SEO combinado com automatização de contatos cria um pipeline qualificado consistente."
         },
         "1": {
           "q": "Como automatizar o acompanhamento das missões de consultoria?",
@@ -104,7 +99,6 @@
       "name": "Agência de marketing",
       "problemType": "Demasiados processos manuais, reporting moroso, prospeção passiva",
       "solutions": {
-        "prospection-ia": "Prospete as PMEs que ainda não têm agência. Segmentação por setor, faturação e presença digital. Enriquecimento LinkedIn e email.",
         "site-web": "Um site portfolio que converte: casos de clientes, resultados quantificados, formulário de briefing, SEO nas suas especialidades-chave.",
         "automatisation": "Automatize os seus reportings de clientes, os follow-ups de orçamentos, a compilação de KPI multi-plataformas e a faturação.",
         "integration-ia": "Um chatbot que qualifica os briefings recebidos. Agentes IA para vigilância concorrencial, análise de dados e redação.",
@@ -117,7 +111,7 @@
         },
         "1": {
           "q": "Como prospetar novos clientes para uma agência?",
-          "a": "A prospeção IA identifica as empresas sem estratégia digital estruturada, enriquece os contactos e integra-os na sua sequência de prospeção."
+          "a": "Um site moderno e otimizado posiciona a sua especialidade e qualifica os contatos."
         },
         "2": {
           "q": "A IA pode ajudar na criação de conteúdo?",
@@ -129,7 +123,6 @@
       "name": "Gabinete de contabilidade",
       "problemType": "Follow-ups manuais, prazos apertados, recolha de documentos morosa",
       "solutions": {
-        "prospection-ia": "Identifique as PMEs sem contabilista ou insatisfeitas. Segmentação por zona, setor e dimensão. Enriquecimento de email do dirigente.",
         "site-web": "Um site profissional que transmite confiança: especialidades, equipa, marcação de reuniões online, FAQ sobre obrigações contabilísticas.",
         "automatisation": "Automatize os follow-ups de documentos contabilísticos, o acompanhamento de prazos fiscais, os lembretes a clientes e a faturação.",
         "integration-ia": "Um chatbot que responde às perguntas contabilísticas comuns dos seus clientes. Um agente IA que pré-categoriza os documentos recebidos.",
@@ -142,7 +135,7 @@
         },
         "1": {
           "q": "Como encontrar novos clientes para um gabinete de contabilidade?",
-          "a": "A prospeção IA visa as empresas recentemente criadas ou em crescimento que precisam de estruturar a sua contabilidade."
+          "a": "A automatização identifica as empresas em crescimento e organiza os seus dados contáveis."
         },
         "2": {
           "q": "Um chatbot IA é útil para um gabinete de contabilidade?",
@@ -154,7 +147,6 @@
       "name": "ESN / Consultora IT",
       "problemType": "Prospeção massiva, qualificação fraca, acompanhamento de missões complexo",
       "solutions": {
-        "prospection-ia": "Identifique as empresas que recrutam perfis tech. Segmentação por stack tecnológico, dimensão e localização. Scoring por potencial de missão.",
         "site-web": "Um site que destaca as suas competências técnicas, as suas referências e os seus consultores disponíveis. SEO nas tecnologias-chave.",
         "automatisation": "Automatize o matching consultor/missão, os follow-ups comerciais, o acompanhamento entre projetos e o reporting de atividade.",
         "integration-ia": "Um agente IA que analisa os cadernos de encargos, faz match dos perfis de consultores e prepara as respostas técnicas.",
@@ -163,7 +155,7 @@
       "faq": {
         "0": {
           "q": "Como melhorar a prospeção de uma consultora IT?",
-          "a": "A prospeção IA identifica as empresas com necessidades tech ativas (ofertas de emprego, projetos anunciados) e enriquece os contactos decisores IT."
+          "a": "A automatização identifica e enriquece os contatos das empresas com necessidades tech ativas."
         },
         "1": {
           "q": "Como automatizar o matching consultor/missão?",
@@ -179,7 +171,6 @@
       "name": "Coach / Consultor",
       "problemType": "Sem sistema de leads, dependência da rede de contactos, site básico ou inexistente",
       "solutions": {
-        "prospection-ia": "Identifique as empresas que precisam das suas competências. Segmentação por problemática setorial, dimensão e setor.",
         "site-web": "Um site que o posiciona como especialista: página de método, testemunhos, calendário de reuniões, blog SEO na sua temática.",
         "automatisation": "Automatize a sua sequência de prospeção, os seus follow-ups, a sua faturação e o acompanhamento dos seus clientes.",
         "integration-ia": "Um chatbot que qualifica os seus visitantes e marca reuniões. Um agente IA que prepara as suas sessões com o contexto do cliente.",
@@ -188,7 +179,7 @@
       "faq": {
         "0": {
           "q": "Como pode um coach encontrar clientes online?",
-          "a": "Um site otimizado para SEO + uma prospeção IA direcionada criam um fluxo regular de leads qualificados, sem depender apenas do boca-a-boca."
+          "a": "Um site otimizado para SEO cria um fluxo regular de leads qualificados de forma consistente."
         },
         "1": {
           "q": "Como automatizar a marcação de reuniões para um consultor?",
@@ -204,7 +195,6 @@
       "name": "Artesão / Microempresa",
       "problemType": "Sem visibilidade online, acompanhamento de clientes em papel ou por SMS, sem site",
       "solutions": {
-        "prospection-ia": "Identifique os potenciais clientes locais que procuram os seus serviços. Segmentação por zona geográfica e tipo de necessidade.",
         "site-web": "Um site vitrina profissional com os seus trabalhos, zona de intervenção, orçamentos online. Visível no Google Maps e nas pesquisas locais.",
         "automatisation": "Automatize os seus orçamentos, follow-ups, lembretes de obras e faturação. Acabou os esquecimentos e o papel.",
         "integration-ia": "Um chatbot WhatsApp que recebe pedidos de orçamento 24/7 e os organiza automaticamente no seu planeamento.",
@@ -229,7 +219,6 @@
       "name": "Restauração / Hotelaria",
       "problemType": "Site não encontrável, sem reservas online, avaliações não geridas",
       "solutions": {
-        "prospection-ia": "Identifique as empresas locais para parcerias B2B (eventos, refeições de negócios, seminários).",
         "site-web": "Um site com menu, reservas online, galeria de fotos, avaliações Google integradas. Otimizado para o referenciamento local.",
         "automatisation": "Automatize as confirmações de reserva, os lembretes a clientes, os pedidos de avaliação pós-visita e o acompanhamento de fornecedores.",
         "integration-ia": "Um chatbot de reservas no seu site e WhatsApp. Um agente IA que gere os pedidos de eventos e os menus personalizados.",
@@ -254,7 +243,6 @@
       "name": "Advogado / Notário",
       "problemType": "Site genérico, nenhum lead orgânico, imagem online descuidada",
       "solutions": {
-        "prospection-ia": "Identifique as empresas que precisam de consultoria jurídica: constituições, litígios, conformidade. Segmentação por setor e eventos.",
         "site-web": "Um site que reflete a sua especialidade: áreas de direito, equipa, publicações, marcação de consulta confidencial. SEO nas suas especialidades.",
         "automatisation": "Automatize o acompanhamento de processos, os follow-ups de documentos, os lembretes de audiências e a faturação de atos.",
         "integration-ia": "Um chatbot confidencial que pré-qualifica os pedidos de consulta e orienta para o especialista certo do escritório.",
@@ -279,7 +267,6 @@
       "name": "Agência imobiliária",
       "problemType": "Prospeção apenas no terreno, acompanhamento manual de mandatos, site vitrina pouco eficaz",
       "solutions": {
-        "prospection-ia": "Identifique os proprietários suscetíveis de vender: mudanças de vida, heranças, investidores. Segmentação por zona e tipo de imóvel.",
         "site-web": "Um site com listagens de imóveis, fichas detalhadas, simulador online, formulários de contacto por imóvel. SEO local otimizado.",
         "automatisation": "Automatize os alertas a compradores, os follow-ups de mandatos, o matching imóveis/compradores e o reporting de atividade.",
         "integration-ia": "Um chatbot que qualifica os pedidos (compra/venda/arrendamento), propõe os imóveis correspondentes e marca as visitas.",
@@ -288,7 +275,7 @@
       "faq": {
         "0": {
           "q": "Como pode uma agência imobiliária automatizar a sua prospeção?",
-          "a": "A prospeção IA identifica os sinais de venda (transmissões, certificados energéticos, duração de detenção) e enriquece os contactos dos proprietários da zona."
+          "a": "A automatização identifica sinais de venda e enriquece os contatos dos proprietários da zona."
         },
         "1": {
           "q": "Como melhorar o site de uma agência imobiliária?",
@@ -304,7 +291,6 @@
       "name": "E-commerce / Loja online",
       "problemType": "Tráfego fraco, sem retenção de clientes, processos manuais de gestão",
       "solutions": {
-        "prospection-ia": "Identifique os parceiros B2B, revendedores e influenciadores do seu nicho. Segmentação por setor e audiência.",
         "site-web": "Um site e-commerce otimizado: fichas de produtos SEO, funil de conversão, páginas de categorias, blog de produto.",
         "automatisation": "Automatize o acompanhamento de encomendas, os follow-ups de carrinho abandonado, os emails pós-compra e a gestão de stock.",
         "integration-ia": "Um chatbot que guia a compra, responde às perguntas sobre produtos e gere o serviço pós-venda. Um agente IA para recomendações personalizadas.",

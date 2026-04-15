@@ -44,26 +44,6 @@ const SAAS = [
     ],
   },
   {
-    id: "prospection-ia",
-    icon: Crosshair,
-    name: "Prospection IA",
-    description:
-      "Trouvez vos futurs clients grâce à l\u2019IA. Ciblage, enrichissement, intégration CRM.",
-    priceMonthly: 99,
-    priceYearly: 79,
-    yearlyTotal: 948,
-    setup: 490,
-    href: "/services/trouver-prospects",
-    accentHover: "hover:border-emerald-400/40",
-    features: [
-      "Ciblage IA par secteur, zone géo et taille d\u2019entreprise",
-      "Enrichissement automatique (email, LinkedIn, téléphone)",
-      "Scoring des leads par IA (score 1-10)",
-      "Intégration CRM / tableur automatique",
-      "Base mise à jour en continu",
-    ],
-  },
-  {
     id: "site-web",
     icon: Globe,
     name: "Site Web Moderne",
@@ -125,27 +105,6 @@ const SAAS = [
     ],
   },
   {
-    id: "q2c-facturation",
-    icon: Receipt,
-    name: "Q2C — Facturation SaaS",
-    description:
-      "Facturation électronique conforme 2026 pour SaaS B2B. Du devis au paiement, Factur-X natif.",
-    priceMonthly: 149,
-    priceYearly: 119,
-    yearlyTotal: 1428,
-    setup: 490,
-    href: "/services/q2c-facturation",
-    badge: "Nouveau",
-    accentHover: "hover:border-emerald-400/40",
-    features: [
-      "Factur-X EXTENDED + UBL + CII",
-      "Cycle complet devis → contrat → facture → paiement",
-      "TVA EU/OSS 30 pays + validation VIES",
-      "Connecteur universel Plateforme Agréée",
-      "Dashboard MRR/ARR/Churn + Revenue Recognition",
-    ],
-  },
-  {
     id: "nixie-pulse",
     icon: Gauge,
     name: "Nixie Pulse",
@@ -197,7 +156,7 @@ const PACKS = [
     id: "scale",
     name: "Scale",
     tagline: "Système complet",
-    desc: "Les 6 SaaS inclus",
+    desc: "Les 5 solutions incluses",
     priceMonthly: 649,
     priceYearly: 519,
     badge: "-25% vs à la carte",
@@ -280,7 +239,7 @@ export default function PricingContent() {
           </h1>
 
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            6 SaaS conçus pour les PME françaises. Mise en place incluse.
+            5 solutions conçues pour les PME françaises. Mise en place incluse.
             <br className="hidden sm:block" />
             Sans engagement mensuel, -20% en annuel.
           </p>
@@ -289,7 +248,7 @@ export default function PricingContent() {
           <div className="flex flex-wrap items-center justify-center gap-8 pt-2">
             <div className="text-center">
               <div className="font-display font-bold text-2xl text-violet-600 dark:text-violet-400">
-                <CountUp end={6} suffix=" SaaS" />
+                <CountUp end={5} suffix=" solutions" />
               </div>
               <div className="text-xs text-muted-foreground">à la carte ou en pack</div>
             </div>
@@ -352,7 +311,7 @@ export default function PricingContent() {
         <section
           id="saas"
           className="mt-16 scroll-mt-24"
-          aria-label="Nos 6 SaaS"
+          aria-label="Nos 5 solutions"
         >
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {SAAS.map((s) => {

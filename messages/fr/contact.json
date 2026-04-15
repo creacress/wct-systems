@@ -8,16 +8,16 @@
     "contactPageDescription": "Page de contact pour demander un audit gratuit (prospects, relances, CRM/RDV, KPI, site SEO)."
   },
   "hero": {
-    "badge": "Contact \u2022 Audit gratuit \u2022 R\u00e9ponse 24\u201348h",
+    "badge": "Contact • Audit gratuit • Réponse 24–48h",
     "title": "Parlons de votre contexte",
     "titleSub": "et livrons une V1 utile",
-    "description": "D\u00e9crivez votre situation en 60 secondes. On revient vers vous avec un plan clair : <strong>3 priorit\u00e9s</strong>, une <strong>V1</strong> rapidement, puis optimisation.",
+    "description": "Décrivez votre situation en 60 secondes. On revient vers vous avec un plan clair : <strong>3 priorités</strong>, une <strong>V1</strong> rapidement, puis optimisation.",
     "ctaServices": "Voir les services",
     "ctaCases": "Voir des cas clients"
   },
   "form": {
     "title": "Demander un audit",
-    "subtitle": "Pas de blabla : vous expliquez, on structure, on propose un plan d\u2019ex\u00e9cution.",
+    "subtitle": "Pas de blabla : vous expliquez, on structure, on propose un plan d’exécution.",
     "ariaLabel": "Formulaire de contact",
     "honeypotLabel": "Ne pas remplir",
     "labelName": "Nom",
@@ -27,35 +27,33 @@
     "labelCompany": "Entreprise",
     "optional": "(optionnel)",
     "placeholderCompany": "Nom de votre entreprise",
-    "labelPhone": "T\u00e9l\u00e9phone",
+    "labelPhone": "Téléphone",
     "placeholderPhone": "06 00 00 00 00",
     "labelSubject": "Sujet",
-    "placeholderSubject": "Choisir\u2026",
+    "placeholderSubject": "Choisir…",
     "labelMessage": "Message",
     "placeholderMessage": "En 3 lignes : votre objectif + votre situation actuelle + votre urgence.",
-    "messageExample": "Exemple : \"Je veux 20 demandes/mois. Aujourd'hui je fais tout \u00e0 la main. Je veux une V1 en 2 semaines.\"",
-    "consent": "J\u2019accepte d\u2019\u00eatre recontact\u00e9(e) au sujet de ma demande. (Aucun spam.)",
+    "messageExample": "Exemple : \"Je veux 20 demandes/mois. Aujourd'hui je fais tout à la main. Je veux une V1 en 2 semaines.\"",
+    "consent": "J’accepte d’être recontacté(e) au sujet de ma demande. (Aucun spam.)",
     "submit": "Envoyer la demande",
-    "responseTime": "R\u00e9ponse sous 24\u201348h ouvr\u00e9es. Si votre demande est urgente, indiquez-le dans le message."
+    "responseTime": "Réponse sous 24–48h ouvrées. Si votre demande est urgente, indiquez-le dans le message."
   },
   "services": {
     "digital-workplace": "Digital Workplace",
-    "prospection-ia": "Prospection IA",
     "site-web": "Site Web Moderne",
     "automatisation": "Automatisation (RPA)",
-    "integration-ia": "Int\u00e9gration IA",
-    "q2c-facturation": "Q2C — Facturation SaaS",
+    "integration-ia": "Intégration IA",
     "nixie-pulse": "Nixie Pulse",
     "pack-starter": "Pack Starter",
     "pack-business": "Pack Business",
     "pack-scale": "Pack Scale",
-    "autre": "Autre / \u00e0 discuter"
+    "autre": "Autre / à discuter"
   },
   "sidebar": {
     "whatYouGet": "Ce que vous obtenez",
     "benefits": {
-      "0": "3 priorit\u00e9s concr\u00e8tes",
-      "1": "Un plan d\u2019ex\u00e9cution",
+      "0": "3 priorités concrètes",
+      "1": "Un plan d’exécution",
       "2": "Une V1 utile rapidement",
       "3": "Des KPI pour piloter"
     },
@@ -63,47 +61,47 @@
     "goFasterDesc": "Donnez ces 3 infos dans votre message :",
     "tip1": "Objectif (ex: 20 demandes/mois)",
     "tip2": "Votre process actuel",
-    "tip3": "D\u00e9lai souhait\u00e9",
+    "tip3": "Délai souhaité",
     "alternative": "Alternative",
-    "alternativeDesc": "Vous pouvez aussi passer par la page services pour choisir exactement la brique qui vous int\u00e9resse.",
+    "alternativeDesc": "Vous pouvez aussi passer par la page services pour choisir exactement la brique qui vous intéresse.",
     "chooseService": "Choisir un service"
   },
   "merci": {
     "metadata": {
-      "title": "Merci — Votre demande a \u00e9t\u00e9 envoy\u00e9e | WCT Systems",
-      "description": "Votre demande a bien \u00e9t\u00e9 re\u00e7ue. Nous revenons vers vous sous 24 \u00e0 48h ouvr\u00e9es avec un plan clair."
+      "title": "Merci — Votre demande a été envoyée | WCT Systems",
+      "description": "Votre demande a bien été reçue. Nous revenons vers vous sous 24 à 48h ouvrées avec un plan clair."
     },
-    "badge": "Demande envoy\u00e9e",
+    "badge": "Demande envoyée",
     "title": "Merci pour votre demande",
-    "titleHighlight": "On s\u2019en occupe.",
-    "description": "Votre message a bien \u00e9t\u00e9 envoy\u00e9. On revient vers vous sous <strong>24 \u00e0 48h ouvr\u00e9es</strong> avec un plan adapt\u00e9 \u00e0 votre situation.",
-    "stepsTitle": "La suite en 3 \u00e9tapes",
+    "titleHighlight": "On s’en occupe.",
+    "description": "Votre message a bien été envoyé. On revient vers vous sous <strong>24 à 48h ouvrées</strong> avec un plan adapté à votre situation.",
+    "stepsTitle": "La suite en 3 étapes",
     "steps": {
       "0": {
-        "title": "Confirmation re\u00e7ue",
-        "desc": "Votre message est bien arriv\u00e9. Vous recevrez un email de confirmation sous quelques minutes."
+        "title": "Confirmation reçue",
+        "desc": "Votre message est bien arrivé. Vous recevrez un email de confirmation sous quelques minutes."
       },
       "1": {
         "title": "Analyse de votre demande",
-        "desc": "On \u00e9tudie votre contexte et on pr\u00e9pare 3 priorit\u00e9s concr\u00e8tes adapt\u00e9es \u00e0 votre situation."
+        "desc": "On étudie votre contexte et on prépare 3 priorités concrètes adaptées à votre situation."
       },
       "2": {
-        "title": "Retour sous 24\u201348h",
-        "desc": "On vous recontacte avec un plan clair : priorit\u00e9s, V1, et KPI \u00e0 suivre."
+        "title": "Retour sous 24–48h",
+        "desc": "On vous recontacte avec un plan clair : priorités, V1, et KPI à suivre."
       }
     },
-    "meanwhile": "En attendant, vous pouvez\u2026",
+    "meanwhile": "En attendant, vous pouvez…",
     "tips": {
       "0": "Consulter nos cas clients pour voir des exemples concrets",
       "1": "Explorer nos services pour affiner votre besoin",
-      "2": "Pr\u00e9parer les acc\u00e8s \u00e0 vos outils actuels (CRM, fichiers\u2026)",
-      "3": "Lister vos 3 priorit\u00e9s business du moment"
+      "2": "Préparer les accès à vos outils actuels (CRM, fichiers…)",
+      "3": "Lister vos 3 priorités business du moment"
     },
     "urgent": "Besoin urgent ?",
-    "urgentDesc": "Si votre demande est critique, renvoyez un message en pr\u00e9cisant l\u2019urgence \u2014 on priorise les demandes qui l\u2019indiquent clairement.",
+    "urgentDesc": "Si votre demande est critique, renvoyez un message en précisant l’urgence — on priorise les demandes qui l’indiquent clairement.",
     "resend": "Renvoyer un message",
     "ctaTitle": "En attendant notre retour",
-    "ctaDesc": "D\u00e9couvrez comment on aide les PME \u00e0 g\u00e9n\u00e9rer plus de clients avec des syst\u00e8mes simples.",
+    "ctaDesc": "Découvrez comment on aide les PME à générer plus de clients avec des systèmes simples.",
     "ctaCases": "Voir les cas clients",
     "ctaServices": "Explorer les services"
   }

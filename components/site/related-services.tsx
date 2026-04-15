@@ -2,13 +2,6 @@ import Link from "next/link";
 
 const ALL_SERVICES = [
   {
-    id: "trouver-prospects",
-    title: "Prospection IA",
-    desc: "Ciblage IA, enrichissement automatique, scoring, intégration CRM.",
-    href: "/services/trouver-prospects",
-    color: "emerald",
-  },
-  {
     id: "site-web-moderne",
     title: "Site Web Moderne",
     desc: "Site rapide, SEO + SEO IA, mobile-first, templates sectoriels.",
@@ -35,13 +28,6 @@ const ALL_SERVICES = [
     desc: "Bureau virtuel gamifié, messagerie, KPI, intégration 200+ outils.",
     href: "/services/digital-workplace",
     color: "cyan",
-  },
-  {
-    id: "q2c-facturation",
-    title: "Q2C — Facturation SaaS",
-    desc: "Facturation électronique conforme 2026, Factur-X, TVA OSS, connecteur PA.",
-    href: "/services/q2c-facturation",
-    color: "emerald",
   },
   {
     id: "nixie-pulse",

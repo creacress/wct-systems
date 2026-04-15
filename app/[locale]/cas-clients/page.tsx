@@ -9,31 +9,27 @@ import { getTranslations, getLocale } from "next-intl/server";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 const CASE_SERVICES = [
-  "prospection-ia",
   "site-web",
   "automatisation",
   "integration-ia",
   "digital-workplace",
-  "pack-scale",
   "automatisation",
   "automatisation",
 ] as const;
 
 const CASE_STACKS = [
-  ["Prospection IA", "Enrichissement", "Scoring", "CRM"],
   ["Next.js", "SEO local", "SEO IA", "Conversion"],
   ["Automatisation", "n8n", "Email/SMS", "Dashboard KPI"],
   ["Chatbot IA", "RAG", "WhatsApp", "E-commerce"],
   ["Digital Workplace", "CRM", "Chat", "Gamification"],
-  ["Prospection IA", "Next.js", "Automatisation", "Chatbot IA", "Digital Workplace"],
   ["Next.js", "Automatisation (RPA)", "APIs", "UX / Design system"],
   ["SI", "APIs", "Automatisation", "Optimisation Web"],
 ];
 
-const CASE_IS_PME = [true, true, true, true, true, true, false, false];
+const CASE_IS_PME = [true, true, true, true, false, false];
 
-const CASE_DELIVERED_COUNTS = [4, 4, 4, 4, 4, 5, 4, 4];
-const CASE_RESULTS_COUNTS = [4, 4, 4, 4, 4, 5, 3, 3];
+const CASE_DELIVERED_COUNTS = [4, 4, 4, 4, 4, 4];
+const CASE_RESULTS_COUNTS = [4, 4, 4, 4, 3, 3];
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("casClients");
@@ -60,7 +56,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function CasClientsPage() {
   const t = await getTranslations("casClients");
 
-  const CASES: CaseStudy[] = Array.from({ length: 8 }, (_, i) => ({
+  const CASES: CaseStudy[] = Array.from({ length: 6 }, (_, i) => ({
     slug: t(`cases.${i}.slug`),
     org: t(`cases.${i}.org`),
     sector: t(`cases.${i}.sector`),

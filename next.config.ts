@@ -274,6 +274,41 @@ const nextConfig: NextConfig = {
         destination: "/services/automatiser-relances",
         permanent: true,
       },
+
+      // =============================================
+      // 3. SERVICES SUPPRIMÉS (2024-2025)
+      // =============================================
+
+      // --- Prospection IA removed ---
+      {
+        source: "/services/trouver-prospects",
+        destination: "/services",
+        permanent: true,
+      },
+      {
+        source: "/pt/servicos/prospeccao-ia",
+        destination: "/pt/servicos",
+        permanent: true,
+      },
+
+      // --- Q2C Facturation removed ---
+      {
+        source: "/services/q2c-facturation",
+        destination: "/services",
+        permanent: true,
+      },
+      {
+        source: "/pt/servicos/q2c-faturacao",
+        destination: "/pt/servicos",
+        permanent: true,
+      },
+
+      // --- Solutions subdirectory catch-all ---
+      {
+        source: "/solutions/prospection-ia/:path*",
+        destination: "/solutions",
+        permanent: true,
+      },
     ];
   },
 };

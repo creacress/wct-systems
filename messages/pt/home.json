@@ -1,36 +1,59 @@
 {
   "metadata": {
     "title": "WCT Systems — IA & Automatização para PMEs portuguesas",
-    "description": "A WCT Systems ajuda PMEs portuguesas com 6 SaaS: Digital Workplace, Prospeção IA, Site Web Moderno, Automatização RPA, Integração IA, Q2C Faturação SaaS. Auditoria gratuita em 15 min.",
-    "keywords": "IA PME Portugal, automatização PME, SaaS PME, prospeção B2B IA, WCT Systems"
+    "description": "A WCT Systems ajuda PMEs portuguesas com 5 soluções: Digital Workplace, Site Web Moderno, Automatização RPA, Integração IA, Nixie Pulse. Auditoria gratuita em 15 min.",
+    "keywords": "IA PME Portugal, automatização PME, SaaS PME, prospeção B2B IA, WCT Systems",
+    "orgDescription": "Digital Workplace & IA para PMEs portuguesas. 5 soluções, um ecossistema.",
+    "webDescription": "Digital Workplace gamificado + IA + automatização para PMEs. 5 soluções, um ecossistema."
   },
   "site": {
     "tagline": "Digital Workplace & IA para PMEs",
-    "orgDescription": "Digital Workplace & IA para PMEs portuguesas. 6 SaaS, um ecossistema.",
-    "webDescription": "Digital Workplace gamificado + IA + automatização para PMEs. 6 SaaS, um ecossistema."
+    "orgDescription": "Digital Workplace & IA para PMEs portuguesas. 5 soluções, um ecossistema.",
+    "webDescription": "Digital Workplace gamificado + IA + automatização para PMEs. 5 soluções, um ecossistema."
   },
   "hero": {
-    "badge": "6 SaaS \u2022 Digital Workplace \u2022 IA",
+    "badge": "5 soluções • Digital Workplace • IA",
     "titleLine1": "O seu escritório digital.",
     "titleLine2": "Tudo-em-um, gamificado, orientado por IA.",
-    "description": "<strong>WCT Systems</strong> concebe o Digital Workplace das PMEs portuguesas: um escritório virtual gamificado + 6 SaaS (<strong>Digital Workplace, Prospeção IA, Site Web, Automatização, Integração IA, Faturação SaaS</strong>).",
+    "description": "<strong>WCT Systems</strong> concebe o Digital Workplace das PMEs portuguesas: um escritório virtual gamificado + 4 SaaS complementares (<strong>Site Web Moderno, Automatização RPA, Integração IA, Nixie Pulse</strong>).",
     "ctaPrimary": "Descobrir o Workplace",
-    "ctaSecondary": "Ver os 6 serviços"
+    "ctaSecondary": "Ver as 5 soluções"
   },
   "stats": {
     "items": {
-      "0": { "suffix": " SaaS", "label": "Ecossistema" },
-      "1": { "suffix": " dias", "label": "Time to live" },
-      "2": { "suffix": "+", "label": "Integrações" }
+      "0": {
+        "suffix": " SaaS",
+        "label": "Ecossistema"
+      },
+      "1": {
+        "suffix": " dias",
+        "label": "Time to live"
+      },
+      "2": {
+        "suffix": "+",
+        "label": "Integrações"
+      }
     }
   },
   "process_mini": {
     "title": "O seu Workplace em 14 dias",
     "steps": {
-      "0": { "title": "Auditoria", "desc": "Mapeamento de ferramentas e processos" },
-      "1": { "title": "Configuração", "desc": "Áreas funcionais + conexões" },
-      "2": { "title": "Gamificação", "desc": "XP, badges + formação" },
-      "3": { "title": "Go live", "desc": "Implementação + KPI em tempo real" }
+      "0": {
+        "title": "Auditoria",
+        "desc": "Mapeamento de ferramentas e processos"
+      },
+      "1": {
+        "title": "Configuração",
+        "desc": "Áreas funcionais + conexões"
+      },
+      "2": {
+        "title": "Gamificação",
+        "desc": "XP, badges + formação"
+      },
+      "3": {
+        "title": "Go live",
+        "desc": "Implementação + KPI em tempo real"
+      }
     }
   },
   "why": {
@@ -58,8 +81,8 @@
     }
   },
   "ecosystem": {
-    "title": "O ecossistema 6 SaaS",
-    "subtitle": "6 SaaS complementares: Digital Workplace + 5 módulos de IA, automatização e faturação. Cada serviço tem a sua cor.",
+    "title": "O ecossistema 5 soluções",
+    "subtitle": "5 soluções complementares: Digital Workplace + automatização RPA, integração IA, site web moderno e Nixie Pulse. Cada serviço tem a sua cor.",
     "viewAll": "Ver tudo",
     "learnMore": "Saber mais",
     "requestAudit": "Pedir uma auditoria",
@@ -73,8 +96,8 @@
       "badge": "Novo"
     },
     "1": {
-      "title": "Prospeção IA",
-      "desc": "Segmentação IA, enriquecimento automático, scoring, integração CRM."
+      "title": "Site Web Moderno",
+      "desc": "Site rápido, SEO + SEO IA, pensado para converter. 4 templates, entregue em 14 dias."
     },
     "2": {
       "title": "Site Web Moderno",
@@ -90,7 +113,7 @@
       "badge": "Popular"
     },
     "5": {
-      "title": "Q2C — Faturação SaaS",
+      "title": "Nixie Pulse",
       "desc": "Faturação eletrónica em conformidade: Factur-X, UBL, CII, IVA OSS, conector AP. A partir de 149 €/mês.",
       "badge": "Novo"
     }
@@ -100,9 +123,21 @@
     "subtitle": "Transformar tempo perdido em oportunidades mensuráveis. Exemplo indicativo para uma PME.",
     "disclaimer": "*Indicação: o ROI depende da sua oferta, zona, sazonalidade e qualidade do acompanhamento.",
     "items": {
-      "0": { "label": "Hipótese", "value": "2h/dia", "detail": "de prospeção manual automatizada" },
-      "1": { "label": "Ganho", "value": "~40h/mês", "detail": "recuperadas (vendidas ou reinvestidas)" },
-      "2": { "label": "Impacto", "value": "+volume", "detail": "tratado = mais hipóteses de fecho" }
+      "0": {
+        "label": "Hipótese",
+        "value": "2h/dia",
+        "detail": "de prospeção manual automatizada"
+      },
+      "1": {
+        "label": "Ganho",
+        "value": "~40h/mês",
+        "detail": "recuperadas (vendidas ou reinvestidas)"
+      },
+      "2": {
+        "label": "Impacto",
+        "value": "+volume",
+        "detail": "tratado = mais hipóteses de fecho"
+      }
     }
   },
   "process": {
@@ -111,9 +146,18 @@
     "ctaPrimary": "Começar com uma auditoria",
     "ctaSecondary": "Ler llms.txt",
     "steps": {
-      "0": { "title": "Auditoria & plano", "desc": "3 prioridades + KPI + plano de execução." },
-      "1": { "title": "V1 em produção", "desc": "Um sistema simples que funciona (prospects + acompanhamento + follow-ups)." },
-      "2": { "title": "Otimização", "desc": "SEO, conteúdos, follow-ups, dashboards: escalamos." }
+      "0": {
+        "title": "Auditoria & plano",
+        "desc": "3 prioridades + KPI + plano de execução."
+      },
+      "1": {
+        "title": "V1 em produção",
+        "desc": "Um sistema simples que funciona (prospects + acompanhamento + follow-ups)."
+      },
+      "2": {
+        "title": "Otimização",
+        "desc": "SEO, conteúdos, follow-ups, dashboards: escalamos."
+      }
     }
   },
   "results": {
@@ -121,10 +165,22 @@
     "subtitle": "Casos anonimizados, números reais.",
     "viewCases": "Ver os casos →",
     "items": {
-      "0": { "value": "×6", "label": "prospects/mês (consultora RH)" },
-      "1": { "value": "70%", "label": "questões automáticas (chatbot e-commerce)" },
-      "2": { "value": "28d", "label": "sistema completo implementado (gabinete de contabilidade)" },
-      "3": { "value": "92%", "label": "adoção Digital Workplace (empresa de TI)" }
+      "0": {
+        "value": "×6",
+        "label": "prospects/mês (consultora RH)"
+      },
+      "1": {
+        "value": "70%",
+        "label": "questões automáticas (chatbot e-commerce)"
+      },
+      "2": {
+        "value": "28d",
+        "label": "sistema completo implementado (gabinete de contabilidade)"
+      },
+      "3": {
+        "value": "92%",
+        "label": "adoção Digital Workplace (empresa de TI)"
+      }
     }
   },
   "blog": {

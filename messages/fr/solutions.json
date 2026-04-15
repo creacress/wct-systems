@@ -10,7 +10,7 @@
     "breadcrumb_solutions": "Solutions par secteur",
     "heading_line1": "Des solutions adaptées",
     "heading_line2": "à votre secteur",
-    "subtitle": "Chaque métier a ses défis. Découvrez comment nos 6 SaaS s'adaptent à votre réalité.",
+    "subtitle": "Chaque métier a ses défis. Découvrez comment nos 5 solutions s'adaptent à votre réalité.",
     "price_from": "Dès {price}€/mois",
     "cta_heading": "Votre secteur n'est pas listé ?",
     "cta_text": "Nos solutions s'adaptent à tous les métiers. Parlons de votre cas en 15 min.",
@@ -53,10 +53,6 @@
     "jsonld_country": "France"
   },
   "services": {
-    "prospection-ia": {
-      "name": "Prospection IA",
-      "description": "Ciblage IA par secteur et zone, enrichissement automatique, scoring leads, intégration CRM."
-    },
     "site-web": {
       "name": "Site Web Moderne",
       "description": "Site web rapide, SEO classique + SEO IA, mobile-first, templates sectoriels, livré en 14 jours."
@@ -79,7 +75,6 @@
       "name": "Cabinet de conseil",
       "problemType": "Prospection chronophage, dépendance au bouche-à-oreille, suivi client manuel",
       "solutions": {
-        "prospection-ia": "Identifiez automatiquement les entreprises qui correspondent à votre expertise. Ciblage par secteur, taille et zone géographique. Enrichissement des contacts décideurs.",
         "site-web": "Un site qui positionne votre expertise et génère des leads qualifiés. Pages par domaine de compétence, cas clients, prise de RDV intégrée.",
         "automatisation": "Automatisez le suivi de vos missions, les relances prospects, le reporting client et la facturation récurrente.",
         "integration-ia": "Un assistant IA qui qualifie vos leads entrants, répond aux questions fréquentes et prépare vos rendez-vous avec le contexte client.",
@@ -104,7 +99,6 @@
       "name": "Agence marketing",
       "problemType": "Trop de process manuels, reporting chronophage, prospection passive",
       "solutions": {
-        "prospection-ia": "Prospectez les PME et ETI qui n'ont pas encore d'agence. Ciblage par secteur, CA et présence digitale. Enrichissement LinkedIn et email.",
         "site-web": "Un site portfolio qui convertit : cas clients, résultats chiffrés, formulaire de brief, SEO sur vos expertises clés.",
         "automatisation": "Automatisez vos reportings clients, vos relances de devis, la compilation de KPI multi-plateformes et la facturation.",
         "integration-ia": "Un chatbot qui qualifie les briefs entrants. Des agents IA pour la veille concurrentielle, l'analyse de données et la rédaction.",
@@ -129,7 +123,6 @@
       "name": "Cabinet comptable",
       "problemType": "Relances manuelles, deadlines serrées, collecte de pièces chronophage",
       "solutions": {
-        "prospection-ia": "Identifiez les TPE/PME sans expert-comptable ou insatisfaites. Ciblage par zone, secteur et taille. Enrichissement email du dirigeant.",
         "site-web": "Un site professionnel qui rassure : expertises, équipe, prise de RDV en ligne, FAQ sur les obligations comptables.",
         "automatisation": "Automatisez les relances de pièces comptables, le suivi des échéances fiscales, les rappels clients et la facturation.",
         "integration-ia": "Un chatbot qui répond aux questions comptables courantes de vos clients. Un agent IA qui pré-catégorise les pièces reçues.",
@@ -154,7 +147,6 @@
       "name": "ESN / SSII",
       "problemType": "Prospection massive, qualification faible, suivi des missions complexe",
       "solutions": {
-        "prospection-ia": "Identifiez les entreprises qui recrutent des profils tech. Ciblage par stack technique, taille et localisation. Scoring par potentiel de mission.",
         "site-web": "Un site qui met en avant vos compétences techniques, vos références et vos consultants disponibles. SEO sur les technologies clés.",
         "automatisation": "Automatisez le matching consultant/mission, les relances commerciales, le suivi d'intercontrat et le reporting d'activité.",
         "integration-ia": "Un agent IA qui analyse les appels d'offres, matche les profils consultants et prépare les réponses techniques.",
@@ -179,7 +171,6 @@
       "name": "Coach / Consultant",
       "problemType": "Pas de système de leads, dépendance au réseau, site web basique ou absent",
       "solutions": {
-        "prospection-ia": "Identifiez les entreprises qui ont besoin de vos compétences. Ciblage par problématique métier, taille et secteur.",
         "site-web": "Un site qui vous positionne comme expert : page de méthode, témoignages, calendrier de RDV, blog SEO sur votre thématique.",
         "automatisation": "Automatisez votre séquence de prospection, vos relances, votre facturation et le suivi de vos clients.",
         "integration-ia": "Un chatbot qui qualifie vos visiteurs et prend des RDV. Un agent IA qui prépare vos sessions avec le contexte client.",
@@ -204,7 +195,6 @@
       "name": "Artisan / TPE",
       "problemType": "Pas de visibilité en ligne, suivi client au papier ou par SMS, pas de site web",
       "solutions": {
-        "prospection-ia": "Identifiez les prospects locaux qui cherchent vos services. Ciblage par zone géographique et type de besoin.",
         "site-web": "Un site vitrine professionnel avec vos réalisations, zone d'intervention, devis en ligne. Visible sur Google Maps et les recherches locales.",
         "automatisation": "Automatisez vos devis, relances, rappels de chantier et facturation. Fini les oublis et le papier.",
         "integration-ia": "Un chatbot WhatsApp qui prend les demandes de devis 24/7 et les organise automatiquement dans votre planning.",
@@ -229,7 +219,6 @@
       "name": "Restaurant / Hôtellerie",
       "problemType": "Site non trouvable, pas de réservation en ligne, avis non gérés",
       "solutions": {
-        "prospection-ia": "Identifiez les entreprises locales pour des partenariats B2B (événements, repas d'affaires, séminaires).",
         "site-web": "Un site avec menu, réservation en ligne, galerie photos, avis Google intégrés. Optimisé pour le référencement local.",
         "automatisation": "Automatisez les confirmations de réservation, les rappels clients, les demandes d'avis post-visite et le suivi fournisseurs.",
         "integration-ia": "Un chatbot de réservation sur votre site et WhatsApp. Un agent IA qui gère les demandes d'événements et les menus personnalisés.",
@@ -254,7 +243,6 @@
       "name": "Avocat / Notaire",
       "problemType": "Site générique, aucun lead organique, image en ligne négligée",
       "solutions": {
-        "prospection-ia": "Identifiez les entreprises qui ont besoin de conseil juridique : créations, litiges, conformité. Ciblage par secteur et événements.",
         "site-web": "Un site qui reflète votre expertise : domaines de droit, équipe, publications, prise de RDV confidentielle. SEO sur vos spécialités.",
         "automatisation": "Automatisez le suivi des dossiers, les relances de pièces, les rappels d'audience et la facturation des actes.",
         "integration-ia": "Un chatbot confidentiel qui pré-qualifie les demandes de consultation et oriente vers le bon expert du cabinet.",
@@ -279,7 +267,6 @@
       "name": "Agence immobilière",
       "problemType": "Prospection terrain uniquement, suivi manuel des mandats, site vitrine peu performant",
       "solutions": {
-        "prospection-ia": "Identifiez les propriétaires susceptibles de vendre : changements de vie, successions, investisseurs. Ciblage par zone et type de bien.",
         "site-web": "Un site avec listings de biens, fiches détaillées, estimateur en ligne, formulaires de contact par bien. SEO local optimisé.",
         "automatisation": "Automatisez les alertes acquéreurs, les relances mandats, le matching biens/acheteurs et le reporting d'activité.",
         "integration-ia": "Un chatbot qui qualifie les demandes (achat/vente/location), propose les biens correspondants et prend les RDV de visite.",
@@ -304,7 +291,6 @@
       "name": "E-commerce / Boutique en ligne",
       "problemType": "Trafic faible, pas de rétention client, processus manuels de gestion",
       "solutions": {
-        "prospection-ia": "Identifiez les partenaires B2B, revendeurs et influenceurs de votre niche. Ciblage par secteur et audience.",
         "site-web": "Un site e-commerce optimisé : fiches produits SEO, tunnel de conversion, pages catégories, blog produit.",
         "automatisation": "Automatisez le suivi de commandes, les relances panier abandonné, les emails post-achat et la gestion de stock.",
         "integration-ia": "Un chatbot qui guide l'achat, répond aux questions produit et gère le SAV. Un agent IA pour les recommandations personnalisées.",

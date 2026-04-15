@@ -8,9 +8,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
   return {
-    title: "Services — 7 Solutions Digital Workplace, IA & IoT pour PME | WCT Systems",
+    title: "Services — 5 Solutions Digital Workplace, Automatisation & IA pour PME | WCT Systems",
     description:
-      "7 solutions pour PME : Digital Workplace gamifié, Prospection IA, Site Web Moderne, Automatisation RPA, Intégration IA, Q2C Facturation SaaS et Nixie Pulse (dashboard KPI physique connecté). À partir de 79 € HT/mois. Audit gratuit.",
+      "5 solutions pour PME : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA et Nixie Pulse (dashboard KPI physique connecté). À partir de 99 € HT/mois. Audit gratuit.",
     alternates: {
       canonical: `${siteUrl}${locale === "pt" ? "/pt/servicos" : "/services"}`,
       languages: {
@@ -41,20 +41,6 @@ const SERVICES = [
       "Messagerie temps réel + visio",
       "Dashboard KPI par équipe",
       "Intégration 200+ outils existants",
-    ],
-  },
-  {
-    id: "prospection-ia",
-    href: "/services/trouver-prospects",
-    name: "Prospection IA",
-    short: "Trouvez vos futurs clients grâce à l\u2019IA. Ciblage, enrichissement, intégration CRM.",
-    price: "99",
-    bullets: [
-      "Ciblage IA par secteur et zone géo",
-      "Enrichissement automatique (email, LinkedIn, téléphone)",
-      "Scoring des leads par IA",
-      "Intégration CRM / tableur automatique",
-      "Base mise à jour en continu",
     ],
   },
   {
@@ -98,21 +84,6 @@ const SERVICES = [
       "Connexion à vos outils existants",
       "Réponses basées sur vos données (RAG)",
       "Formation équipe incluse (1h/mois)",
-    ],
-  },
-  {
-    id: "q2c-facturation",
-    href: "/services/q2c-facturation",
-    name: "Q2C — Facturation SaaS",
-    badge: "Nouveau",
-    short: "Facturation électronique conforme 2026 pour SaaS B2B. Devis, contrats, abonnements, Factur-X, TVA OSS.",
-    price: "149",
-    bullets: [
-      "Factur-X + UBL + CII (3 formats réglementaires)",
-      "Cycle complet devis → paiement",
-      "TVA OSS 30 pays + validation VIES",
-      "Connecteur Plateforme Agréée",
-      "Dashboard MRR/ARR + IFRS 15",
     ],
   },
   {
@@ -160,42 +131,28 @@ const SERVICE_COLORS = [
     check: "text-cyan-600 dark:text-cyan-400",
     badge: "bg-cyan-600",
   },
-  /* 1 — Prospection IA */
-  {
-    card: "bg-gradient-to-br from-emerald-50/40 to-green-50/20 dark:from-emerald-500/[0.04] dark:to-green-500/[0.02]",
-    border: "border-emerald-200/60 hover:border-emerald-400/50 dark:border-emerald-700/30 dark:hover:border-emerald-500/20",
-    check: "text-emerald-600 dark:text-emerald-400",
-    badge: "bg-emerald-600",
-  },
-  /* 2 — Site Web Moderne */
+  /* 1 — Site Web Moderne */
   {
     card: "bg-gradient-to-br from-sky-50/40 to-indigo-50/20 dark:from-sky-500/[0.04] dark:to-indigo-500/[0.02]",
     border: "border-sky-200/60 hover:border-sky-400/50 dark:border-sky-700/30 dark:hover:border-sky-500/20",
     check: "text-sky-600 dark:text-sky-400",
     badge: "bg-sky-600",
   },
-  /* 3 — Automatisation */
+  /* 2 — Automatisation */
   {
     card: "bg-gradient-to-br from-amber-50/40 to-orange-50/20 dark:from-amber-500/[0.04] dark:to-orange-500/[0.02]",
     border: "border-amber-200/60 hover:border-amber-400/50 dark:border-amber-700/30 dark:hover:border-amber-500/20",
     check: "text-amber-600 dark:text-amber-400",
     badge: "bg-amber-600",
   },
-  /* 4 — Intégration IA */
+  /* 3 — Intégration IA */
   {
     card: "bg-gradient-to-br from-fuchsia-50/40 to-purple-50/20 dark:from-fuchsia-500/[0.04] dark:to-purple-500/[0.02]",
     border: "border-fuchsia-200/60 hover:border-fuchsia-400/50 dark:border-fuchsia-700/30 dark:hover:border-fuchsia-500/20",
     check: "text-fuchsia-600 dark:text-fuchsia-400",
     badge: "bg-fuchsia-600",
   },
-  /* 5 — Q2C Facturation SaaS */
-  {
-    card: "bg-gradient-to-br from-emerald-50/40 to-teal-50/20 dark:from-emerald-500/[0.04] dark:to-teal-500/[0.02]",
-    border: "border-emerald-200/60 hover:border-emerald-400/50 dark:border-emerald-700/30 dark:hover:border-emerald-500/20",
-    check: "text-emerald-600 dark:text-emerald-400",
-    badge: "bg-emerald-600",
-  },
-  /* 6 — Nixie Pulse */
+  /* 4 — Nixie Pulse */
   {
     card: "bg-gradient-to-br from-orange-50/40 to-amber-50/20 dark:from-orange-500/[0.04] dark:to-amber-500/[0.02]",
     border: "border-orange-200/60 hover:border-orange-400/50 dark:border-orange-700/30 dark:hover:border-orange-500/20",
@@ -280,18 +237,18 @@ export default function ServicesPage() {
         <ScrollReveal direction="up" delay={0}>
           <section className="space-y-8">
             <div className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-4 py-1 text-xs uppercase tracking-wide text-violet-700 dark:border-violet-800 dark:bg-violet-950/50 dark:text-violet-300">
-              7 Solutions &bull; SaaS &bull; IA &bull; Hardware &bull; PME
+              5 Solutions &bull; SaaS &bull; IA &bull; Hardware &bull; PME
             </div>
 
             <h1 className="font-display font-bold text-4xl tracking-tight sm:text-5xl md:text-6xl">
-              7 solutions pour PME.
+              5 solutions pour PME.
               <span className="block bg-gradient-to-r from-violet-600 via-cyan-500 to-indigo-500 bg-clip-text text-transparent dark:from-violet-400 dark:via-cyan-400 dark:to-indigo-400">
                 Du digital au physique.
               </span>
             </h1>
 
             <p className="max-w-2xl text-lg text-muted-foreground">
-              Digital Workplace, prospection, site web, automatisation, IA et facturation SaaS — plus Nixie Pulse, le premier dashboard KPI physique connecté.
+              Digital Workplace, site web, automatisation, IA et Nixie Pulse — le premier dashboard KPI physique connecté.
               Prenez-les individuellement ou combinez-les en pack.
             </p>
 
@@ -314,7 +271,7 @@ export default function ServicesPage() {
 
         {/* GRID */}
         <ScrollReveal direction="up" delay={100}>
-          <section className="mt-14 grid gap-6 md:grid-cols-2" aria-label="Nos 7 solutions">
+          <section className="mt-14 grid gap-6 md:grid-cols-2" aria-label="Nos 5 solutions">
             {SERVICES.map((s, i) => {
               const colors = SERVICE_COLORS[i];
               return (

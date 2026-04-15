@@ -1,14 +1,14 @@
 {
   "list": {
-    "metadata_title": "Services — 5 solutions Digital Workplace & IA pour PME | WCT Systems",
-    "metadata_description": "5 solutions pour PME : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse. Mise en place incluse, à partir de 79 € HT/mois. Audit gratuit.",
-    "hero_badge": "5 solutions • Digital Workplace • IA • PME",
-    "hero_title_line1": "5 solutions pour PME.",
+    "metadata_title": "Services — 6 solutions Digital Workplace & IA pour PME | WCT Systems",
+    "metadata_description": "6 solutions pour PME : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse, AIViz. À partir de 29 € HT/mois. Audit gratuit.",
+    "hero_badge": "6 solutions • Digital Workplace • IA • PME",
+    "hero_title_line1": "6 solutions pour PME.",
     "hero_title_line2": "Un écosystème complet.",
     "hero_description": "Digital Workplace, prospection, site web, automatisation et IA : chaque SaaS résout un problème précis. Prenez-les individuellement ou combinez-les en pack pour un système complet.",
     "hero_cta_audit": "Réserver un audit gratuit",
     "hero_cta_pricing": "Voir les tarifs",
-    "grid_aria_label": "Nos 5 solutions",
+    "grid_aria_label": "Nos 6 solutions",
     "price_suffix": "HT/mois",
     "card_cta_learn_more": "En savoir plus",
     "card_cta_start": "Démarrer",
@@ -798,5 +798,5 @@
     "jsonld_service_description": "Mesurez votre visibilité de marque dans ChatGPT, Perplexity, Claude, Gemini. Score 0-100, détection citation gaps, rapports PDF, benchmarking concurrentiel.",
     "jsonld_area_served": "France"
   },
-  "metadata_description": "5 solutions pour PME : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse. Mise en place incluse, à partir de 79 € HT/mois. Audit gratuit."
+  "metadata_description": "6 solutions pour PME : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse, AIViz. À partir de 29 € HT/mois. Audit gratuit."
 }

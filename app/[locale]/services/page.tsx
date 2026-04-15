@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Services — 5 Solutions Digital Workplace, Automatisation & IA pour PME | WCT Systems",
     description:
-      "5 solutions pour PME : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA et Nixie Pulse (dashboard KPI physique connecté). À partir de 99 € HT/mois. Audit gratuit.",
+      "6 solutions pour PME : Digital Workplace, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse et AIViz. À partir de 29 € HT/mois. Audit gratuit.",
     alternates: {
       canonical: `${siteUrl}${locale === "pt" ? "/pt/servicos" : "/services"}`,
       languages: {
@@ -259,11 +259,11 @@ export default function ServicesPage() {
         <ScrollReveal direction="up" delay={0}>
           <section className="space-y-8">
             <div className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-4 py-1 text-xs uppercase tracking-wide text-violet-700 dark:border-violet-800 dark:bg-violet-950/50 dark:text-violet-300">
-              5 Solutions &bull; SaaS &bull; IA &bull; Hardware &bull; PME
+              6 Solutions &bull; SaaS &bull; IA &bull; Hardware &bull; PME
             </div>
 
             <h1 className="font-display font-bold text-4xl tracking-tight sm:text-5xl md:text-6xl">
-              5 solutions pour PME.
+              6 solutions pour PME.
               <span className="block bg-gradient-to-r from-violet-600 via-cyan-500 to-indigo-500 bg-clip-text text-transparent dark:from-violet-400 dark:via-cyan-400 dark:to-indigo-400">
                 Du digital au physique.
               </span>
@@ -293,7 +293,7 @@ export default function ServicesPage() {
 
         {/* GRID */}
         <ScrollReveal direction="up" delay={100}>
-          <section className="mt-14 grid gap-6 md:grid-cols-2" aria-label="Nos 5 solutions">
+          <section className="mt-14 grid gap-6 md:grid-cols-2" aria-label="Nos 6 solutions">
             {SERVICES.map((s, i) => {
               const colors = SERVICE_COLORS[i];
               return (

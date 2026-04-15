@@ -31,12 +31,12 @@ export const metadata: Metadata = {
     template: "%s | WCT Systems",
   },
   description:
-    "5 solutions pour PME françaises : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA et Nixie Pulse. Audit gratuit en 15 minutes.",
+    "6 solutions pour PME françaises : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse et AIViz. Audit gratuit en 15 minutes.",
   applicationName: "WCT Systems",
   openGraph: {
     title: "WCT Systems — IA, Automatisation & Digital Workplace pour PME",
     description:
-      "5 solutions pour PME : Digital Workplace, Site Web Moderne, Automatisation RPA, Intégration IA et Nixie Pulse.",
+      "6 solutions pour PME : Digital Workplace, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse et AIViz.",
     url: "/",
     siteName: "WCT Systems",
     locale: "fr_FR",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "WCT Systems — IA, Automatisation & Digital Workplace pour PME",
     description:
-      "5 solutions pour PME — Digital Workplace, IA, automatisation, dashboard KPI physique, résultats mesurables.",
+      "6 solutions pour PME — Digital Workplace, Site Web Moderne, IA, automatisation, Nixie Pulse et AIViz.",
   },
   robots: {
     index: true,

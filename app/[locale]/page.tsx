@@ -137,14 +137,14 @@ export default function HomePage() {
         "@type": "Organization",
         name: SITE.name,
         url: SITE.url,
-        description: "Digital Workplace, IA & Automatisation pour PME françaises. 5 solutions intégrées.",
+        description: "Digital Workplace, IA & Automatisation pour PME françaises. 6 solutions intégrées.",
         sameAs: SITE.sameAs,
       },
       {
         "@type": "WebSite",
         name: SITE.name,
         url: SITE.url,
-        description: "Digital Workplace gamifié + IA + automatisation pour PME. 5 solutions intégrées.",
+        description: "Digital Workplace gamifié + IA + automatisation pour PME. 6 solutions intégrées.",
         potentialAction: {
           "@type": "SearchAction",
           target: `${SITE.url}/blog?q={search_term_string}`,
@@ -250,7 +250,7 @@ export default function HomePage() {
                   href="/services"
                   className="inline-flex items-center justify-center rounded-2xl border px-6 py-3 text-sm font-medium transition-colors hover:bg-muted dark:border-white/[0.12]"
                 >
-                  Voir les 5 solutions
+                  Voir les 6 solutions
                 </Link>
               </div>
             </ScrollReveal>
@@ -337,7 +337,7 @@ export default function HomePage() {
               <div>
                 <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">L&apos;écosystème complet</h2>
                 <p className="mt-2 max-w-2xl text-muted-foreground">
-                  5 solutions complémentaires : Digital Workplace, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse. Chaque service a sa couleur.
+                  6 solutions complémentaires : Digital Workplace, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse et AIViz. Chaque service a sa couleur.
                 </p>
               </div>
               <Link

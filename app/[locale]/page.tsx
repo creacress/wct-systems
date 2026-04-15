@@ -12,10 +12,18 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
   return {
-    title: "WCT Systems — IA, Automatisation & Digital Workplace pour PME françaises",
+    title: "Digital Workplace, IA & Automatisation pour PME — Alternative française | WCT Systems",
     description:
-      "WCT Systems aide les PME françaises avec 5 solutions : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA et Nixie Pulse (dashboard KPI physique connecté). Audit gratuit en 15 min.",
-    keywords: ["IA PME France", "automatisation PME", "SaaS PME", "Digital Workplace PME", "WCT Systems"],
+      "WCT Systems équipe les PME françaises : Digital Workplace gamifié (alternative à Microsoft 365 & Slack), Site Web Moderne, Automatisation RPA, Intégration IA et Nixie Pulse. Hébergé en France, à partir de 199 €/mois. Audit gratuit en 15 min.",
+    keywords: [
+      "Digital Workplace PME",
+      "alternative Microsoft 365 PME",
+      "automatisation PME France",
+      "intégration IA PME",
+      "outil collaboratif tout-en-un PME",
+      "site web PME",
+      "WCT Systems",
+    ],
     alternates: {
       canonical: `${siteUrl}${locale === "pt" ? "/pt" : ""}`,
       languages: {
@@ -134,6 +142,38 @@ export default function HomePage() {
         },
       },
       {
+        "@type": "SoftwareApplication",
+        name: "WCT Systems Digital Workplace",
+        applicationCategory: "BusinessApplication",
+        applicationSubCategory: "Collaboration & Productivity Suite",
+        operatingSystem: "Web, iOS, Android",
+        description:
+          "Digital Workplace tout-en-un pour PME françaises : messagerie, visio, documents, tâches, CRM et IA intégrée. Alternative française à Microsoft 365 & Slack, hébergée en France.",
+        url: `${SITE.url}/services/digital-workplace`,
+        inLanguage: ["fr-FR", "pt-PT"],
+        offers: {
+          "@type": "Offer",
+          price: "199",
+          priceCurrency: "EUR",
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: "199",
+            priceCurrency: "EUR",
+            referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
+          },
+          availability: "https://schema.org/InStock",
+          url: `${SITE.url}/tarifs`,
+        },
+        provider: { "@type": "Organization", name: SITE.name, url: SITE.url },
+        featureList: [
+          "Digital Workplace gamifié (alternative Microsoft 365 & Slack)",
+          "Site Web Moderne (Next.js + IA)",
+          "Automatisation RPA & relances",
+          "Intégration IA & chatbots",
+          "Nixie Pulse — Dashboard KPI physique Made in France",
+        ],
+      },
+      {
         "@type": "FAQPage",
         mainEntity: FAQ.map((f) => ({
           "@type": "Question",
@@ -166,23 +206,24 @@ export default function HomePage() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-500 opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-violet-600" />
                 </span>
-                5 Solutions &bull; SaaS &bull; IA &bull; Hardware
+                Alternative française &bull; Hébergé en France &bull; RGPD
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={100}>
               <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                Votre bureau digital.
+                Le Digital Workplace français
                 <span className="block bg-gradient-to-r from-violet-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent dark:from-violet-400 dark:via-indigo-400 dark:to-cyan-400">
-                  Tout-en-un, gamifié, piloté par l&apos;IA.
+                  qui remplace vos 12 outils.
                 </span>
               </h1>
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
               <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-                <strong className="text-foreground">WCT Systems</strong> conçoit le Digital Workplace des PME françaises :
-                un bureau virtuel gamifié + 5 solutions (<strong className="text-foreground">Digital Workplace, Site Web, Automatisation, Intégration IA</strong> et <strong className="text-foreground">Nixie Pulse</strong>, le dashboard KPI physique connecté).
+                <strong className="text-foreground">WCT Systems</strong> équipe les PME françaises avec un Digital Workplace souverain —
+                et 4 solutions complémentaires : <strong className="text-foreground">Site Web Moderne</strong>, <strong className="text-foreground">Automatisation RPA</strong>, <strong className="text-foreground">Intégration IA</strong> et <strong className="text-foreground">Nixie Pulse</strong> (dashboard KPI physique).
+                Hébergé en France, à partir de <strong className="text-foreground">199 €/mois</strong>.
               </p>
             </ScrollReveal>
 
@@ -211,7 +252,7 @@ export default function HomePage() {
               {/* Stat counters row */}
               <div className="grid grid-cols-3 gap-3">
                 {[
-                  { end: 7, suffix: " solutions", label: "Écosystème" },
+                  { end: 5, suffix: " solutions", label: "Écosystème" },
                   { end: 14, suffix: " jours", label: "Time to live" },
                   { end: 200, suffix: "+", label: "Intégrations" },
                 ].map((s) => (
@@ -279,7 +320,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── ÉCOSYSTÈME 7 SOLUTIONS ── */}
+        {/* ── ÉCOSYSTÈME 5 SOLUTIONS ── */}
         <section className="mt-24" aria-label="Écosystème">
           <ScrollReveal>
             <div className="flex items-end justify-between gap-6">
@@ -444,10 +485,10 @@ export default function HomePage() {
               </div>
               <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {[
-                  { value: "×6", label: "prospects/mois (cabinet RH)" },
+                  { value: "92%", label: "adoption Digital Workplace (ESN)" },
                   { value: "70%", label: "questions auto (chatbot e-commerce)" },
                   { value: "28j", label: "système complet déployé (cabinet comptable)" },
-                  { value: "92%", label: "adoption Digital Workplace (ESN)" },
+                  { value: "40h", label: "économisées/mois (automatisation facturation)" },
                 ].map((s) => (
                   <div key={s.label} className="rounded-2xl border bg-background p-4 dark:border-white/[0.06] dark:bg-white/[0.03]">
                     <div className="text-2xl font-bold font-mono tracking-tight">{s.value}</div>

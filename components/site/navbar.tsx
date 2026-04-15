@@ -144,7 +144,7 @@ export function Navbar() {
                 {it.label}
                 {it.href === "/services" && (
                   <span className="ml-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-violet-100 text-[10px] font-semibold text-violet-600 dark:bg-violet-900/50 dark:text-violet-400">
-                    7
+                    5
                   </span>
                 )}
                 {/* Animated underline */}
@@ -260,7 +260,7 @@ export function Navbar() {
                     {it.label}
                     {it.href === "/services" && (
                       <span className="ml-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-violet-100 text-[10px] font-semibold text-violet-600 dark:bg-violet-900/50 dark:text-violet-400">
-                        7
+                        5
                       </span>
                     )}
                   </Link>

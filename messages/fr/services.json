@@ -95,9 +95,9 @@
     "cta_button": "Réserver l'audit"
   },
   "digital_workplace": {
-    "metadata_title": "Digital Workplace — Bureau virtuel gamifié pour PME | WCT Systems",
-    "metadata_description": "Centralisez vos outils dans un bureau virtuel gamifié : chaque pièce = un outil métier. CRM, messagerie, projets, KPI — tout dans un seul espace. À partir de 199€/mois.",
-    "metadata_keywords": "digital workplace PME, bureau virtuel, espace de travail collaboratif, virtual office, outil collaboratif PME",
+    "metadata_title": "Digital Workplace français — Alternative à Microsoft 365 & Slack pour PME | WCT Systems",
+    "metadata_description": "Alternative française à Microsoft 365 & Slack pour PME : bureau virtuel gamifié, messagerie, visio, docs, CRM et KPI dans un seul espace. Hébergé en France. À partir de 199 €/mois.",
+    "metadata_keywords": "digital workplace français, alternative Microsoft 365 PME, alternative Slack PME, bureau virtuel PME, outil collaboratif français, espace de travail hébergé en France",
     "breadcrumb_home": "Accueil",
     "breadcrumb_services": "Services",
     "breadcrumb_current": "Digital Workplace",
@@ -264,9 +264,9 @@
     "jsonld_area_served": "France"
   },
   "site_web_moderne": {
-    "metadata_title": "Création site web PME — SEO + IA, livré en 14 jours | WCT Systems",
-    "metadata_description": "Site web moderne pour PME : SEO classique + SEO IA (JSON-LD, llms.txt), mobile-first, templates sectoriels, performances A+. À partir de 99€/mois.",
-    "metadata_keywords": "création site web PME, site internet professionnel, site web SEO IA, site web PME pas cher",
+    "metadata_title": "Site Web PME — Alternative française à Wix & WordPress, SEO + IA | WCT Systems",
+    "metadata_description": "Alternative française à Wix / WordPress pour PME : site Next.js optimisé SEO classique + SEO IA (JSON-LD, llms.txt), mobile-first, hébergé en France. Livré en 14 jours. À partir de 99 €/mois.",
+    "metadata_keywords": "création site web PME, alternative Wix PME, alternative WordPress PME, site web SEO IA, site internet français, site web PME hébergé en France",
     "breadcrumb_home": "Accueil",
     "breadcrumb_services": "Services",
     "breadcrumb_current": "Site Web Moderne",
@@ -473,9 +473,9 @@
     "jsonld_area_served": "France"
   },
   "automatiser_relances": {
-    "metadata_title": "Automatiser relances commerciales PME — RPA sans code | WCT Systems",
-    "metadata_description": "Automatisez vos relances, CRM, reporting et facturation avec des workflows sur mesure. 200+ intégrations, dashboard KPI. À partir de 149€/mois.",
-    "metadata_keywords": "automatiser relances commerciales, RPA PME, automatisation n8n, workflow automatique",
+    "metadata_title": "Automatisation RPA PME — Alternative française à Zapier & Make | WCT Systems",
+    "metadata_description": "Alternative française à Zapier / Make pour PME : automatisez relances, CRM, reporting et facturation avec des workflows sur mesure. 200+ intégrations, hébergé en France. À partir de 149 €/mois.",
+    "metadata_keywords": "automatisation PME France, alternative Zapier PME, alternative Make PME, RPA français, workflow automatique PME, n8n hébergé en France",
     "breadcrumb_home": "Accueil",
     "breadcrumb_services": "Services",
     "breadcrumb_current": "Automatisation RPA",
@@ -602,9 +602,9 @@
     "jsonld_area_served": "France"
   },
   "integration_ia": {
-    "metadata_title": "Intégration IA en entreprise — Chatbot, agents, RAG | WCT Systems",
-    "metadata_description": "Déployez un chatbot IA, des agents métier ou un assistant basé sur vos données (RAG). Formation incluse. À partir de 199€/mois.",
-    "metadata_keywords": "chatbot IA entreprise, intégration IA PME, agent IA sur mesure, RAG entreprise",
+    "metadata_title": "Intégration IA PME — Alternative française sécurisée à ChatGPT Enterprise | WCT Systems",
+    "metadata_description": "Alternative française à ChatGPT Enterprise pour PME : chatbot IA, agents métier et assistant RAG connectés à vos données. Sécurisé, hébergé en France. Formation incluse. À partir de 199 €/mois.",
+    "metadata_keywords": "intégration IA PME France, alternative ChatGPT Enterprise, chatbot IA entreprise, agent IA français, RAG hébergé en France, IA sécurisée PME",
     "breadcrumb_home": "Accueil",
     "breadcrumb_services": "Services",
     "breadcrumb_current": "Intégration IA",

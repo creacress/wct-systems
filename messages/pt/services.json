@@ -95,9 +95,9 @@
     "cta_button": "Reservar a auditoria"
   },
   "digital_workplace": {
-    "metadata_title": "Digital Workplace — Escritório virtual gamificado para PMEs | WCT Systems",
-    "metadata_description": "Centralize as suas ferramentas num escritório virtual gamificado: cada sala = uma ferramenta de negócio. CRM, mensagens, projetos, KPI — tudo num único espaço. A partir de 199€/mês.",
-    "metadata_keywords": "digital workplace PME, escritório virtual, espaço de trabalho colaborativo, virtual office, ferramenta colaborativa PME",
+    "metadata_title": "Digital Workplace europeu — Alternativa a Microsoft 365 & Slack para PMEs | WCT Systems",
+    "metadata_description": "Alternativa europeia a Microsoft 365 & Slack para PMEs: escritório virtual gamificado, mensagens, videochamada, documentos, CRM e KPI num único espaço. Alojado na UE. A partir de 199 €/mês.",
+    "metadata_keywords": "digital workplace europeu, alternativa Microsoft 365 PME, alternativa Slack PME, escritório virtual PME, ferramenta colaborativa europeia",
     "breadcrumb_home": "Início",
     "breadcrumb_services": "Serviços",
     "breadcrumb_current": "Digital Workplace",
@@ -264,9 +264,9 @@
     "jsonld_area_served": "Portugal"
   },
   "site_web_moderne": {
-    "metadata_title": "Criação de site web para PMEs — SEO + IA, entregue em 14 dias | WCT Systems",
-    "metadata_description": "Site web moderno para PMEs: SEO clássico + SEO IA (JSON-LD, llms.txt), mobile-first, templates setoriais, desempenho A+. A partir de 99€/mês.",
-    "metadata_keywords": "criação site web PME, site internet profissional, site web SEO IA, site web PME acessível",
+    "metadata_title": "Site Web PME — Alternativa europeia a Wix & WordPress, SEO + IA | WCT Systems",
+    "metadata_description": "Alternativa europeia a Wix / WordPress para PMEs: site Next.js otimizado SEO clássico + SEO IA (JSON-LD, llms.txt), mobile-first, alojado na UE. Entregue em 14 dias. A partir de 99 €/mês.",
+    "metadata_keywords": "criação site web PME, alternativa Wix PME, alternativa WordPress PME, site web SEO IA, site internet europeu",
     "breadcrumb_home": "Início",
     "breadcrumb_services": "Serviços",
     "breadcrumb_current": "Site Web Moderno",
@@ -473,9 +473,9 @@
     "jsonld_area_served": "Portugal"
   },
   "automatiser_relances": {
-    "metadata_title": "Automatizar follow-ups comerciais para PMEs — RPA sem código | WCT Systems",
-    "metadata_description": "Automatize os seus follow-ups, CRM, relatórios e faturação com workflows personalizados. Mais de 200 integrações, dashboard KPI. A partir de 149€/mês.",
-    "metadata_keywords": "automatizar follow-ups comerciais, RPA PME, automatização n8n, workflow automático",
+    "metadata_title": "Automatização RPA PME — Alternativa europeia a Zapier & Make | WCT Systems",
+    "metadata_description": "Alternativa europeia a Zapier / Make para PMEs: automatize follow-ups, CRM, relatórios e faturação com workflows personalizados. Mais de 200 integrações, alojado na UE. A partir de 149 €/mês.",
+    "metadata_keywords": "automatização PME Europa, alternativa Zapier PME, alternativa Make PME, RPA europeu, workflow automático PME, n8n alojado UE",
     "breadcrumb_home": "Início",
     "breadcrumb_services": "Serviços",
     "breadcrumb_current": "Automatização RPA",
@@ -602,9 +602,9 @@
     "jsonld_area_served": "Portugal"
   },
   "integration_ia": {
-    "metadata_title": "Integração IA em empresa — Chatbot, agentes, RAG | WCT Systems",
-    "metadata_description": "Implemente um chatbot IA, agentes de negócio ou um assistente baseado nos seus dados (RAG). Formação incluída. A partir de 199€/mês.",
-    "metadata_keywords": "chatbot IA empresa, integração IA PME, agente IA personalizado, RAG empresa",
+    "metadata_title": "Integração IA PME — Alternativa europeia segura ao ChatGPT Enterprise | WCT Systems",
+    "metadata_description": "Alternativa europeia ao ChatGPT Enterprise para PMEs: chatbot IA, agentes de negócio e assistente RAG ligados aos seus dados. Seguro, alojado na UE. Formação incluída. A partir de 199 €/mês.",
+    "metadata_keywords": "integração IA PME Europa, alternativa ChatGPT Enterprise, chatbot IA empresa, agente IA europeu, RAG alojado UE, IA segura PME",
     "breadcrumb_home": "Início",
     "breadcrumb_services": "Serviços",
     "breadcrumb_current": "Integração IA",

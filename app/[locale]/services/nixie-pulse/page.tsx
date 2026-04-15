@@ -12,16 +12,17 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
   return {
-    title: "Nixie Pulse — Dashboard KPI physique connecté | Tubes Nixie IN-14 | WCT Systems",
+    title: "Nixie Pulse — Dashboard KPI physique Made in France | Alternative hardware aux dashboards SaaS | WCT Systems",
     description:
-      "Le premier dashboard KPI physique connecté au monde. Tubes Nixie IN-14 soviétiques affichant vos données Stripe, Bitcoin, GitHub, Analytics en temps réel. Made in France. À partir de 990 €.",
+      "Le premier dashboard KPI physique connecté au monde. Tubes Nixie IN-14 soviétiques affichant vos données Stripe, Bitcoin, GitHub, Analytics en temps réel. Alternative hardware française aux dashboards SaaS. Made in France. À partir de 990 €.",
     keywords: [
       "Nixie Pulse",
       "dashboard KPI physique",
-      "tubes Nixie",
-      "objet connecté",
-      "données temps réel",
-      "Made in France",
+      "dashboard Made in France",
+      "alternative dashboard SaaS",
+      "tubes Nixie IN-14",
+      "objet connecté français",
+      "KPI temps réel hardware",
     ],
     alternates: {
       canonical: `${siteUrl}/services/nixie-pulse`,

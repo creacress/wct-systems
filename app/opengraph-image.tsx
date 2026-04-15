@@ -49,22 +49,22 @@ export default function OpenGraphImage() {
         </div>
 
         {/* Main message */}
-        <div style={{ display: "flex", flexDirection: "column", fontSize: 76, fontWeight: 700, lineHeight: 1.05 }}>
-          <div>Plus de clients.</div>
+        <div style={{ display: "flex", flexDirection: "column", fontSize: 72, fontWeight: 700, lineHeight: 1.05 }}>
+          <div>Le Digital Workplace français</div>
           <div style={{ opacity: 0.75 }}>
-            Moins de tâches répétitives.
+            qui remplace vos 12 outils.
           </div>
         </div>
 
         {/* Bottom strip */}
         <div
           style={{
-            fontSize: 30,
+            fontSize: 26,
             opacity: 0.7,
             letterSpacing: 1,
           }}
         >
-          IA • Automatisation • Acquisition • Conversion
+          Alternative à Microsoft 365 & Slack • Hébergé en France • 199 €/mois
         </div>
       </div>
     ),

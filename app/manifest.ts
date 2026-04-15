@@ -5,10 +5,10 @@ export default function manifest(): MetadataRoute.Manifest {
 
   return {
     id: siteUrl,
-    name: "WCT Systems — IA & Automatisation pour PME",
+    name: "WCT Systems — Digital Workplace, IA & Automatisation pour PME",
     short_name: "WCT Systems",
     description:
-      "Systèmes IA et automatisation pour PME : Prospects → Relances → CRM/RDV → KPI. Audit gratuit.",
+      "Alternative française à Microsoft 365 pour PME : Digital Workplace gamifié, Site Web, Automatisation RPA, Intégration IA et Nixie Pulse. Hébergé en France. Audit gratuit.",
     start_url: "/",
     scope: "/",
     display: "standalone",

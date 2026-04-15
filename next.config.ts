@@ -212,6 +212,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/tarifications",
+        destination: "/tarifs",
+        permanent: true,
+      },
+      {
+        source: "/tarification",
+        destination: "/tarifs",
+        permanent: true,
+      },
+      {
         source: "/bug-bounty",
         destination: "/",
         permanent: true,

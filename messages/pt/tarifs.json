@@ -172,21 +172,21 @@
       "starter": {
         "name": "Starter",
         "tagline": "Lançar a aquisição",
-        "desc": "2 SaaS à escolha entre os 6",
+        "desc": "2 SaaS à escolha entre os 5",
         "badge": "-10% vs à la carte",
         "cta": "Compor o meu pack"
       },
       "business": {
         "name": "Business",
         "tagline": "Estruturar e pilotar",
-        "desc": "3 SaaS à escolha entre os 6",
+        "desc": "3 SaaS à escolha entre os 5",
         "badge": "-15% vs à la carte",
         "cta": "Compor o meu pack"
       },
       "scale": {
         "name": "Scale",
         "tagline": "Sistema completo",
-        "desc": "Os 5 soluções incluídas",
+        "desc": "As 5 soluções incluídas",
         "badge": "-25% vs à la carte",
         "extraBadge": "Account manager dedicado",
         "cta": "Escolher Scale"

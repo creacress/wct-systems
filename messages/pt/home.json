@@ -97,25 +97,21 @@
     },
     "1": {
       "title": "Site Web Moderno",
-      "desc": "Site rápido, SEO + SEO IA, pensado para converter. 4 templates, entregue em 14 dias."
-    },
-    "2": {
-      "title": "Site Web Moderno",
       "desc": "Site rápido, SEO + SEO IA, 4 templates. Entregue em 14 dias."
     },
-    "3": {
+    "2": {
       "title": "Automatização (RPA)",
       "desc": "Workflows à medida: follow-ups, CRM, reporting, dashboard KPI."
     },
-    "4": {
+    "3": {
       "title": "Integração IA",
       "desc": "Chatbot, agentes IA, assistentes à medida conectados aos seus dados.",
       "badge": "Popular"
     },
-    "5": {
+    "4": {
       "title": "Nixie Pulse",
-      "desc": "Faturação eletrónica em conformidade: Factur-X, UBL, CII, IVA OSS, conector AP. A partir de 149 €/mês.",
-      "badge": "Novo"
+      "desc": "Dashboard KPI físico conectado. Tubos Nixie IN-14 soviéticos exibindo os seus dados em tempo real. Made in France.",
+      "badge": "Hardware"
     }
   },
   "roi": {

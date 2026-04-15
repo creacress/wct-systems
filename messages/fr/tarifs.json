@@ -172,14 +172,14 @@
       "starter": {
         "name": "Starter",
         "tagline": "Lancer l’acquisition",
-        "desc": "2 SaaS au choix parmi les 6",
+        "desc": "2 SaaS au choix parmi les 5",
         "badge": "-10% vs à la carte",
         "cta": "Composer mon pack"
       },
       "business": {
         "name": "Business",
         "tagline": "Structurer et piloter",
-        "desc": "3 SaaS au choix parmi les 6",
+        "desc": "3 SaaS au choix parmi les 5",
         "badge": "-15% vs à la carte",
         "cta": "Composer mon pack"
       },

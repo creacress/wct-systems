@@ -15,6 +15,7 @@ import {
   CreditCard,
   CalendarCheck,
   Gauge,
+  Eye,
 } from "lucide-react";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import CountUp from "@/components/ui/count-up";
@@ -123,6 +124,27 @@ const SAAS = [
       "WiFi intégré + interface web de configuration",
       "4 gammes : Mini (4 tubes) à Double (16 tubes)",
       "Assemblé à la main en France",
+    ],
+  },
+  {
+    id: "aiviz",
+    icon: Eye,
+    name: "AIViz",
+    description:
+      "Mesurez votre visibilité dans ChatGPT, Perplexity, Claude, Gemini. Score 0-100, gaps, rapports.",
+    priceMonthly: 29,
+    priceYearly: 23,
+    yearlyTotal: 276,
+    setup: 0,
+    href: "/services/aiviz",
+    badge: "Nouveau",
+    accentHover: "hover:border-violet-400/40",
+    features: [
+      "Scans hebdomadaires (Starter)",
+      "1 marque suivie",
+      "4 LLMs (ChatGPT, Perplexity, Claude, Gemini)",
+      "Rapports PDF mensuels",
+      "Alertes email",
     ],
   },
 ];

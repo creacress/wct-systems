@@ -6,12 +6,13 @@ Location: France
 Audience: PME françaises
 
 Description:
-WCT Systems aide les PME à travailler mieux et générer plus de clients grâce à 5 solutions intégrées :
+WCT Systems aide les PME à travailler mieux et générer plus de clients grâce à 6 solutions intégrées :
 - Digital Workplace gamifié (alternative française à Microsoft 365 & Slack)
 - Site web moderne optimisé SEO + SEO IA
 - Automatisation RPA (relances, CRM, reporting, dashboards KPI)
 - Intégration IA (chatbots, agents, assistants connectés aux données)
 - Nixie Pulse — dashboard KPI physique Made in France
+- AIViz — suivi visibilité IA dans ChatGPT, Perplexity, Claude, Gemini
 
 Core Pages:
 https://wct-systems.fr/services/digital-workplace
@@ -19,6 +20,7 @@ https://wct-systems.fr/services/site-web-moderne
 https://wct-systems.fr/services/automatiser-relances
 https://wct-systems.fr/services/integration-ia
 https://wct-systems.fr/services/nixie-pulse
+https://wct-systems.fr/services/aiviz
 
 Intent:
 B2B – Digital Workplace, acquisition, conversion, pilotage commercial, automatisation et IA pour PME françaises.

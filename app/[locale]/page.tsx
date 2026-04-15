@@ -117,6 +117,16 @@ const SERVICES = [
     borderHover: "hover:border-orange-400/40 dark:hover:border-orange-500/30",
     badge: "Hardware",
   },
+  {
+    href: "/services/aiviz",
+    title: "AIViz",
+    desc: "Suivez votre visibilité dans ChatGPT, Perplexity, Claude, Gemini. Score, gaps, rapports.",
+    price: "29",
+    color: "violet",
+    gradient: "from-violet-500/10 to-indigo-500/5",
+    borderHover: "hover:border-violet-400/40 dark:hover:border-violet-500/30",
+    badge: "Nouveau",
+  },
 ] as const;
 
 export default function HomePage() {

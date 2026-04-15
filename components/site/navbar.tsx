@@ -144,7 +144,7 @@ export function Navbar() {
                 {it.label}
                 {it.href === "/services" && (
                   <span className="ml-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-violet-100 text-[10px] font-semibold text-violet-600 dark:bg-violet-900/50 dark:text-violet-400">
-                    5
+                    6
                   </span>
                 )}
                 {/* Animated underline */}

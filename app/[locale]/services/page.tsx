@@ -101,6 +101,21 @@ const SERVICES = [
       "Assemblé à la main en France — Made in France",
     ],
   },
+  {
+    id: "aiviz",
+    href: "/services/aiviz",
+    name: "AIViz",
+    badge: "Nouveau",
+    short: "Suivez votre visibilité dans ChatGPT, Perplexity, Claude, Gemini. Score 0-100, détection gaps, rapports.",
+    price: "29",
+    bullets: [
+      "Scans multi-LLM (ChatGPT, Perplexity, Claude, Gemini)",
+      "Score 0-100 pondéré",
+      "Détection citation gaps",
+      "Rapports PDF mensuels",
+      "Alertes email",
+    ],
+  },
 ] as const;
 
 const FAQ = [
@@ -158,6 +173,13 @@ const SERVICE_COLORS = [
     border: "border-orange-200/60 hover:border-orange-400/50 dark:border-orange-700/30 dark:hover:border-orange-500/20",
     check: "text-orange-600 dark:text-orange-400",
     badge: "bg-orange-600",
+  },
+  /* 5 — AIViz */
+  {
+    card: "bg-gradient-to-br from-violet-50/40 to-indigo-50/20 dark:from-violet-500/[0.04] dark:to-indigo-500/[0.02]",
+    border: "border-violet-200/60 hover:border-violet-400/50 dark:border-violet-700/30 dark:hover:border-violet-500/20",
+    check: "text-violet-600 dark:text-violet-400",
+    badge: "bg-violet-600",
   },
 ] as const;
 

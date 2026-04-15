@@ -26,19 +26,20 @@ brand: WCT Systems
 purpose: Présenter clairement l'offre, les preuves et les contenus.
 
 ## Pages prioritaires
-- /services — Vue d'ensemble des 5 solutions pour PME
+- /services — Vue d'ensemble des 6 solutions pour PME
 - /services/digital-workplace — Bureau virtuel gamifié tout-en-un (199€/mois)
 - /services/site-web-moderne — Création site web PME : SEO classique + SEO IA, 12 templates sectoriels, livré en 14 jours (99€/mois)
 - /services/automatiser-relances — Automatisation RPA : relances, CRM, facturation, reporting, 200+ intégrations (149€/mois)
 - /services/integration-ia — Intégration IA : chatbot, agents métier, RAG, formation incluse (199€/mois)
 - /services/nixie-pulse — Nixie Pulse : dashboard KPI physique connecté avec tubes Nixie IN-14 soviétiques, données temps réel (à partir de 990€)
+- /services/aiviz — AIViz : suivi visibilité IA dans ChatGPT, Perplexity, Claude, Gemini, score 0-100, rapports (à partir de 29€/mois)
 - /tarifs — Tous les prix, packs et options de paiement
 - /contact — Formulaire d'audit gratuit (réponse 24-48h)
 - /solutions — Solutions adaptées par secteur d'activité
 - /blog — Articles pratiques sur l'IA, l'automatisation et la prospection B2B
 
 ## Résumé
-WCT Systems aide les PME françaises à gagner du temps et des clients grâce à 5 solutions complémentaires : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA et Nixie Pulse (dashboard KPI physique connecté avec tubes Nixie soviétiques). SaaS à partir de 99€ HT/mois. Audit gratuit de 15 minutes.
+WCT Systems aide les PME françaises à gagner du temps et des clients grâce à 6 solutions complémentaires : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse (dashboard KPI physique connecté avec tubes Nixie soviétiques) et AIViz (visibilité IA). SaaS à partir de 29€ HT/mois. Audit gratuit de 15 minutes.
 
 ## FAQ
 Q: Combien coûte un site web pour PME en 2026 ?
@@ -108,18 +109,19 @@ brand: WCT Systems
 purpose: Apresentar claramente a oferta, as provas e os conteúdos.
 
 ## Páginas prioritárias
-- /pt/servicos — Visão geral dos 5 SaaS para PMEs
+- /pt/servicos — Visão geral dos 6 SaaS para PMEs
 - /pt/servicos/digital-workplace — Escritório virtual gamificado tudo-em-um (199€/mês)
 - /pt/servicos/website-moderno — Criação de website para PME: SEO clássico + SEO IA, 12 templates setoriais, entregue em 14 dias (99€/mês)
 - /pt/servicos/automatizacao-rpa — Automatização RPA: follow-ups, CRM, faturação, reporting, 200+ integrações (149€/mês)
 - /pt/servicos/integracao-ia — Integração IA: chatbot, agentes de negócio, RAG, formação incluída (199€/mês)
+- /pt/servicos/aiviz — AIViz: monitorização visibilidade IA no ChatGPT, Perplexity, Claude, Gemini, score 0-100, relatórios (a partir de 29€/mês)
 - /pt/precos — Todos os preços, packs e opções de pagamento
 - /pt/contacto — Formulário de auditoria gratuita (resposta 24-48h)
 - /pt/solucoes — Soluções adaptadas por setor de atividade
 - /pt/blog — Artigos práticos sobre IA, automatização e prospeção B2B
 
 ## Resumo
-A WCT Systems ajuda as PMEs portuguesas a ganhar tempo e clientes com 5 soluções complementares: Digital Workplace gamificado, Website Moderno, Automatização RPA, Integração IA e dashboard KPI físico Nixie Pulse. Implementação incluída, a partir de 99€/mês. Auditoria gratuita de 15 minutos.
+A WCT Systems ajuda as PMEs portuguesas a ganhar tempo e clientes com 6 soluções complementares: Digital Workplace gamificado, Website Moderno, Automatização RPA, Integração IA, dashboard KPI físico Nixie Pulse e AIViz (visibilidade IA). Implementação incluída, a partir de 29€/mês. Auditoria gratuita de 15 minutos.
 
 ## FAQ
 P: Quanto custa um website para PME em 2026?

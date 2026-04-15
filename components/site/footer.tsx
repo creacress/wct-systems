@@ -16,6 +16,7 @@ const SAAS_KEYS = [
   { href: "/services/automatiser-relances", key: "saas_automatisation" },
   { href: "/services/integration-ia", key: "saas_integration_ia" },
   { href: "/services/nixie-pulse", key: "saas_nixie_pulse" },
+  { href: "/services/aiviz", key: "saas_aiviz" },
 ] as const;
 
 const LEGAL_KEYS = [

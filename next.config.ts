@@ -319,6 +319,18 @@ const nextConfig: NextConfig = {
         destination: "/solutions",
         permanent: true,
       },
+
+      // --- AIViz aliases ---
+      {
+        source: "/ai-visibility",
+        destination: "/services/aiviz",
+        permanent: true,
+      },
+      {
+        source: "/aiviz",
+        destination: "/services/aiviz",
+        permanent: true,
+      },
     ];
   },
 };

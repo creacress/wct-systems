@@ -62,7 +62,8 @@
           "Respostas baseadas nos seus dados (RAG)",
           "Formação de equipa incluída (1h/mês)"
         ]
-      }
+      },
+      "aiviz": "AIViz"
     },
     "faq": [
       {
@@ -695,6 +696,106 @@
     "cta_button": "Reservar a auditoria",
     "jsonld_service_name": "Integração IA — Chatbot, Agentes & Assistentes personalizados",
     "jsonld_service_description": "Serviço de integração IA para PMEs: chatbot site/WhatsApp, agentes IA de negócio (vendas, suporte, RH), RAG sobre os seus dados, ligação a ferramentas existentes.",
+    "jsonld_area_served": "Portugal"
+  },
+  "aiviz": {
+    "metadata_title": "AIViz — Visibilidade IA da sua marca no ChatGPT, Perplexity, Claude | WCT Systems",
+    "metadata_description": "Meça a sua visibilidade no ChatGPT, Perplexity, Claude, Gemini. Pontuação 0-100, deteção de gaps de citação, relatórios PDF. A partir de 29€/mês.",
+    "metadata_keywords": "visibilidade IA, SEO IA, visibilidade ChatGPT, visibilidade Perplexity, visibilidade Claude, visibilidade Gemini, monitorização IA",
+    "breadcrumb_home": "Início",
+    "breadcrumb_services": "Serviços",
+    "breadcrumb_current": "AIViz",
+    "hero_badge": "Novo",
+    "hero_badge_popular": "Beta",
+    "hero_title_line1": "O ChatGPT fala realmente",
+    "hero_title_line2": "da sua marca?",
+    "hero_description": "60% das pesquisas agora ocorrem no ChatGPT, Perplexity, Claude e Gemini. AIViz mostra-lhe se a sua marca é citada e como melhorar a sua visibilidade IA.",
+    "hero_cta": "Começar gratuitamente",
+    "hero_pricing": "A partir de 29€/mês · 14 dias grátis",
+    "use_cases_title": "Problemas que AIViz resolve",
+    "use_cases": [
+      {
+        "title": "Invisibilidade LLM",
+        "desc": "Descubra se os seus concorrentes são citados nas respostas LLM enquanto você está ausente."
+      },
+      {
+        "title": "Gaps de citação",
+        "desc": "Identifique onde deveria ser citado mas não está — e como corrigir."
+      },
+      {
+        "title": "Concorrentes à sua frente",
+        "desc": "Acompanhe como os seus concorrentes ganham espaço nas respostas LLM."
+      },
+      {
+        "title": "Monitorização multi-LLM",
+        "desc": "Um único dashboard para ChatGPT, Perplexity, Claude, Gemini — todos os seus dados."
+      },
+      {
+        "title": "Relatórios acionáveis",
+        "desc": "Relatórios PDF mensais com recomendações precisas para aumentar a sua visibilidade."
+      },
+      {
+        "title": "Benchmarking competitivo",
+        "desc": "Compare a sua visibilidade IA com os seus concorrentes diretos. Quem está na frente?"
+      }
+    ],
+    "included_title": "O que está incluído",
+    "included_items": [
+      "Análises multi-LLM (ChatGPT, Perplexity, Claude, Gemini)",
+      "Pontuação 0-100 ponderada por LLM",
+      "Deteção automática de gaps de citação",
+      "Relatórios PDF automatizados mensais",
+      "Alertas por email em caso de queda de visibilidade",
+      "Suporte em português"
+    ],
+    "roi_title": "Exemplo de ROI",
+    "roi_hypothesis_label": "Hipótese",
+    "roi_hypothesis": "0 visibilidade inicial em 4 LLMs",
+    "roi_gain_label": "Ganho",
+    "roi_gain_suffix": "pts",
+    "roi_gain_text": " de visibilidade em 90 dias",
+    "roi_impact_label": "Impacto",
+    "roi_impact": "+40% de leads orgânicos atribuídos a SEO IA",
+    "roi_business_title": "Tradução para o negócio",
+    "roi_business_desc_prefix": "Se está invisível em 4 LLMs e ganhar ",
+    "roi_business_bold1": "60 pts",
+    "roi_business_mid": " de visibilidade IA, significa que passará de ",
+    "roi_business_bold2": "0% para 60%",
+    "roi_business_suffix": " das respostas LLM — um aumento massivo de visibilidade orgânica.",
+    "roi_disclaimer": "*Exemplo indicativo: depende do seu setor, volume de pesquisas e concorrência.",
+    "before_after_title": "Antes / Depois AIViz",
+    "before_label": "Sem monitorização",
+    "before_text": "Está invisível nas respostas LLM. Os seus concorrentes capturam os leads. Perde 40% de visibilidade orgânica potencial.",
+    "after_label": "Com AIViz",
+    "after_text": "Tem uma pontuação clara, conhece os seus gaps, sabe onde se posicionar para dominar as respostas LLM.",
+    "faq_title": "Perguntas frequentes",
+    "faq": [
+      {
+        "q": "Quanto tempo demora uma análise?",
+        "a": "Uma análise completa (4 LLMs) demora entre 2 a 5 minutos. Os resultados são atualizados e recebe uma notificação."
+      },
+      {
+        "q": "Com que frequência são feitas as análises?",
+        "a": "Depende do plano: Starter (semanal), Business (diária), Agency (horária). Quanto mais alto o plano, mais atualizados os seus dados."
+      },
+      {
+        "q": "O que fazer com os gaps de citação detetados?",
+        "a": "AIViz gera recomendações específicas: páginas a otimizar, conteúdos a criar, links a construir. Claude ajuda-o a priorizá-las."
+      },
+      {
+        "q": "Os meus dados estão seguros?",
+        "a": "Sim. Alojamento UE, encriptação em trânsito e em repouso, sem partilha de dados. Eliminação a pedido, conformidade RGPD."
+      },
+      {
+        "q": "Posso cancelar a minha subscrição?",
+        "a": "Sim. Subscrição mensal sem compromisso a longo prazo. Pode cancelar a qualquer momento antes do final do mês."
+      }
+    ],
+    "cta_title": "Recupere o controlo do seu referenciamento IA",
+    "cta_description": "Descubra a sua visibilidade no ChatGPT, Perplexity, Claude e Gemini. Comece gratuitamente, 14 dias grátis.",
+    "cta_button": "Começar gratuitamente",
+    "jsonld_service_name": "AIViz — Monitorização de visibilidade IA",
+    "jsonld_service_description": "Meça a sua visibilidade de marca no ChatGPT, Perplexity, Claude, Gemini. Pontuação 0-100, deteção de gaps de citação, relatórios PDF, benchmarking competitivo.",
     "jsonld_area_served": "Portugal"
   },
   "metadata_description": "5 soluções para PMEs: Digital Workplace gamificado, Site Web Moderno, Automatização RPA, Integração IA, Nixie Pulse. Implementação incluída, a partir de 79 € s/IVA/mês. Auditoria gratuita."

@@ -44,3 +44,10 @@ next-env.d.ts
 # blog auto-publish
 logs/
 scripts/topic-backlog.md
+
+# SEO audit reports (local only, pushed to Notion)
+reports/seo/
+
+# claude-seo baselines + cache
+.seo-drift/
+.seo-cache/

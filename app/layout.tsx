@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Sora, DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Sora, DM_Sans, JetBrains_Mono, Instrument_Serif } from "next/font/google";
 import { getLocale } from "next-intl/server";
 
 const sora = Sora({
@@ -22,6 +22,14 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains",
   display: "swap",
   weight: ["400", "500", "600"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-instrument",
+  display: "swap",
+  weight: ["400"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -67,7 +75,20 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   return (
-    <html lang={locale} suppressHydrationWarning className={`${sora.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}>
+    <html lang={locale} suppressHydrationWarning className={`${sora.variable} ${dmSans.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable}`}>
+      <head>
+        {/* Preconnect — fonts served via next/font but help establish GTM early-connect without loading it */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        {/* Preload LCP-critical above-the-fold logo (navbar, every page) */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/logo-wct-systems-80.webp"
+          type="image/webp"
+          fetchPriority="high"
+        />
+      </head>
       <body className="min-h-screen bg-background text-foreground antialiased font-body">
         <noscript>
           <iframe

@@ -114,11 +114,29 @@ export function CookieBanner() {
   useEffect(() => {
     const consent = getConsent();
 
-    // 1. Initialiser le Consent Mode AVANT GTM
+    // 1. Initialiser le Consent Mode AVANT GTM (synchrone, très léger)
     initConsentMode(consent === "accepted");
 
-    // 2. Charger GTM TOUJOURS (indépendamment du consentement)
-    loadGTM();
+    // 2. Différer le chargement de GTM hors du chemin critique LCP/TBT
+    //    → requestIdleCallback si dispo, sinon setTimeout 1500ms.
+    //    GTM pèse ~100 KB + beaucoup de tags tiers : on attend que le main thread soit libre.
+    const scheduleGTM = () => {
+      type IdleWindow = Window & {
+        requestIdleCallback?: (cb: IdleRequestCallback, opts?: { timeout: number }) => number;
+      };
+      const w = window as IdleWindow;
+      if (typeof w.requestIdleCallback === "function") {
+        w.requestIdleCallback(() => loadGTM(), { timeout: 4000 });
+      } else {
+        setTimeout(() => loadGTM(), 1500);
+      }
+    };
+
+    if (document.readyState === "complete") {
+      scheduleGTM();
+    } else {
+      window.addEventListener("load", scheduleGTM, { once: true });
+    }
 
     // 3. Afficher la bannière seulement si pas encore de choix
     if (consent === null) {

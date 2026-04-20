@@ -7,6 +7,7 @@ import { PageBackground } from "@/components/site/page-background";
 import Breadcrumbs from "@/components/site/breadcrumbs";
 import RelatedServices from "@/components/site/related-services";
 import { AIVizWidget } from "@/components/aiviz/AIVizWidget";
+import ScrollToButton from "@/components/site/scroll-to-button";
 import { getTranslations, getLocale } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -144,15 +145,12 @@ export default async function AIVizPage() {
               >
                 {t('aiviz.hero_cta')}
               </a>
-              <button
-                onClick={() => {
-                  const el = document.getElementById('aiviz-demo');
-                  el?.scrollIntoView({ behavior: 'smooth' });
-                }}
+              <ScrollToButton
+                targetId="aiviz-demo"
                 className="inline-flex items-center justify-center rounded-2xl border border-violet-200 bg-violet-50/50 px-6 py-3 text-sm font-medium text-violet-700 transition hover:bg-violet-100 dark:border-violet-800 dark:bg-violet-950/50 dark:text-violet-300 dark:hover:bg-violet-900/50"
               >
                 Voir la démo
-              </button>
+              </ScrollToButton>
               <div className="text-sm text-muted-foreground">
                 {t('aiviz.hero_pricing')}
               </div>

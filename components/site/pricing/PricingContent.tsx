@@ -242,52 +242,49 @@ export default function PricingContent() {
   const [isYearly, setIsYearly] = useState(false);
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20">
+    <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 sm:py-20 lg:py-24">
       {/* ── HERO ──────────────────────────────────────────────────────── */}
       <ScrollReveal direction="up" delay={0}>
-        <section className="space-y-8 text-center">
+        <section className="space-y-7 text-center">
           {/* Badge */}
           <div className="flex justify-center">
-            <span className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-4 py-1.5 text-xs font-medium uppercase tracking-wide text-violet-700 dark:border-violet-800 dark:bg-violet-950/50 dark:text-violet-300">
+            <span className="inline-flex items-center gap-2 rounded-full border border-violet-200/60 bg-white/70 px-3.5 py-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-violet-700 shadow-sm backdrop-blur dark:border-violet-800/40 dark:bg-white/5 dark:text-violet-300">
               Tarifs transparents · Mise en place incluse
             </span>
           </div>
 
-          <h1 className="font-display font-bold text-4xl tracking-tight sm:text-5xl md:text-6xl">
-            Choisissez votre plan.
-            <span className="block bg-linear-to-r from-violet-600 via-indigo-500 to-slate-600 bg-clip-text text-transparent dark:from-violet-400 dark:via-indigo-400 dark:to-slate-400">
+          <h1
+            data-speakable
+            className="text-[clamp(2.2rem,6vw,4rem)] font-semibold leading-[1.04] tracking-[-0.03em]"
+          >
+            Choisissez votre plan.{" "}
+            <span className="font-serif-display italic text-violet-600 dark:text-violet-400">
               Évoluez à votre rythme.
             </span>
           </h1>
 
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            5 solutions conçues pour les PME françaises. Mise en place incluse.
+          <p className="mx-auto max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            6 solutions conçues pour les PME françaises. Mise en place incluse.
             <br className="hidden sm:block" />
-            Sans engagement mensuel, -20% en annuel.
+            Sans engagement mensuel, −20 % en annuel.
           </p>
 
           {/* Stats rapides */}
-          <div className="flex flex-wrap items-center justify-center gap-8 pt-2">
-            <div className="text-center">
-              <div className="font-display font-bold text-2xl text-violet-600 dark:text-violet-400">
-                <CountUp end={5} suffix=" solutions" />
+          <div className="mx-auto mt-4 grid max-w-2xl grid-cols-3 gap-3 sm:gap-4">
+            {[
+              { end: 6, suffix: " solutions", label: "à la carte ou en pack" },
+              { end: 20, prefix: "−", suffix: "%", label: "en engagement annuel" },
+              { end: 0, suffix: " €", label: "frais de mise en place" },
+            ].map((x) => (
+              <div key={x.label} className="bento-card p-4 text-center sm:p-5">
+                <div className="font-display text-xl font-semibold tracking-[-0.02em] text-violet-600 dark:text-violet-400 sm:text-2xl">
+                  <CountUp end={x.end} prefix={x.prefix} suffix={x.suffix} />
+                </div>
+                <div className="mt-1 text-xs leading-tight text-muted-foreground">
+                  {x.label}
+                </div>
               </div>
-              <div className="text-xs text-muted-foreground">à la carte ou en pack</div>
-            </div>
-            <div className="h-8 w-px bg-border" />
-            <div className="text-center">
-              <div className="font-display font-bold text-2xl text-indigo-600 dark:text-indigo-400">
-                <CountUp end={20} prefix="-" suffix="%" />
-              </div>
-              <div className="text-xs text-muted-foreground">en engagement annuel</div>
-            </div>
-            <div className="h-8 w-px bg-border" />
-            <div className="text-center">
-              <div className="font-display font-bold text-2xl text-slate-700 dark:text-slate-300">
-                <CountUp end={0} suffix=" €" />
-              </div>
-              <div className="text-xs text-muted-foreground">frais de mise en place</div>
-            </div>
+            ))}
           </div>
 
           {/* Toggle mensuel / annuel */}
@@ -728,9 +725,9 @@ export default function PricingContent() {
                 key={f.q}
                 className="group rounded-3xl border bg-background p-6 transition open:shadow-md hover:bg-muted dark:border-white/[0.08] dark:bg-white/[0.03] dark:hover:bg-white/[0.06] open:border-violet-200/60 dark:open:border-violet-800/40"
               >
-                <summary className="flex cursor-pointer items-center justify-between font-medium">
+                <summary className="flex cursor-pointer items-center justify-between rounded-xl font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background">
                   <span>{f.q}</span>
-                  <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 group-open:rotate-180" />
+                  <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 group-open:rotate-180" aria-hidden="true" />
                 </summary>
                 <p className="mt-3 text-sm text-muted-foreground">{f.a}</p>
               </details>

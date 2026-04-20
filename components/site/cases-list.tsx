@@ -46,8 +46,10 @@ export function CasesList({ cases }: { cases: CaseStudy[] }) {
       {/* Filtres */}
       <div className="flex flex-wrap gap-2 mt-14 mb-8">
         <button
+          type="button"
           onClick={() => setFilter(null)}
-          className={`rounded-full border px-4 py-1.5 text-xs font-medium transition ${
+          aria-pressed={filter === null}
+          className={`rounded-full border px-4 py-1.5 text-xs font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
             filter === null
               ? "border-violet-300 bg-violet-100 text-violet-700 dark:border-violet-700 dark:bg-violet-950/50 dark:text-violet-300"
               : "border-border bg-background text-muted-foreground hover:bg-muted dark:border-white/[0.08]"
@@ -58,8 +60,10 @@ export function CasesList({ cases }: { cases: CaseStudy[] }) {
         {services.map(([slug, label]) => (
           <button
             key={slug}
+            type="button"
             onClick={() => setFilter(slug === filter ? null : slug)}
-            className={`rounded-full border px-4 py-1.5 text-xs font-medium transition ${
+            aria-pressed={filter === slug}
+            className={`rounded-full border px-4 py-1.5 text-xs font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
               filter === slug
                 ? getBadgeClass(slug)
                 : "border-border bg-background text-muted-foreground hover:bg-muted dark:border-white/[0.08]"
@@ -133,7 +137,7 @@ function CaseCard({ c }: { c: CaseStudy }) {
 
       {/* Expandable details */}
       <details className="mt-4 group">
-        <summary className="cursor-pointer text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5">
+        <summary className="cursor-pointer rounded-sm text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background">
           Voir le détail
           <span className="transition-transform duration-200 group-open:rotate-90">&rsaquo;</span>
         </summary>
@@ -179,7 +183,7 @@ function CaseCard({ c }: { c: CaseStudy }) {
       <div className="mt-auto pt-4">
         <Link
           href="/contact"
-          className="inline-flex items-center text-xs font-medium text-violet-600 hover:underline dark:text-violet-400"
+          className="inline-flex items-center rounded-sm text-xs font-medium text-violet-600 hover:underline dark:text-violet-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
           Un projet similaire ? &rarr;
         </Link>

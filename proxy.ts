@@ -55,5 +55,12 @@ export default auth((req) => {
 });
 
 export const config = {
-  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
+  // Default matcher excludes paths with a dot (static files). We explicitly
+  // add /llms.txt and /ai.txt so next-intl routes them to [locale] handlers
+  // (SEO + AI discovery surfaces — must be served at the apex, not /fr/*).
+  matcher: [
+    "/((?!api|_next|_vercel|.*\\..*).*)",
+    "/llms.txt",
+    "/ai.txt",
+  ],
 };

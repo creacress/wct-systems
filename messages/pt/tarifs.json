@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Preços IA & Automatização PME — A partir de 79€/mês | WCT Systems",
-    "description": "5 soluções para PMEs: Digital Workplace, Site Web Moderno, Automatização RPA, Integração IA, Nixie Pulse. Implementação incluída. -20% no plano anual. Pagamento em 3x.",
+    "description": "6 soluções para PMEs: Digital Workplace, Site Web Moderno, Automatização RPA, Integração IA, Nixie Pulse, AIViz. Implementação incluída. -20% no plano anual. Pagamento em 3x.",
     "keywords": "preços automatização PME, preço SaaS PME, assinatura IA empresa"
   },
   "breadcrumb": {
@@ -42,7 +42,7 @@
       },
       "2": {
         "name": "Pack Scale",
-        "description": "5 soluções incluídas"
+        "description": "6 soluções incluídas"
       }
     },
     "faq": {
@@ -96,7 +96,7 @@
     "badge": "Preços transparentes · Implementação incluída",
     "title": "Escolha o seu plano.",
     "titleHighlight": "Evolua ao seu ritmo.",
-    "subtitle": "5 soluções concebidas para PMEs portuguesas. Implementação incluída.",
+    "subtitle": "6 soluções concebidas para PMEs portuguesas. Implementação incluída.",
     "subtitleLine2": "Sem compromisso mensal, -20% no plano anual.",
     "statSaas": "SaaS",
     "statSaasLabel": "à la carte ou em pack",
@@ -106,7 +106,7 @@
     "toggleYearly": "Anual"
   },
   "saas": {
-    "sectionLabel": "As nossas 5 soluções",
+    "sectionLabel": "As nossas 6 soluções",
     "items": {
       "digital-workplace": {
         "name": "Digital Workplace",
@@ -186,7 +186,7 @@
       "scale": {
         "name": "Scale",
         "tagline": "Sistema completo",
-        "desc": "As 5 soluções incluídas",
+        "desc": "As 6 soluções incluídas",
         "badge": "-25% vs à la carte",
         "extraBadge": "Account manager dedicado",
         "cta": "Escolher Scale"
@@ -286,5 +286,5 @@
     "subtitle": "A auditoria é gratuita — 15 a 30 minutos para compreender a sua situação, identificar o serviço (ou pack) certo e ver um plano concreto antes de se comprometer.",
     "button": "Reservar uma auditoria gratuita"
   },
-  "description": "5 soluções para PMEs: Digital Workplace, Site Web Moderno, Automatização RPA, Integração IA, Nixie Pulse. Implementação incluída. -20% no plano anual. Pagamento em 3x."
+  "description": "6 soluções para PMEs: Digital Workplace, Site Web Moderno, Automatização RPA, Integração IA, Nixie Pulse, AIViz. Implementação incluída. -20% no plano anual. Pagamento em 3x."
 }

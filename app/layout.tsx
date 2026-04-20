@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Sora, DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Sora, DM_Sans, JetBrains_Mono, Instrument_Serif } from "next/font/google";
 import { getLocale } from "next-intl/server";
 
 const sora = Sora({
@@ -24,6 +24,14 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500", "600"],
 });
 
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-instrument",
+  display: "swap",
+  weight: ["400"],
+  style: ["normal", "italic"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: {
@@ -31,12 +39,12 @@ export const metadata: Metadata = {
     template: "%s | WCT Systems",
   },
   description:
-    "5 solutions pour PME françaises : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA et Nixie Pulse. Audit gratuit en 15 minutes.",
+    "6 solutions pour PME françaises : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse et AIViz. Audit gratuit en 15 minutes.",
   applicationName: "WCT Systems",
   openGraph: {
     title: "WCT Systems — IA, Automatisation & Digital Workplace pour PME",
     description:
-      "5 solutions pour PME : Digital Workplace, Site Web Moderne, Automatisation RPA, Intégration IA et Nixie Pulse.",
+      "6 solutions pour PME : Digital Workplace, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse et AIViz.",
     url: "/",
     siteName: "WCT Systems",
     locale: "fr_FR",
@@ -46,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "WCT Systems — IA, Automatisation & Digital Workplace pour PME",
     description:
-      "5 solutions pour PME — Digital Workplace, IA, automatisation, dashboard KPI physique, résultats mesurables.",
+      "6 solutions pour PME — Digital Workplace, Site Web Moderne, IA, automatisation, Nixie Pulse et AIViz.",
   },
   robots: {
     index: true,
@@ -67,7 +75,20 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   return (
-    <html lang={locale} suppressHydrationWarning className={`${sora.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}>
+    <html lang={locale} suppressHydrationWarning className={`${sora.variable} ${dmSans.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable}`}>
+      <head>
+        {/* Preconnect — fonts served via next/font but help establish GTM early-connect without loading it */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        {/* Preload LCP-critical above-the-fold logo (navbar, every page) */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/logo-wct-systems-80.webp"
+          type="image/webp"
+          fetchPriority="high"
+        />
+      </head>
       <body className="min-h-screen bg-background text-foreground antialiased font-body">
         <noscript>
           <iframe

@@ -16,6 +16,7 @@ const SAAS_KEYS = [
   { href: "/services/automatiser-relances", key: "saas_automatisation" },
   { href: "/services/integration-ia", key: "saas_integration_ia" },
   { href: "/services/nixie-pulse", key: "saas_nixie_pulse" },
+  { href: "/services/aiviz", key: "saas_aiviz" },
 ] as const;
 
 const LEGAL_KEYS = [
@@ -36,7 +37,11 @@ export async function Footer() {
   const LEGAL = LEGAL_KEYS.map((it) => ({ href: it.href, label: t(it.key) }));
 
   return (
-    <footer className="relative border-t dark:border-white/[0.06]">
+    <footer
+      className="relative border-t dark:border-white/[0.06]"
+      // TODO: i18n — add dedicated "common.footer.aria_footer" key
+      aria-label="Pied de page"
+    >
       {/* Gradient top accent */}
       <div aria-hidden className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-violet-500/40 to-transparent" />
 
@@ -64,7 +69,11 @@ export async function Footer() {
             <p className="font-display text-sm font-medium">{t("section_navigation")}</p>
             <div className="grid gap-2 text-sm">
               {NAV.map((l) => (
-                <Link key={l.href} href={l.href} className="text-muted-foreground transition-colors hover:text-foreground">
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className="rounded-sm text-muted-foreground transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-violet-500/30 focus:ring-offset-2 focus:ring-offset-background"
+                >
                   {l.label}
                 </Link>
               ))}
@@ -76,7 +85,11 @@ export async function Footer() {
             <p className="font-display text-sm font-medium">{t("section_saas")}</p>
             <div className="grid gap-2 text-sm">
               {SAAS.map((l) => (
-                <Link key={l.href} href={l.href} className="text-muted-foreground transition-colors hover:text-foreground">
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className="rounded-sm text-muted-foreground transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-violet-500/30 focus:ring-offset-2 focus:ring-offset-background"
+                >
                   {l.label}
                 </Link>
               ))}
@@ -103,7 +116,11 @@ export async function Footer() {
           <p>{t("copyright", { year })}</p>
           <div className="flex flex-wrap gap-4">
             {LEGAL.map((l) => (
-              <Link key={l.href} href={l.href} className="transition-colors hover:text-foreground">
+              <Link
+                key={l.href}
+                href={l.href}
+                className="rounded-sm transition-colors hover:text-foreground focus:outline-none focus:ring-2 focus:ring-violet-500/30 focus:ring-offset-2 focus:ring-offset-background"
+              >
                 {l.label}
               </Link>
             ))}

@@ -111,11 +111,13 @@ export function Navbar() {
         >
           <span className="relative inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border bg-background shadow-sm transition-transform duration-300 group-hover:rotate-12">
             <Image
-              src="/images/logo-wct-systems.png"
+              src="/images/logo-wct-systems-80.webp"
               alt="WCT Systems"
               width={40}
               height={40}
               priority
+              fetchPriority="high"
+              sizes="40px"
               className="h-10 w-10 rounded-full object-cover"
             />
             <span className="pointer-events-none absolute inset-0 rounded-full ring-1 ring-foreground/10" />
@@ -144,7 +146,7 @@ export function Navbar() {
                 {it.label}
                 {it.href === "/services" && (
                   <span className="ml-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-violet-100 text-[10px] font-semibold text-violet-600 dark:bg-violet-900/50 dark:text-violet-400">
-                    5
+                    6
                   </span>
                 )}
                 {/* Animated underline */}
@@ -221,10 +223,11 @@ export function Navbar() {
             <div className="inline-flex items-center gap-3">
               <span className="relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border bg-background shadow-sm">
                 <Image
-                  src="/images/logo-wct-systems.png"
+                  src="/images/logo-wct-systems-80.webp"
                   alt="WCT Systems"
                   width={36}
                   height={36}
+                  sizes="36px"
                   className="h-9 w-9 rounded-full object-cover"
                 />
               </span>
@@ -260,7 +263,7 @@ export function Navbar() {
                     {it.label}
                     {it.href === "/services" && (
                       <span className="ml-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-violet-100 text-[10px] font-semibold text-violet-600 dark:bg-violet-900/50 dark:text-violet-400">
-                        5
+                        6
                       </span>
                     )}
                   </Link>

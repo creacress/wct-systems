@@ -19,19 +19,19 @@ export default function manifest(): MetadataRoute.Manifest {
     lang: "fr",
     icons: [
       {
-        src: "/images/logo-wct-systems.png",
+        src: "/images/logo-wct-systems-192.png",
         sizes: "192x192",
         type: "image/png",
         purpose: "any",
       },
       {
-        src: "/images/logo-wct-systems.png",
+        src: "/images/logo-wct-systems-512.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "any",
       },
       {
-        src: "/images/logo-wct-systems.png",
+        src: "/images/logo-wct-systems-512.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "maskable",

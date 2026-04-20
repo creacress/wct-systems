@@ -319,6 +319,67 @@ const nextConfig: NextConfig = {
         destination: "/solutions",
         permanent: true,
       },
+
+      // --- AIViz aliases ---
+      {
+        source: "/ai-visibility",
+        destination: "/services/aiviz",
+        permanent: true,
+      },
+      {
+        source: "/aiviz",
+        destination: "/services/aiviz",
+        permanent: true,
+      },
+    ];
+  },
+
+  /**
+   * Security headers — OWASP baseline.
+   * Tested against securityheaders.com (target: grade A / A+).
+   * CSP intentionally omitted for now (needs site-wide audit + report-only phase);
+   * add it once the inline scripts/styles are inventoried.
+   */
+  async headers() {
+    const securityHeaders = [
+      // Force HTTPS for 2 years + preload list (remove `preload` if not submitted to hstspreload.org)
+      {
+        key: "Strict-Transport-Security",
+        value: "max-age=63072000; includeSubDomains; preload",
+      },
+      // Prevent MIME-sniffing
+      {
+        key: "X-Content-Type-Options",
+        value: "nosniff",
+      },
+      // Prevent clickjacking (allow same-origin iframes only)
+      {
+        key: "X-Frame-Options",
+        value: "SAMEORIGIN",
+      },
+      // Referrer leaks — send origin only on cross-origin requests
+      {
+        key: "Referrer-Policy",
+        value: "strict-origin-when-cross-origin",
+      },
+      // Lock down browser features we don't use
+      {
+        key: "Permissions-Policy",
+        value:
+          "camera=(), microphone=(), geolocation=(), interest-cohort=(), payment=(self), usb=(), magnetometer=(), gyroscope=()",
+      },
+      // Explicitly opt out of FLoC / Topics for privacy
+      {
+        key: "X-DNS-Prefetch-Control",
+        value: "on",
+      },
+    ];
+
+    return [
+      {
+        source: "/:path*",
+        headers: securityHeaders,
+      },
     ];
   },
 };

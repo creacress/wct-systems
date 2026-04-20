@@ -1,14 +1,14 @@
 {
   "list": {
-    "metadata_title": "Services — 5 solutions Digital Workplace & IA pour PME | WCT Systems",
-    "metadata_description": "5 solutions pour PME : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse. Mise en place incluse, à partir de 79 € HT/mois. Audit gratuit.",
-    "hero_badge": "5 solutions • Digital Workplace • IA • PME",
-    "hero_title_line1": "5 solutions pour PME.",
+    "metadata_title": "Services — 6 solutions Digital Workplace & IA pour PME | WCT Systems",
+    "metadata_description": "6 solutions pour PME : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse, AIViz. À partir de 29 € HT/mois. Audit gratuit.",
+    "hero_badge": "6 solutions • Digital Workplace • IA • PME",
+    "hero_title_line1": "6 solutions pour PME.",
     "hero_title_line2": "Un écosystème complet.",
     "hero_description": "Digital Workplace, prospection, site web, automatisation et IA : chaque SaaS résout un problème précis. Prenez-les individuellement ou combinez-les en pack pour un système complet.",
     "hero_cta_audit": "Réserver un audit gratuit",
     "hero_cta_pricing": "Voir les tarifs",
-    "grid_aria_label": "Nos 5 solutions",
+    "grid_aria_label": "Nos 6 solutions",
     "price_suffix": "HT/mois",
     "card_cta_learn_more": "En savoir plus",
     "card_cta_start": "Démarrer",
@@ -62,7 +62,8 @@
           "Réponses basées sur vos données (RAG)",
           "Formation équipe incluse (1h/mois)"
         ]
-      }
+      },
+      "aiviz": "AIViz"
     },
     "faq": [
       {
@@ -697,5 +698,105 @@
     "jsonld_service_description": "Service d'intégration IA pour PME : chatbot site/WhatsApp, agents IA métier (vente, support, RH), RAG sur vos données, connexion outils existants.",
     "jsonld_area_served": "France"
   },
-  "metadata_description": "5 solutions pour PME : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse. Mise en place incluse, à partir de 79 € HT/mois. Audit gratuit."
+  "aiviz": {
+    "metadata_title": "AIViz — Visibilité IA de votre marque dans ChatGPT, Perplexity, Claude | WCT Systems",
+    "metadata_description": "Mesurez votre visibilité dans ChatGPT, Perplexity, Claude, Gemini. Score 0-100, détection citation gaps, rapports PDF. À partir de 29€/mois.",
+    "metadata_keywords": "visibilité IA, SEO IA, ChatGPT visibilité, Perplexity visibilité, Claude visibilité, Gemini visibilité, suivi IA",
+    "breadcrumb_home": "Accueil",
+    "breadcrumb_services": "Services",
+    "breadcrumb_current": "AIViz",
+    "hero_badge": "Nouveau",
+    "hero_badge_popular": "Beta",
+    "hero_title_line1": "ChatGPT parle-t-il vraiment",
+    "hero_title_line2": "de votre marque ?",
+    "hero_description": "60% des recherches se font dans ChatGPT, Perplexity, Claude et Gemini. AIViz vous montre si votre marque est citée et comment améliorer votre visibilité IA.",
+    "hero_cta": "Démarrer gratuitement",
+    "hero_pricing": "À partir de 29€/mois · 14 jours offerts",
+    "use_cases_title": "Problèmes que AIViz résout",
+    "use_cases": [
+      {
+        "title": "Invisibilité LLM",
+        "desc": "Découvrez si vos concurrents sont cités dans les réponses LLM alors que vous êtes absent."
+      },
+      {
+        "title": "Citation gaps",
+        "desc": "Identifiez où vous devriez être cité mais vous ne l'êtes pas — et comment corriger."
+      },
+      {
+        "title": "Concurrents devant vous",
+        "desc": "Tracez comment vos concurrents prennent la place dans les réponses LLM."
+      },
+      {
+        "title": "Suivi multi-LLM",
+        "desc": "Un tableau de bord unique pour ChatGPT, Perplexity, Claude, Gemini — toutes vos données."
+      },
+      {
+        "title": "Rapports actionnables",
+        "desc": "Rapports PDF mensuels avec recommandations précises pour augmenter votre visibilité."
+      },
+      {
+        "title": "Benchmarking concurrentiel",
+        "desc": "Comparez votre visibilité IA avec vos concurrents directs. Qui gagne ?"
+      }
+    ],
+    "included_title": "Ce qui est inclus",
+    "included_items": [
+      "Scans multi-LLM (ChatGPT, Perplexity, Claude, Gemini)",
+      "Score 0-100 pondéré par LLM",
+      "Détection automatique citation gaps",
+      "Rapports PDF automatisés mensuels",
+      "Alertes email en cas de baisse visibilité",
+      "Support en français"
+    ],
+    "roi_title": "Exemple de ROI",
+    "roi_hypothesis_label": "Hypothèse",
+    "roi_hypothesis": "0 visibilité initiale dans 4 LLMs",
+    "roi_gain_label": "Gain",
+    "roi_gain_suffix": "pts",
+    "roi_gain_text": " de visibilité en 90 jours",
+    "roi_impact_label": "Impact",
+    "roi_impact": "+40% de leads organiques attribués au SEO IA",
+    "roi_business_title": "Traduction business",
+    "roi_business_desc_prefix": "Si vous êtes invisible dans 4 LLMs et que vous gagnez ",
+    "roi_business_bold1": "60 pts",
+    "roi_business_mid": " de visibilité IA, cela signifie que vous passerez de ",
+    "roi_business_bold2": "0% à 60%",
+    "roi_business_suffix": " des réponses LLM — une augmentation massive de visibilité organique.",
+    "roi_disclaimer": "*Exemple indicatif : dépend de votre secteur, volume de recherches et concurrence.",
+    "before_after_title": "Avant / Après AIViz",
+    "before_label": "Sans suivi",
+    "before_text": "Vous êtes invisible dans les réponses LLM. Vos concurrents capturent les leads. Vous perdez 40% de visibilité organique potentielle.",
+    "after_label": "Avec AIViz",
+    "after_text": "Vous avez un score clair, vous connaissez vos gaps, vous savez où vous positionner pour dominer les réponses LLM.",
+    "faq_title": "Questions fréquentes",
+    "faq": [
+      {
+        "q": "Combien de temps prend un scan ?",
+        "a": "Un scan complet (4 LLMs) prend entre 2 et 5 minutes. Les résultats sont mis à jour et vous recevez une notification."
+      },
+      {
+        "q": "À quelle fréquence les scans sont-ils effectués ?",
+        "a": "Cela dépend du plan : Starter (hebdomadaire), Business (quotidienne), Agency (horaire). Plus vous montez en plan, plus vos données sont fraîches."
+      },
+      {
+        "q": "Que faire des citation gaps détectées ?",
+        "a": "AIViz génère des recommandations spécifiques : pages à optimiser, contenus à créer, liens à build. Claude vous aide à les prioriser."
+      },
+      {
+        "q": "Mes données sont-elles sécurisées ?",
+        "a": "Oui. Hébergement EU, chiffrement en transit et au repos, pas de partage de données. Suppression sur demande, conformité RGPD."
+      },
+      {
+        "q": "Puis-je annuler mon abonnement ?",
+        "a": "Oui. Abonnement mensuel sans engagement long terme. Vous pouvez annuler à tout moment avant la fin du mois."
+      }
+    ],
+    "cta_title": "Reprenez le contrôle de votre référencement IA",
+    "cta_description": "Découvrez votre visibilité dans ChatGPT, Perplexity, Claude et Gemini. Commencez gratuitement, 14 jours offerts.",
+    "cta_button": "Démarrer gratuitement",
+    "jsonld_service_name": "AIViz — Suivi de visibilité IA",
+    "jsonld_service_description": "Mesurez votre visibilité de marque dans ChatGPT, Perplexity, Claude, Gemini. Score 0-100, détection citation gaps, rapports PDF, benchmarking concurrentiel.",
+    "jsonld_area_served": "France"
+  },
+  "metadata_description": "6 solutions pour PME : Digital Workplace gamifié, Site Web Moderne, Automatisation RPA, Intégration IA, Nixie Pulse, AIViz. À partir de 29 € HT/mois. Audit gratuit."
 }

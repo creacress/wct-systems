@@ -1,23 +1,23 @@
 {
   "metadata": {
     "title": "WCT Systems — IA & Automatização para PMEs portuguesas",
-    "description": "A WCT Systems ajuda PMEs portuguesas com 5 soluções: Digital Workplace, Site Web Moderno, Automatização RPA, Integração IA, Nixie Pulse. Auditoria gratuita em 15 min.",
+    "description": "A WCT Systems ajuda PMEs portuguesas com 6 soluções: Digital Workplace, Site Web Moderno, Automatização RPA, Integração IA, Nixie Pulse, AIViz. Auditoria gratuita em 15 min.",
     "keywords": "IA PME Portugal, automatização PME, SaaS PME, prospeção B2B IA, WCT Systems",
-    "orgDescription": "Digital Workplace & IA para PMEs portuguesas. 5 soluções, um ecossistema.",
-    "webDescription": "Digital Workplace gamificado + IA + automatização para PMEs. 5 soluções, um ecossistema."
+    "orgDescription": "Digital Workplace & IA para PMEs portuguesas. 6 soluções, um ecossistema.",
+    "webDescription": "Digital Workplace gamificado + IA + automatização para PMEs. 6 soluções, um ecossistema."
   },
   "site": {
     "tagline": "Digital Workplace & IA para PMEs",
-    "orgDescription": "Digital Workplace & IA para PMEs portuguesas. 5 soluções, um ecossistema.",
-    "webDescription": "Digital Workplace gamificado + IA + automatização para PMEs. 5 soluções, um ecossistema."
+    "orgDescription": "Digital Workplace & IA para PMEs portuguesas. 6 soluções, um ecossistema.",
+    "webDescription": "Digital Workplace gamificado + IA + automatização para PMEs. 6 soluções, um ecossistema."
   },
   "hero": {
-    "badge": "5 soluções • Digital Workplace • IA",
+    "badge": "6 soluções • Digital Workplace • IA",
     "titleLine1": "O seu escritório digital.",
     "titleLine2": "Tudo-em-um, gamificado, orientado por IA.",
-    "description": "<strong>WCT Systems</strong> concebe o Digital Workplace das PMEs portuguesas: um escritório virtual gamificado + 4 SaaS complementares (<strong>Site Web Moderno, Automatização RPA, Integração IA, Nixie Pulse</strong>).",
+    "description": "<strong>WCT Systems</strong> concebe o Digital Workplace das PMEs portuguesas: um escritório virtual gamificado + 5 SaaS complementares (<strong>Site Web Moderno, Automatização RPA, Integração IA, Nixie Pulse, AIViz</strong>).",
     "ctaPrimary": "Descobrir o Workplace",
-    "ctaSecondary": "Ver as 5 soluções"
+    "ctaSecondary": "Ver as 6 soluções"
   },
   "stats": {
     "items": {
@@ -81,8 +81,8 @@
     }
   },
   "ecosystem": {
-    "title": "O ecossistema 5 soluções",
-    "subtitle": "5 soluções complementares: Digital Workplace + automatização RPA, integração IA, site web moderno e Nixie Pulse. Cada serviço tem a sua cor.",
+    "title": "O ecossistema 6 soluções",
+    "subtitle": "6 soluções complementares: Digital Workplace + automatização RPA, integração IA, site web moderno, Nixie Pulse e AIViz. Cada serviço tem a sua cor.",
     "viewAll": "Ver tudo",
     "learnMore": "Saber mais",
     "requestAudit": "Pedir uma auditoria",

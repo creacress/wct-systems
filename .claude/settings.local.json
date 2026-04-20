@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build 2>&1 | tail -60)",
+      "Bash(npm run build 2>&1 | tail -20)",
+      "Bash(npm run build 2>&1 | tail -30)",
+      "Bash(npm run build 2>&1 | tail -10)",
+      "Bash(npm run build 2>&1 | tail -40)",
+      "Bash(npm run build 2>&1 | tail -5)",
+      "Bash(npm run build 2>&1 | grep -i \"error\" | head -10)",
+      "mcp__claude_ai_Stripe__create_product",
+      "mcp__claude_ai_Stripe__create_price",
+      "mcp__claude_ai_Stripe__list_products",
+      "Bash(npx next:*)",
+      "Bash(ls -la /Users/webcressontech/Documents/wct-systems/app/\\\\\\(site\\\\\\)/)",
+      "Bash(npm run:*)",
+      "Bash(npm install:*)",
+      "Bash(wc:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(ls -la /Users/webcressontech/Documents/wct-systems/app/\\\\\\(site\\\\\\)/services/)",
+      "Bash(chmod:*)"
+    ]
+  }
+}

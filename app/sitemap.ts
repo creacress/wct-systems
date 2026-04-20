@@ -29,9 +29,10 @@ const FR_TO_PT: Record<string, string> = {
   "/conditions-generales-de-vente": "/termos-e-condicoes",
 };
 
-/** FR-only routes — no /pt URL emitted (Nixie Pulse is a French hardware product). */
+/** FR-only routes — no /pt URL emitted (Nixie Pulse is a French hardware product, AIViz not yet translated). */
 const FR_ONLY_ROUTES = new Set<string>([
   "/services/nixie-pulse",
+  "/services/aiviz",
 ]);
 
 /** FR blog slug → PT blog slug mapping. Only FR posts listed here get a /pt/blog URL. */
@@ -59,6 +60,7 @@ const staticRoutes = [
   "/services/site-web-moderne",
   "/services/integration-ia",
   "/services/nixie-pulse",
+  "/services/aiviz",
   "/tarifs",
   "/contact",
   "/cas-clients",
